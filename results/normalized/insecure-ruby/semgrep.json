@@ -1,0 +1,1905 @@
+{
+  "tool": "semgrep",
+  "project": "insecure-ruby",
+  "timestamp": "2026-01-13T18:25:58.501008",
+  "duration_seconds": 17.48022723197937,
+  "issues": [
+    {
+      "id": "6f197c21-4e77-4e90-98a7-9d2ca8d549ef",
+      "tool": "Semgrep OSS",
+      "rule_id": "javascript.browser.security.insecure-document-method.insecure-document-method",
+      "rule_name": "javascript.browser.security.insecure-document-method.insecure-document-method",
+      "file_path": "app/assets/images/fonts/lte-ie7.js",
+      "line_number": 6,
+      "column_number": 3,
+      "end_line": 6,
+      "end_column": 88,
+      "severity": "warning",
+      "message": "User controlled data in methods like `innerHTML`, `outerHTML` or `document.write` is an anti-pattern that can lead to XSS vulnerabilities",
+      "snippet": "\t\tel.innerHTML = '<span style=\"font-family: \\'icomoon\\'\">' + entity + '</span>' + html;",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/assets/images/fonts/lte-ie7.js",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 88,
+                "endLine": 6,
+                "snippet": {
+                  "text": "\t\tel.innerHTML = '<span style=\"font-family: \\'icomoon\\'\">' + entity + '</span>' + html;"
+                },
+                "startColumn": 3,
+                "startLine": 6
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "User controlled data in methods like `innerHTML`, `outerHTML` or `document.write` is an anti-pattern that can lead to XSS vulnerabilities"
+        },
+        "properties": {},
+        "ruleId": "javascript.browser.security.insecure-document-method.insecure-document-method"
+      }
+    },
+    {
+      "id": "1aad8ca7-38e6-43fe-8d1a-e6508d73ccad",
+      "tool": "Semgrep OSS",
+      "rule_id": "generic.secrets.security.detected-generic-api-key.detected-generic-api-key",
+      "rule_name": "generic.secrets.security.detected-generic-api-key.detected-generic-api-key",
+      "file_path": "app/assets/javascripts/bootstrap-image-gallery-main.js",
+      "line_number": 61,
+      "column_number": 16,
+      "end_line": 61,
+      "end_column": 59,
+      "severity": "warning",
+      "message": "Generic API Key detected",
+      "snippet": "    //         api_key: '7617adae70159d09ba78cfec73c13be3'",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/assets/javascripts/bootstrap-image-gallery-main.js",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 59,
+                "endLine": 61,
+                "snippet": {
+                  "text": "    //         api_key: '7617adae70159d09ba78cfec73c13be3'"
+                },
+                "startColumn": 16,
+                "startLine": 61
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Generic API Key detected"
+        },
+        "properties": {},
+        "ruleId": "generic.secrets.security.detected-generic-api-key.detected-generic-api-key"
+      }
+    },
+    {
+      "id": "5281f537-ac74-4c6c-a872-39fc458188df",
+      "tool": "Semgrep OSS",
+      "rule_id": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
+      "rule_name": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
+      "file_path": "app/assets/javascripts/date-picker/date.js",
+      "line_number": 70,
+      "column_number": 345,
+      "end_line": 70,
+      "end_column": 371,
+      "severity": "warning",
+      "message": "RegExp() called with a `s` function argument, this might allow an attacker to cause a Regular Expression Denial-of-Service (ReDoS) within your application as RegExP blocks the main thread. For this reason, it is recommended to use hardcoded regexes instead. If your regex is run on user-controlled input, consider performing input validation or use a regex checking/sanitization library such as https://www.npmjs.com/package/recheck to verify that the regex does not appear vulnerable to ReDoS.",
+      "snippet": "(function(){Date.Parsing={Exception:function(s){this.message=\"Parse error at '\"+s.substring(0,10)+\" ...'\";}};var $P=Date.Parsing;var _=$P.Operators={rtoken:function(r){return function(s){var mx=s.match(r);if(mx){return([mx[0],s.substring(mx[0].length)]);}else{throw new $P.Exception(s);}};},token:function(s){return function(s){return _.rtoken(new RegExp(\"^\\s*\"+s+\"\\s*\"))(s);};},stoken:function(s){return _.rtoken(new RegExp(\"^\"+s));},until:function(p){return function(s){var qx=[],rx=null;while(s.length){try{rx=p.call(this,s);}catch(e){qx.push(rx[0]);s=rx[1];continue;}",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/assets/javascripts/date-picker/date.js",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 371,
+                "endLine": 70,
+                "snippet": {
+                  "text": "(function(){Date.Parsing={Exception:function(s){this.message=\"Parse error at '\"+s.substring(0,10)+\" ...'\";}};var $P=Date.Parsing;var _=$P.Operators={rtoken:function(r){return function(s){var mx=s.match(r);if(mx){return([mx[0],s.substring(mx[0].length)]);}else{throw new $P.Exception(s);}};},token:function(s){return function(s){return _.rtoken(new RegExp(\"^\\s*\"+s+\"\\s*\"))(s);};},stoken:function(s){return _.rtoken(new RegExp(\"^\"+s));},until:function(p){return function(s){var qx=[],rx=null;while(s.length){try{rx=p.call(this,s);}catch(e){qx.push(rx[0]);s=rx[1];continue;}"
+                },
+                "startColumn": 345,
+                "startLine": 70
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "RegExp() called with a `s` function argument, this might allow an attacker to cause a Regular Expression Denial-of-Service (ReDoS) within your application as RegExP blocks the main thread. For this reason, it is recommended to use hardcoded regexes instead. If your regex is run on user-controlled input, consider performing input validation or use a regex checking/sanitization library such as https://www.npmjs.com/package/recheck to verify that the regex does not appear vulnerable to ReDoS."
+        },
+        "properties": {},
+        "ruleId": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp"
+      }
+    },
+    {
+      "id": "9278a98b-34cf-4387-8fef-8d6e2bd78a85",
+      "tool": "Semgrep OSS",
+      "rule_id": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
+      "rule_name": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
+      "file_path": "app/assets/javascripts/date-picker/date.js",
+      "line_number": 70,
+      "column_number": 415,
+      "end_line": 70,
+      "end_column": 432,
+      "severity": "warning",
+      "message": "RegExp() called with a `s` function argument, this might allow an attacker to cause a Regular Expression Denial-of-Service (ReDoS) within your application as RegExP blocks the main thread. For this reason, it is recommended to use hardcoded regexes instead. If your regex is run on user-controlled input, consider performing input validation or use a regex checking/sanitization library such as https://www.npmjs.com/package/recheck to verify that the regex does not appear vulnerable to ReDoS.",
+      "snippet": "(function(){Date.Parsing={Exception:function(s){this.message=\"Parse error at '\"+s.substring(0,10)+\" ...'\";}};var $P=Date.Parsing;var _=$P.Operators={rtoken:function(r){return function(s){var mx=s.match(r);if(mx){return([mx[0],s.substring(mx[0].length)]);}else{throw new $P.Exception(s);}};},token:function(s){return function(s){return _.rtoken(new RegExp(\"^\\s*\"+s+\"\\s*\"))(s);};},stoken:function(s){return _.rtoken(new RegExp(\"^\"+s));},until:function(p){return function(s){var qx=[],rx=null;while(s.length){try{rx=p.call(this,s);}catch(e){qx.push(rx[0]);s=rx[1];continue;}",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/assets/javascripts/date-picker/date.js",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 432,
+                "endLine": 70,
+                "snippet": {
+                  "text": "(function(){Date.Parsing={Exception:function(s){this.message=\"Parse error at '\"+s.substring(0,10)+\" ...'\";}};var $P=Date.Parsing;var _=$P.Operators={rtoken:function(r){return function(s){var mx=s.match(r);if(mx){return([mx[0],s.substring(mx[0].length)]);}else{throw new $P.Exception(s);}};},token:function(s){return function(s){return _.rtoken(new RegExp(\"^\\s*\"+s+\"\\s*\"))(s);};},stoken:function(s){return _.rtoken(new RegExp(\"^\"+s));},until:function(p){return function(s){var qx=[],rx=null;while(s.length){try{rx=p.call(this,s);}catch(e){qx.push(rx[0]);s=rx[1];continue;}"
+                },
+                "startColumn": 415,
+                "startLine": 70
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "RegExp() called with a `s` function argument, this might allow an attacker to cause a Regular Expression Denial-of-Service (ReDoS) within your application as RegExP blocks the main thread. For this reason, it is recommended to use hardcoded regexes instead. If your regex is run on user-controlled input, consider performing input validation or use a regex checking/sanitization library such as https://www.npmjs.com/package/recheck to verify that the regex does not appear vulnerable to ReDoS."
+        },
+        "properties": {},
+        "ruleId": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp"
+      }
+    },
+    {
+      "id": "f48fb133-39aa-4911-ab04-a8ad6f590274",
+      "tool": "Semgrep OSS",
+      "rule_id": "javascript.browser.security.raw-html-concat.raw-html-concat",
+      "rule_name": "javascript.browser.security.raw-html-concat.raw-html-concat",
+      "file_path": "app/assets/javascripts/jquery.snippet.js",
+      "line_number": 402,
+      "column_number": 4,
+      "end_line": 405,
+      "end_column": 22,
+      "severity": "warning",
+      "message": "User controlled data in a HTML string may result in XSS",
+      "snippet": "\t  '<html><head><title>Snippet :: Code View :: '+location.href+'</title></head>'\n\t   +'<body bgcolor=white onLoad=\"self.focus()\">'\n\t   +'<pre>'+content+'</pre>'\n\t   +'</body></html>'",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/assets/javascripts/jquery.snippet.js",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 22,
+                "endLine": 405,
+                "snippet": {
+                  "text": "\t  '<html><head><title>Snippet :: Code View :: '+location.href+'</title></head>'\n\t   +'<body bgcolor=white onLoad=\"self.focus()\">'\n\t   +'<pre>'+content+'</pre>'\n\t   +'</body></html>'"
+                },
+                "startColumn": 4,
+                "startLine": 402
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "User controlled data in a HTML string may result in XSS"
+        },
+        "properties": {},
+        "ruleId": "javascript.browser.security.raw-html-concat.raw-html-concat"
+      }
+    },
+    {
+      "id": "96e69ffa-c8b5-4e94-9874-c7547b24f8b6",
+      "tool": "Semgrep OSS",
+      "rule_id": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
+      "rule_name": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
+      "file_path": "app/assets/javascripts/jquery.snippet.js",
+      "line_number": 446,
+      "column_number": 36,
+      "end_line": 446,
+      "end_column": 70,
+      "severity": "warning",
+      "message": "RegExp() called with a `name` function argument, this might allow an attacker to cause a Regular Expression Denial-of-Service (ReDoS) within your application as RegExP blocks the main thread. For this reason, it is recommended to use hardcoded regexes instead. If your regex is run on user-controlled input, consider performing input validation or use a regex checking/sanitization library such as https://www.npmjs.com/package/recheck to verify that the regex does not appear vulnerable to ReDoS.",
+      "snippet": "\t\t\t\treturn !!this.className.match( new RegExp(\"\\\\s*\" + name + \"\\\\s*\") );",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/assets/javascripts/jquery.snippet.js",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 70,
+                "endLine": 446,
+                "snippet": {
+                  "text": "\t\t\t\treturn !!this.className.match( new RegExp(\"\\\\s*\" + name + \"\\\\s*\") );"
+                },
+                "startColumn": 36,
+                "startLine": 446
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "RegExp() called with a `name` function argument, this might allow an attacker to cause a Regular Expression Denial-of-Service (ReDoS) within your application as RegExP blocks the main thread. For this reason, it is recommended to use hardcoded regexes instead. If your regex is run on user-controlled input, consider performing input validation or use a regex checking/sanitization library such as https://www.npmjs.com/package/recheck to verify that the regex does not appear vulnerable to ReDoS."
+        },
+        "properties": {},
+        "ruleId": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp"
+      }
+    },
+    {
+      "id": "9aa1432f-5fc0-4083-b853-02cde90196a5",
+      "tool": "Semgrep OSS",
+      "rule_id": "javascript.browser.security.insecure-document-method.insecure-document-method",
+      "rule_name": "javascript.browser.security.insecure-document-method.insecure-document-method",
+      "file_path": "app/assets/javascripts/jquery.snippet.js",
+      "line_number": 556,
+      "column_number": 3,
+      "end_line": 556,
+      "end_column": 62,
+      "severity": "warning",
+      "message": "User controlled data in methods like `innerHTML`, `outerHTML` or `document.write` is an anti-pattern that can lead to XSS vulnerabilities",
+      "snippet": "\t\tthis.div.innerHTML = this.getHTML( box.width, box.height );",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/assets/javascripts/jquery.snippet.js",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 62,
+                "endLine": 556,
+                "snippet": {
+                  "text": "\t\tthis.div.innerHTML = this.getHTML( box.width, box.height );"
+                },
+                "startColumn": 3,
+                "startLine": 556
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "User controlled data in methods like `innerHTML`, `outerHTML` or `document.write` is an anti-pattern that can lead to XSS vulnerabilities"
+        },
+        "properties": {},
+        "ruleId": "javascript.browser.security.insecure-document-method.insecure-document-method"
+      }
+    },
+    {
+      "id": "bba2b84a-7537-4d21-b35c-8fc77a29ba9f",
+      "tool": "Semgrep OSS",
+      "rule_id": "javascript.browser.security.eval-detected.eval-detected",
+      "rule_name": "javascript.browser.security.eval-detected.eval-detected",
+      "file_path": "app/assets/javascripts/jquery.snippet.js",
+      "line_number": 737,
+      "column_number": 4442,
+      "end_line": 737,
+      "end_column": 4468,
+      "severity": "warning",
+      "message": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources.",
+      "snippet": "if(!this.sh_languages){this.sh_languages={}}var sh_requests={};function sh_isEmailAddress(a){if(/^mailto:/.test(a)){return false}return a.indexOf(\"@\")!==-1}function sh_setHref(b,c,d){var a=d.substring(b[c-2].pos,b[c-1].pos);if(a.length>=2&&a.charAt(0)===\"<\"&&a.charAt(a.length-1)===\">\"){a=a.substr(1,a.length-2)}if(sh_isEmailAddress(a)){a=\"mailto:\"+a}b[c-2].node.href=a}function sh_konquerorExec(b){var a=[\"\"];a.index=b.length;a.input=b;return a}function sh_highlightString(B,o){if(/Konqueror/.test(navigator.userAgent)){if(!o.konquered){for(var F=0;F<o.length;F++){for(var H=0;H<o[F].length;H++){var G=o[F][H][0];if(G.source===\"$\"){G.exec=sh_konquerorExec}}}o.konquered=true}}var N=document.createElement(\"a\");var q=document.createElement(\"span\");var A=[];var j=0;var n=[];var C=0;var k=null;var x=function(i,a){var p=i.length;if(p===0){return}if(!a){var Q=n.length;if(Q!==0){var r=n[Q-1];if(!r[3]){a=r[1]}}}if(k!==a){if(k){A[j++]={pos:C};if(k===\"sh_url\"){sh_setHref(A,j,B)}}if(a){var P;if(a===\"sh_url\"){P=N.cloneNode(false)}else{P=q.cloneNode(false)}P.className=a;A[j++]={node:P,pos:C}}}C+=p;k=a};var t=/\\r\\n|\\r|\\n/g;t.lastIndex=0;var d=B.length;while(C<d){var v=C;var l;var w;var h=t.exec(B);if(h===null){l=d;w=d}else{l=h.index;w=t.lastIndex}var g=B.substring(v,l);var M=[];for(;;){var I=C-v;var D;var y=n.length;if(y===0){D=0}else{D=n[y-1][2]}var O=o[D];var z=O.length;var m=M[D];if(!m){m=M[D]=[]}var E=null;var u=-1;for(var K=0;K<z;K++){var f;if(K<m.length&&(m[K]===null||I<=m[K].index)){f=m[K]}else{var c=O[K][0];c.lastIndex=I;f=c.exec(g);m[K]=f}if(f!==null&&(E===null||f.index<E.index)){E=f;u=K;if(f.index===I){break}}}if(E===null){x(g.substring(I),null);break}else{if(E.index>I){x(g.substring(I,E.index),null)}var e=O[u];var J=e[1];var b;if(J instanceof Array){for(var L=0;L<J.length;L++){b=E[L+1];x(b,J[L])}}else{b=E[0];x(b,J)}switch(e[2]){case -1:break;case -2:n.pop();break;case -3:n.length=0;break;default:n.push(e);break}}}if(k){A[j++]={pos:C};if(k===\"sh_url\"){sh_setHref(A,j,B)}k=null}C=w}return A}function sh_getClasses(d){var a=[];var b=d.className;if(b&&b.length>0){var e=b.split(\" \");for(var c=0;c<e.length;c++){if(e[c].length>0){a.push(e[c])}}}return a}function sh_addClass(c,a){var d=sh_getClasses(c);for(var b=0;b<d.length;b++){if(a.toLowerCase()===d[b].toLowerCase()){return}}d.push(a);c.className=d.join(\" \")}function sh_extractTagsFromNodeList(c,a){var f=c.length;for(var d=0;d<f;d++){var e=c.item(d);switch(e.nodeType){case 1:if(e.nodeName.toLowerCase()===\"br\"){var b;if(/MSIE/.test(navigator.userAgent)){b=\"\\r\"}else{b=\"\\n\"}a.text.push(b);a.pos++}else{a.tags.push({node:e.cloneNode(false),pos:a.pos});sh_extractTagsFromNodeList(e.childNodes,a);a.tags.push({pos:a.pos})}break;case 3:case 4:a.text.push(e.data);a.pos+=e.length;break}}}function sh_extractTags(c,b){var a={};a.text=[];a.tags=b;a.pos=0;sh_extractTagsFromNodeList(c.childNodes,a);return a.text.join(\"\")}function sh_mergeTags(d,f){var a=d.length;if(a===0){return f}var c=f.length;if(c===0){return d}var i=[];var e=0;var b=0;while(e<a&&b<c){var h=d[e];var g=f[b];if(h.pos<=g.pos){i.push(h);e++}else{i.push(g);if(f[b+1].pos<=h.pos){b++;i.push(f[b]);b++}else{i.push({pos:h.pos});f[b]={node:g.node.cloneNode(false),pos:h.pos}}}}while(e<a){i.push(d[e]);e++}while(b<c){i.push(f[b]);b++}return i}function sh_insertTags(k,h){var g=document;var l=document.createDocumentFragment();var e=0;var d=k.length;var b=0;var j=h.length;var c=l;while(b<j||e<d){var i;var a;if(e<d){i=k[e];a=i.pos}else{a=j}if(a<=b){if(i.node){var f=i.node;c.appendChild(f);c=f}else{c=c.parentNode}e++}else{c.appendChild(g.createTextNode(h.substring(b,a)));b=a}}return l}function sh_highlightElement(d,g){sh_addClass(d,\"sh_sourceCode\");var c=[];var e=sh_extractTags(d,c);var f=sh_highlightString(e,g);var b=sh_mergeTags(c,f);var a=sh_insertTags(b,e);while(d.hasChildNodes()){d.removeChild(d.firstChild)}d.appendChild(a)}function sh_getXMLHttpRequest(){if(window.ActiveXObject){return new ActiveXObject(\"Msxml2.XMLHTTP\")}else{if(window.XMLHttpRequest){return new XMLHttpRequest()}}throw\"No XMLHttpRequest implementation available\"}function sh_load(language,element,prefix,suffix){if(language in sh_requests){sh_requests[language].push(element);return}sh_requests[language]=[element];var request=sh_getXMLHttpRequest();var url=prefix+\"sh_\"+language+suffix;request.open(\"GET\",url,true);request.onreadystatechange=function(){if(request.readyState===4){try{if(!request.status||request.status===200){eval(request.responseText);var elements=sh_requests[language];for(var i=0;i<elements.length;i++){sh_highlightElement(elements[i],sh_languages[language])}}else{throw\"HTTP error: status \"+request.status}}finally{request=null}}};request.send(null)}",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/assets/javascripts/jquery.snippet.js",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 4468,
+                "endLine": 737,
+                "snippet": {
+                  "text": "if(!this.sh_languages){this.sh_languages={}}var sh_requests={};function sh_isEmailAddress(a){if(/^mailto:/.test(a)){return false}return a.indexOf(\"@\")!==-1}function sh_setHref(b,c,d){var a=d.substring(b[c-2].pos,b[c-1].pos);if(a.length>=2&&a.charAt(0)===\"<\"&&a.charAt(a.length-1)===\">\"){a=a.substr(1,a.length-2)}if(sh_isEmailAddress(a)){a=\"mailto:\"+a}b[c-2].node.href=a}function sh_konquerorExec(b){var a=[\"\"];a.index=b.length;a.input=b;return a}function sh_highlightString(B,o){if(/Konqueror/.test(navigator.userAgent)){if(!o.konquered){for(var F=0;F<o.length;F++){for(var H=0;H<o[F].length;H++){var G=o[F][H][0];if(G.source===\"$\"){G.exec=sh_konquerorExec}}}o.konquered=true}}var N=document.createElement(\"a\");var q=document.createElement(\"span\");var A=[];var j=0;var n=[];var C=0;var k=null;var x=function(i,a){var p=i.length;if(p===0){return}if(!a){var Q=n.length;if(Q!==0){var r=n[Q-1];if(!r[3]){a=r[1]}}}if(k!==a){if(k){A[j++]={pos:C};if(k===\"sh_url\"){sh_setHref(A,j,B)}}if(a){var P;if(a===\"sh_url\"){P=N.cloneNode(false)}else{P=q.cloneNode(false)}P.className=a;A[j++]={node:P,pos:C}}}C+=p;k=a};var t=/\\r\\n|\\r|\\n/g;t.lastIndex=0;var d=B.length;while(C<d){var v=C;var l;var w;var h=t.exec(B);if(h===null){l=d;w=d}else{l=h.index;w=t.lastIndex}var g=B.substring(v,l);var M=[];for(;;){var I=C-v;var D;var y=n.length;if(y===0){D=0}else{D=n[y-1][2]}var O=o[D];var z=O.length;var m=M[D];if(!m){m=M[D]=[]}var E=null;var u=-1;for(var K=0;K<z;K++){var f;if(K<m.length&&(m[K]===null||I<=m[K].index)){f=m[K]}else{var c=O[K][0];c.lastIndex=I;f=c.exec(g);m[K]=f}if(f!==null&&(E===null||f.index<E.index)){E=f;u=K;if(f.index===I){break}}}if(E===null){x(g.substring(I),null);break}else{if(E.index>I){x(g.substring(I,E.index),null)}var e=O[u];var J=e[1];var b;if(J instanceof Array){for(var L=0;L<J.length;L++){b=E[L+1];x(b,J[L])}}else{b=E[0];x(b,J)}switch(e[2]){case -1:break;case -2:n.pop();break;case -3:n.length=0;break;default:n.push(e);break}}}if(k){A[j++]={pos:C};if(k===\"sh_url\"){sh_setHref(A,j,B)}k=null}C=w}return A}function sh_getClasses(d){var a=[];var b=d.className;if(b&&b.length>0){var e=b.split(\" \");for(var c=0;c<e.length;c++){if(e[c].length>0){a.push(e[c])}}}return a}function sh_addClass(c,a){var d=sh_getClasses(c);for(var b=0;b<d.length;b++){if(a.toLowerCase()===d[b].toLowerCase()){return}}d.push(a);c.className=d.join(\" \")}function sh_extractTagsFromNodeList(c,a){var f=c.length;for(var d=0;d<f;d++){var e=c.item(d);switch(e.nodeType){case 1:if(e.nodeName.toLowerCase()===\"br\"){var b;if(/MSIE/.test(navigator.userAgent)){b=\"\\r\"}else{b=\"\\n\"}a.text.push(b);a.pos++}else{a.tags.push({node:e.cloneNode(false),pos:a.pos});sh_extractTagsFromNodeList(e.childNodes,a);a.tags.push({pos:a.pos})}break;case 3:case 4:a.text.push(e.data);a.pos+=e.length;break}}}function sh_extractTags(c,b){var a={};a.text=[];a.tags=b;a.pos=0;sh_extractTagsFromNodeList(c.childNodes,a);return a.text.join(\"\")}function sh_mergeTags(d,f){var a=d.length;if(a===0){return f}var c=f.length;if(c===0){return d}var i=[];var e=0;var b=0;while(e<a&&b<c){var h=d[e];var g=f[b];if(h.pos<=g.pos){i.push(h);e++}else{i.push(g);if(f[b+1].pos<=h.pos){b++;i.push(f[b]);b++}else{i.push({pos:h.pos});f[b]={node:g.node.cloneNode(false),pos:h.pos}}}}while(e<a){i.push(d[e]);e++}while(b<c){i.push(f[b]);b++}return i}function sh_insertTags(k,h){var g=document;var l=document.createDocumentFragment();var e=0;var d=k.length;var b=0;var j=h.length;var c=l;while(b<j||e<d){var i;var a;if(e<d){i=k[e];a=i.pos}else{a=j}if(a<=b){if(i.node){var f=i.node;c.appendChild(f);c=f}else{c=c.parentNode}e++}else{c.appendChild(g.createTextNode(h.substring(b,a)));b=a}}return l}function sh_highlightElement(d,g){sh_addClass(d,\"sh_sourceCode\");var c=[];var e=sh_extractTags(d,c);var f=sh_highlightString(e,g);var b=sh_mergeTags(c,f);var a=sh_insertTags(b,e);while(d.hasChildNodes()){d.removeChild(d.firstChild)}d.appendChild(a)}function sh_getXMLHttpRequest(){if(window.ActiveXObject){return new ActiveXObject(\"Msxml2.XMLHTTP\")}else{if(window.XMLHttpRequest){return new XMLHttpRequest()}}throw\"No XMLHttpRequest implementation available\"}function sh_load(language,element,prefix,suffix){if(language in sh_requests){sh_requests[language].push(element);return}sh_requests[language]=[element];var request=sh_getXMLHttpRequest();var url=prefix+\"sh_\"+language+suffix;request.open(\"GET\",url,true);request.onreadystatechange=function(){if(request.readyState===4){try{if(!request.status||request.status===200){eval(request.responseText);var elements=sh_requests[language];for(var i=0;i<elements.length;i++){sh_highlightElement(elements[i],sh_languages[language])}}else{throw\"HTTP error: status \"+request.status}}finally{request=null}}};request.send(null)}"
+                },
+                "startColumn": 4442,
+                "startLine": 737
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources."
+        },
+        "properties": {},
+        "ruleId": "javascript.browser.security.eval-detected.eval-detected"
+      }
+    },
+    {
+      "id": "431182b2-6543-482d-8fe9-c661e575d29b",
+      "tool": "Semgrep OSS",
+      "rule_id": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
+      "rule_name": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
+      "file_path": "app/assets/javascripts/moment.js",
+      "line_number": 6,
+      "column_number": 1739,
+      "end_line": 6,
+      "end_column": 1849,
+      "severity": "warning",
+      "message": "RegExp() called with a `a` function argument, this might allow an attacker to cause a Regular Expression Denial-of-Service (ReDoS) within your application as RegExP blocks the main thread. For this reason, it is recommended to use hardcoded regexes instead. If your regex is run on user-controlled input, consider performing input validation or use a regex checking/sanitization library such as https://www.npmjs.com/package/recheck to verify that the regex does not appear vulnerable to ReDoS.",
+      "snippet": "(function(a){function E(a,b,c,d){var e=c.lang();return e[a].call?e[a](c,d):e[a][b]}function F(a,b){return function(c){return K(a.call(this,c),b)}}function G(a){return function(b){var c=a.call(this,b);return c+this.lang().ordinal(c)}}function H(a,b,c){this._d=a,this._isUTC=!!b,this._a=a._a||null,this._lang=c||!1}function I(a){var b=this._data={},c=a.years||a.y||0,d=a.months||a.M||0,e=a.weeks||a.w||0,f=a.days||a.d||0,g=a.hours||a.h||0,h=a.minutes||a.m||0,i=a.seconds||a.s||0,j=a.milliseconds||a.ms||0;this._milliseconds=j+i*1e3+h*6e4+g*36e5,this._days=f+e*7,this._months=d+c*12,b.milliseconds=j%1e3,i+=J(j/1e3),b.seconds=i%60,h+=J(i/60),b.minutes=h%60,g+=J(h/60),b.hours=g%24,f+=J(g/24),f+=e*7,b.days=f%30,d+=J(f/30),b.months=d%12,c+=J(d/12),b.years=c,this._lang=!1}function J(a){return a<0?Math.ceil(a):Math.floor(a)}function K(a,b){var c=a+\"\";while(c.length<b)c=\"0\"+c;return c}function L(a,b,c){var d=b._milliseconds,e=b._days,f=b._months,g;d&&a._d.setTime(+a+d*c),e&&a.date(a.date()+e*c),f&&(g=a.date(),a.date(1).month(a.month()+f*c).date(Math.min(g,a.daysInMonth())))}function M(a){return Object.prototype.toString.call(a)===\"[object Array]\"}function N(a,b){var c=Math.min(a.length,b.length),d=Math.abs(a.length-b.length),e=0,f;for(f=0;f<c;f++)~~a[f]!==~~b[f]&&e++;return e+d}function O(a,b,c,d){var e,f,g=[];for(e=0;e<7;e++)g[e]=a[e]=a[e]==null?e===2?1:0:a[e];return a[7]=g[7]=b,a[8]!=null&&(g[8]=a[8]),a[3]+=c||0,a[4]+=d||0,f=new Date(0),b?(f.setUTCFullYear(a[0],a[1],a[2]),f.setUTCHours(a[3],a[4],a[5],a[6])):(f.setFullYear(a[0],a[1],a[2]),f.setHours(a[3],a[4],a[5],a[6])),f._a=g,f}function P(a,c){var d,e,g=[];!c&&h&&(c=require(\"./lang/\"+a));for(d=0;d<i.length;d++)c[i[d]]=c[i[d]]||f.en[i[d]];for(d=0;d<12;d++)e=b([2e3,d]),g[d]=new RegExp(\"^\"+(c.months[d]||c.months(e,\"\"))+\"|^\"+(c.monthsShort[d]||c.monthsShort(e,\"\")).replace(\".\",\"\"),\"i\");return c.monthsParse=c.monthsParse||g,f[a]=c,c}function Q(a){var c=typeof a==\"string\"&&a||a&&a._lang||null;return c?f[c]||P(c):b}function R(a){return a.match(/\\[.*\\]/)?a.replace(/^\\[|\\]$/g,\"\"):a.replace(/\\\\/g,\"\")}function S(a){var b=a.match(k),c,d;for(c=0,d=b.length;c<d;c++)D[b[c]]?b[c]=D[b[c]]:b[c]=R(b[c]);return function(e){var f=\"\";for(c=0;c<d;c++)f+=typeof b[c].call==\"function\"?b[c].call(e,a):b[c];return f}}function T(a,b){function d(b){return a.lang().longDateFormat[b]||b}var c=5;while(c--&&l.test(b))b=b.replace(l,d);return A[b]||(A[b]=S(b)),A[b](a)}function U(a){switch(a){case\"DDDD\":return p;case\"YYYY\":return q;case\"S\":case\"SS\":case\"SSS\":case\"DDD\":return o;case\"MMM\":case\"MMMM\":case\"dd\":case\"ddd\":case\"dddd\":case\"a\":case\"A\":return r;case\"Z\":case\"ZZ\":return s;case\"T\":return t;case\"MM\":case\"DD\":case\"YY\":case\"HH\":case\"hh\":case\"mm\":case\"ss\":case\"M\":case\"D\":case\"d\":case\"H\":case\"h\":case\"m\":case\"s\":return n;default:return new RegExp(a.replace(\"\\\\\",\"\"))}}function V(a,b,c,d){var e,f;switch(a){case\"M\":case\"MM\":c[1]=b==null?0:~~b-1;break;case\"MMM\":case\"MMMM\":for(e=0;e<12;e++)if(Q().monthsParse[e].test(b)){c[1]=e,f=!0;break}f||(c[8]=!1);break;case\"D\":case\"DD\":case\"DDD\":case\"DDDD\":b!=null&&(c[2]=~~b);break;case\"YY\":c[0]=~~b+(~~b>70?1900:2e3);break;case\"YYYY\":c[0]=~~Math.abs(b);break;case\"a\":case\"A\":d.isPm=(b+\"\").toLowerCase()===\"pm\";break;case\"H\":case\"HH\":case\"h\":case\"hh\":c[3]=~~b;break;case\"m\":case\"mm\":c[4]=~~b;break;case\"s\":case\"ss\":c[5]=~~b;break;case\"S\":case\"SS\":case\"SSS\":c[6]=~~((\"0.\"+b)*1e3);break;case\"Z\":case\"ZZ\":d.isUTC=!0,e=(b+\"\").match(x),e&&e[1]&&(d.tzh=~~e[1]),e&&e[2]&&(d.tzm=~~e[2]),e&&e[0]===\"+\"&&(d.tzh=-d.tzh,d.tzm=-d.tzm)}b==null&&(c[8]=!1)}function W(a,b){var c=[0,0,1,0,0,0,0],d={tzh:0,tzm:0},e=b.match(k),f,g;for(f=0;f<e.length;f++)g=(U(e[f]).exec(a)||[])[0],g&&(a=a.slice(a.indexOf(g)+g.length)),D[e[f]]&&V(e[f],g,c,d);return d.isPm&&c[3]<12&&(c[3]+=12),d.isPm===!1&&c[3]===12&&(c[3]=0),O(c,d.isUTC,d.tzh,d.tzm)}function X(a,b){var c,d=a.match(m)||[],e,f=99,g,h,i;for(g=0;g<b.length;g++)h=W(a,b[g]),e=T(new H(h),b[g]).match(m)||[],i=N(d,e),i<f&&(f=i,c=h);return c}function Y(a){var b=\"YYYY-MM-DDT\",c;if(u.exec(a)){for(c=0;c<4;c++)if(w[c][1].exec(a)){b+=w[c][0];break}return s.exec(a)?W(a,b+\" Z\"):W(a,b)}return new Date(a)}function Z(a,b,c,d,e){var f=e.relativeTime[a];return typeof f==\"function\"?f(b||1,!!c,a,d):f.replace(/%d/i,b||1)}function $(a,b,c){var e=d(Math.abs(a)/1e3),f=d(e/60),g=d(f/60),h=d(g/24),i=d(h/365),j=e<45&&[\"s\",e]||f===1&&[\"m\"]||f<45&&[\"mm\",f]||g===1&&[\"h\"]||g<22&&[\"hh\",g]||h===1&&[\"d\"]||h<=25&&[\"dd\",h]||h<=45&&[\"M\"]||h<345&&[\"MM\",d(h/30)]||i===1&&[\"y\"]||[\"yy\",i];return j[2]=b,j[3]=a>0,j[4]=c,Z.apply({},j)}function _(a,c){b.fn[a]=function(a){var b=this._isUTC?\"UTC\":\"\";return a!=null?(this._d[\"set\"+b+c](a),this):this._d[\"get\"+b+c]()}}function ab(a){b.duration.fn[a]=function(){return this._data[a]}}function bb(a,c){b.duration.fn[\"as\"+a]=function(){return+this/c}}var b,c=\"1.7.2\",d=Math.round,e,f={},g=\"en\",h=typeof module!=\"undefined\"&&module.exports,i=\"months|monthsShort|weekdays|weekdaysShort|weekdaysMin|longDateFormat|calendar|relativeTime|ordinal|meridiem\".split(\"|\"),j=/^\\/?Date\\((\\-?\\d+)/i,k=/(\\[[^\\[]*\\])|(\\\\)?(Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|YYYY|YY|a|A|hh?|HH?|mm?|ss?|SS?S?|zz?|ZZ?|.)/g,l=/(\\[[^\\[]*\\])|(\\\\)?(LT|LL?L?L?)/g,m=/([0-9a-zA-Z\\u00A0-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFEF]+)/gi,n=/\\d\\d?/,o=/\\d{1,3}/,p=/\\d{3}/,q=/\\d{1,4}/,r=/[0-9a-z\\u00A0-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFEF]+/i,s=/Z|[\\+\\-]\\d\\d:?\\d\\d/i,t=/T/i,u=/^\\s*\\d{4}-\\d\\d-\\d\\d(T(\\d\\d(:\\d\\d(:\\d\\d(\\.\\d\\d?\\d?)?)?)?)?([\\+\\-]\\d\\d:?\\d\\d)?)?/,v=\"YYYY-MM-DDTHH:mm:ssZ\",w=[[\"HH:mm:ss.S\",/T\\d\\d:\\d\\d:\\d\\d\\.\\d{1,3}/],[\"HH:mm:ss\",/T\\d\\d:\\d\\d:\\d\\d/],[\"HH:mm\",/T\\d\\d:\\d\\d/],[\"HH\",/T\\d\\d/]],x=/([\\+\\-]|\\d\\d)/gi,y=\"Month|Date|Hours|Minutes|Seconds|Milliseconds\".split(\"|\"),z={Milliseconds:1,Seconds:1e3,Minutes:6e4,Hours:36e5,Days:864e5,Months:2592e6,Years:31536e6},A={},B=\"DDD w M D d\".split(\" \"),C=\"M D H h m s w\".split(\" \"),D={M:function(){return this.month()+1},MMM:function(a){return E(\"monthsShort\",this.month(),this,a)},MMMM:function(a){return E(\"months\",this.month(),this,a)},D:function(){return this.date()},DDD:function(){var a=new Date(this.year(),this.month(),this.date()),b=new Date(this.year(),0,1);return~~((a-b)/864e5+1.5)},d:function(){return this.day()},dd:function(a){return E(\"weekdaysMin\",this.day(),this,a)},ddd:function(a){return E(\"weekdaysShort\",this.day(),this,a)},dddd:function(a){return E(\"weekdays\",this.day(),this,a)},w:function(){var a=new Date(this.year(),this.month(),this.date()-this.day()+5),b=new Date(a.getFullYear(),0,4);return~~((a-b)/864e5/7+1.5)},YY:function(){return K(this.year()%100,2)},YYYY:function(){return K(this.year(),4)},a:function(){return this.lang().meridiem(this.hours(),this.minutes(),!0)},A:function(){return this.lang().meridiem(this.hours(),this.minutes(),!1)},H:function(){return this.hours()},h:function(){return this.hours()%12||12},m:function(){return this.minutes()},s:function(){return this.seconds()},S:function(){return~~(this.milliseconds()/100)},SS:function(){return K(~~(this.milliseconds()/10),2)},SSS:function(){return K(this.milliseconds(),3)},Z:function(){var a=-this.zone(),b=\"+\";return a<0&&(a=-a,b=\"-\"),b+K(~~(a/60),2)+\":\"+K(~~a%60,2)},ZZ:function(){var a=-this.zone(),b=\"+\";return a<0&&(a=-a,b=\"-\"),b+K(~~(10*a/6),4)}};while(B.length)e=B.pop(),D[e+\"o\"]=G(D[e]);while(C.length)e=C.pop(),D[e+e]=F(D[e],2);D.DDDD=F(D.DDD,3),b=function(c,d){if(c===null||c===\"\")return null;var e,f;return b.isMoment(c)?new H(new Date(+c._d),c._isUTC,c._lang):(d?M(d)?e=X(c,d):e=W(c,d):(f=j.exec(c),e=c===a?new Date:f?new Date(+f[1]):c instanceof Date?c:M(c)?O(c):typeof c==\"string\"?Y(c):new Date(c)),new H(e))},b.utc=function(a,c){return M(a)?new H(O(a,!0),!0):(typeof a==\"string\"&&!s.exec(a)&&(a+=\" +0000\",c&&(c+=\" Z\")),b(a,c).utc())},b.unix=function(a){return b(a*1e3)},b.duration=function(a,c){var d=b.isDuration(a),e=typeof a==\"number\",f=d?a._data:e?{}:a,g;return e&&(c?f[c]=a:f.milliseconds=a),g=new I(f),d&&(g._lang=a._lang),g},b.humanizeDuration=function(a,c,d){return b.duration(a,c===!0?null:c).humanize(c===!0?!0:d)},b.version=c,b.defaultFormat=v,b.lang=function(a,c){var d;if(!a)return g;(c||!f[a])&&P(a,c);if(f[a]){for(d=0;d<i.length;d++)b[i[d]]=f[a][i[d]];b.monthsParse=f[a].monthsParse,g=a}},b.langData=Q,b.isMoment=function(a){return a instanceof H},b.isDuration=function(a){return a instanceof I},b.lang(\"en\",{months:\"January_February_March_April_May_June_July_August_September_October_November_December\".split(\"_\"),monthsShort:\"Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec\".split(\"_\"),weekdays:\"Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday\".split(\"_\"),weekdaysShort:\"Sun_Mon_Tue_Wed_Thu_Fri_Sat\".split(\"_\"),weekdaysMin:\"Su_Mo_Tu_We_Th_Fr_Sa\".split(\"_\"),longDateFormat:{LT:\"h:mm A\",L:\"MM/DD/YYYY\",LL:\"MMMM D YYYY\",LLL:\"MMMM D YYYY LT\",LLLL:\"dddd, MMMM D YYYY LT\"},meridiem:function(a,b,c){return a>11?c?\"pm\":\"PM\":c?\"am\":\"AM\"},calendar:{sameDay:\"[Today at] LT\",nextDay:\"[Tomorrow at] LT\",nextWeek:\"dddd [at] LT\",lastDay:\"[Yesterday at] LT\",lastWeek:\"[last] dddd [at] LT\",sameElse:\"L\"},relativeTime:{future:\"in %s\",past:\"%s ago\",s:\"a few seconds\",m:\"a minute\",mm:\"%d minutes\",h:\"an hour\",hh:\"%d hours\",d:\"a day\",dd:\"%d days\",M:\"a month\",MM:\"%d months\",y:\"a year\",yy:\"%d years\"},ordinal:function(a){var b=a%10;return~~(a%100/10)===1?\"th\":b===1?\"st\":b===2?\"nd\":b===3?\"rd\":\"th\"}}),b.fn=H.prototype={clone:function(){return b(this)},valueOf:function(){return+this._d},unix:function(){return Math.floor(+this._d/1e3)},toString:function(){return this._d.toString()},toDate:function(){return this._d},toArray:function(){var a=this;return[a.year(),a.month(),a.date(),a.hours(),a.minutes(),a.seconds(),a.milliseconds(),!!this._isUTC]},isValid:function(){return this._a?this._a[8]!=null?!!this._a[8]:!N(this._a,(this._a[7]?b.utc(this._a):b(this._a)).toArray()):!isNaN(this._d.getTime())},utc:function(){return this._isUTC=!0,this},local:function(){return this._isUTC=!1,this},format:function(a){return T(this,a?a:b.defaultFormat)},add:function(a,c){var d=c?b.duration(+c,a):b.duration(a);return L(this,d,1),this},subtract:function(a,c){var d=c?b.duration(+c,a):b.duration(a);return L(this,d,-1),this},diff:function(a,c,e){var f=this._isUTC?b(a).utc():b(a).local(),g=(this.zone()-f.zone())*6e4,h=this._d-f._d-g,i=this.year()-f.year(),j=this.month()-f.month(),k=this.date()-f.date(),l;return c===\"months\"?l=i*12+j+k/30:c===\"years\"?l=i+(j+k/30)/12:l=c===\"seconds\"?h/1e3:c===\"minutes\"?h/6e4:c===\"hours\"?h/36e5:c===\"days\"?h/864e5:c===\"weeks\"?h/6048e5:h,e?l:d(l)},from:function(a,c){return b.duration(this.diff(a)).lang(this._lang).humanize(!c)},fromNow:function(a){return this.from(b(),a)},calendar:function(){var a=this.diff(b().sod(),\"days\",!0),c=this.lang().calendar,d=c.sameElse,e=a<-6?d:a<-1?c.lastWeek:a<0?c.lastDay:a<1?c.sameDay:a<2?c.nextDay:a<7?c.nextWeek:d;return this.format(typeof e==\"function\"?e.apply(this):e)},isLeapYear:function(){var a=this.year();return a%4===0&&a%100!==0||a%400===0},isDST:function(){return this.zone()<b([this.year()]).zone()||this.zone()<b([this.year(),5]).zone()},day:function(a){var b=this._isUTC?this._d.getUTCDay():this._d.getDay();return a==null?b:this.add({d:a-b})},startOf:function(a){switch(a.replace(/s$/,\"\")){case\"year\":this.month(0);case\"month\":this.date(1);case\"day\":this.hours(0);case\"hour\":this.minutes(0);case\"minute\":this.seconds(0);case\"second\":this.milliseconds(0)}return this},endOf:function(a){return this.startOf(a).add(a.replace(/s?$/,\"s\"),1).subtract(\"ms\",1)},sod:function(){return this.clone().startOf(\"day\")},eod:function(){return this.clone().endOf(\"day\")},zone:function(){return this._isUTC?0:this._d.getTimezoneOffset()},daysInMonth:function(){return b.utc([this.year(),this.month()+1,0]).date()},lang:function(b){return b===a?Q(this):(this._lang=b,this)}};for(e=0;e<y.length;e++)_(y[e].toLowerCase(),y[e]);_(\"year\",\"FullYear\"),b.duration.fn=I.prototype={weeks:function(){return J(this.days()/7)},valueOf:function(){return this._milliseconds+this._days*864e5+this._months*2592e6},humanize:function(a){var b=+this,c=this.lang().relativeTime,d=$(b,!a,this.lang()),e=b<=0?c.past:c.future;return a&&(typeof e==\"function\"?d=e(d):d=e.replace(/%s/i,d)),d},lang:b.fn.lang};for(e in z)z.hasOwnProperty(e)&&(bb(e,z[e]),ab(e.toLowerCase()));bb(\"Weeks\",6048e5),h&&(module.exports=b),typeof ender==\"undefined\"&&(this.moment=b),typeof define==\"function\"&&define.amd&&define(\"moment\",[],function(){return b})}).call(this);",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/assets/javascripts/moment.js",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 1849,
+                "endLine": 6,
+                "snippet": {
+                  "text": "(function(a){function E(a,b,c,d){var e=c.lang();return e[a].call?e[a](c,d):e[a][b]}function F(a,b){return function(c){return K(a.call(this,c),b)}}function G(a){return function(b){var c=a.call(this,b);return c+this.lang().ordinal(c)}}function H(a,b,c){this._d=a,this._isUTC=!!b,this._a=a._a||null,this._lang=c||!1}function I(a){var b=this._data={},c=a.years||a.y||0,d=a.months||a.M||0,e=a.weeks||a.w||0,f=a.days||a.d||0,g=a.hours||a.h||0,h=a.minutes||a.m||0,i=a.seconds||a.s||0,j=a.milliseconds||a.ms||0;this._milliseconds=j+i*1e3+h*6e4+g*36e5,this._days=f+e*7,this._months=d+c*12,b.milliseconds=j%1e3,i+=J(j/1e3),b.seconds=i%60,h+=J(i/60),b.minutes=h%60,g+=J(h/60),b.hours=g%24,f+=J(g/24),f+=e*7,b.days=f%30,d+=J(f/30),b.months=d%12,c+=J(d/12),b.years=c,this._lang=!1}function J(a){return a<0?Math.ceil(a):Math.floor(a)}function K(a,b){var c=a+\"\";while(c.length<b)c=\"0\"+c;return c}function L(a,b,c){var d=b._milliseconds,e=b._days,f=b._months,g;d&&a._d.setTime(+a+d*c),e&&a.date(a.date()+e*c),f&&(g=a.date(),a.date(1).month(a.month()+f*c).date(Math.min(g,a.daysInMonth())))}function M(a){return Object.prototype.toString.call(a)===\"[object Array]\"}function N(a,b){var c=Math.min(a.length,b.length),d=Math.abs(a.length-b.length),e=0,f;for(f=0;f<c;f++)~~a[f]!==~~b[f]&&e++;return e+d}function O(a,b,c,d){var e,f,g=[];for(e=0;e<7;e++)g[e]=a[e]=a[e]==null?e===2?1:0:a[e];return a[7]=g[7]=b,a[8]!=null&&(g[8]=a[8]),a[3]+=c||0,a[4]+=d||0,f=new Date(0),b?(f.setUTCFullYear(a[0],a[1],a[2]),f.setUTCHours(a[3],a[4],a[5],a[6])):(f.setFullYear(a[0],a[1],a[2]),f.setHours(a[3],a[4],a[5],a[6])),f._a=g,f}function P(a,c){var d,e,g=[];!c&&h&&(c=require(\"./lang/\"+a));for(d=0;d<i.length;d++)c[i[d]]=c[i[d]]||f.en[i[d]];for(d=0;d<12;d++)e=b([2e3,d]),g[d]=new RegExp(\"^\"+(c.months[d]||c.months(e,\"\"))+\"|^\"+(c.monthsShort[d]||c.monthsShort(e,\"\")).replace(\".\",\"\"),\"i\");return c.monthsParse=c.monthsParse||g,f[a]=c,c}function Q(a){var c=typeof a==\"string\"&&a||a&&a._lang||null;return c?f[c]||P(c):b}function R(a){return a.match(/\\[.*\\]/)?a.replace(/^\\[|\\]$/g,\"\"):a.replace(/\\\\/g,\"\")}function S(a){var b=a.match(k),c,d;for(c=0,d=b.length;c<d;c++)D[b[c]]?b[c]=D[b[c]]:b[c]=R(b[c]);return function(e){var f=\"\";for(c=0;c<d;c++)f+=typeof b[c].call==\"function\"?b[c].call(e,a):b[c];return f}}function T(a,b){function d(b){return a.lang().longDateFormat[b]||b}var c=5;while(c--&&l.test(b))b=b.replace(l,d);return A[b]||(A[b]=S(b)),A[b](a)}function U(a){switch(a){case\"DDDD\":return p;case\"YYYY\":return q;case\"S\":case\"SS\":case\"SSS\":case\"DDD\":return o;case\"MMM\":case\"MMMM\":case\"dd\":case\"ddd\":case\"dddd\":case\"a\":case\"A\":return r;case\"Z\":case\"ZZ\":return s;case\"T\":return t;case\"MM\":case\"DD\":case\"YY\":case\"HH\":case\"hh\":case\"mm\":case\"ss\":case\"M\":case\"D\":case\"d\":case\"H\":case\"h\":case\"m\":case\"s\":return n;default:return new RegExp(a.replace(\"\\\\\",\"\"))}}function V(a,b,c,d){var e,f;switch(a){case\"M\":case\"MM\":c[1]=b==null?0:~~b-1;break;case\"MMM\":case\"MMMM\":for(e=0;e<12;e++)if(Q().monthsParse[e].test(b)){c[1]=e,f=!0;break}f||(c[8]=!1);break;case\"D\":case\"DD\":case\"DDD\":case\"DDDD\":b!=null&&(c[2]=~~b);break;case\"YY\":c[0]=~~b+(~~b>70?1900:2e3);break;case\"YYYY\":c[0]=~~Math.abs(b);break;case\"a\":case\"A\":d.isPm=(b+\"\").toLowerCase()===\"pm\";break;case\"H\":case\"HH\":case\"h\":case\"hh\":c[3]=~~b;break;case\"m\":case\"mm\":c[4]=~~b;break;case\"s\":case\"ss\":c[5]=~~b;break;case\"S\":case\"SS\":case\"SSS\":c[6]=~~((\"0.\"+b)*1e3);break;case\"Z\":case\"ZZ\":d.isUTC=!0,e=(b+\"\").match(x),e&&e[1]&&(d.tzh=~~e[1]),e&&e[2]&&(d.tzm=~~e[2]),e&&e[0]===\"+\"&&(d.tzh=-d.tzh,d.tzm=-d.tzm)}b==null&&(c[8]=!1)}function W(a,b){var c=[0,0,1,0,0,0,0],d={tzh:0,tzm:0},e=b.match(k),f,g;for(f=0;f<e.length;f++)g=(U(e[f]).exec(a)||[])[0],g&&(a=a.slice(a.indexOf(g)+g.length)),D[e[f]]&&V(e[f],g,c,d);return d.isPm&&c[3]<12&&(c[3]+=12),d.isPm===!1&&c[3]===12&&(c[3]=0),O(c,d.isUTC,d.tzh,d.tzm)}function X(a,b){var c,d=a.match(m)||[],e,f=99,g,h,i;for(g=0;g<b.length;g++)h=W(a,b[g]),e=T(new H(h),b[g]).match(m)||[],i=N(d,e),i<f&&(f=i,c=h);return c}function Y(a){var b=\"YYYY-MM-DDT\",c;if(u.exec(a)){for(c=0;c<4;c++)if(w[c][1].exec(a)){b+=w[c][0];break}return s.exec(a)?W(a,b+\" Z\"):W(a,b)}return new Date(a)}function Z(a,b,c,d,e){var f=e.relativeTime[a];return typeof f==\"function\"?f(b||1,!!c,a,d):f.replace(/%d/i,b||1)}function $(a,b,c){var e=d(Math.abs(a)/1e3),f=d(e/60),g=d(f/60),h=d(g/24),i=d(h/365),j=e<45&&[\"s\",e]||f===1&&[\"m\"]||f<45&&[\"mm\",f]||g===1&&[\"h\"]||g<22&&[\"hh\",g]||h===1&&[\"d\"]||h<=25&&[\"dd\",h]||h<=45&&[\"M\"]||h<345&&[\"MM\",d(h/30)]||i===1&&[\"y\"]||[\"yy\",i];return j[2]=b,j[3]=a>0,j[4]=c,Z.apply({},j)}function _(a,c){b.fn[a]=function(a){var b=this._isUTC?\"UTC\":\"\";return a!=null?(this._d[\"set\"+b+c](a),this):this._d[\"get\"+b+c]()}}function ab(a){b.duration.fn[a]=function(){return this._data[a]}}function bb(a,c){b.duration.fn[\"as\"+a]=function(){return+this/c}}var b,c=\"1.7.2\",d=Math.round,e,f={},g=\"en\",h=typeof module!=\"undefined\"&&module.exports,i=\"months|monthsShort|weekdays|weekdaysShort|weekdaysMin|longDateFormat|calendar|relativeTime|ordinal|meridiem\".split(\"|\"),j=/^\\/?Date\\((\\-?\\d+)/i,k=/(\\[[^\\[]*\\])|(\\\\)?(Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|YYYY|YY|a|A|hh?|HH?|mm?|ss?|SS?S?|zz?|ZZ?|.)/g,l=/(\\[[^\\[]*\\])|(\\\\)?(LT|LL?L?L?)/g,m=/([0-9a-zA-Z\\u00A0-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFEF]+)/gi,n=/\\d\\d?/,o=/\\d{1,3}/,p=/\\d{3}/,q=/\\d{1,4}/,r=/[0-9a-z\\u00A0-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFEF]+/i,s=/Z|[\\+\\-]\\d\\d:?\\d\\d/i,t=/T/i,u=/^\\s*\\d{4}-\\d\\d-\\d\\d(T(\\d\\d(:\\d\\d(:\\d\\d(\\.\\d\\d?\\d?)?)?)?)?([\\+\\-]\\d\\d:?\\d\\d)?)?/,v=\"YYYY-MM-DDTHH:mm:ssZ\",w=[[\"HH:mm:ss.S\",/T\\d\\d:\\d\\d:\\d\\d\\.\\d{1,3}/],[\"HH:mm:ss\",/T\\d\\d:\\d\\d:\\d\\d/],[\"HH:mm\",/T\\d\\d:\\d\\d/],[\"HH\",/T\\d\\d/]],x=/([\\+\\-]|\\d\\d)/gi,y=\"Month|Date|Hours|Minutes|Seconds|Milliseconds\".split(\"|\"),z={Milliseconds:1,Seconds:1e3,Minutes:6e4,Hours:36e5,Days:864e5,Months:2592e6,Years:31536e6},A={},B=\"DDD w M D d\".split(\" \"),C=\"M D H h m s w\".split(\" \"),D={M:function(){return this.month()+1},MMM:function(a){return E(\"monthsShort\",this.month(),this,a)},MMMM:function(a){return E(\"months\",this.month(),this,a)},D:function(){return this.date()},DDD:function(){var a=new Date(this.year(),this.month(),this.date()),b=new Date(this.year(),0,1);return~~((a-b)/864e5+1.5)},d:function(){return this.day()},dd:function(a){return E(\"weekdaysMin\",this.day(),this,a)},ddd:function(a){return E(\"weekdaysShort\",this.day(),this,a)},dddd:function(a){return E(\"weekdays\",this.day(),this,a)},w:function(){var a=new Date(this.year(),this.month(),this.date()-this.day()+5),b=new Date(a.getFullYear(),0,4);return~~((a-b)/864e5/7+1.5)},YY:function(){return K(this.year()%100,2)},YYYY:function(){return K(this.year(),4)},a:function(){return this.lang().meridiem(this.hours(),this.minutes(),!0)},A:function(){return this.lang().meridiem(this.hours(),this.minutes(),!1)},H:function(){return this.hours()},h:function(){return this.hours()%12||12},m:function(){return this.minutes()},s:function(){return this.seconds()},S:function(){return~~(this.milliseconds()/100)},SS:function(){return K(~~(this.milliseconds()/10),2)},SSS:function(){return K(this.milliseconds(),3)},Z:function(){var a=-this.zone(),b=\"+\";return a<0&&(a=-a,b=\"-\"),b+K(~~(a/60),2)+\":\"+K(~~a%60,2)},ZZ:function(){var a=-this.zone(),b=\"+\";return a<0&&(a=-a,b=\"-\"),b+K(~~(10*a/6),4)}};while(B.length)e=B.pop(),D[e+\"o\"]=G(D[e]);while(C.length)e=C.pop(),D[e+e]=F(D[e],2);D.DDDD=F(D.DDD,3),b=function(c,d){if(c===null||c===\"\")return null;var e,f;return b.isMoment(c)?new H(new Date(+c._d),c._isUTC,c._lang):(d?M(d)?e=X(c,d):e=W(c,d):(f=j.exec(c),e=c===a?new Date:f?new Date(+f[1]):c instanceof Date?c:M(c)?O(c):typeof c==\"string\"?Y(c):new Date(c)),new H(e))},b.utc=function(a,c){return M(a)?new H(O(a,!0),!0):(typeof a==\"string\"&&!s.exec(a)&&(a+=\" +0000\",c&&(c+=\" Z\")),b(a,c).utc())},b.unix=function(a){return b(a*1e3)},b.duration=function(a,c){var d=b.isDuration(a),e=typeof a==\"number\",f=d?a._data:e?{}:a,g;return e&&(c?f[c]=a:f.milliseconds=a),g=new I(f),d&&(g._lang=a._lang),g},b.humanizeDuration=function(a,c,d){return b.duration(a,c===!0?null:c).humanize(c===!0?!0:d)},b.version=c,b.defaultFormat=v,b.lang=function(a,c){var d;if(!a)return g;(c||!f[a])&&P(a,c);if(f[a]){for(d=0;d<i.length;d++)b[i[d]]=f[a][i[d]];b.monthsParse=f[a].monthsParse,g=a}},b.langData=Q,b.isMoment=function(a){return a instanceof H},b.isDuration=function(a){return a instanceof I},b.lang(\"en\",{months:\"January_February_March_April_May_June_July_August_September_October_November_December\".split(\"_\"),monthsShort:\"Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec\".split(\"_\"),weekdays:\"Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday\".split(\"_\"),weekdaysShort:\"Sun_Mon_Tue_Wed_Thu_Fri_Sat\".split(\"_\"),weekdaysMin:\"Su_Mo_Tu_We_Th_Fr_Sa\".split(\"_\"),longDateFormat:{LT:\"h:mm A\",L:\"MM/DD/YYYY\",LL:\"MMMM D YYYY\",LLL:\"MMMM D YYYY LT\",LLLL:\"dddd, MMMM D YYYY LT\"},meridiem:function(a,b,c){return a>11?c?\"pm\":\"PM\":c?\"am\":\"AM\"},calendar:{sameDay:\"[Today at] LT\",nextDay:\"[Tomorrow at] LT\",nextWeek:\"dddd [at] LT\",lastDay:\"[Yesterday at] LT\",lastWeek:\"[last] dddd [at] LT\",sameElse:\"L\"},relativeTime:{future:\"in %s\",past:\"%s ago\",s:\"a few seconds\",m:\"a minute\",mm:\"%d minutes\",h:\"an hour\",hh:\"%d hours\",d:\"a day\",dd:\"%d days\",M:\"a month\",MM:\"%d months\",y:\"a year\",yy:\"%d years\"},ordinal:function(a){var b=a%10;return~~(a%100/10)===1?\"th\":b===1?\"st\":b===2?\"nd\":b===3?\"rd\":\"th\"}}),b.fn=H.prototype={clone:function(){return b(this)},valueOf:function(){return+this._d},unix:function(){return Math.floor(+this._d/1e3)},toString:function(){return this._d.toString()},toDate:function(){return this._d},toArray:function(){var a=this;return[a.year(),a.month(),a.date(),a.hours(),a.minutes(),a.seconds(),a.milliseconds(),!!this._isUTC]},isValid:function(){return this._a?this._a[8]!=null?!!this._a[8]:!N(this._a,(this._a[7]?b.utc(this._a):b(this._a)).toArray()):!isNaN(this._d.getTime())},utc:function(){return this._isUTC=!0,this},local:function(){return this._isUTC=!1,this},format:function(a){return T(this,a?a:b.defaultFormat)},add:function(a,c){var d=c?b.duration(+c,a):b.duration(a);return L(this,d,1),this},subtract:function(a,c){var d=c?b.duration(+c,a):b.duration(a);return L(this,d,-1),this},diff:function(a,c,e){var f=this._isUTC?b(a).utc():b(a).local(),g=(this.zone()-f.zone())*6e4,h=this._d-f._d-g,i=this.year()-f.year(),j=this.month()-f.month(),k=this.date()-f.date(),l;return c===\"months\"?l=i*12+j+k/30:c===\"years\"?l=i+(j+k/30)/12:l=c===\"seconds\"?h/1e3:c===\"minutes\"?h/6e4:c===\"hours\"?h/36e5:c===\"days\"?h/864e5:c===\"weeks\"?h/6048e5:h,e?l:d(l)},from:function(a,c){return b.duration(this.diff(a)).lang(this._lang).humanize(!c)},fromNow:function(a){return this.from(b(),a)},calendar:function(){var a=this.diff(b().sod(),\"days\",!0),c=this.lang().calendar,d=c.sameElse,e=a<-6?d:a<-1?c.lastWeek:a<0?c.lastDay:a<1?c.sameDay:a<2?c.nextDay:a<7?c.nextWeek:d;return this.format(typeof e==\"function\"?e.apply(this):e)},isLeapYear:function(){var a=this.year();return a%4===0&&a%100!==0||a%400===0},isDST:function(){return this.zone()<b([this.year()]).zone()||this.zone()<b([this.year(),5]).zone()},day:function(a){var b=this._isUTC?this._d.getUTCDay():this._d.getDay();return a==null?b:this.add({d:a-b})},startOf:function(a){switch(a.replace(/s$/,\"\")){case\"year\":this.month(0);case\"month\":this.date(1);case\"day\":this.hours(0);case\"hour\":this.minutes(0);case\"minute\":this.seconds(0);case\"second\":this.milliseconds(0)}return this},endOf:function(a){return this.startOf(a).add(a.replace(/s?$/,\"s\"),1).subtract(\"ms\",1)},sod:function(){return this.clone().startOf(\"day\")},eod:function(){return this.clone().endOf(\"day\")},zone:function(){return this._isUTC?0:this._d.getTimezoneOffset()},daysInMonth:function(){return b.utc([this.year(),this.month()+1,0]).date()},lang:function(b){return b===a?Q(this):(this._lang=b,this)}};for(e=0;e<y.length;e++)_(y[e].toLowerCase(),y[e]);_(\"year\",\"FullYear\"),b.duration.fn=I.prototype={weeks:function(){return J(this.days()/7)},valueOf:function(){return this._milliseconds+this._days*864e5+this._months*2592e6},humanize:function(a){var b=+this,c=this.lang().relativeTime,d=$(b,!a,this.lang()),e=b<=0?c.past:c.future;return a&&(typeof e==\"function\"?d=e(d):d=e.replace(/%s/i,d)),d},lang:b.fn.lang};for(e in z)z.hasOwnProperty(e)&&(bb(e,z[e]),ab(e.toLowerCase()));bb(\"Weeks\",6048e5),h&&(module.exports=b),typeof ender==\"undefined\"&&(this.moment=b),typeof define==\"function\"&&define.amd&&define(\"moment\",[],function(){return b})}).call(this);"
+                },
+                "startColumn": 1739,
+                "startLine": 6
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "RegExp() called with a `a` function argument, this might allow an attacker to cause a Regular Expression Denial-of-Service (ReDoS) within your application as RegExP blocks the main thread. For this reason, it is recommended to use hardcoded regexes instead. If your regex is run on user-controlled input, consider performing input validation or use a regex checking/sanitization library such as https://www.npmjs.com/package/recheck to verify that the regex does not appear vulnerable to ReDoS."
+        },
+        "properties": {},
+        "ruleId": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp"
+      }
+    },
+    {
+      "id": "f6020558-be0e-4314-ad4e-d4ab0dedd0f5",
+      "tool": "Semgrep OSS",
+      "rule_id": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
+      "rule_name": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
+      "file_path": "app/assets/javascripts/moment.js",
+      "line_number": 6,
+      "column_number": 1739,
+      "end_line": 6,
+      "end_column": 1849,
+      "severity": "warning",
+      "message": "RegExp() called with a `c` function argument, this might allow an attacker to cause a Regular Expression Denial-of-Service (ReDoS) within your application as RegExP blocks the main thread. For this reason, it is recommended to use hardcoded regexes instead. If your regex is run on user-controlled input, consider performing input validation or use a regex checking/sanitization library such as https://www.npmjs.com/package/recheck to verify that the regex does not appear vulnerable to ReDoS.",
+      "snippet": "(function(a){function E(a,b,c,d){var e=c.lang();return e[a].call?e[a](c,d):e[a][b]}function F(a,b){return function(c){return K(a.call(this,c),b)}}function G(a){return function(b){var c=a.call(this,b);return c+this.lang().ordinal(c)}}function H(a,b,c){this._d=a,this._isUTC=!!b,this._a=a._a||null,this._lang=c||!1}function I(a){var b=this._data={},c=a.years||a.y||0,d=a.months||a.M||0,e=a.weeks||a.w||0,f=a.days||a.d||0,g=a.hours||a.h||0,h=a.minutes||a.m||0,i=a.seconds||a.s||0,j=a.milliseconds||a.ms||0;this._milliseconds=j+i*1e3+h*6e4+g*36e5,this._days=f+e*7,this._months=d+c*12,b.milliseconds=j%1e3,i+=J(j/1e3),b.seconds=i%60,h+=J(i/60),b.minutes=h%60,g+=J(h/60),b.hours=g%24,f+=J(g/24),f+=e*7,b.days=f%30,d+=J(f/30),b.months=d%12,c+=J(d/12),b.years=c,this._lang=!1}function J(a){return a<0?Math.ceil(a):Math.floor(a)}function K(a,b){var c=a+\"\";while(c.length<b)c=\"0\"+c;return c}function L(a,b,c){var d=b._milliseconds,e=b._days,f=b._months,g;d&&a._d.setTime(+a+d*c),e&&a.date(a.date()+e*c),f&&(g=a.date(),a.date(1).month(a.month()+f*c).date(Math.min(g,a.daysInMonth())))}function M(a){return Object.prototype.toString.call(a)===\"[object Array]\"}function N(a,b){var c=Math.min(a.length,b.length),d=Math.abs(a.length-b.length),e=0,f;for(f=0;f<c;f++)~~a[f]!==~~b[f]&&e++;return e+d}function O(a,b,c,d){var e,f,g=[];for(e=0;e<7;e++)g[e]=a[e]=a[e]==null?e===2?1:0:a[e];return a[7]=g[7]=b,a[8]!=null&&(g[8]=a[8]),a[3]+=c||0,a[4]+=d||0,f=new Date(0),b?(f.setUTCFullYear(a[0],a[1],a[2]),f.setUTCHours(a[3],a[4],a[5],a[6])):(f.setFullYear(a[0],a[1],a[2]),f.setHours(a[3],a[4],a[5],a[6])),f._a=g,f}function P(a,c){var d,e,g=[];!c&&h&&(c=require(\"./lang/\"+a));for(d=0;d<i.length;d++)c[i[d]]=c[i[d]]||f.en[i[d]];for(d=0;d<12;d++)e=b([2e3,d]),g[d]=new RegExp(\"^\"+(c.months[d]||c.months(e,\"\"))+\"|^\"+(c.monthsShort[d]||c.monthsShort(e,\"\")).replace(\".\",\"\"),\"i\");return c.monthsParse=c.monthsParse||g,f[a]=c,c}function Q(a){var c=typeof a==\"string\"&&a||a&&a._lang||null;return c?f[c]||P(c):b}function R(a){return a.match(/\\[.*\\]/)?a.replace(/^\\[|\\]$/g,\"\"):a.replace(/\\\\/g,\"\")}function S(a){var b=a.match(k),c,d;for(c=0,d=b.length;c<d;c++)D[b[c]]?b[c]=D[b[c]]:b[c]=R(b[c]);return function(e){var f=\"\";for(c=0;c<d;c++)f+=typeof b[c].call==\"function\"?b[c].call(e,a):b[c];return f}}function T(a,b){function d(b){return a.lang().longDateFormat[b]||b}var c=5;while(c--&&l.test(b))b=b.replace(l,d);return A[b]||(A[b]=S(b)),A[b](a)}function U(a){switch(a){case\"DDDD\":return p;case\"YYYY\":return q;case\"S\":case\"SS\":case\"SSS\":case\"DDD\":return o;case\"MMM\":case\"MMMM\":case\"dd\":case\"ddd\":case\"dddd\":case\"a\":case\"A\":return r;case\"Z\":case\"ZZ\":return s;case\"T\":return t;case\"MM\":case\"DD\":case\"YY\":case\"HH\":case\"hh\":case\"mm\":case\"ss\":case\"M\":case\"D\":case\"d\":case\"H\":case\"h\":case\"m\":case\"s\":return n;default:return new RegExp(a.replace(\"\\\\\",\"\"))}}function V(a,b,c,d){var e,f;switch(a){case\"M\":case\"MM\":c[1]=b==null?0:~~b-1;break;case\"MMM\":case\"MMMM\":for(e=0;e<12;e++)if(Q().monthsParse[e].test(b)){c[1]=e,f=!0;break}f||(c[8]=!1);break;case\"D\":case\"DD\":case\"DDD\":case\"DDDD\":b!=null&&(c[2]=~~b);break;case\"YY\":c[0]=~~b+(~~b>70?1900:2e3);break;case\"YYYY\":c[0]=~~Math.abs(b);break;case\"a\":case\"A\":d.isPm=(b+\"\").toLowerCase()===\"pm\";break;case\"H\":case\"HH\":case\"h\":case\"hh\":c[3]=~~b;break;case\"m\":case\"mm\":c[4]=~~b;break;case\"s\":case\"ss\":c[5]=~~b;break;case\"S\":case\"SS\":case\"SSS\":c[6]=~~((\"0.\"+b)*1e3);break;case\"Z\":case\"ZZ\":d.isUTC=!0,e=(b+\"\").match(x),e&&e[1]&&(d.tzh=~~e[1]),e&&e[2]&&(d.tzm=~~e[2]),e&&e[0]===\"+\"&&(d.tzh=-d.tzh,d.tzm=-d.tzm)}b==null&&(c[8]=!1)}function W(a,b){var c=[0,0,1,0,0,0,0],d={tzh:0,tzm:0},e=b.match(k),f,g;for(f=0;f<e.length;f++)g=(U(e[f]).exec(a)||[])[0],g&&(a=a.slice(a.indexOf(g)+g.length)),D[e[f]]&&V(e[f],g,c,d);return d.isPm&&c[3]<12&&(c[3]+=12),d.isPm===!1&&c[3]===12&&(c[3]=0),O(c,d.isUTC,d.tzh,d.tzm)}function X(a,b){var c,d=a.match(m)||[],e,f=99,g,h,i;for(g=0;g<b.length;g++)h=W(a,b[g]),e=T(new H(h),b[g]).match(m)||[],i=N(d,e),i<f&&(f=i,c=h);return c}function Y(a){var b=\"YYYY-MM-DDT\",c;if(u.exec(a)){for(c=0;c<4;c++)if(w[c][1].exec(a)){b+=w[c][0];break}return s.exec(a)?W(a,b+\" Z\"):W(a,b)}return new Date(a)}function Z(a,b,c,d,e){var f=e.relativeTime[a];return typeof f==\"function\"?f(b||1,!!c,a,d):f.replace(/%d/i,b||1)}function $(a,b,c){var e=d(Math.abs(a)/1e3),f=d(e/60),g=d(f/60),h=d(g/24),i=d(h/365),j=e<45&&[\"s\",e]||f===1&&[\"m\"]||f<45&&[\"mm\",f]||g===1&&[\"h\"]||g<22&&[\"hh\",g]||h===1&&[\"d\"]||h<=25&&[\"dd\",h]||h<=45&&[\"M\"]||h<345&&[\"MM\",d(h/30)]||i===1&&[\"y\"]||[\"yy\",i];return j[2]=b,j[3]=a>0,j[4]=c,Z.apply({},j)}function _(a,c){b.fn[a]=function(a){var b=this._isUTC?\"UTC\":\"\";return a!=null?(this._d[\"set\"+b+c](a),this):this._d[\"get\"+b+c]()}}function ab(a){b.duration.fn[a]=function(){return this._data[a]}}function bb(a,c){b.duration.fn[\"as\"+a]=function(){return+this/c}}var b,c=\"1.7.2\",d=Math.round,e,f={},g=\"en\",h=typeof module!=\"undefined\"&&module.exports,i=\"months|monthsShort|weekdays|weekdaysShort|weekdaysMin|longDateFormat|calendar|relativeTime|ordinal|meridiem\".split(\"|\"),j=/^\\/?Date\\((\\-?\\d+)/i,k=/(\\[[^\\[]*\\])|(\\\\)?(Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|YYYY|YY|a|A|hh?|HH?|mm?|ss?|SS?S?|zz?|ZZ?|.)/g,l=/(\\[[^\\[]*\\])|(\\\\)?(LT|LL?L?L?)/g,m=/([0-9a-zA-Z\\u00A0-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFEF]+)/gi,n=/\\d\\d?/,o=/\\d{1,3}/,p=/\\d{3}/,q=/\\d{1,4}/,r=/[0-9a-z\\u00A0-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFEF]+/i,s=/Z|[\\+\\-]\\d\\d:?\\d\\d/i,t=/T/i,u=/^\\s*\\d{4}-\\d\\d-\\d\\d(T(\\d\\d(:\\d\\d(:\\d\\d(\\.\\d\\d?\\d?)?)?)?)?([\\+\\-]\\d\\d:?\\d\\d)?)?/,v=\"YYYY-MM-DDTHH:mm:ssZ\",w=[[\"HH:mm:ss.S\",/T\\d\\d:\\d\\d:\\d\\d\\.\\d{1,3}/],[\"HH:mm:ss\",/T\\d\\d:\\d\\d:\\d\\d/],[\"HH:mm\",/T\\d\\d:\\d\\d/],[\"HH\",/T\\d\\d/]],x=/([\\+\\-]|\\d\\d)/gi,y=\"Month|Date|Hours|Minutes|Seconds|Milliseconds\".split(\"|\"),z={Milliseconds:1,Seconds:1e3,Minutes:6e4,Hours:36e5,Days:864e5,Months:2592e6,Years:31536e6},A={},B=\"DDD w M D d\".split(\" \"),C=\"M D H h m s w\".split(\" \"),D={M:function(){return this.month()+1},MMM:function(a){return E(\"monthsShort\",this.month(),this,a)},MMMM:function(a){return E(\"months\",this.month(),this,a)},D:function(){return this.date()},DDD:function(){var a=new Date(this.year(),this.month(),this.date()),b=new Date(this.year(),0,1);return~~((a-b)/864e5+1.5)},d:function(){return this.day()},dd:function(a){return E(\"weekdaysMin\",this.day(),this,a)},ddd:function(a){return E(\"weekdaysShort\",this.day(),this,a)},dddd:function(a){return E(\"weekdays\",this.day(),this,a)},w:function(){var a=new Date(this.year(),this.month(),this.date()-this.day()+5),b=new Date(a.getFullYear(),0,4);return~~((a-b)/864e5/7+1.5)},YY:function(){return K(this.year()%100,2)},YYYY:function(){return K(this.year(),4)},a:function(){return this.lang().meridiem(this.hours(),this.minutes(),!0)},A:function(){return this.lang().meridiem(this.hours(),this.minutes(),!1)},H:function(){return this.hours()},h:function(){return this.hours()%12||12},m:function(){return this.minutes()},s:function(){return this.seconds()},S:function(){return~~(this.milliseconds()/100)},SS:function(){return K(~~(this.milliseconds()/10),2)},SSS:function(){return K(this.milliseconds(),3)},Z:function(){var a=-this.zone(),b=\"+\";return a<0&&(a=-a,b=\"-\"),b+K(~~(a/60),2)+\":\"+K(~~a%60,2)},ZZ:function(){var a=-this.zone(),b=\"+\";return a<0&&(a=-a,b=\"-\"),b+K(~~(10*a/6),4)}};while(B.length)e=B.pop(),D[e+\"o\"]=G(D[e]);while(C.length)e=C.pop(),D[e+e]=F(D[e],2);D.DDDD=F(D.DDD,3),b=function(c,d){if(c===null||c===\"\")return null;var e,f;return b.isMoment(c)?new H(new Date(+c._d),c._isUTC,c._lang):(d?M(d)?e=X(c,d):e=W(c,d):(f=j.exec(c),e=c===a?new Date:f?new Date(+f[1]):c instanceof Date?c:M(c)?O(c):typeof c==\"string\"?Y(c):new Date(c)),new H(e))},b.utc=function(a,c){return M(a)?new H(O(a,!0),!0):(typeof a==\"string\"&&!s.exec(a)&&(a+=\" +0000\",c&&(c+=\" Z\")),b(a,c).utc())},b.unix=function(a){return b(a*1e3)},b.duration=function(a,c){var d=b.isDuration(a),e=typeof a==\"number\",f=d?a._data:e?{}:a,g;return e&&(c?f[c]=a:f.milliseconds=a),g=new I(f),d&&(g._lang=a._lang),g},b.humanizeDuration=function(a,c,d){return b.duration(a,c===!0?null:c).humanize(c===!0?!0:d)},b.version=c,b.defaultFormat=v,b.lang=function(a,c){var d;if(!a)return g;(c||!f[a])&&P(a,c);if(f[a]){for(d=0;d<i.length;d++)b[i[d]]=f[a][i[d]];b.monthsParse=f[a].monthsParse,g=a}},b.langData=Q,b.isMoment=function(a){return a instanceof H},b.isDuration=function(a){return a instanceof I},b.lang(\"en\",{months:\"January_February_March_April_May_June_July_August_September_October_November_December\".split(\"_\"),monthsShort:\"Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec\".split(\"_\"),weekdays:\"Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday\".split(\"_\"),weekdaysShort:\"Sun_Mon_Tue_Wed_Thu_Fri_Sat\".split(\"_\"),weekdaysMin:\"Su_Mo_Tu_We_Th_Fr_Sa\".split(\"_\"),longDateFormat:{LT:\"h:mm A\",L:\"MM/DD/YYYY\",LL:\"MMMM D YYYY\",LLL:\"MMMM D YYYY LT\",LLLL:\"dddd, MMMM D YYYY LT\"},meridiem:function(a,b,c){return a>11?c?\"pm\":\"PM\":c?\"am\":\"AM\"},calendar:{sameDay:\"[Today at] LT\",nextDay:\"[Tomorrow at] LT\",nextWeek:\"dddd [at] LT\",lastDay:\"[Yesterday at] LT\",lastWeek:\"[last] dddd [at] LT\",sameElse:\"L\"},relativeTime:{future:\"in %s\",past:\"%s ago\",s:\"a few seconds\",m:\"a minute\",mm:\"%d minutes\",h:\"an hour\",hh:\"%d hours\",d:\"a day\",dd:\"%d days\",M:\"a month\",MM:\"%d months\",y:\"a year\",yy:\"%d years\"},ordinal:function(a){var b=a%10;return~~(a%100/10)===1?\"th\":b===1?\"st\":b===2?\"nd\":b===3?\"rd\":\"th\"}}),b.fn=H.prototype={clone:function(){return b(this)},valueOf:function(){return+this._d},unix:function(){return Math.floor(+this._d/1e3)},toString:function(){return this._d.toString()},toDate:function(){return this._d},toArray:function(){var a=this;return[a.year(),a.month(),a.date(),a.hours(),a.minutes(),a.seconds(),a.milliseconds(),!!this._isUTC]},isValid:function(){return this._a?this._a[8]!=null?!!this._a[8]:!N(this._a,(this._a[7]?b.utc(this._a):b(this._a)).toArray()):!isNaN(this._d.getTime())},utc:function(){return this._isUTC=!0,this},local:function(){return this._isUTC=!1,this},format:function(a){return T(this,a?a:b.defaultFormat)},add:function(a,c){var d=c?b.duration(+c,a):b.duration(a);return L(this,d,1),this},subtract:function(a,c){var d=c?b.duration(+c,a):b.duration(a);return L(this,d,-1),this},diff:function(a,c,e){var f=this._isUTC?b(a).utc():b(a).local(),g=(this.zone()-f.zone())*6e4,h=this._d-f._d-g,i=this.year()-f.year(),j=this.month()-f.month(),k=this.date()-f.date(),l;return c===\"months\"?l=i*12+j+k/30:c===\"years\"?l=i+(j+k/30)/12:l=c===\"seconds\"?h/1e3:c===\"minutes\"?h/6e4:c===\"hours\"?h/36e5:c===\"days\"?h/864e5:c===\"weeks\"?h/6048e5:h,e?l:d(l)},from:function(a,c){return b.duration(this.diff(a)).lang(this._lang).humanize(!c)},fromNow:function(a){return this.from(b(),a)},calendar:function(){var a=this.diff(b().sod(),\"days\",!0),c=this.lang().calendar,d=c.sameElse,e=a<-6?d:a<-1?c.lastWeek:a<0?c.lastDay:a<1?c.sameDay:a<2?c.nextDay:a<7?c.nextWeek:d;return this.format(typeof e==\"function\"?e.apply(this):e)},isLeapYear:function(){var a=this.year();return a%4===0&&a%100!==0||a%400===0},isDST:function(){return this.zone()<b([this.year()]).zone()||this.zone()<b([this.year(),5]).zone()},day:function(a){var b=this._isUTC?this._d.getUTCDay():this._d.getDay();return a==null?b:this.add({d:a-b})},startOf:function(a){switch(a.replace(/s$/,\"\")){case\"year\":this.month(0);case\"month\":this.date(1);case\"day\":this.hours(0);case\"hour\":this.minutes(0);case\"minute\":this.seconds(0);case\"second\":this.milliseconds(0)}return this},endOf:function(a){return this.startOf(a).add(a.replace(/s?$/,\"s\"),1).subtract(\"ms\",1)},sod:function(){return this.clone().startOf(\"day\")},eod:function(){return this.clone().endOf(\"day\")},zone:function(){return this._isUTC?0:this._d.getTimezoneOffset()},daysInMonth:function(){return b.utc([this.year(),this.month()+1,0]).date()},lang:function(b){return b===a?Q(this):(this._lang=b,this)}};for(e=0;e<y.length;e++)_(y[e].toLowerCase(),y[e]);_(\"year\",\"FullYear\"),b.duration.fn=I.prototype={weeks:function(){return J(this.days()/7)},valueOf:function(){return this._milliseconds+this._days*864e5+this._months*2592e6},humanize:function(a){var b=+this,c=this.lang().relativeTime,d=$(b,!a,this.lang()),e=b<=0?c.past:c.future;return a&&(typeof e==\"function\"?d=e(d):d=e.replace(/%s/i,d)),d},lang:b.fn.lang};for(e in z)z.hasOwnProperty(e)&&(bb(e,z[e]),ab(e.toLowerCase()));bb(\"Weeks\",6048e5),h&&(module.exports=b),typeof ender==\"undefined\"&&(this.moment=b),typeof define==\"function\"&&define.amd&&define(\"moment\",[],function(){return b})}).call(this);",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/assets/javascripts/moment.js",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 1849,
+                "endLine": 6,
+                "snippet": {
+                  "text": "(function(a){function E(a,b,c,d){var e=c.lang();return e[a].call?e[a](c,d):e[a][b]}function F(a,b){return function(c){return K(a.call(this,c),b)}}function G(a){return function(b){var c=a.call(this,b);return c+this.lang().ordinal(c)}}function H(a,b,c){this._d=a,this._isUTC=!!b,this._a=a._a||null,this._lang=c||!1}function I(a){var b=this._data={},c=a.years||a.y||0,d=a.months||a.M||0,e=a.weeks||a.w||0,f=a.days||a.d||0,g=a.hours||a.h||0,h=a.minutes||a.m||0,i=a.seconds||a.s||0,j=a.milliseconds||a.ms||0;this._milliseconds=j+i*1e3+h*6e4+g*36e5,this._days=f+e*7,this._months=d+c*12,b.milliseconds=j%1e3,i+=J(j/1e3),b.seconds=i%60,h+=J(i/60),b.minutes=h%60,g+=J(h/60),b.hours=g%24,f+=J(g/24),f+=e*7,b.days=f%30,d+=J(f/30),b.months=d%12,c+=J(d/12),b.years=c,this._lang=!1}function J(a){return a<0?Math.ceil(a):Math.floor(a)}function K(a,b){var c=a+\"\";while(c.length<b)c=\"0\"+c;return c}function L(a,b,c){var d=b._milliseconds,e=b._days,f=b._months,g;d&&a._d.setTime(+a+d*c),e&&a.date(a.date()+e*c),f&&(g=a.date(),a.date(1).month(a.month()+f*c).date(Math.min(g,a.daysInMonth())))}function M(a){return Object.prototype.toString.call(a)===\"[object Array]\"}function N(a,b){var c=Math.min(a.length,b.length),d=Math.abs(a.length-b.length),e=0,f;for(f=0;f<c;f++)~~a[f]!==~~b[f]&&e++;return e+d}function O(a,b,c,d){var e,f,g=[];for(e=0;e<7;e++)g[e]=a[e]=a[e]==null?e===2?1:0:a[e];return a[7]=g[7]=b,a[8]!=null&&(g[8]=a[8]),a[3]+=c||0,a[4]+=d||0,f=new Date(0),b?(f.setUTCFullYear(a[0],a[1],a[2]),f.setUTCHours(a[3],a[4],a[5],a[6])):(f.setFullYear(a[0],a[1],a[2]),f.setHours(a[3],a[4],a[5],a[6])),f._a=g,f}function P(a,c){var d,e,g=[];!c&&h&&(c=require(\"./lang/\"+a));for(d=0;d<i.length;d++)c[i[d]]=c[i[d]]||f.en[i[d]];for(d=0;d<12;d++)e=b([2e3,d]),g[d]=new RegExp(\"^\"+(c.months[d]||c.months(e,\"\"))+\"|^\"+(c.monthsShort[d]||c.monthsShort(e,\"\")).replace(\".\",\"\"),\"i\");return c.monthsParse=c.monthsParse||g,f[a]=c,c}function Q(a){var c=typeof a==\"string\"&&a||a&&a._lang||null;return c?f[c]||P(c):b}function R(a){return a.match(/\\[.*\\]/)?a.replace(/^\\[|\\]$/g,\"\"):a.replace(/\\\\/g,\"\")}function S(a){var b=a.match(k),c,d;for(c=0,d=b.length;c<d;c++)D[b[c]]?b[c]=D[b[c]]:b[c]=R(b[c]);return function(e){var f=\"\";for(c=0;c<d;c++)f+=typeof b[c].call==\"function\"?b[c].call(e,a):b[c];return f}}function T(a,b){function d(b){return a.lang().longDateFormat[b]||b}var c=5;while(c--&&l.test(b))b=b.replace(l,d);return A[b]||(A[b]=S(b)),A[b](a)}function U(a){switch(a){case\"DDDD\":return p;case\"YYYY\":return q;case\"S\":case\"SS\":case\"SSS\":case\"DDD\":return o;case\"MMM\":case\"MMMM\":case\"dd\":case\"ddd\":case\"dddd\":case\"a\":case\"A\":return r;case\"Z\":case\"ZZ\":return s;case\"T\":return t;case\"MM\":case\"DD\":case\"YY\":case\"HH\":case\"hh\":case\"mm\":case\"ss\":case\"M\":case\"D\":case\"d\":case\"H\":case\"h\":case\"m\":case\"s\":return n;default:return new RegExp(a.replace(\"\\\\\",\"\"))}}function V(a,b,c,d){var e,f;switch(a){case\"M\":case\"MM\":c[1]=b==null?0:~~b-1;break;case\"MMM\":case\"MMMM\":for(e=0;e<12;e++)if(Q().monthsParse[e].test(b)){c[1]=e,f=!0;break}f||(c[8]=!1);break;case\"D\":case\"DD\":case\"DDD\":case\"DDDD\":b!=null&&(c[2]=~~b);break;case\"YY\":c[0]=~~b+(~~b>70?1900:2e3);break;case\"YYYY\":c[0]=~~Math.abs(b);break;case\"a\":case\"A\":d.isPm=(b+\"\").toLowerCase()===\"pm\";break;case\"H\":case\"HH\":case\"h\":case\"hh\":c[3]=~~b;break;case\"m\":case\"mm\":c[4]=~~b;break;case\"s\":case\"ss\":c[5]=~~b;break;case\"S\":case\"SS\":case\"SSS\":c[6]=~~((\"0.\"+b)*1e3);break;case\"Z\":case\"ZZ\":d.isUTC=!0,e=(b+\"\").match(x),e&&e[1]&&(d.tzh=~~e[1]),e&&e[2]&&(d.tzm=~~e[2]),e&&e[0]===\"+\"&&(d.tzh=-d.tzh,d.tzm=-d.tzm)}b==null&&(c[8]=!1)}function W(a,b){var c=[0,0,1,0,0,0,0],d={tzh:0,tzm:0},e=b.match(k),f,g;for(f=0;f<e.length;f++)g=(U(e[f]).exec(a)||[])[0],g&&(a=a.slice(a.indexOf(g)+g.length)),D[e[f]]&&V(e[f],g,c,d);return d.isPm&&c[3]<12&&(c[3]+=12),d.isPm===!1&&c[3]===12&&(c[3]=0),O(c,d.isUTC,d.tzh,d.tzm)}function X(a,b){var c,d=a.match(m)||[],e,f=99,g,h,i;for(g=0;g<b.length;g++)h=W(a,b[g]),e=T(new H(h),b[g]).match(m)||[],i=N(d,e),i<f&&(f=i,c=h);return c}function Y(a){var b=\"YYYY-MM-DDT\",c;if(u.exec(a)){for(c=0;c<4;c++)if(w[c][1].exec(a)){b+=w[c][0];break}return s.exec(a)?W(a,b+\" Z\"):W(a,b)}return new Date(a)}function Z(a,b,c,d,e){var f=e.relativeTime[a];return typeof f==\"function\"?f(b||1,!!c,a,d):f.replace(/%d/i,b||1)}function $(a,b,c){var e=d(Math.abs(a)/1e3),f=d(e/60),g=d(f/60),h=d(g/24),i=d(h/365),j=e<45&&[\"s\",e]||f===1&&[\"m\"]||f<45&&[\"mm\",f]||g===1&&[\"h\"]||g<22&&[\"hh\",g]||h===1&&[\"d\"]||h<=25&&[\"dd\",h]||h<=45&&[\"M\"]||h<345&&[\"MM\",d(h/30)]||i===1&&[\"y\"]||[\"yy\",i];return j[2]=b,j[3]=a>0,j[4]=c,Z.apply({},j)}function _(a,c){b.fn[a]=function(a){var b=this._isUTC?\"UTC\":\"\";return a!=null?(this._d[\"set\"+b+c](a),this):this._d[\"get\"+b+c]()}}function ab(a){b.duration.fn[a]=function(){return this._data[a]}}function bb(a,c){b.duration.fn[\"as\"+a]=function(){return+this/c}}var b,c=\"1.7.2\",d=Math.round,e,f={},g=\"en\",h=typeof module!=\"undefined\"&&module.exports,i=\"months|monthsShort|weekdays|weekdaysShort|weekdaysMin|longDateFormat|calendar|relativeTime|ordinal|meridiem\".split(\"|\"),j=/^\\/?Date\\((\\-?\\d+)/i,k=/(\\[[^\\[]*\\])|(\\\\)?(Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|YYYY|YY|a|A|hh?|HH?|mm?|ss?|SS?S?|zz?|ZZ?|.)/g,l=/(\\[[^\\[]*\\])|(\\\\)?(LT|LL?L?L?)/g,m=/([0-9a-zA-Z\\u00A0-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFEF]+)/gi,n=/\\d\\d?/,o=/\\d{1,3}/,p=/\\d{3}/,q=/\\d{1,4}/,r=/[0-9a-z\\u00A0-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFEF]+/i,s=/Z|[\\+\\-]\\d\\d:?\\d\\d/i,t=/T/i,u=/^\\s*\\d{4}-\\d\\d-\\d\\d(T(\\d\\d(:\\d\\d(:\\d\\d(\\.\\d\\d?\\d?)?)?)?)?([\\+\\-]\\d\\d:?\\d\\d)?)?/,v=\"YYYY-MM-DDTHH:mm:ssZ\",w=[[\"HH:mm:ss.S\",/T\\d\\d:\\d\\d:\\d\\d\\.\\d{1,3}/],[\"HH:mm:ss\",/T\\d\\d:\\d\\d:\\d\\d/],[\"HH:mm\",/T\\d\\d:\\d\\d/],[\"HH\",/T\\d\\d/]],x=/([\\+\\-]|\\d\\d)/gi,y=\"Month|Date|Hours|Minutes|Seconds|Milliseconds\".split(\"|\"),z={Milliseconds:1,Seconds:1e3,Minutes:6e4,Hours:36e5,Days:864e5,Months:2592e6,Years:31536e6},A={},B=\"DDD w M D d\".split(\" \"),C=\"M D H h m s w\".split(\" \"),D={M:function(){return this.month()+1},MMM:function(a){return E(\"monthsShort\",this.month(),this,a)},MMMM:function(a){return E(\"months\",this.month(),this,a)},D:function(){return this.date()},DDD:function(){var a=new Date(this.year(),this.month(),this.date()),b=new Date(this.year(),0,1);return~~((a-b)/864e5+1.5)},d:function(){return this.day()},dd:function(a){return E(\"weekdaysMin\",this.day(),this,a)},ddd:function(a){return E(\"weekdaysShort\",this.day(),this,a)},dddd:function(a){return E(\"weekdays\",this.day(),this,a)},w:function(){var a=new Date(this.year(),this.month(),this.date()-this.day()+5),b=new Date(a.getFullYear(),0,4);return~~((a-b)/864e5/7+1.5)},YY:function(){return K(this.year()%100,2)},YYYY:function(){return K(this.year(),4)},a:function(){return this.lang().meridiem(this.hours(),this.minutes(),!0)},A:function(){return this.lang().meridiem(this.hours(),this.minutes(),!1)},H:function(){return this.hours()},h:function(){return this.hours()%12||12},m:function(){return this.minutes()},s:function(){return this.seconds()},S:function(){return~~(this.milliseconds()/100)},SS:function(){return K(~~(this.milliseconds()/10),2)},SSS:function(){return K(this.milliseconds(),3)},Z:function(){var a=-this.zone(),b=\"+\";return a<0&&(a=-a,b=\"-\"),b+K(~~(a/60),2)+\":\"+K(~~a%60,2)},ZZ:function(){var a=-this.zone(),b=\"+\";return a<0&&(a=-a,b=\"-\"),b+K(~~(10*a/6),4)}};while(B.length)e=B.pop(),D[e+\"o\"]=G(D[e]);while(C.length)e=C.pop(),D[e+e]=F(D[e],2);D.DDDD=F(D.DDD,3),b=function(c,d){if(c===null||c===\"\")return null;var e,f;return b.isMoment(c)?new H(new Date(+c._d),c._isUTC,c._lang):(d?M(d)?e=X(c,d):e=W(c,d):(f=j.exec(c),e=c===a?new Date:f?new Date(+f[1]):c instanceof Date?c:M(c)?O(c):typeof c==\"string\"?Y(c):new Date(c)),new H(e))},b.utc=function(a,c){return M(a)?new H(O(a,!0),!0):(typeof a==\"string\"&&!s.exec(a)&&(a+=\" +0000\",c&&(c+=\" Z\")),b(a,c).utc())},b.unix=function(a){return b(a*1e3)},b.duration=function(a,c){var d=b.isDuration(a),e=typeof a==\"number\",f=d?a._data:e?{}:a,g;return e&&(c?f[c]=a:f.milliseconds=a),g=new I(f),d&&(g._lang=a._lang),g},b.humanizeDuration=function(a,c,d){return b.duration(a,c===!0?null:c).humanize(c===!0?!0:d)},b.version=c,b.defaultFormat=v,b.lang=function(a,c){var d;if(!a)return g;(c||!f[a])&&P(a,c);if(f[a]){for(d=0;d<i.length;d++)b[i[d]]=f[a][i[d]];b.monthsParse=f[a].monthsParse,g=a}},b.langData=Q,b.isMoment=function(a){return a instanceof H},b.isDuration=function(a){return a instanceof I},b.lang(\"en\",{months:\"January_February_March_April_May_June_July_August_September_October_November_December\".split(\"_\"),monthsShort:\"Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec\".split(\"_\"),weekdays:\"Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday\".split(\"_\"),weekdaysShort:\"Sun_Mon_Tue_Wed_Thu_Fri_Sat\".split(\"_\"),weekdaysMin:\"Su_Mo_Tu_We_Th_Fr_Sa\".split(\"_\"),longDateFormat:{LT:\"h:mm A\",L:\"MM/DD/YYYY\",LL:\"MMMM D YYYY\",LLL:\"MMMM D YYYY LT\",LLLL:\"dddd, MMMM D YYYY LT\"},meridiem:function(a,b,c){return a>11?c?\"pm\":\"PM\":c?\"am\":\"AM\"},calendar:{sameDay:\"[Today at] LT\",nextDay:\"[Tomorrow at] LT\",nextWeek:\"dddd [at] LT\",lastDay:\"[Yesterday at] LT\",lastWeek:\"[last] dddd [at] LT\",sameElse:\"L\"},relativeTime:{future:\"in %s\",past:\"%s ago\",s:\"a few seconds\",m:\"a minute\",mm:\"%d minutes\",h:\"an hour\",hh:\"%d hours\",d:\"a day\",dd:\"%d days\",M:\"a month\",MM:\"%d months\",y:\"a year\",yy:\"%d years\"},ordinal:function(a){var b=a%10;return~~(a%100/10)===1?\"th\":b===1?\"st\":b===2?\"nd\":b===3?\"rd\":\"th\"}}),b.fn=H.prototype={clone:function(){return b(this)},valueOf:function(){return+this._d},unix:function(){return Math.floor(+this._d/1e3)},toString:function(){return this._d.toString()},toDate:function(){return this._d},toArray:function(){var a=this;return[a.year(),a.month(),a.date(),a.hours(),a.minutes(),a.seconds(),a.milliseconds(),!!this._isUTC]},isValid:function(){return this._a?this._a[8]!=null?!!this._a[8]:!N(this._a,(this._a[7]?b.utc(this._a):b(this._a)).toArray()):!isNaN(this._d.getTime())},utc:function(){return this._isUTC=!0,this},local:function(){return this._isUTC=!1,this},format:function(a){return T(this,a?a:b.defaultFormat)},add:function(a,c){var d=c?b.duration(+c,a):b.duration(a);return L(this,d,1),this},subtract:function(a,c){var d=c?b.duration(+c,a):b.duration(a);return L(this,d,-1),this},diff:function(a,c,e){var f=this._isUTC?b(a).utc():b(a).local(),g=(this.zone()-f.zone())*6e4,h=this._d-f._d-g,i=this.year()-f.year(),j=this.month()-f.month(),k=this.date()-f.date(),l;return c===\"months\"?l=i*12+j+k/30:c===\"years\"?l=i+(j+k/30)/12:l=c===\"seconds\"?h/1e3:c===\"minutes\"?h/6e4:c===\"hours\"?h/36e5:c===\"days\"?h/864e5:c===\"weeks\"?h/6048e5:h,e?l:d(l)},from:function(a,c){return b.duration(this.diff(a)).lang(this._lang).humanize(!c)},fromNow:function(a){return this.from(b(),a)},calendar:function(){var a=this.diff(b().sod(),\"days\",!0),c=this.lang().calendar,d=c.sameElse,e=a<-6?d:a<-1?c.lastWeek:a<0?c.lastDay:a<1?c.sameDay:a<2?c.nextDay:a<7?c.nextWeek:d;return this.format(typeof e==\"function\"?e.apply(this):e)},isLeapYear:function(){var a=this.year();return a%4===0&&a%100!==0||a%400===0},isDST:function(){return this.zone()<b([this.year()]).zone()||this.zone()<b([this.year(),5]).zone()},day:function(a){var b=this._isUTC?this._d.getUTCDay():this._d.getDay();return a==null?b:this.add({d:a-b})},startOf:function(a){switch(a.replace(/s$/,\"\")){case\"year\":this.month(0);case\"month\":this.date(1);case\"day\":this.hours(0);case\"hour\":this.minutes(0);case\"minute\":this.seconds(0);case\"second\":this.milliseconds(0)}return this},endOf:function(a){return this.startOf(a).add(a.replace(/s?$/,\"s\"),1).subtract(\"ms\",1)},sod:function(){return this.clone().startOf(\"day\")},eod:function(){return this.clone().endOf(\"day\")},zone:function(){return this._isUTC?0:this._d.getTimezoneOffset()},daysInMonth:function(){return b.utc([this.year(),this.month()+1,0]).date()},lang:function(b){return b===a?Q(this):(this._lang=b,this)}};for(e=0;e<y.length;e++)_(y[e].toLowerCase(),y[e]);_(\"year\",\"FullYear\"),b.duration.fn=I.prototype={weeks:function(){return J(this.days()/7)},valueOf:function(){return this._milliseconds+this._days*864e5+this._months*2592e6},humanize:function(a){var b=+this,c=this.lang().relativeTime,d=$(b,!a,this.lang()),e=b<=0?c.past:c.future;return a&&(typeof e==\"function\"?d=e(d):d=e.replace(/%s/i,d)),d},lang:b.fn.lang};for(e in z)z.hasOwnProperty(e)&&(bb(e,z[e]),ab(e.toLowerCase()));bb(\"Weeks\",6048e5),h&&(module.exports=b),typeof ender==\"undefined\"&&(this.moment=b),typeof define==\"function\"&&define.amd&&define(\"moment\",[],function(){return b})}).call(this);"
+                },
+                "startColumn": 1739,
+                "startLine": 6
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "RegExp() called with a `c` function argument, this might allow an attacker to cause a Regular Expression Denial-of-Service (ReDoS) within your application as RegExP blocks the main thread. For this reason, it is recommended to use hardcoded regexes instead. If your regex is run on user-controlled input, consider performing input validation or use a regex checking/sanitization library such as https://www.npmjs.com/package/recheck to verify that the regex does not appear vulnerable to ReDoS."
+        },
+        "properties": {},
+        "ruleId": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp"
+      }
+    },
+    {
+      "id": "be10ffac-2481-42ba-aedf-1223919e44ff",
+      "tool": "Semgrep OSS",
+      "rule_id": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
+      "rule_name": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
+      "file_path": "app/assets/javascripts/moment.js",
+      "line_number": 6,
+      "column_number": 2783,
+      "end_line": 6,
+      "end_column": 2813,
+      "severity": "warning",
+      "message": "RegExp() called with a `a` function argument, this might allow an attacker to cause a Regular Expression Denial-of-Service (ReDoS) within your application as RegExP blocks the main thread. For this reason, it is recommended to use hardcoded regexes instead. If your regex is run on user-controlled input, consider performing input validation or use a regex checking/sanitization library such as https://www.npmjs.com/package/recheck to verify that the regex does not appear vulnerable to ReDoS.",
+      "snippet": "(function(a){function E(a,b,c,d){var e=c.lang();return e[a].call?e[a](c,d):e[a][b]}function F(a,b){return function(c){return K(a.call(this,c),b)}}function G(a){return function(b){var c=a.call(this,b);return c+this.lang().ordinal(c)}}function H(a,b,c){this._d=a,this._isUTC=!!b,this._a=a._a||null,this._lang=c||!1}function I(a){var b=this._data={},c=a.years||a.y||0,d=a.months||a.M||0,e=a.weeks||a.w||0,f=a.days||a.d||0,g=a.hours||a.h||0,h=a.minutes||a.m||0,i=a.seconds||a.s||0,j=a.milliseconds||a.ms||0;this._milliseconds=j+i*1e3+h*6e4+g*36e5,this._days=f+e*7,this._months=d+c*12,b.milliseconds=j%1e3,i+=J(j/1e3),b.seconds=i%60,h+=J(i/60),b.minutes=h%60,g+=J(h/60),b.hours=g%24,f+=J(g/24),f+=e*7,b.days=f%30,d+=J(f/30),b.months=d%12,c+=J(d/12),b.years=c,this._lang=!1}function J(a){return a<0?Math.ceil(a):Math.floor(a)}function K(a,b){var c=a+\"\";while(c.length<b)c=\"0\"+c;return c}function L(a,b,c){var d=b._milliseconds,e=b._days,f=b._months,g;d&&a._d.setTime(+a+d*c),e&&a.date(a.date()+e*c),f&&(g=a.date(),a.date(1).month(a.month()+f*c).date(Math.min(g,a.daysInMonth())))}function M(a){return Object.prototype.toString.call(a)===\"[object Array]\"}function N(a,b){var c=Math.min(a.length,b.length),d=Math.abs(a.length-b.length),e=0,f;for(f=0;f<c;f++)~~a[f]!==~~b[f]&&e++;return e+d}function O(a,b,c,d){var e,f,g=[];for(e=0;e<7;e++)g[e]=a[e]=a[e]==null?e===2?1:0:a[e];return a[7]=g[7]=b,a[8]!=null&&(g[8]=a[8]),a[3]+=c||0,a[4]+=d||0,f=new Date(0),b?(f.setUTCFullYear(a[0],a[1],a[2]),f.setUTCHours(a[3],a[4],a[5],a[6])):(f.setFullYear(a[0],a[1],a[2]),f.setHours(a[3],a[4],a[5],a[6])),f._a=g,f}function P(a,c){var d,e,g=[];!c&&h&&(c=require(\"./lang/\"+a));for(d=0;d<i.length;d++)c[i[d]]=c[i[d]]||f.en[i[d]];for(d=0;d<12;d++)e=b([2e3,d]),g[d]=new RegExp(\"^\"+(c.months[d]||c.months(e,\"\"))+\"|^\"+(c.monthsShort[d]||c.monthsShort(e,\"\")).replace(\".\",\"\"),\"i\");return c.monthsParse=c.monthsParse||g,f[a]=c,c}function Q(a){var c=typeof a==\"string\"&&a||a&&a._lang||null;return c?f[c]||P(c):b}function R(a){return a.match(/\\[.*\\]/)?a.replace(/^\\[|\\]$/g,\"\"):a.replace(/\\\\/g,\"\")}function S(a){var b=a.match(k),c,d;for(c=0,d=b.length;c<d;c++)D[b[c]]?b[c]=D[b[c]]:b[c]=R(b[c]);return function(e){var f=\"\";for(c=0;c<d;c++)f+=typeof b[c].call==\"function\"?b[c].call(e,a):b[c];return f}}function T(a,b){function d(b){return a.lang().longDateFormat[b]||b}var c=5;while(c--&&l.test(b))b=b.replace(l,d);return A[b]||(A[b]=S(b)),A[b](a)}function U(a){switch(a){case\"DDDD\":return p;case\"YYYY\":return q;case\"S\":case\"SS\":case\"SSS\":case\"DDD\":return o;case\"MMM\":case\"MMMM\":case\"dd\":case\"ddd\":case\"dddd\":case\"a\":case\"A\":return r;case\"Z\":case\"ZZ\":return s;case\"T\":return t;case\"MM\":case\"DD\":case\"YY\":case\"HH\":case\"hh\":case\"mm\":case\"ss\":case\"M\":case\"D\":case\"d\":case\"H\":case\"h\":case\"m\":case\"s\":return n;default:return new RegExp(a.replace(\"\\\\\",\"\"))}}function V(a,b,c,d){var e,f;switch(a){case\"M\":case\"MM\":c[1]=b==null?0:~~b-1;break;case\"MMM\":case\"MMMM\":for(e=0;e<12;e++)if(Q().monthsParse[e].test(b)){c[1]=e,f=!0;break}f||(c[8]=!1);break;case\"D\":case\"DD\":case\"DDD\":case\"DDDD\":b!=null&&(c[2]=~~b);break;case\"YY\":c[0]=~~b+(~~b>70?1900:2e3);break;case\"YYYY\":c[0]=~~Math.abs(b);break;case\"a\":case\"A\":d.isPm=(b+\"\").toLowerCase()===\"pm\";break;case\"H\":case\"HH\":case\"h\":case\"hh\":c[3]=~~b;break;case\"m\":case\"mm\":c[4]=~~b;break;case\"s\":case\"ss\":c[5]=~~b;break;case\"S\":case\"SS\":case\"SSS\":c[6]=~~((\"0.\"+b)*1e3);break;case\"Z\":case\"ZZ\":d.isUTC=!0,e=(b+\"\").match(x),e&&e[1]&&(d.tzh=~~e[1]),e&&e[2]&&(d.tzm=~~e[2]),e&&e[0]===\"+\"&&(d.tzh=-d.tzh,d.tzm=-d.tzm)}b==null&&(c[8]=!1)}function W(a,b){var c=[0,0,1,0,0,0,0],d={tzh:0,tzm:0},e=b.match(k),f,g;for(f=0;f<e.length;f++)g=(U(e[f]).exec(a)||[])[0],g&&(a=a.slice(a.indexOf(g)+g.length)),D[e[f]]&&V(e[f],g,c,d);return d.isPm&&c[3]<12&&(c[3]+=12),d.isPm===!1&&c[3]===12&&(c[3]=0),O(c,d.isUTC,d.tzh,d.tzm)}function X(a,b){var c,d=a.match(m)||[],e,f=99,g,h,i;for(g=0;g<b.length;g++)h=W(a,b[g]),e=T(new H(h),b[g]).match(m)||[],i=N(d,e),i<f&&(f=i,c=h);return c}function Y(a){var b=\"YYYY-MM-DDT\",c;if(u.exec(a)){for(c=0;c<4;c++)if(w[c][1].exec(a)){b+=w[c][0];break}return s.exec(a)?W(a,b+\" Z\"):W(a,b)}return new Date(a)}function Z(a,b,c,d,e){var f=e.relativeTime[a];return typeof f==\"function\"?f(b||1,!!c,a,d):f.replace(/%d/i,b||1)}function $(a,b,c){var e=d(Math.abs(a)/1e3),f=d(e/60),g=d(f/60),h=d(g/24),i=d(h/365),j=e<45&&[\"s\",e]||f===1&&[\"m\"]||f<45&&[\"mm\",f]||g===1&&[\"h\"]||g<22&&[\"hh\",g]||h===1&&[\"d\"]||h<=25&&[\"dd\",h]||h<=45&&[\"M\"]||h<345&&[\"MM\",d(h/30)]||i===1&&[\"y\"]||[\"yy\",i];return j[2]=b,j[3]=a>0,j[4]=c,Z.apply({},j)}function _(a,c){b.fn[a]=function(a){var b=this._isUTC?\"UTC\":\"\";return a!=null?(this._d[\"set\"+b+c](a),this):this._d[\"get\"+b+c]()}}function ab(a){b.duration.fn[a]=function(){return this._data[a]}}function bb(a,c){b.duration.fn[\"as\"+a]=function(){return+this/c}}var b,c=\"1.7.2\",d=Math.round,e,f={},g=\"en\",h=typeof module!=\"undefined\"&&module.exports,i=\"months|monthsShort|weekdays|weekdaysShort|weekdaysMin|longDateFormat|calendar|relativeTime|ordinal|meridiem\".split(\"|\"),j=/^\\/?Date\\((\\-?\\d+)/i,k=/(\\[[^\\[]*\\])|(\\\\)?(Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|YYYY|YY|a|A|hh?|HH?|mm?|ss?|SS?S?|zz?|ZZ?|.)/g,l=/(\\[[^\\[]*\\])|(\\\\)?(LT|LL?L?L?)/g,m=/([0-9a-zA-Z\\u00A0-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFEF]+)/gi,n=/\\d\\d?/,o=/\\d{1,3}/,p=/\\d{3}/,q=/\\d{1,4}/,r=/[0-9a-z\\u00A0-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFEF]+/i,s=/Z|[\\+\\-]\\d\\d:?\\d\\d/i,t=/T/i,u=/^\\s*\\d{4}-\\d\\d-\\d\\d(T(\\d\\d(:\\d\\d(:\\d\\d(\\.\\d\\d?\\d?)?)?)?)?([\\+\\-]\\d\\d:?\\d\\d)?)?/,v=\"YYYY-MM-DDTHH:mm:ssZ\",w=[[\"HH:mm:ss.S\",/T\\d\\d:\\d\\d:\\d\\d\\.\\d{1,3}/],[\"HH:mm:ss\",/T\\d\\d:\\d\\d:\\d\\d/],[\"HH:mm\",/T\\d\\d:\\d\\d/],[\"HH\",/T\\d\\d/]],x=/([\\+\\-]|\\d\\d)/gi,y=\"Month|Date|Hours|Minutes|Seconds|Milliseconds\".split(\"|\"),z={Milliseconds:1,Seconds:1e3,Minutes:6e4,Hours:36e5,Days:864e5,Months:2592e6,Years:31536e6},A={},B=\"DDD w M D d\".split(\" \"),C=\"M D H h m s w\".split(\" \"),D={M:function(){return this.month()+1},MMM:function(a){return E(\"monthsShort\",this.month(),this,a)},MMMM:function(a){return E(\"months\",this.month(),this,a)},D:function(){return this.date()},DDD:function(){var a=new Date(this.year(),this.month(),this.date()),b=new Date(this.year(),0,1);return~~((a-b)/864e5+1.5)},d:function(){return this.day()},dd:function(a){return E(\"weekdaysMin\",this.day(),this,a)},ddd:function(a){return E(\"weekdaysShort\",this.day(),this,a)},dddd:function(a){return E(\"weekdays\",this.day(),this,a)},w:function(){var a=new Date(this.year(),this.month(),this.date()-this.day()+5),b=new Date(a.getFullYear(),0,4);return~~((a-b)/864e5/7+1.5)},YY:function(){return K(this.year()%100,2)},YYYY:function(){return K(this.year(),4)},a:function(){return this.lang().meridiem(this.hours(),this.minutes(),!0)},A:function(){return this.lang().meridiem(this.hours(),this.minutes(),!1)},H:function(){return this.hours()},h:function(){return this.hours()%12||12},m:function(){return this.minutes()},s:function(){return this.seconds()},S:function(){return~~(this.milliseconds()/100)},SS:function(){return K(~~(this.milliseconds()/10),2)},SSS:function(){return K(this.milliseconds(),3)},Z:function(){var a=-this.zone(),b=\"+\";return a<0&&(a=-a,b=\"-\"),b+K(~~(a/60),2)+\":\"+K(~~a%60,2)},ZZ:function(){var a=-this.zone(),b=\"+\";return a<0&&(a=-a,b=\"-\"),b+K(~~(10*a/6),4)}};while(B.length)e=B.pop(),D[e+\"o\"]=G(D[e]);while(C.length)e=C.pop(),D[e+e]=F(D[e],2);D.DDDD=F(D.DDD,3),b=function(c,d){if(c===null||c===\"\")return null;var e,f;return b.isMoment(c)?new H(new Date(+c._d),c._isUTC,c._lang):(d?M(d)?e=X(c,d):e=W(c,d):(f=j.exec(c),e=c===a?new Date:f?new Date(+f[1]):c instanceof Date?c:M(c)?O(c):typeof c==\"string\"?Y(c):new Date(c)),new H(e))},b.utc=function(a,c){return M(a)?new H(O(a,!0),!0):(typeof a==\"string\"&&!s.exec(a)&&(a+=\" +0000\",c&&(c+=\" Z\")),b(a,c).utc())},b.unix=function(a){return b(a*1e3)},b.duration=function(a,c){var d=b.isDuration(a),e=typeof a==\"number\",f=d?a._data:e?{}:a,g;return e&&(c?f[c]=a:f.milliseconds=a),g=new I(f),d&&(g._lang=a._lang),g},b.humanizeDuration=function(a,c,d){return b.duration(a,c===!0?null:c).humanize(c===!0?!0:d)},b.version=c,b.defaultFormat=v,b.lang=function(a,c){var d;if(!a)return g;(c||!f[a])&&P(a,c);if(f[a]){for(d=0;d<i.length;d++)b[i[d]]=f[a][i[d]];b.monthsParse=f[a].monthsParse,g=a}},b.langData=Q,b.isMoment=function(a){return a instanceof H},b.isDuration=function(a){return a instanceof I},b.lang(\"en\",{months:\"January_February_March_April_May_June_July_August_September_October_November_December\".split(\"_\"),monthsShort:\"Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec\".split(\"_\"),weekdays:\"Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday\".split(\"_\"),weekdaysShort:\"Sun_Mon_Tue_Wed_Thu_Fri_Sat\".split(\"_\"),weekdaysMin:\"Su_Mo_Tu_We_Th_Fr_Sa\".split(\"_\"),longDateFormat:{LT:\"h:mm A\",L:\"MM/DD/YYYY\",LL:\"MMMM D YYYY\",LLL:\"MMMM D YYYY LT\",LLLL:\"dddd, MMMM D YYYY LT\"},meridiem:function(a,b,c){return a>11?c?\"pm\":\"PM\":c?\"am\":\"AM\"},calendar:{sameDay:\"[Today at] LT\",nextDay:\"[Tomorrow at] LT\",nextWeek:\"dddd [at] LT\",lastDay:\"[Yesterday at] LT\",lastWeek:\"[last] dddd [at] LT\",sameElse:\"L\"},relativeTime:{future:\"in %s\",past:\"%s ago\",s:\"a few seconds\",m:\"a minute\",mm:\"%d minutes\",h:\"an hour\",hh:\"%d hours\",d:\"a day\",dd:\"%d days\",M:\"a month\",MM:\"%d months\",y:\"a year\",yy:\"%d years\"},ordinal:function(a){var b=a%10;return~~(a%100/10)===1?\"th\":b===1?\"st\":b===2?\"nd\":b===3?\"rd\":\"th\"}}),b.fn=H.prototype={clone:function(){return b(this)},valueOf:function(){return+this._d},unix:function(){return Math.floor(+this._d/1e3)},toString:function(){return this._d.toString()},toDate:function(){return this._d},toArray:function(){var a=this;return[a.year(),a.month(),a.date(),a.hours(),a.minutes(),a.seconds(),a.milliseconds(),!!this._isUTC]},isValid:function(){return this._a?this._a[8]!=null?!!this._a[8]:!N(this._a,(this._a[7]?b.utc(this._a):b(this._a)).toArray()):!isNaN(this._d.getTime())},utc:function(){return this._isUTC=!0,this},local:function(){return this._isUTC=!1,this},format:function(a){return T(this,a?a:b.defaultFormat)},add:function(a,c){var d=c?b.duration(+c,a):b.duration(a);return L(this,d,1),this},subtract:function(a,c){var d=c?b.duration(+c,a):b.duration(a);return L(this,d,-1),this},diff:function(a,c,e){var f=this._isUTC?b(a).utc():b(a).local(),g=(this.zone()-f.zone())*6e4,h=this._d-f._d-g,i=this.year()-f.year(),j=this.month()-f.month(),k=this.date()-f.date(),l;return c===\"months\"?l=i*12+j+k/30:c===\"years\"?l=i+(j+k/30)/12:l=c===\"seconds\"?h/1e3:c===\"minutes\"?h/6e4:c===\"hours\"?h/36e5:c===\"days\"?h/864e5:c===\"weeks\"?h/6048e5:h,e?l:d(l)},from:function(a,c){return b.duration(this.diff(a)).lang(this._lang).humanize(!c)},fromNow:function(a){return this.from(b(),a)},calendar:function(){var a=this.diff(b().sod(),\"days\",!0),c=this.lang().calendar,d=c.sameElse,e=a<-6?d:a<-1?c.lastWeek:a<0?c.lastDay:a<1?c.sameDay:a<2?c.nextDay:a<7?c.nextWeek:d;return this.format(typeof e==\"function\"?e.apply(this):e)},isLeapYear:function(){var a=this.year();return a%4===0&&a%100!==0||a%400===0},isDST:function(){return this.zone()<b([this.year()]).zone()||this.zone()<b([this.year(),5]).zone()},day:function(a){var b=this._isUTC?this._d.getUTCDay():this._d.getDay();return a==null?b:this.add({d:a-b})},startOf:function(a){switch(a.replace(/s$/,\"\")){case\"year\":this.month(0);case\"month\":this.date(1);case\"day\":this.hours(0);case\"hour\":this.minutes(0);case\"minute\":this.seconds(0);case\"second\":this.milliseconds(0)}return this},endOf:function(a){return this.startOf(a).add(a.replace(/s?$/,\"s\"),1).subtract(\"ms\",1)},sod:function(){return this.clone().startOf(\"day\")},eod:function(){return this.clone().endOf(\"day\")},zone:function(){return this._isUTC?0:this._d.getTimezoneOffset()},daysInMonth:function(){return b.utc([this.year(),this.month()+1,0]).date()},lang:function(b){return b===a?Q(this):(this._lang=b,this)}};for(e=0;e<y.length;e++)_(y[e].toLowerCase(),y[e]);_(\"year\",\"FullYear\"),b.duration.fn=I.prototype={weeks:function(){return J(this.days()/7)},valueOf:function(){return this._milliseconds+this._days*864e5+this._months*2592e6},humanize:function(a){var b=+this,c=this.lang().relativeTime,d=$(b,!a,this.lang()),e=b<=0?c.past:c.future;return a&&(typeof e==\"function\"?d=e(d):d=e.replace(/%s/i,d)),d},lang:b.fn.lang};for(e in z)z.hasOwnProperty(e)&&(bb(e,z[e]),ab(e.toLowerCase()));bb(\"Weeks\",6048e5),h&&(module.exports=b),typeof ender==\"undefined\"&&(this.moment=b),typeof define==\"function\"&&define.amd&&define(\"moment\",[],function(){return b})}).call(this);",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/assets/javascripts/moment.js",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 2813,
+                "endLine": 6,
+                "snippet": {
+                  "text": "(function(a){function E(a,b,c,d){var e=c.lang();return e[a].call?e[a](c,d):e[a][b]}function F(a,b){return function(c){return K(a.call(this,c),b)}}function G(a){return function(b){var c=a.call(this,b);return c+this.lang().ordinal(c)}}function H(a,b,c){this._d=a,this._isUTC=!!b,this._a=a._a||null,this._lang=c||!1}function I(a){var b=this._data={},c=a.years||a.y||0,d=a.months||a.M||0,e=a.weeks||a.w||0,f=a.days||a.d||0,g=a.hours||a.h||0,h=a.minutes||a.m||0,i=a.seconds||a.s||0,j=a.milliseconds||a.ms||0;this._milliseconds=j+i*1e3+h*6e4+g*36e5,this._days=f+e*7,this._months=d+c*12,b.milliseconds=j%1e3,i+=J(j/1e3),b.seconds=i%60,h+=J(i/60),b.minutes=h%60,g+=J(h/60),b.hours=g%24,f+=J(g/24),f+=e*7,b.days=f%30,d+=J(f/30),b.months=d%12,c+=J(d/12),b.years=c,this._lang=!1}function J(a){return a<0?Math.ceil(a):Math.floor(a)}function K(a,b){var c=a+\"\";while(c.length<b)c=\"0\"+c;return c}function L(a,b,c){var d=b._milliseconds,e=b._days,f=b._months,g;d&&a._d.setTime(+a+d*c),e&&a.date(a.date()+e*c),f&&(g=a.date(),a.date(1).month(a.month()+f*c).date(Math.min(g,a.daysInMonth())))}function M(a){return Object.prototype.toString.call(a)===\"[object Array]\"}function N(a,b){var c=Math.min(a.length,b.length),d=Math.abs(a.length-b.length),e=0,f;for(f=0;f<c;f++)~~a[f]!==~~b[f]&&e++;return e+d}function O(a,b,c,d){var e,f,g=[];for(e=0;e<7;e++)g[e]=a[e]=a[e]==null?e===2?1:0:a[e];return a[7]=g[7]=b,a[8]!=null&&(g[8]=a[8]),a[3]+=c||0,a[4]+=d||0,f=new Date(0),b?(f.setUTCFullYear(a[0],a[1],a[2]),f.setUTCHours(a[3],a[4],a[5],a[6])):(f.setFullYear(a[0],a[1],a[2]),f.setHours(a[3],a[4],a[5],a[6])),f._a=g,f}function P(a,c){var d,e,g=[];!c&&h&&(c=require(\"./lang/\"+a));for(d=0;d<i.length;d++)c[i[d]]=c[i[d]]||f.en[i[d]];for(d=0;d<12;d++)e=b([2e3,d]),g[d]=new RegExp(\"^\"+(c.months[d]||c.months(e,\"\"))+\"|^\"+(c.monthsShort[d]||c.monthsShort(e,\"\")).replace(\".\",\"\"),\"i\");return c.monthsParse=c.monthsParse||g,f[a]=c,c}function Q(a){var c=typeof a==\"string\"&&a||a&&a._lang||null;return c?f[c]||P(c):b}function R(a){return a.match(/\\[.*\\]/)?a.replace(/^\\[|\\]$/g,\"\"):a.replace(/\\\\/g,\"\")}function S(a){var b=a.match(k),c,d;for(c=0,d=b.length;c<d;c++)D[b[c]]?b[c]=D[b[c]]:b[c]=R(b[c]);return function(e){var f=\"\";for(c=0;c<d;c++)f+=typeof b[c].call==\"function\"?b[c].call(e,a):b[c];return f}}function T(a,b){function d(b){return a.lang().longDateFormat[b]||b}var c=5;while(c--&&l.test(b))b=b.replace(l,d);return A[b]||(A[b]=S(b)),A[b](a)}function U(a){switch(a){case\"DDDD\":return p;case\"YYYY\":return q;case\"S\":case\"SS\":case\"SSS\":case\"DDD\":return o;case\"MMM\":case\"MMMM\":case\"dd\":case\"ddd\":case\"dddd\":case\"a\":case\"A\":return r;case\"Z\":case\"ZZ\":return s;case\"T\":return t;case\"MM\":case\"DD\":case\"YY\":case\"HH\":case\"hh\":case\"mm\":case\"ss\":case\"M\":case\"D\":case\"d\":case\"H\":case\"h\":case\"m\":case\"s\":return n;default:return new RegExp(a.replace(\"\\\\\",\"\"))}}function V(a,b,c,d){var e,f;switch(a){case\"M\":case\"MM\":c[1]=b==null?0:~~b-1;break;case\"MMM\":case\"MMMM\":for(e=0;e<12;e++)if(Q().monthsParse[e].test(b)){c[1]=e,f=!0;break}f||(c[8]=!1);break;case\"D\":case\"DD\":case\"DDD\":case\"DDDD\":b!=null&&(c[2]=~~b);break;case\"YY\":c[0]=~~b+(~~b>70?1900:2e3);break;case\"YYYY\":c[0]=~~Math.abs(b);break;case\"a\":case\"A\":d.isPm=(b+\"\").toLowerCase()===\"pm\";break;case\"H\":case\"HH\":case\"h\":case\"hh\":c[3]=~~b;break;case\"m\":case\"mm\":c[4]=~~b;break;case\"s\":case\"ss\":c[5]=~~b;break;case\"S\":case\"SS\":case\"SSS\":c[6]=~~((\"0.\"+b)*1e3);break;case\"Z\":case\"ZZ\":d.isUTC=!0,e=(b+\"\").match(x),e&&e[1]&&(d.tzh=~~e[1]),e&&e[2]&&(d.tzm=~~e[2]),e&&e[0]===\"+\"&&(d.tzh=-d.tzh,d.tzm=-d.tzm)}b==null&&(c[8]=!1)}function W(a,b){var c=[0,0,1,0,0,0,0],d={tzh:0,tzm:0},e=b.match(k),f,g;for(f=0;f<e.length;f++)g=(U(e[f]).exec(a)||[])[0],g&&(a=a.slice(a.indexOf(g)+g.length)),D[e[f]]&&V(e[f],g,c,d);return d.isPm&&c[3]<12&&(c[3]+=12),d.isPm===!1&&c[3]===12&&(c[3]=0),O(c,d.isUTC,d.tzh,d.tzm)}function X(a,b){var c,d=a.match(m)||[],e,f=99,g,h,i;for(g=0;g<b.length;g++)h=W(a,b[g]),e=T(new H(h),b[g]).match(m)||[],i=N(d,e),i<f&&(f=i,c=h);return c}function Y(a){var b=\"YYYY-MM-DDT\",c;if(u.exec(a)){for(c=0;c<4;c++)if(w[c][1].exec(a)){b+=w[c][0];break}return s.exec(a)?W(a,b+\" Z\"):W(a,b)}return new Date(a)}function Z(a,b,c,d,e){var f=e.relativeTime[a];return typeof f==\"function\"?f(b||1,!!c,a,d):f.replace(/%d/i,b||1)}function $(a,b,c){var e=d(Math.abs(a)/1e3),f=d(e/60),g=d(f/60),h=d(g/24),i=d(h/365),j=e<45&&[\"s\",e]||f===1&&[\"m\"]||f<45&&[\"mm\",f]||g===1&&[\"h\"]||g<22&&[\"hh\",g]||h===1&&[\"d\"]||h<=25&&[\"dd\",h]||h<=45&&[\"M\"]||h<345&&[\"MM\",d(h/30)]||i===1&&[\"y\"]||[\"yy\",i];return j[2]=b,j[3]=a>0,j[4]=c,Z.apply({},j)}function _(a,c){b.fn[a]=function(a){var b=this._isUTC?\"UTC\":\"\";return a!=null?(this._d[\"set\"+b+c](a),this):this._d[\"get\"+b+c]()}}function ab(a){b.duration.fn[a]=function(){return this._data[a]}}function bb(a,c){b.duration.fn[\"as\"+a]=function(){return+this/c}}var b,c=\"1.7.2\",d=Math.round,e,f={},g=\"en\",h=typeof module!=\"undefined\"&&module.exports,i=\"months|monthsShort|weekdays|weekdaysShort|weekdaysMin|longDateFormat|calendar|relativeTime|ordinal|meridiem\".split(\"|\"),j=/^\\/?Date\\((\\-?\\d+)/i,k=/(\\[[^\\[]*\\])|(\\\\)?(Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|YYYY|YY|a|A|hh?|HH?|mm?|ss?|SS?S?|zz?|ZZ?|.)/g,l=/(\\[[^\\[]*\\])|(\\\\)?(LT|LL?L?L?)/g,m=/([0-9a-zA-Z\\u00A0-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFEF]+)/gi,n=/\\d\\d?/,o=/\\d{1,3}/,p=/\\d{3}/,q=/\\d{1,4}/,r=/[0-9a-z\\u00A0-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFEF]+/i,s=/Z|[\\+\\-]\\d\\d:?\\d\\d/i,t=/T/i,u=/^\\s*\\d{4}-\\d\\d-\\d\\d(T(\\d\\d(:\\d\\d(:\\d\\d(\\.\\d\\d?\\d?)?)?)?)?([\\+\\-]\\d\\d:?\\d\\d)?)?/,v=\"YYYY-MM-DDTHH:mm:ssZ\",w=[[\"HH:mm:ss.S\",/T\\d\\d:\\d\\d:\\d\\d\\.\\d{1,3}/],[\"HH:mm:ss\",/T\\d\\d:\\d\\d:\\d\\d/],[\"HH:mm\",/T\\d\\d:\\d\\d/],[\"HH\",/T\\d\\d/]],x=/([\\+\\-]|\\d\\d)/gi,y=\"Month|Date|Hours|Minutes|Seconds|Milliseconds\".split(\"|\"),z={Milliseconds:1,Seconds:1e3,Minutes:6e4,Hours:36e5,Days:864e5,Months:2592e6,Years:31536e6},A={},B=\"DDD w M D d\".split(\" \"),C=\"M D H h m s w\".split(\" \"),D={M:function(){return this.month()+1},MMM:function(a){return E(\"monthsShort\",this.month(),this,a)},MMMM:function(a){return E(\"months\",this.month(),this,a)},D:function(){return this.date()},DDD:function(){var a=new Date(this.year(),this.month(),this.date()),b=new Date(this.year(),0,1);return~~((a-b)/864e5+1.5)},d:function(){return this.day()},dd:function(a){return E(\"weekdaysMin\",this.day(),this,a)},ddd:function(a){return E(\"weekdaysShort\",this.day(),this,a)},dddd:function(a){return E(\"weekdays\",this.day(),this,a)},w:function(){var a=new Date(this.year(),this.month(),this.date()-this.day()+5),b=new Date(a.getFullYear(),0,4);return~~((a-b)/864e5/7+1.5)},YY:function(){return K(this.year()%100,2)},YYYY:function(){return K(this.year(),4)},a:function(){return this.lang().meridiem(this.hours(),this.minutes(),!0)},A:function(){return this.lang().meridiem(this.hours(),this.minutes(),!1)},H:function(){return this.hours()},h:function(){return this.hours()%12||12},m:function(){return this.minutes()},s:function(){return this.seconds()},S:function(){return~~(this.milliseconds()/100)},SS:function(){return K(~~(this.milliseconds()/10),2)},SSS:function(){return K(this.milliseconds(),3)},Z:function(){var a=-this.zone(),b=\"+\";return a<0&&(a=-a,b=\"-\"),b+K(~~(a/60),2)+\":\"+K(~~a%60,2)},ZZ:function(){var a=-this.zone(),b=\"+\";return a<0&&(a=-a,b=\"-\"),b+K(~~(10*a/6),4)}};while(B.length)e=B.pop(),D[e+\"o\"]=G(D[e]);while(C.length)e=C.pop(),D[e+e]=F(D[e],2);D.DDDD=F(D.DDD,3),b=function(c,d){if(c===null||c===\"\")return null;var e,f;return b.isMoment(c)?new H(new Date(+c._d),c._isUTC,c._lang):(d?M(d)?e=X(c,d):e=W(c,d):(f=j.exec(c),e=c===a?new Date:f?new Date(+f[1]):c instanceof Date?c:M(c)?O(c):typeof c==\"string\"?Y(c):new Date(c)),new H(e))},b.utc=function(a,c){return M(a)?new H(O(a,!0),!0):(typeof a==\"string\"&&!s.exec(a)&&(a+=\" +0000\",c&&(c+=\" Z\")),b(a,c).utc())},b.unix=function(a){return b(a*1e3)},b.duration=function(a,c){var d=b.isDuration(a),e=typeof a==\"number\",f=d?a._data:e?{}:a,g;return e&&(c?f[c]=a:f.milliseconds=a),g=new I(f),d&&(g._lang=a._lang),g},b.humanizeDuration=function(a,c,d){return b.duration(a,c===!0?null:c).humanize(c===!0?!0:d)},b.version=c,b.defaultFormat=v,b.lang=function(a,c){var d;if(!a)return g;(c||!f[a])&&P(a,c);if(f[a]){for(d=0;d<i.length;d++)b[i[d]]=f[a][i[d]];b.monthsParse=f[a].monthsParse,g=a}},b.langData=Q,b.isMoment=function(a){return a instanceof H},b.isDuration=function(a){return a instanceof I},b.lang(\"en\",{months:\"January_February_March_April_May_June_July_August_September_October_November_December\".split(\"_\"),monthsShort:\"Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec\".split(\"_\"),weekdays:\"Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday\".split(\"_\"),weekdaysShort:\"Sun_Mon_Tue_Wed_Thu_Fri_Sat\".split(\"_\"),weekdaysMin:\"Su_Mo_Tu_We_Th_Fr_Sa\".split(\"_\"),longDateFormat:{LT:\"h:mm A\",L:\"MM/DD/YYYY\",LL:\"MMMM D YYYY\",LLL:\"MMMM D YYYY LT\",LLLL:\"dddd, MMMM D YYYY LT\"},meridiem:function(a,b,c){return a>11?c?\"pm\":\"PM\":c?\"am\":\"AM\"},calendar:{sameDay:\"[Today at] LT\",nextDay:\"[Tomorrow at] LT\",nextWeek:\"dddd [at] LT\",lastDay:\"[Yesterday at] LT\",lastWeek:\"[last] dddd [at] LT\",sameElse:\"L\"},relativeTime:{future:\"in %s\",past:\"%s ago\",s:\"a few seconds\",m:\"a minute\",mm:\"%d minutes\",h:\"an hour\",hh:\"%d hours\",d:\"a day\",dd:\"%d days\",M:\"a month\",MM:\"%d months\",y:\"a year\",yy:\"%d years\"},ordinal:function(a){var b=a%10;return~~(a%100/10)===1?\"th\":b===1?\"st\":b===2?\"nd\":b===3?\"rd\":\"th\"}}),b.fn=H.prototype={clone:function(){return b(this)},valueOf:function(){return+this._d},unix:function(){return Math.floor(+this._d/1e3)},toString:function(){return this._d.toString()},toDate:function(){return this._d},toArray:function(){var a=this;return[a.year(),a.month(),a.date(),a.hours(),a.minutes(),a.seconds(),a.milliseconds(),!!this._isUTC]},isValid:function(){return this._a?this._a[8]!=null?!!this._a[8]:!N(this._a,(this._a[7]?b.utc(this._a):b(this._a)).toArray()):!isNaN(this._d.getTime())},utc:function(){return this._isUTC=!0,this},local:function(){return this._isUTC=!1,this},format:function(a){return T(this,a?a:b.defaultFormat)},add:function(a,c){var d=c?b.duration(+c,a):b.duration(a);return L(this,d,1),this},subtract:function(a,c){var d=c?b.duration(+c,a):b.duration(a);return L(this,d,-1),this},diff:function(a,c,e){var f=this._isUTC?b(a).utc():b(a).local(),g=(this.zone()-f.zone())*6e4,h=this._d-f._d-g,i=this.year()-f.year(),j=this.month()-f.month(),k=this.date()-f.date(),l;return c===\"months\"?l=i*12+j+k/30:c===\"years\"?l=i+(j+k/30)/12:l=c===\"seconds\"?h/1e3:c===\"minutes\"?h/6e4:c===\"hours\"?h/36e5:c===\"days\"?h/864e5:c===\"weeks\"?h/6048e5:h,e?l:d(l)},from:function(a,c){return b.duration(this.diff(a)).lang(this._lang).humanize(!c)},fromNow:function(a){return this.from(b(),a)},calendar:function(){var a=this.diff(b().sod(),\"days\",!0),c=this.lang().calendar,d=c.sameElse,e=a<-6?d:a<-1?c.lastWeek:a<0?c.lastDay:a<1?c.sameDay:a<2?c.nextDay:a<7?c.nextWeek:d;return this.format(typeof e==\"function\"?e.apply(this):e)},isLeapYear:function(){var a=this.year();return a%4===0&&a%100!==0||a%400===0},isDST:function(){return this.zone()<b([this.year()]).zone()||this.zone()<b([this.year(),5]).zone()},day:function(a){var b=this._isUTC?this._d.getUTCDay():this._d.getDay();return a==null?b:this.add({d:a-b})},startOf:function(a){switch(a.replace(/s$/,\"\")){case\"year\":this.month(0);case\"month\":this.date(1);case\"day\":this.hours(0);case\"hour\":this.minutes(0);case\"minute\":this.seconds(0);case\"second\":this.milliseconds(0)}return this},endOf:function(a){return this.startOf(a).add(a.replace(/s?$/,\"s\"),1).subtract(\"ms\",1)},sod:function(){return this.clone().startOf(\"day\")},eod:function(){return this.clone().endOf(\"day\")},zone:function(){return this._isUTC?0:this._d.getTimezoneOffset()},daysInMonth:function(){return b.utc([this.year(),this.month()+1,0]).date()},lang:function(b){return b===a?Q(this):(this._lang=b,this)}};for(e=0;e<y.length;e++)_(y[e].toLowerCase(),y[e]);_(\"year\",\"FullYear\"),b.duration.fn=I.prototype={weeks:function(){return J(this.days()/7)},valueOf:function(){return this._milliseconds+this._days*864e5+this._months*2592e6},humanize:function(a){var b=+this,c=this.lang().relativeTime,d=$(b,!a,this.lang()),e=b<=0?c.past:c.future;return a&&(typeof e==\"function\"?d=e(d):d=e.replace(/%s/i,d)),d},lang:b.fn.lang};for(e in z)z.hasOwnProperty(e)&&(bb(e,z[e]),ab(e.toLowerCase()));bb(\"Weeks\",6048e5),h&&(module.exports=b),typeof ender==\"undefined\"&&(this.moment=b),typeof define==\"function\"&&define.amd&&define(\"moment\",[],function(){return b})}).call(this);"
+                },
+                "startColumn": 2783,
+                "startLine": 6
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "RegExp() called with a `a` function argument, this might allow an attacker to cause a Regular Expression Denial-of-Service (ReDoS) within your application as RegExP blocks the main thread. For this reason, it is recommended to use hardcoded regexes instead. If your regex is run on user-controlled input, consider performing input validation or use a regex checking/sanitization library such as https://www.npmjs.com/package/recheck to verify that the regex does not appear vulnerable to ReDoS."
+        },
+        "properties": {},
+        "ruleId": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp"
+      }
+    },
+    {
+      "id": "6340c44a-a602-41d5-a9b4-a26e668608b3",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.rails.security.brakeman.check-unscoped-find.check-unscoped-find",
+      "rule_name": "ruby.rails.security.brakeman.check-unscoped-find.check-unscoped-find",
+      "file_path": "app/controllers/admin_controller.rb",
+      "line_number": 28,
+      "column_number": 13,
+      "end_line": 28,
+      "end_column": 52,
+      "severity": "warning",
+      "message": "Found an unscoped `find(...)` with user-controllable input. If the ActiveRecord model being searched against is sensitive, this may lead to Insecure Direct Object Reference (IDOR) behavior and allow users to read arbitrary records. Scope the find to the current user, e.g. `current_user.accounts.find(params[:id])`.",
+      "snippet": "    @user = User.find_by_id(params[:admin_id].to_s)",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/controllers/admin_controller.rb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 52,
+                "endLine": 28,
+                "snippet": {
+                  "text": "    @user = User.find_by_id(params[:admin_id].to_s)"
+                },
+                "startColumn": 13,
+                "startLine": 28
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Found an unscoped `find(...)` with user-controllable input. If the ActiveRecord model being searched against is sensitive, this may lead to Insecure Direct Object Reference (IDOR) behavior and allow users to read arbitrary records. Scope the find to the current user, e.g. `current_user.accounts.find(params[:id])`."
+        },
+        "properties": {},
+        "ruleId": "ruby.rails.security.brakeman.check-unscoped-find.check-unscoped-find"
+      }
+    },
+    {
+      "id": "e9395f08-f4c4-4e2a-aeeb-56b1924cad00",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.rails.security.brakeman.check-unscoped-find.check-unscoped-find",
+      "rule_name": "ruby.rails.security.brakeman.check-unscoped-find.check-unscoped-find",
+      "file_path": "app/controllers/admin_controller.rb",
+      "line_number": 34,
+      "column_number": 12,
+      "end_line": 34,
+      "end_column": 46,
+      "severity": "warning",
+      "message": "Found an unscoped `find(...)` with user-controllable input. If the ActiveRecord model being searched against is sensitive, this may lead to Insecure Direct Object Reference (IDOR) behavior and allow users to read arbitrary records. Scope the find to the current user, e.g. `current_user.accounts.find(params[:id])`.",
+      "snippet": "    user = User.find_by_id(params[:admin_id])",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/controllers/admin_controller.rb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 46,
+                "endLine": 34,
+                "snippet": {
+                  "text": "    user = User.find_by_id(params[:admin_id])"
+                },
+                "startColumn": 12,
+                "startLine": 34
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Found an unscoped `find(...)` with user-controllable input. If the ActiveRecord model being searched against is sensitive, this may lead to Insecure Direct Object Reference (IDOR) behavior and allow users to read arbitrary records. Scope the find to the current user, e.g. `current_user.accounts.find(params[:id])`."
+        },
+        "properties": {},
+        "ruleId": "ruby.rails.security.brakeman.check-unscoped-find.check-unscoped-find"
+      }
+    },
+    {
+      "id": "f5c35478-71bd-40fe-98f2-d7942748a1ef",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.rails.security.brakeman.check-unsafe-reflection.check-unsafe-reflection",
+      "rule_name": "ruby.rails.security.brakeman.check-unsafe-reflection.check-unsafe-reflection",
+      "file_path": "app/controllers/api/v1/mobile_controller.rb",
+      "line_number": 10,
+      "column_number": 15,
+      "end_line": 10,
+      "end_column": 38,
+      "severity": "warning",
+      "message": "Found user-controllable input to Ruby reflection functionality. This allows a remote user to influence runtime behavior, up to and including arbitrary remote code execution. Do not provide user-controllable input to reflection functionality. Do not call symbol conversion on user-controllable input.",
+      "snippet": "      model = params[:class].classify.constantize",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/controllers/api/v1/mobile_controller.rb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 38,
+                "endLine": 10,
+                "snippet": {
+                  "text": "      model = params[:class].classify.constantize"
+                },
+                "startColumn": 15,
+                "startLine": 10
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Found user-controllable input to Ruby reflection functionality. This allows a remote user to influence runtime behavior, up to and including arbitrary remote code execution. Do not provide user-controllable input to reflection functionality. Do not call symbol conversion on user-controllable input."
+        },
+        "properties": {},
+        "ruleId": "ruby.rails.security.brakeman.check-unsafe-reflection.check-unsafe-reflection"
+      }
+    },
+    {
+      "id": "1bff3c17-4119-4e63-8ddd-29d3aa720d9a",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.rails.security.brakeman.check-unsafe-reflection.check-unsafe-reflection",
+      "rule_name": "ruby.rails.security.brakeman.check-unsafe-reflection.check-unsafe-reflection",
+      "file_path": "app/controllers/api/v1/mobile_controller.rb",
+      "line_number": 17,
+      "column_number": 15,
+      "end_line": 17,
+      "end_column": 38,
+      "severity": "warning",
+      "message": "Found user-controllable input to Ruby reflection functionality. This allows a remote user to influence runtime behavior, up to and including arbitrary remote code execution. Do not provide user-controllable input to reflection functionality. Do not call symbol conversion on user-controllable input.",
+      "snippet": "      model = params[:class].classify.constantize",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/controllers/api/v1/mobile_controller.rb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 38,
+                "endLine": 17,
+                "snippet": {
+                  "text": "      model = params[:class].classify.constantize"
+                },
+                "startColumn": 15,
+                "startLine": 17
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Found user-controllable input to Ruby reflection functionality. This allows a remote user to influence runtime behavior, up to and including arbitrary remote code execution. Do not provide user-controllable input to reflection functionality. Do not call symbol conversion on user-controllable input."
+        },
+        "properties": {},
+        "ruleId": "ruby.rails.security.brakeman.check-unsafe-reflection.check-unsafe-reflection"
+      }
+    },
+    {
+      "id": "b855a335-4981-4be9-920c-68020d7ce149",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.lang.security.weak-hashes-sha1.weak-hashes-sha1",
+      "rule_name": "ruby.lang.security.weak-hashes-sha1.weak-hashes-sha1",
+      "file_path": "app/controllers/api/v1/users_controller.rb",
+      "line_number": 42,
+      "column_number": 14,
+      "end_line": 42,
+      "end_column": 45,
+      "severity": "warning",
+      "message": "Should not use SHA1 to generate hashes. There is a proven SHA1 hash collision by Google, which could lead to vulnerabilities. Use SHA256, SHA3 or other hashing functions instead.",
+      "snippet": "    digest = OpenSSL::Digest::SHA1.hexdigest(\"#{ACCESS_TOKEN_SALT}:#{id}\")",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/controllers/api/v1/users_controller.rb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 45,
+                "endLine": 42,
+                "snippet": {
+                  "text": "    digest = OpenSSL::Digest::SHA1.hexdigest(\"#{ACCESS_TOKEN_SALT}:#{id}\")"
+                },
+                "startColumn": 14,
+                "startLine": 42
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Should not use SHA1 to generate hashes. There is a proven SHA1 hash collision by Google, which could lead to vulnerabilities. Use SHA256, SHA3 or other hashing functions instead."
+        },
+        "properties": {},
+        "ruleId": "ruby.lang.security.weak-hashes-sha1.weak-hashes-sha1"
+      }
+    },
+    {
+      "id": "977058c5-6d0e-4489-a3e6-aff16309eb84",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.lang.security.missing-csrf-protection.missing-csrf-protection",
+      "rule_name": "ruby.lang.security.missing-csrf-protection.missing-csrf-protection",
+      "file_path": "app/controllers/application_controller.rb",
+      "line_number": 2,
+      "column_number": 1,
+      "end_line": 59,
+      "end_column": 8,
+      "severity": "warning",
+      "message": "Detected controller which does not enable cross-site request forgery protections using 'protect_from_forgery'. Add 'protect_from_forgery :with => :exception' to your controller class.",
+      "snippet": "class ApplicationController < ActionController::Base\n  before_action :authenticated, :has_info, :create_analytic, :mailer_options\n  helper_method :current_user, :is_admin?, :sanitize_font\n\n  # Our security guy keep talking about sea-surfing, cool story bro.\n  # Prevent CSRF attacks by raising an exception.\n  # For APIs, you may want to use :null_session instead.\n  #protect_from_forgery with: :exception\n\n  private\n\n  def mailer_options\n    ActionMailer::Base.default_url_options[:protocol] = request.protocol\n    ActionMailer::Base.default_url_options[:host]     = request.host_with_port\n  end\n\n  def current_user\n    @current_user ||= (\n      User.find_by(auth_token: cookies[:auth_token].to_s) ||\n      User.find_by(id: session[:user_id].to_s)\n    )\n  end\n\n  def authenticated\n     path = request.fullpath.present? ? root_url(url: request.fullpath) : root_url\n     redirect_to path and reset_session if !current_user\n  end\n\n  def is_admin?\n    current_user.admin if current_user\n  end\n\n  def administrative\n    if !is_admin?\n     redirect_to root_url\n   end\n  end\n\n  def has_info\n    redirect = false\n    if current_user\n      begin\n      if !(current_user.retirement || current_user.paid_time_off || current_user.paid_time_off.schedule || current_user.work_info || current_user.performance)\n        redirect = true\n      end\n      rescue\n         redirect = true\n      end\n    end\n    redirect_to home_dashboard_index_path if redirect\n  end\n\n  def create_analytic\n    Analytics.create({ ip_address: request.remote_ip, referrer: request.referrer, user_agent: request.user_agent})\n  end\n\n  def sanitize_font(css)\n    css",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/controllers/application_controller.rb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 8,
+                "endLine": 59,
+                "snippet": {
+                  "text": "class ApplicationController < ActionController::Base\n  before_action :authenticated, :has_info, :create_analytic, :mailer_options\n  helper_method :current_user, :is_admin?, :sanitize_font\n\n  # Our security guy keep talking about sea-surfing, cool story bro.\n  # Prevent CSRF attacks by raising an exception.\n  # For APIs, you may want to use :null_session instead.\n  #protect_from_forgery with: :exception\n\n  private\n\n  def mailer_options\n    ActionMailer::Base.default_url_options[:protocol] = request.protocol\n    ActionMailer::Base.default_url_options[:host]     = request.host_with_port\n  end\n\n  def current_user\n    @current_user ||= (\n      User.find_by(auth_token: cookies[:auth_token].to_s) ||\n      User.find_by(id: session[:user_id].to_s)\n    )\n  end\n\n  def authenticated\n     path = request.fullpath.present? ? root_url(url: request.fullpath) : root_url\n     redirect_to path and reset_session if !current_user\n  end\n\n  def is_admin?\n    current_user.admin if current_user\n  end\n\n  def administrative\n    if !is_admin?\n     redirect_to root_url\n   end\n  end\n\n  def has_info\n    redirect = false\n    if current_user\n      begin\n      if !(current_user.retirement || current_user.paid_time_off || current_user.paid_time_off.schedule || current_user.work_info || current_user.performance)\n        redirect = true\n      end\n      rescue\n         redirect = true\n      end\n    end\n    redirect_to home_dashboard_index_path if redirect\n  end\n\n  def create_analytic\n    Analytics.create({ ip_address: request.remote_ip, referrer: request.referrer, user_agent: request.user_agent})\n  end\n\n  def sanitize_font(css)\n    css"
+                },
+                "startColumn": 1,
+                "startLine": 2
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Detected controller which does not enable cross-site request forgery protections using 'protect_from_forgery'. Add 'protect_from_forgery :with => :exception' to your controller class."
+        },
+        "properties": {},
+        "ruleId": "ruby.lang.security.missing-csrf-protection.missing-csrf-protection"
+      }
+    },
+    {
+      "id": "7382474a-e58c-426b-af70-6e8fa8718b56",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.rails.security.brakeman.check-unsafe-reflection.check-unsafe-reflection",
+      "rule_name": "ruby.rails.security.brakeman.check-unsafe-reflection.check-unsafe-reflection",
+      "file_path": "app/controllers/benefit_forms_controller.rb",
+      "line_number": 12,
+      "column_number": 13,
+      "end_line": 12,
+      "end_column": 26,
+      "severity": "warning",
+      "message": "Found user-controllable input to Ruby reflection functionality. This allows a remote user to influence runtime behavior, up to and including arbitrary remote code execution. Do not provide user-controllable input to reflection functionality. Do not call symbol conversion on user-controllable input.",
+      "snippet": "     file = params[:type].constantize.new(path)",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/controllers/benefit_forms_controller.rb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 26,
+                "endLine": 12,
+                "snippet": {
+                  "text": "     file = params[:type].constantize.new(path)"
+                },
+                "startColumn": 13,
+                "startLine": 12
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Found user-controllable input to Ruby reflection functionality. This allows a remote user to influence runtime behavior, up to and including arbitrary remote code execution. Do not provide user-controllable input to reflection functionality. Do not call symbol conversion on user-controllable input."
+        },
+        "properties": {},
+        "ruleId": "ruby.rails.security.brakeman.check-unsafe-reflection.check-unsafe-reflection"
+      }
+    },
+    {
+      "id": "36e1d05b-0821-4de8-878a-7e54f9f280e1",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.rails.security.brakeman.check-send-file.check-send-file",
+      "rule_name": "ruby.rails.security.brakeman.check-send-file.check-send-file",
+      "file_path": "app/controllers/benefit_forms_controller.rb",
+      "line_number": 13,
+      "column_number": 6,
+      "end_line": 13,
+      "end_column": 47,
+      "severity": "warning",
+      "message": "Allowing user input to `send_file` allows a malicious user to potentially read arbitrary files from the server. Avoid accepting user input in `send_file` or normalize with `File.basename(...)`",
+      "snippet": "     send_file file, disposition: \"attachment\"",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/controllers/benefit_forms_controller.rb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 47,
+                "endLine": 13,
+                "snippet": {
+                  "text": "     send_file file, disposition: \"attachment\""
+                },
+                "startColumn": 6,
+                "startLine": 13
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Allowing user input to `send_file` allows a malicious user to potentially read arbitrary files from the server. Avoid accepting user input in `send_file` or normalize with `File.basename(...)`"
+        },
+        "properties": {},
+        "ruleId": "ruby.rails.security.brakeman.check-send-file.check-send-file"
+      }
+    },
+    {
+      "id": "5610e6a8-2190-417f-a0b8-148d4034217a",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.lang.security.bad-deserialization.bad-deserialization",
+      "rule_name": "ruby.lang.security.bad-deserialization.bad-deserialization",
+      "file_path": "app/controllers/password_resets_controller.rb",
+      "line_number": 6,
+      "column_number": 12,
+      "end_line": 6,
+      "end_column": 56,
+      "severity": "warning",
+      "message": "Checks for unsafe deserialization. Objects in Ruby can be serialized into strings, then later loaded from strings. However, uses of load and object_load can cause remote code execution. Loading user input with MARSHAL or CSV can potentially be dangerous. Use JSON in a secure fashion instead.",
+      "snippet": "    user = Marshal.load(Base64.decode64(params[:user])) unless params[:user].nil?",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/controllers/password_resets_controller.rb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 56,
+                "endLine": 6,
+                "snippet": {
+                  "text": "    user = Marshal.load(Base64.decode64(params[:user])) unless params[:user].nil?"
+                },
+                "startColumn": 12,
+                "startLine": 6
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Checks for unsafe deserialization. Objects in Ruby can be serialized into strings, then later loaded from strings. However, uses of load and object_load can cause remote code execution. Loading user input with MARSHAL or CSV can potentially be dangerous. Use JSON in a secure fashion instead."
+        },
+        "properties": {},
+        "ruleId": "ruby.lang.security.bad-deserialization.bad-deserialization"
+      }
+    },
+    {
+      "id": "f5550a3e-62b4-4547-810b-25162961e28e",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.rails.security.audit.xss.avoid-html-safe.avoid-html-safe",
+      "rule_name": "ruby.rails.security.audit.xss.avoid-html-safe.avoid-html-safe",
+      "file_path": "app/controllers/password_resets_controller.rb",
+      "line_number": 36,
+      "column_number": 23,
+      "end_line": 36,
+      "end_column": 103,
+      "severity": "warning",
+      "message": "'html_safe()' does not make the supplied string safe. 'html_safe()' bypasses HTML escaping. If external data can reach here, this exposes your application to cross-site scripting (XSS) attacks. Ensure no external data reaches here.",
+      "snippet": "      flash[:error] = \"There was an issue sending password reset email to #{params[:email]}\".html_safe unless params[:email].nil?",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/controllers/password_resets_controller.rb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 103,
+                "endLine": 36,
+                "snippet": {
+                  "text": "      flash[:error] = \"There was an issue sending password reset email to #{params[:email]}\".html_safe unless params[:email].nil?"
+                },
+                "startColumn": 23,
+                "startLine": 36
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "'html_safe()' does not make the supplied string safe. 'html_safe()' bypasses HTML escaping. If external data can reach here, this exposes your application to cross-site scripting (XSS) attacks. Ensure no external data reaches here."
+        },
+        "properties": {},
+        "ruleId": "ruby.rails.security.audit.xss.avoid-html-safe.avoid-html-safe"
+      }
+    },
+    {
+      "id": "0a68a927-161f-4e11-84f2-64695c5a490a",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.lang.security.weak-hashes-md5.weak-hashes-md5",
+      "rule_name": "ruby.lang.security.weak-hashes-md5.weak-hashes-md5",
+      "file_path": "app/controllers/password_resets_controller.rb",
+      "line_number": 48,
+      "column_number": 12,
+      "end_line": 48,
+      "end_column": 40,
+      "severity": "warning",
+      "message": "Should not use md5 to generate hashes. md5 is proven to be vulnerable through the use of brute-force attacks. Could also result in collisions, leading to potential collision attacks. Use SHA256 or other hashing functions instead.",
+      "snippet": "    hash = Digest::MD5.hexdigest(email)",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/controllers/password_resets_controller.rb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 40,
+                "endLine": 48,
+                "snippet": {
+                  "text": "    hash = Digest::MD5.hexdigest(email)"
+                },
+                "startColumn": 12,
+                "startLine": 48
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Should not use md5 to generate hashes. md5 is proven to be vulnerable through the use of brute-force attacks. Could also result in collisions, leading to potential collision attacks. Use SHA256 or other hashing functions instead."
+        },
+        "properties": {},
+        "ruleId": "ruby.lang.security.weak-hashes-md5.weak-hashes-md5"
+      }
+    },
+    {
+      "id": "996074fc-fcc5-46bb-9a9b-74e82a4dac39",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.lang.security.weak-hashes-md5.weak-hashes-md5",
+      "rule_name": "ruby.lang.security.weak-hashes-md5.weak-hashes-md5",
+      "file_path": "app/controllers/password_resets_controller.rb",
+      "line_number": 57,
+      "column_number": 15,
+      "end_line": 57,
+      "end_column": 49,
+      "severity": "warning",
+      "message": "Should not use md5 to generate hashes. md5 is proven to be vulnerable through the use of brute-force attacks. Could also result in collisions, leading to potential collision attacks. Use SHA256 or other hashing functions instead.",
+      "snippet": "      email = Digest::MD5.hexdigest(@user.email)",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/controllers/password_resets_controller.rb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 49,
+                "endLine": 57,
+                "snippet": {
+                  "text": "      email = Digest::MD5.hexdigest(@user.email)"
+                },
+                "startColumn": 15,
+                "startLine": 57
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Should not use md5 to generate hashes. md5 is proven to be vulnerable through the use of brute-force attacks. Could also result in collisions, leading to potential collision attacks. Use SHA256 or other hashing functions instead."
+        },
+        "properties": {},
+        "ruleId": "ruby.lang.security.weak-hashes-md5.weak-hashes-md5"
+      }
+    },
+    {
+      "id": "2e92736e-46fa-424c-be1a-c06fd2ad7944",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.rails.security.brakeman.check-unscoped-find.check-unscoped-find",
+      "rule_name": "ruby.rails.security.brakeman.check-unscoped-find.check-unscoped-find",
+      "file_path": "app/controllers/pay_controller.rb",
+      "line_number": 29,
+      "column_number": 11,
+      "end_line": 29,
+      "end_column": 38,
+      "severity": "warning",
+      "message": "Found an unscoped `find(...)` with user-controllable input. If the ActiveRecord model being searched against is sensitive, this may lead to Insecure Direct Object Reference (IDOR) behavior and allow users to read arbitrary records. Scope the find to the current user, e.g. `current_user.accounts.find(params[:id])`.",
+      "snippet": "    pay = Pay.find_by_id(params[:id])",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/controllers/pay_controller.rb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 38,
+                "endLine": 29,
+                "snippet": {
+                  "text": "    pay = Pay.find_by_id(params[:id])"
+                },
+                "startColumn": 11,
+                "startLine": 29
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Found an unscoped `find(...)` with user-controllable input. If the ActiveRecord model being searched against is sensitive, this may lead to Insecure Direct Object Reference (IDOR) behavior and allow users to read arbitrary records. Scope the find to the current user, e.g. `current_user.accounts.find(params[:id])`."
+        },
+        "properties": {},
+        "ruleId": "ruby.rails.security.brakeman.check-unscoped-find.check-unscoped-find"
+      }
+    },
+    {
+      "id": "53c61165-ca41-4c5c-8953-5c8926e533f4",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.rails.security.audit.xss.avoid-redirect.avoid-redirect",
+      "rule_name": "ruby.rails.security.audit.xss.avoid-redirect.avoid-redirect",
+      "file_path": "app/controllers/sessions_controller.rb",
+      "line_number": 26,
+      "column_number": 7,
+      "end_line": 26,
+      "end_column": 23,
+      "severity": "warning",
+      "message": "When a redirect uses user input, a malicious user can spoof a website under a trusted URL or access restricted parts of a site. When using user-supplied values, sanitize the value before using it for the redirect.",
+      "snippet": "      redirect_to path",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/controllers/sessions_controller.rb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 23,
+                "endLine": 26,
+                "snippet": {
+                  "text": "      redirect_to path"
+                },
+                "startColumn": 7,
+                "startLine": 26
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "When a redirect uses user input, a malicious user can spoof a website under a trusted URL or access restricted parts of a site. When using user-supplied values, sanitize the value before using it for the redirect."
+        },
+        "properties": {},
+        "ruleId": "ruby.rails.security.audit.xss.avoid-redirect.avoid-redirect"
+      }
+    },
+    {
+      "id": "f0186433-a24d-4a65-8960-c65df0590669",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.rails.security.brakeman.check-redirect-to.check-redirect-to",
+      "rule_name": "ruby.rails.security.brakeman.check-redirect-to.check-redirect-to",
+      "file_path": "app/controllers/sessions_controller.rb",
+      "line_number": 26,
+      "column_number": 19,
+      "end_line": 26,
+      "end_column": 23,
+      "severity": "warning",
+      "message": "Found potentially unsafe handling of redirect behavior path. Do not pass `params` to `redirect_to` without the `:only_path => true` hash value.",
+      "snippet": "      redirect_to path",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/controllers/sessions_controller.rb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 23,
+                "endLine": 26,
+                "snippet": {
+                  "text": "      redirect_to path"
+                },
+                "startColumn": 19,
+                "startLine": 26
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Found potentially unsafe handling of redirect behavior path. Do not pass `params` to `redirect_to` without the `:only_path => true` hash value."
+        },
+        "properties": {},
+        "ruleId": "ruby.rails.security.brakeman.check-redirect-to.check-redirect-to"
+      }
+    },
+    {
+      "id": "59945ecb-4403-4d37-a8d1-0a79184a3e05",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.rails.security.injection.tainted-sql-string.tainted-sql-string",
+      "rule_name": "ruby.rails.security.injection.tainted-sql-string.tainted-sql-string",
+      "file_path": "app/controllers/users_controller.rb",
+      "line_number": 29,
+      "column_number": 23,
+      "end_line": 29,
+      "end_column": 53,
+      "severity": "warning",
+      "message": "Detected user input used to manually construct a SQL string. This is usually bad practice because manual construction could accidentally result in a SQL injection. An attacker could use a SQL injection to steal or modify contents of the database. Instead, use a parameterized query which is available by default in most database engines. Alternatively, consider using an object-relational mapper (ORM) such as ActiveRecord which will protect your queries.",
+      "snippet": "    user = User.where(\"id = '#{params[:user][:id]}'\")[0]",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/controllers/users_controller.rb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 53,
+                "endLine": 29,
+                "snippet": {
+                  "text": "    user = User.where(\"id = '#{params[:user][:id]}'\")[0]"
+                },
+                "startColumn": 23,
+                "startLine": 29
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Detected user input used to manually construct a SQL string. This is usually bad practice because manual construction could accidentally result in a SQL injection. An attacker could use a SQL injection to steal or modify contents of the database. Instead, use a parameterized query which is available by default in most database engines. Alternatively, consider using an object-relational mapper (ORM) such as ActiveRecord which will protect your queries."
+        },
+        "properties": {},
+        "ruleId": "ruby.rails.security.injection.tainted-sql-string.tainted-sql-string"
+      }
+    },
+    {
+      "id": "924e9017-8f1c-42c1-8a03-14cfbfeb107d",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.lang.security.model-attr-accessible.model-attr-accessible",
+      "rule_name": "ruby.lang.security.model-attr-accessible.model-attr-accessible",
+      "file_path": "app/controllers/users_controller.rb",
+      "line_number": 55,
+      "column_number": 5,
+      "end_line": 55,
+      "end_column": 74,
+      "severity": "warning",
+      "message": "Checks for dangerous permitted attributes that can lead to mass assignment vulnerabilities. Query parameters allowed using permit and attr_accessible are checked for allowance of dangerous attributes admin, banned, role, and account_id. Also checks for usages of params.permit!, which allows everything. Fix: don't allow admin, banned, role, and account_id using permit or attr_accessible.",
+      "snippet": "    params.require(:user).permit(:email, :admin, :first_name, :last_name)",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/controllers/users_controller.rb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 74,
+                "endLine": 55,
+                "snippet": {
+                  "text": "    params.require(:user).permit(:email, :admin, :first_name, :last_name)"
+                },
+                "startColumn": 5,
+                "startLine": 55
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Checks for dangerous permitted attributes that can lead to mass assignment vulnerabilities. Query parameters allowed using permit and attr_accessible are checked for allowance of dangerous attributes admin, banned, role, and account_id. Also checks for usages of params.permit!, which allows everything. Fix: don't allow admin, banned, role, and account_id using permit or attr_accessible."
+        },
+        "properties": {},
+        "ruleId": "ruby.lang.security.model-attr-accessible.model-attr-accessible"
+      }
+    },
+    {
+      "id": "ea94c08a-c9db-4c44-b3b9-5da9eb2f81c1",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.lang.security.weak-hashes-md5.weak-hashes-md5",
+      "rule_name": "ruby.lang.security.weak-hashes-md5.weak-hashes-md5",
+      "file_path": "app/models/user.rb",
+      "line_number": 45,
+      "column_number": 25,
+      "end_line": 45,
+      "end_column": 56,
+      "severity": "warning",
+      "message": "Should not use md5 to generate hashes. md5 is proven to be vulnerable through the use of brute-force attacks. Could also result in collisions, leading to potential collision attacks. Use SHA256 or other hashing functions instead.",
+      "snippet": "    if user.password == Digest::MD5.hexdigest(password)",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/models/user.rb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 56,
+                "endLine": 45,
+                "snippet": {
+                  "text": "    if user.password == Digest::MD5.hexdigest(password)"
+                },
+                "startColumn": 25,
+                "startLine": 45
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Should not use md5 to generate hashes. md5 is proven to be vulnerable through the use of brute-force attacks. Could also result in collisions, leading to potential collision attacks. Use SHA256 or other hashing functions instead."
+        },
+        "properties": {},
+        "ruleId": "ruby.lang.security.weak-hashes-md5.weak-hashes-md5"
+      }
+    },
+    {
+      "id": "33a3f3f2-9e71-44a4-9898-a386ef3f945e",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.lang.security.weak-hashes-md5.weak-hashes-md5",
+      "rule_name": "ruby.lang.security.weak-hashes-md5.weak-hashes-md5",
+      "file_path": "app/models/user.rb",
+      "line_number": 55,
+      "column_number": 23,
+      "end_line": 55,
+      "end_column": 59,
+      "severity": "warning",
+      "message": "Should not use md5 to generate hashes. md5 is proven to be vulnerable through the use of brute-force attacks. Could also result in collisions, leading to potential collision attacks. Use SHA256 or other hashing functions instead.",
+      "snippet": "      self.password = Digest::MD5.hexdigest(self.password)",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/models/user.rb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 59,
+                "endLine": 55,
+                "snippet": {
+                  "text": "      self.password = Digest::MD5.hexdigest(self.password)"
+                },
+                "startColumn": 23,
+                "startLine": 55
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Should not use md5 to generate hashes. md5 is proven to be vulnerable through the use of brute-force attacks. Could also result in collisions, leading to potential collision attacks. Use SHA256 or other hashing functions instead."
+        },
+        "properties": {},
+        "ruleId": "ruby.lang.security.weak-hashes-md5.weak-hashes-md5"
+      }
+    },
+    {
+      "id": "2f6cb8a5-14f7-443b-a3bb-5236fedea2e5",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.rails.security.audit.xss.templates.unquoted-attribute.unquoted-attribute",
+      "rule_name": "ruby.rails.security.audit.xss.templates.unquoted-attribute.unquoted-attribute",
+      "file_path": "app/views/admin/analytics.html.erb",
+      "line_number": 9,
+      "column_number": 76,
+      "end_line": 9,
+      "end_column": 109,
+      "severity": "warning",
+      "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"<%= expr %>\".",
+      "snippet": "    <table class=\"table table-striped table-hover table-bordered pull-left <%= \"custom\" if params[:field] %>\" id=\"data-table\">",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/views/admin/analytics.html.erb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 109,
+                "endLine": 9,
+                "snippet": {
+                  "text": "    <table class=\"table table-striped table-hover table-bordered pull-left <%= \"custom\" if params[:field] %>\" id=\"data-table\">"
+                },
+                "startColumn": 76,
+                "startLine": 9
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"<%= expr %>\"."
+        },
+        "properties": {},
+        "ruleId": "ruby.rails.security.audit.xss.templates.unquoted-attribute.unquoted-attribute"
+      }
+    },
+    {
+      "id": "4157f145-8f4c-4914-96eb-d94e60226eaf",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.rails.security.audit.xss.templates.avoid-raw.avoid-raw",
+      "rule_name": "ruby.rails.security.audit.xss.templates.avoid-raw.avoid-raw",
+      "file_path": "app/views/layouts/application.html.erb",
+      "line_number": 427,
+      "column_number": 26,
+      "end_line": 427,
+      "end_column": 29,
+      "severity": "warning",
+      "message": "'raw' renders raw HTML, as the name implies. This means that normal HTML escaping is bypassed. If user data can be controlled here, this exposes your application to cross-site scripting (XSS). If you need to do this, be sure to correctly sanitize the data using a library such as DOMPurify.",
+      "snippet": "    body { font-size:<%= raw cookies[:font] %> !important;}",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/views/layouts/application.html.erb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 29,
+                "endLine": 427,
+                "snippet": {
+                  "text": "    body { font-size:<%= raw cookies[:font] %> !important;}"
+                },
+                "startColumn": 26,
+                "startLine": 427
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "'raw' renders raw HTML, as the name implies. This means that normal HTML escaping is bypassed. If user data can be controlled here, this exposes your application to cross-site scripting (XSS). If you need to do this, be sure to correctly sanitize the data using a library such as DOMPurify."
+        },
+        "properties": {},
+        "ruleId": "ruby.rails.security.audit.xss.templates.avoid-raw.avoid-raw"
+      }
+    },
+    {
+      "id": "f11fbbfc-cb47-4889-a4f4-a5f32ece9008",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.rails.security.audit.xss.templates.var-in-href.var-in-href",
+      "rule_name": "ruby.rails.security.audit.xss.templates.var-in-href.var-in-href",
+      "file_path": "app/views/layouts/shared/_header.html.erb",
+      "line_number": 7,
+      "column_number": 11,
+      "end_line": 7,
+      "end_column": 71,
+      "severity": "warning",
+      "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using a relative URL, start with a literal forward slash and concatenate the URL, like this: href='/<%= link =>'. You may also consider setting the Content Security Policy (CSP) header.",
+      "snippet": "          <a href=\"<%= home_dashboard_index_path %>\" class=\"rg-brand\">",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/views/layouts/shared/_header.html.erb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 71,
+                "endLine": 7,
+                "snippet": {
+                  "text": "          <a href=\"<%= home_dashboard_index_path %>\" class=\"rg-brand\">"
+                },
+                "startColumn": 11,
+                "startLine": 7
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using a relative URL, start with a literal forward slash and concatenate the URL, like this: href='/<%= link =>'. You may also consider setting the Content Security Policy (CSP) header."
+        },
+        "properties": {},
+        "ruleId": "ruby.rails.security.audit.xss.templates.var-in-href.var-in-href"
+      }
+    },
+    {
+      "id": "8e3fc0e3-a416-4c69-8697-00fad0013964",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.rails.security.audit.xss.templates.avoid-html-safe.avoid-html-safe",
+      "rule_name": "ruby.rails.security.audit.xss.templates.avoid-html-safe.avoid-html-safe",
+      "file_path": "app/views/layouts/shared/_header.html.erb",
+      "line_number": 47,
+      "column_number": 58,
+      "end_line": 47,
+      "end_column": 78,
+      "severity": "warning",
+      "message": "'html_safe' renders raw HTML. This means that normal HTML escaping is bypassed. If user data can be controlled here, this exposes your application to cross-site scripting (XSS). If you need to do this, be sure to correctly sanitize the data using a library such as DOMPurify.",
+      "snippet": "                <span class=\"text-dark\"><%= current_user.first_name.html_safe %></span>",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/views/layouts/shared/_header.html.erb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 78,
+                "endLine": 47,
+                "snippet": {
+                  "text": "                <span class=\"text-dark\"><%= current_user.first_name.html_safe %></span>"
+                },
+                "startColumn": 58,
+                "startLine": 47
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "'html_safe' renders raw HTML. This means that normal HTML escaping is bypassed. If user data can be controlled here, this exposes your application to cross-site scripting (XSS). If you need to do this, be sure to correctly sanitize the data using a library such as DOMPurify."
+        },
+        "properties": {},
+        "ruleId": "ruby.rails.security.audit.xss.templates.avoid-html-safe.avoid-html-safe"
+      }
+    },
+    {
+      "id": "c3661f4b-ff3a-4a4d-ae54-a7c2d0b55c72",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.rails.security.audit.xss.templates.var-in-href.var-in-href",
+      "rule_name": "ruby.rails.security.audit.xss.templates.var-in-href.var-in-href",
+      "file_path": "app/views/layouts/shared/_header.html.erb",
+      "line_number": 75,
+      "column_number": 11,
+      "end_line": 75,
+      "end_column": 56,
+      "severity": "warning",
+      "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using a relative URL, start with a literal forward slash and concatenate the URL, like this: href='/<%= link =>'. You may also consider setting the Content Security Policy (CSP) header.",
+      "snippet": "          <a href=\"<%= login_path %>\" class=\"rg-brand\">",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/views/layouts/shared/_header.html.erb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 56,
+                "endLine": 75,
+                "snippet": {
+                  "text": "          <a href=\"<%= login_path %>\" class=\"rg-brand\">"
+                },
+                "startColumn": 11,
+                "startLine": 75
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using a relative URL, start with a literal forward slash and concatenate the URL, like this: href='/<%= link =>'. You may also consider setting the Content Security Policy (CSP) header."
+        },
+        "properties": {},
+        "ruleId": "ruby.rails.security.audit.xss.templates.var-in-href.var-in-href"
+      }
+    },
+    {
+      "id": "15f221c0-c2fd-452b-baea-02488002bac7",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.rails.security.audit.xss.templates.avoid-html-safe.avoid-html-safe",
+      "rule_name": "ruby.rails.security.audit.xss.templates.avoid-html-safe.avoid-html-safe",
+      "file_path": "app/views/messages/index.html.erb",
+      "line_number": 167,
+      "column_number": 56,
+      "end_line": 167,
+      "end_column": 73,
+      "severity": "warning",
+      "message": "'html_safe' renders raw HTML. This means that normal HTML escaping is bypassed. If user data can be controlled here, this exposes your application to cross-site scripting (XSS). If you need to do this, be sure to correctly sanitize the data using a library such as DOMPurify.",
+      "snippet": "    url: <%= \"/users/#{current_user.id}/messages.json\".inspect.html_safe %>,",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/views/messages/index.html.erb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 73,
+                "endLine": 167,
+                "snippet": {
+                  "text": "    url: <%= \"/users/#{current_user.id}/messages.json\".inspect.html_safe %>,"
+                },
+                "startColumn": 56,
+                "startLine": 167
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "'html_safe' renders raw HTML. This means that normal HTML escaping is bypassed. If user data can be controlled here, this exposes your application to cross-site scripting (XSS). If you need to do this, be sure to correctly sanitize the data using a library such as DOMPurify."
+        },
+        "properties": {},
+        "ruleId": "ruby.rails.security.audit.xss.templates.avoid-html-safe.avoid-html-safe"
+      }
+    },
+    {
+      "id": "ecb3152b-99e2-4816-acd6-858b7a7cb0b9",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.rails.security.audit.xss.templates.avoid-html-safe.avoid-html-safe",
+      "rule_name": "ruby.rails.security.audit.xss.templates.avoid-html-safe.avoid-html-safe",
+      "file_path": "app/views/paid_time_off/index.html.erb",
+      "line_number": 210,
+      "column_number": 73,
+      "end_line": 210,
+      "end_column": 90,
+      "severity": "warning",
+      "message": "'html_safe' renders raw HTML. This means that normal HTML escaping is bypassed. If user data can be controlled here, this exposes your application to cross-site scripting (XSS). If you need to do this, be sure to correctly sanitize the data using a library such as DOMPurify.",
+      "snippet": "    events: <%= get_pto_schedule_schedule_index_path(:format => \"json\").inspect.html_safe %>,",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/views/paid_time_off/index.html.erb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 90,
+                "endLine": 210,
+                "snippet": {
+                  "text": "    events: <%= get_pto_schedule_schedule_index_path(:format => \"json\").inspect.html_safe %>,"
+                },
+                "startColumn": 73,
+                "startLine": 210
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "'html_safe' renders raw HTML. This means that normal HTML escaping is bypassed. If user data can be controlled here, this exposes your application to cross-site scripting (XSS). If you need to do this, be sure to correctly sanitize the data using a library such as DOMPurify."
+        },
+        "properties": {},
+        "ruleId": "ruby.rails.security.audit.xss.templates.avoid-html-safe.avoid-html-safe"
+      }
+    },
+    {
+      "id": "4e4285f2-c183-454e-9ee7-c06abe870a9f",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.rails.security.audit.xss.templates.avoid-html-safe.avoid-html-safe",
+      "rule_name": "ruby.rails.security.audit.xss.templates.avoid-html-safe.avoid-html-safe",
+      "file_path": "app/views/users/account_settings.html.erb",
+      "line_number": 81,
+      "column_number": 49,
+      "end_line": 81,
+      "end_column": 66,
+      "severity": "warning",
+      "message": "'html_safe' renders raw HTML. This means that normal HTML escaping is bypassed. If user data can be controlled here, this exposes your application to cross-site scripting (XSS). If you need to do this, be sure to correctly sanitize the data using a library such as DOMPurify.",
+      "snippet": "      url: <%= \"/users/#{current_user.id}.json\".inspect.html_safe %>,",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/app/views/users/account_settings.html.erb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 66,
+                "endLine": 81,
+                "snippet": {
+                  "text": "      url: <%= \"/users/#{current_user.id}.json\".inspect.html_safe %>,"
+                },
+                "startColumn": 49,
+                "startLine": 81
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "'html_safe' renders raw HTML. This means that normal HTML escaping is bypassed. If user data can be controlled here, this exposes your application to cross-site scripting (XSS). If you need to do this, be sure to correctly sanitize the data using a library such as DOMPurify."
+        },
+        "properties": {},
+        "ruleId": "ruby.rails.security.audit.xss.templates.avoid-html-safe.avoid-html-safe"
+      }
+    },
+    {
+      "id": "47a61bd3-73a1-4080-87f1-db8c49f8bc6b",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.rails.security.audit.detailed-exceptions.detailed-exceptions",
+      "rule_name": "ruby.rails.security.audit.detailed-exceptions.detailed-exceptions",
+      "file_path": "config/environments/development.rb",
+      "line_number": 11,
+      "column_number": 3,
+      "end_line": 11,
+      "end_column": 50,
+      "severity": "warning",
+      "message": "Found that the setting for providing detailed exception reports in Rails is set to true. This can lead to information exposure, where sensitive system or internal information is displayed to the end user. Instead, turn this setting off.",
+      "snippet": "  config.consider_all_requests_local       = true",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/config/environments/development.rb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 50,
+                "endLine": 11,
+                "snippet": {
+                  "text": "  config.consider_all_requests_local       = true"
+                },
+                "startColumn": 3,
+                "startLine": 11
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Found that the setting for providing detailed exception reports in Rails is set to true. This can lead to information exposure, where sensitive system or internal information is displayed to the end user. Instead, turn this setting off."
+        },
+        "properties": {},
+        "ruleId": "ruby.rails.security.audit.detailed-exceptions.detailed-exceptions"
+      }
+    },
+    {
+      "id": "456ddcfd-62a7-46b3-b3f6-8387dbc54394",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.rails.security.audit.detailed-exceptions.detailed-exceptions",
+      "rule_name": "ruby.rails.security.audit.detailed-exceptions.detailed-exceptions",
+      "file_path": "config/environments/mysql.rb",
+      "line_number": 11,
+      "column_number": 3,
+      "end_line": 11,
+      "end_column": 50,
+      "severity": "warning",
+      "message": "Found that the setting for providing detailed exception reports in Rails is set to true. This can lead to information exposure, where sensitive system or internal information is displayed to the end user. Instead, turn this setting off.",
+      "snippet": "  config.consider_all_requests_local       = true",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/config/environments/mysql.rb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 50,
+                "endLine": 11,
+                "snippet": {
+                  "text": "  config.consider_all_requests_local       = true"
+                },
+                "startColumn": 3,
+                "startLine": 11
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Found that the setting for providing detailed exception reports in Rails is set to true. This can lead to information exposure, where sensitive system or internal information is displayed to the end user. Instead, turn this setting off."
+        },
+        "properties": {},
+        "ruleId": "ruby.rails.security.audit.detailed-exceptions.detailed-exceptions"
+      }
+    },
+    {
+      "id": "551efbb5-5c88-4e88-900c-cfd9adb552d8",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.rails.security.audit.detailed-exceptions.detailed-exceptions",
+      "rule_name": "ruby.rails.security.audit.detailed-exceptions.detailed-exceptions",
+      "file_path": "config/environments/openshift.rb",
+      "line_number": 11,
+      "column_number": 3,
+      "end_line": 11,
+      "end_column": 50,
+      "severity": "warning",
+      "message": "Found that the setting for providing detailed exception reports in Rails is set to true. This can lead to information exposure, where sensitive system or internal information is displayed to the end user. Instead, turn this setting off.",
+      "snippet": "  config.consider_all_requests_local       = true",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/config/environments/openshift.rb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 50,
+                "endLine": 11,
+                "snippet": {
+                  "text": "  config.consider_all_requests_local       = true"
+                },
+                "startColumn": 3,
+                "startLine": 11
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Found that the setting for providing detailed exception reports in Rails is set to true. This can lead to information exposure, where sensitive system or internal information is displayed to the end user. Instead, turn this setting off."
+        },
+        "properties": {},
+        "ruleId": "ruby.rails.security.audit.detailed-exceptions.detailed-exceptions"
+      }
+    },
+    {
+      "id": "1fc0329c-3ca3-4e96-adbc-f105f92bf142",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.rails.security.audit.detailed-exceptions.detailed-exceptions",
+      "rule_name": "ruby.rails.security.audit.detailed-exceptions.detailed-exceptions",
+      "file_path": "config/environments/test.rb",
+      "line_number": 16,
+      "column_number": 3,
+      "end_line": 16,
+      "end_column": 50,
+      "severity": "warning",
+      "message": "Found that the setting for providing detailed exception reports in Rails is set to true. This can lead to information exposure, where sensitive system or internal information is displayed to the end user. Instead, turn this setting off.",
+      "snippet": "  config.consider_all_requests_local       = true",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/config/environments/test.rb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 50,
+                "endLine": 16,
+                "snippet": {
+                  "text": "  config.consider_all_requests_local       = true"
+                },
+                "startColumn": 3,
+                "startLine": 16
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Found that the setting for providing detailed exception reports in Rails is set to true. This can lead to information exposure, where sensitive system or internal information is displayed to the end user. Instead, turn this setting off."
+        },
+        "properties": {},
+        "ruleId": "ruby.rails.security.audit.detailed-exceptions.detailed-exceptions"
+      }
+    },
+    {
+      "id": "a604a279-c090-4f10-b523-3f1aff96c1c8",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.lang.security.weak-hashes-md5.weak-hashes-md5",
+      "rule_name": "ruby.lang.security.weak-hashes-md5.weak-hashes-md5",
+      "file_path": "spec/vulnerabilities/password_hashing_spec.rb",
+      "line_number": 18,
+      "column_number": 44,
+      "end_line": 18,
+      "end_column": 75,
+      "severity": "warning",
+      "message": "Should not use md5 to generate hashes. md5 is proven to be vulnerable through the use of brute-force attacks. Could also result in collisions, leading to potential collision attacks. Use SHA256 or other hashing functions instead.",
+      "snippet": "    expect(normal_user.password).not_to eq(Digest::MD5.hexdigest(new_pass))",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/spec/vulnerabilities/password_hashing_spec.rb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 75,
+                "endLine": 18,
+                "snippet": {
+                  "text": "    expect(normal_user.password).not_to eq(Digest::MD5.hexdigest(new_pass))"
+                },
+                "startColumn": 44,
+                "startLine": 18
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Should not use md5 to generate hashes. md5 is proven to be vulnerable through the use of brute-force attacks. Could also result in collisions, leading to potential collision attacks. Use SHA256 or other hashing functions instead."
+        },
+        "properties": {},
+        "ruleId": "ruby.lang.security.weak-hashes-md5.weak-hashes-md5"
+      }
+    },
+    {
+      "id": "92c9db1c-5cb0-47f5-98d8-01bd7da36e17",
+      "tool": "Semgrep OSS",
+      "rule_id": "ruby.lang.security.dangerous-exec.dangerous-exec",
+      "rule_name": "ruby.lang.security.dangerous-exec.dangerous-exec",
+      "file_path": "vulnerable.rb",
+      "line_number": 5,
+      "column_number": 3,
+      "end_line": 5,
+      "end_column": 31,
+      "severity": "warning",
+      "message": "Detected non-static command inside system. Audit the input to 'system'. If unverified user data can reach this call site, this is a code injection vulnerability. A malicious actor can inject a malicious script to execute arbitrary code.",
+      "snippet": "  system(\"echo #{user_input}\")  # Vulnerable to command injection",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/vulnerable.rb",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 31,
+                "endLine": 5,
+                "snippet": {
+                  "text": "  system(\"echo #{user_input}\")  # Vulnerable to command injection"
+                },
+                "startColumn": 3,
+                "startLine": 5
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Detected non-static command inside system. Audit the input to 'system'. If unverified user data can reach this call site, this is a code injection vulnerability. A malicious actor can inject a malicious script to execute arbitrary code."
+        },
+        "properties": {},
+        "ruleId": "ruby.lang.security.dangerous-exec.dangerous-exec"
+      }
+    }
+  ],
+  "issue_count": 44,
+  "issues_by_severity": {
+    "warning": 44
+  },
+  "metadata": {}
+}

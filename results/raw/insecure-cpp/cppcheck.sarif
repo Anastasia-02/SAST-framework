@@ -1,0 +1,1203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="2.16.0"/>
+    <errors>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/format/chars_written.c" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/format/direct_access.c" line="1" column="0"/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;argv&apos; can be declared as const array" verbose="Parameter &apos;argv&apos; can be declared as const array" cwe="398" file0="/src/exploit/format/direct_access.c">
+            <location file="/src/exploit/format/direct_access.c" line="5" column="27" info="Parameter &apos;argv&apos; can be declared as const array"/>
+            <symbol>argv</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/format/dtors_test.c" line="7" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/format/dtors_test.c" line="8" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/format/environment_variable_shellcode.c" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/format/environment_variable_shellcode.c" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/format/environment_variable_shellcode.c" line="3" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;inttypes.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;inttypes.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/format/exploitable.c" line="45" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/format/exploitable.c" line="46" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/format/exploitable.c" line="47" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/format/exploitable.c" line="48" column="0"/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;argv&apos; can be declared as const array" verbose="Parameter &apos;argv&apos; can be declared as const array" cwe="398" file0="/src/exploit/format/exploitable.c">
+            <location file="/src/exploit/format/exploitable.c" line="54" column="27" info="Parameter &apos;argv&apos; can be declared as const array"/>
+            <symbol>argv</symbol>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;test_ptr&apos; can be declared as pointer to const" verbose="Variable &apos;test_ptr&apos; can be declared as pointer to const" cwe="398" file0="/src/exploit/format/exploitable.c">
+            <location file="/src/exploit/format/exploitable.c" line="57" column="17" info="Variable &apos;test_ptr&apos; can be declared as pointer to const"/>
+            <symbol>test_ptr</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/format/exploitable_simple.c" line="6" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/format/exploitable_simple.c" line="7" column="0"/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;argv&apos; can be declared as const array" verbose="Parameter &apos;argv&apos; can be declared as const array" cwe="398" file0="/src/exploit/format/exploitable_simple.c">
+            <location file="/src/exploit/format/exploitable_simple.c" line="9" column="27" info="Parameter &apos;argv&apos; can be declared as const array"/>
+            <symbol>argv</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/format/field_width.c" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/format/getenvaddr.c" line="7" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/format/getenvaddr.c" line="8" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/format/getenvaddr.c" line="9" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/handbook/find_stackpointer.c" line="7" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/handbook/find_stackpointer.c" line="8" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/smashing/exit.c" line="6" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;unistd.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;unistd.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/smashing/shellcode.c" line="6" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/smashing/test_shellcode.c" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;limits.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;limits.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/unlink/unlink_uclibc.c" line="5" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/unlink/unlink_uclibc.c" line="6" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/unlink/unlink_uclibc.c" line="7" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;unistd.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;unistd.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/unlink/unlink_uclibc.c" line="8" column="0"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;where&apos; is always false" verbose="Condition &apos;where&apos; is always false" cwe="570" file0="/src/exploit/unlink/unlink_uclibc.c">
+            <location file="/src/exploit/unlink/unlink_uclibc.c" line="40" column="7" info="Condition &apos;where&apos; is always false"/>
+            <location file="/src/exploit/unlink/unlink_uclibc.c" line="30" column="11" info="Assignment &apos;where=NULL&apos;, assigned value is 0"/>
+        </error>
+        <error id="memleak" severity="error" msg="Memory leak: q" verbose="Memory leak: q" cwe="401" file0="/src/exploit/unlink/unlink_uclibc.c">
+            <location file="/src/exploit/unlink/unlink_uclibc.c" line="38" column="3"/>
+            <symbol>q</symbol>
+        </error>
+        <error id="memleak" severity="error" msg="Memory leak: q" verbose="Memory leak: q" cwe="401" file0="/src/exploit/unlink/unlink_uclibc.c">
+            <location file="/src/exploit/unlink/unlink_uclibc.c" line="49" column="1"/>
+            <symbol>q</symbol>
+        </error>
+        <error id="redundantInitialization" severity="style" msg="Redundant initialization for &apos;q&apos;. The initialized value is overwritten before it is read." verbose="Redundant initialization for &apos;q&apos;. The initialized value is overwritten before it is read." cwe="563" file0="/src/exploit/unlink/unlink_uclibc.c">
+            <location file="/src/exploit/unlink/unlink_uclibc.c" line="38" column="5" info="q is overwritten"/>
+            <location file="/src/exploit/unlink/unlink_uclibc.c" line="25" column="12" info="q is initialized"/>
+            <symbol>q</symbol>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;q&apos; can be declared as pointer to const" verbose="Variable &apos;q&apos; can be declared as pointer to const" cwe="398" file0="/src/exploit/unlink/unlink_uclibc.c">
+            <location file="/src/exploit/unlink/unlink_uclibc.c" line="25" column="10" info="Variable &apos;q&apos; can be declared as pointer to const"/>
+            <symbol>q</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;heap_free_area::size&apos; is never used." verbose="struct member &apos;heap_free_area::size&apos; is never used." cwe="563" file0="/src/exploit/unlink/unlink_uclibc.c">
+            <location file="/src/exploit/unlink/unlink_uclibc.c" line="15" column="10"/>
+            <symbol>heap_free_area::size</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;q&apos; is assigned a value that is never used." verbose="Variable &apos;q&apos; is assigned a value that is never used." cwe="563" file0="/src/exploit/unlink/unlink_uclibc.c">
+            <location file="/src/exploit/unlink/unlink_uclibc.c" line="38" column="5"/>
+            <symbol>q</symbol>
+        </error>
+        <error id="unusedAllocatedMemory" severity="style" msg="Variable &apos;q&apos; is allocated memory that is never used." verbose="Variable &apos;q&apos; is allocated memory that is never used." cwe="563" file0="/src/exploit/unlink/unlink_uclibc.c">
+            <location file="/src/exploit/unlink/unlink_uclibc.c" line="38" column="7"/>
+            <symbol>q</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;memory.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;memory.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/launch.c" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/launch.c" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/launch.c" line="3" column="0"/>
+        </error>
+        <error id="getsCalled" severity="warning" msg="Obsolete function &apos;gets&apos; called. It is recommended to use &apos;fgets&apos; or &apos;gets_s&apos; instead." verbose="The obsolete function &apos;gets&apos; is called. With &apos;gets&apos; you&apos;ll get a buffer overrun if the input data exceeds the size of the buffer. It is recommended to use the functions &apos;fgets&apos; or &apos;gets_s&apos; instead." cwe="477" file0="/src/exploit/wargames/launch.c">
+            <location file="/src/exploit/wargames/launch.c" line="19" column="3"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;n_missiles&apos; can be reduced." verbose="The scope of the variable &apos;n_missiles&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/src/exploit/wargames/launch.c">
+            <location file="/src/exploit/wargames/launch.c" line="14" column="7"/>
+            <symbol>n_missiles</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;cstdio&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;cstdio&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/launch.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/launch.cpp" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;memory.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;memory.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/launch.cpp" line="3" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;n_missiles&apos; can be reduced." verbose="The scope of the variable &apos;n_missiles&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/src/exploit/wargames/launch.cpp">
+            <location file="/src/exploit/wargames/launch.cpp" line="14" column="7"/>
+            <symbol>n_missiles</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;cstdio&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;cstdio&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/launch_bigger.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/launch_bigger.cpp" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;memory.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;memory.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/launch_bigger.cpp" line="3" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;n_missiles&apos; can be reduced." verbose="The scope of the variable &apos;n_missiles&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/src/exploit/wargames/launch_bigger.cpp">
+            <location file="/src/exploit/wargames/launch_bigger.cpp" line="14" column="7"/>
+            <symbol>n_missiles</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;cstdio&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;cstdio&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/launch_fixed.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iomanip&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iomanip&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/launch_fixed.cpp" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/launch_fixed.cpp" line="3" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;memory.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;memory.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/launch_fixed.cpp" line="4" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;n_missiles&apos; can be reduced." verbose="The scope of the variable &apos;n_missiles&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/src/exploit/wargames/launch_fixed.cpp">
+            <location file="/src/exploit/wargames/launch_fixed.cpp" line="15" column="7"/>
+            <symbol>n_missiles</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;memory.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;memory.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/push_string_shellcode_exploit.c" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/push_string_shellcode_exploit.c" line="2" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;padded_bytes&apos; can be reduced." verbose="The scope of the variable &apos;padded_bytes&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/src/exploit/wargames/push_string_shellcode_exploit.c">
+            <location file="/src/exploit/wargames/push_string_shellcode_exploit.c" line="24" column="7"/>
+            <symbol>padded_bytes</symbol>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &apos;pad&apos; can be declared as const array" verbose="Variable &apos;pad&apos; can be declared as const array" cwe="398" file0="/src/exploit/wargames/push_string_shellcode_exploit.c">
+            <location file="/src/exploit/wargames/push_string_shellcode_exploit.c" line="31" column="10" info="Variable &apos;pad&apos; can be declared as const array"/>
+            <symbol>pad</symbol>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &apos;addr&apos; can be declared as const array" verbose="Variable &apos;addr&apos; can be declared as const array" cwe="398" file0="/src/exploit/wargames/push_string_shellcode_exploit.c">
+            <location file="/src/exploit/wargames/push_string_shellcode_exploit.c" line="37" column="10" info="Variable &apos;addr&apos; can be declared as const array"/>
+            <symbol>addr</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/push_string_shellcode_test.c" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/push_string_shellcode_test.c" line="2" column="0"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="portability" msg="%lu in format string (no. 1) requires &apos;unsigned long&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." verbose="%lu in format string (no. 1) requires &apos;unsigned long&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." cwe="686" file0="/src/exploit/wargames/push_string_shellcode_test.c">
+            <location file="/src/exploit/wargames/push_string_shellcode_test.c" line="21" column="3"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;memory.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;memory.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/smashing_shellcode_exploit.c" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/smashing_shellcode_exploit.c" line="2" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;padded_bytes&apos; can be reduced." verbose="The scope of the variable &apos;padded_bytes&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/src/exploit/wargames/smashing_shellcode_exploit.c">
+            <location file="/src/exploit/wargames/smashing_shellcode_exploit.c" line="24" column="7"/>
+            <symbol>padded_bytes</symbol>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &apos;pad&apos; can be declared as const array" verbose="Variable &apos;pad&apos; can be declared as const array" cwe="398" file0="/src/exploit/wargames/smashing_shellcode_exploit.c">
+            <location file="/src/exploit/wargames/smashing_shellcode_exploit.c" line="31" column="10" info="Variable &apos;pad&apos; can be declared as const array"/>
+            <symbol>pad</symbol>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &apos;addr&apos; can be declared as const array" verbose="Variable &apos;addr&apos; can be declared as const array" cwe="398" file0="/src/exploit/wargames/smashing_shellcode_exploit.c">
+            <location file="/src/exploit/wargames/smashing_shellcode_exploit.c" line="37" column="10" info="Variable &apos;addr&apos; can be declared as const array"/>
+            <symbol>addr</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/smashing_shellcode_test.c" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/smashing_shellcode_test.c" line="2" column="0"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="portability" msg="%lu in format string (no. 1) requires &apos;unsigned long&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." verbose="%lu in format string (no. 1) requires &apos;unsigned long&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." cwe="686" file0="/src/exploit/wargames/smashing_shellcode_test.c">
+            <location file="/src/exploit/wargames/smashing_shellcode_test.c" line="22" column="3"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;memory.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;memory.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/stack_variable_exploit.c" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/stack_variable_exploit.c" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/stack_variable_exploit.c" line="3" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/stack_variable_exploit.c" line="4" column="0"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;Anonymous0::buffer&apos; is never used." verbose="struct member &apos;Anonymous0::buffer&apos; is never used." cwe="563" file0="/src/exploit/wargames/stack_variable_exploit.c">
+            <location file="/src/exploit/wargames/stack_variable_exploit.c" line="8" column="13"/>
+            <symbol>Anonymous0::buffer</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;fcntl.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;fcntl.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/tty_shellcode.c" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;unistd.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;unistd.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/tty_shellcode.c" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;memory.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;memory.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/tty_shellcode_exploit.c" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/tty_shellcode_exploit.c" line="2" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;padded_bytes&apos; can be reduced." verbose="The scope of the variable &apos;padded_bytes&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/src/exploit/wargames/tty_shellcode_exploit.c">
+            <location file="/src/exploit/wargames/tty_shellcode_exploit.c" line="45" column="7"/>
+            <symbol>padded_bytes</symbol>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &apos;pad&apos; can be declared as const array" verbose="Variable &apos;pad&apos; can be declared as const array" cwe="398" file0="/src/exploit/wargames/tty_shellcode_exploit.c">
+            <location file="/src/exploit/wargames/tty_shellcode_exploit.c" line="52" column="10" info="Variable &apos;pad&apos; can be declared as const array"/>
+            <symbol>pad</symbol>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &apos;addr&apos; can be declared as const array" verbose="Variable &apos;addr&apos; can be declared as const array" cwe="398" file0="/src/exploit/wargames/tty_shellcode_exploit.c">
+            <location file="/src/exploit/wargames/tty_shellcode_exploit.c" line="59" column="10" info="Variable &apos;addr&apos; can be declared as const array"/>
+            <symbol>addr</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/tty_shellcode_test.c" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploit/wargames/tty_shellcode_test.c" line="2" column="0"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="portability" msg="%lu in format string (no. 1) requires &apos;unsigned long&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." verbose="%lu in format string (no. 1) requires &apos;unsigned long&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." cwe="686" file0="/src/exploit/wargames/tty_shellcode_test.c">
+            <location file="/src/exploit/wargames/tty_shellcode_test.c" line="43" column="3"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/buffer_underflow.c" line="6" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;vector&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;vector&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/container_overflow.cpp" line="6" column="0"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;v.data()[6]&apos; is assigned a value that is never used." verbose="Variable &apos;v.data()[6]&apos; is assigned a value that is never used." cwe="563" file0="/src/exploitable/container_overflow.cpp">
+            <location file="/src/exploitable/container_overflow.cpp" line="11" column="15"/>
+            <symbol>v.data()[6]</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/dangling_pointer.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/dangling_pointer.cpp" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string_view&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string_view&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/dangling_pointer.cpp" line="3" column="0"/>
+        </error>
+        <error id="danglingTemporaryLifetime" severity="error" msg="Using object that is a temporary." verbose="Using object that is a temporary." cwe="562" file0="/src/exploitable/dangling_pointer.cpp">
+            <location file="/src/exploitable/dangling_pointer.cpp" line="17" column="16"/>
+            <location file="/src/exploitable/dangling_pointer.cpp" line="16" column="27" info="Temporary created here."/>
+            <location file="/src/exploitable/dangling_pointer.cpp" line="16" column="27" info="Converted to container view"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/disappearing_memset.c" line="6" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/disappearing_memset.c" line="7" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/disappearing_memset.c" line="8" column="0"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;pwd&apos; can be declared as pointer to const" verbose="Parameter &apos;pwd&apos; can be declared as pointer to const" cwe="398" file0="/src/exploitable/disappearing_memset.c">
+            <location file="/src/exploitable/disappearing_memset.c" line="10" column="32" info="Parameter &apos;pwd&apos; can be declared as pointer to const"/>
+            <symbol>pwd</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/double_free.c" line="6" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/double_free.c" line="7" column="0"/>
+        </error>
+        <error id="doubleFree" severity="error" msg="Memory pointed to by &apos;buffer&apos; is freed twice." verbose="Memory pointed to by &apos;buffer&apos; is freed twice." cwe="415" file0="/src/exploitable/double_free.c">
+            <location file="/src/exploitable/double_free.c" line="15" column="3"/>
+            <location file="/src/exploitable/double_free.c" line="13" column="5"/>
+            <symbol>buffer</symbol>
+        </error>
+        <error id="unusedAllocatedMemory" severity="style" msg="Variable &apos;buffer&apos; is allocated memory that is never used." verbose="Variable &apos;buffer&apos; is allocated memory that is never used." cwe="563" file0="/src/exploitable/double_free.c">
+            <location file="/src/exploitable/double_free.c" line="10" column="19"/>
+            <symbol>buffer</symbol>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;buffer[4]&apos; accessed at index 4, which is out of bounds." verbose="Array &apos;buffer[4]&apos; accessed at index 4, which is out of bounds." cwe="788" file0="/src/exploitable/global_buffer_overflow.c">
+            <location file="/src/exploitable/global_buffer_overflow.c" line="9" column="16" info="Array index out of bounds"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/heap_buffer_overflow.c" line="6" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/heap_buffer_overflow.c" line="7" column="0"/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;argv&apos; can be declared as const array" verbose="Parameter &apos;argv&apos; can be declared as const array" cwe="398" file0="/src/exploitable/heap_buffer_overflow.c">
+            <location file="/src/exploitable/heap_buffer_overflow.c" line="10" column="27" info="Parameter &apos;argv&apos; can be declared as const array"/>
+            <symbol>argv</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/heap_buffer_overflow_cwe.c" line="6" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/heap_buffer_overflow_cwe.c" line="7" column="0"/>
+        </error>
+        <error id="memleak" severity="error" msg="Memory leak: buf" verbose="Memory leak: buf" cwe="401" file0="/src/exploitable/heap_buffer_overflow_cwe.c">
+            <location file="/src/exploitable/heap_buffer_overflow_cwe.c" line="15" column="1"/>
+            <symbol>buf</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;argv&apos; can be declared as const array" verbose="Parameter &apos;argv&apos; can be declared as const array" cwe="398" file0="/src/exploitable/heap_buffer_overflow_cwe.c">
+            <location file="/src/exploitable/heap_buffer_overflow_cwe.c" line="10" column="27" info="Parameter &apos;argv&apos; can be declared as const array"/>
+            <symbol>argv</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;malloc.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;malloc.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/incorrect_type_conversion.c" line="1" column="0"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;b&apos; can be declared as pointer to const" verbose="Variable &apos;b&apos; can be declared as pointer to const" cwe="398" file0="/src/exploitable/incorrect_type_conversion.c">
+            <location file="/src/exploitable/incorrect_type_conversion.c" line="13" column="14" info="Variable &apos;b&apos; can be declared as pointer to const"/>
+            <symbol>b</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;b&apos; is assigned a value that is never used." verbose="Variable &apos;b&apos; is assigned a value that is never used." cwe="563" file0="/src/exploitable/incorrect_type_conversion.c">
+            <location file="/src/exploitable/incorrect_type_conversion.c" line="13" column="16"/>
+            <symbol>b</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;complex&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;complex&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/infinite_loop.cpp" line="6" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/infinite_loop.cpp" line="7" column="0"/>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &apos;values&apos; can be declared as const array" verbose="Variable &apos;values&apos; can be declared as const array" cwe="398" file0="/src/exploitable/infinite_loop.cpp">
+            <location file="/src/exploitable/infinite_loop.cpp" line="12" column="16" info="Variable &apos;values&apos; can be declared as const array"/>
+            <symbol>values</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;limits.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;limits.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/numeric_truncation.c" line="6" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/numeric_truncation.c" line="7" column="0"/>
+        </error>
+        <error id="pointerOutOfBounds" severity="portability" msg="Undefined behaviour, pointer arithmetic &apos;buf+first_len&apos; is out of bounds." verbose="Undefined behaviour, pointer arithmetic &apos;buf+first_len&apos; is out of bounds." cwe="758" file0="/src/exploitable/numeric_truncation.c">
+            <location file="/src/exploitable/numeric_truncation.c" line="19" column="16" info="Pointer arithmetic overflow"/>
+            <location file="/src/exploitable/numeric_truncation.c" line="10" column="37" info="Assignment &apos;first_len=4294967295-256&apos;, assigned value is 4294967039"/>
+        </error>
+        <error id="bufferAccessOutOfBounds" severity="error" msg="Buffer is accessed out of bounds: buf" verbose="Buffer is accessed out of bounds: buf" cwe="788" file0="/src/exploitable/numeric_truncation.c">
+            <location file="/src/exploitable/numeric_truncation.c" line="18" column="12" info="Buffer overrun"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;new_len&lt;=256&apos; is always true" verbose="Condition &apos;new_len&lt;=256&apos; is always true" cwe="571" file0="/src/exploitable/numeric_truncation.c">
+            <location file="/src/exploitable/numeric_truncation.c" line="17" column="15" info="Condition &apos;new_len&lt;=256&apos; is always true"/>
+            <location file="/src/exploitable/numeric_truncation.c" line="15" column="28" info="Assignment &apos;new_len=first_len+second_len&apos;, assigned value is -1"/>
+            <location file="/src/exploitable/numeric_truncation.c" line="10" column="37" info="Assignment &apos;first_len=4294967295-256&apos;, assigned value is 4294967039"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;first&apos; can be reduced." verbose="The scope of the variable &apos;first&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/src/exploitable/numeric_truncation.c">
+            <location file="/src/exploitable/numeric_truncation.c" line="14" column="8"/>
+            <symbol>first</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;second&apos; can be reduced." verbose="The scope of the variable &apos;second&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/src/exploitable/numeric_truncation.c">
+            <location file="/src/exploitable/numeric_truncation.c" line="14" column="26"/>
+            <symbol>second</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;buf&apos; can be reduced." verbose="The scope of the variable &apos;buf&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/src/exploitable/numeric_truncation.c">
+            <location file="/src/exploitable/numeric_truncation.c" line="14" column="46"/>
+            <symbol>buf</symbol>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &apos;first&apos; can be declared as const array" verbose="Variable &apos;first&apos; can be declared as const array" cwe="398" file0="/src/exploitable/numeric_truncation.c">
+            <location file="/src/exploitable/numeric_truncation.c" line="14" column="8" info="Variable &apos;first&apos; can be declared as const array"/>
+            <symbol>first</symbol>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &apos;second&apos; can be declared as const array" verbose="Variable &apos;second&apos; can be declared as const array" cwe="398" file0="/src/exploitable/numeric_truncation.c">
+            <location file="/src/exploitable/numeric_truncation.c" line="14" column="26" info="Variable &apos;second&apos; can be declared as const array"/>
+            <symbol>second</symbol>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: first" verbose="Uninitialized variable: first" cwe="457" file0="/src/exploitable/numeric_truncation.c">
+            <location file="/src/exploitable/numeric_truncation.c" line="18" column="17"/>
+            <symbol>first</symbol>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: second" verbose="Uninitialized variable: second" cwe="457" file0="/src/exploitable/numeric_truncation.c">
+            <location file="/src/exploitable/numeric_truncation.c" line="19" column="29"/>
+            <symbol>second</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;limits.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;limits.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/numeric_truncation_ubsan.c" line="6" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/numeric_truncation_ubsan.c" line="7" column="0"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;len_sum&lt;=buf_len&apos; is always true" verbose="Condition &apos;len_sum&lt;=buf_len&apos; is always true" cwe="571" file0="/src/exploitable/numeric_truncation_ubsan.c">
+            <location file="/src/exploitable/numeric_truncation_ubsan.c" line="15" column="15" info="Condition &apos;len_sum&lt;=buf_len&apos; is always true"/>
+            <location file="/src/exploitable/numeric_truncation_ubsan.c" line="14" column="27" info="Assignment &apos;len_sum=first_len+second_len&apos;, assigned value is -1"/>
+            <location file="/src/exploitable/numeric_truncation_ubsan.c" line="10" column="37" info="Assignment &apos;first_len=4294967295-256&apos;, assigned value is 4294967039"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;assert.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;assert.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/numeric_truncation_unsafe.c" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;limits.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;limits.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/numeric_truncation_unsafe.c" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/numeric_truncation_unsafe.c" line="3" column="0"/>
+        </error>
+        <error id="assertWithSideEffect" severity="warning" msg="Assert statement calls a function which may have desired side effects: &apos;isSafe&apos;." verbose="Non-pure function: &apos;isSafe&apos; is called inside assert statement. Assert statements are removed from release builds so the code inside assert statement is not executed. If the code is needed also in release builds, this is a bug." cwe="398" file0="/src/exploitable/numeric_truncation_unsafe.c">
+            <location file="/src/exploitable/numeric_truncation_unsafe.c" line="16" column="10"/>
+            <symbol>isSafe</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;limits.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;limits.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/signed_integer_overflow.c" line="6" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/signed_integer_overflow.c" line="7" column="0"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;(first_len+second_len)&lt;=256&apos; is always false" verbose="Condition &apos;(first_len+second_len)&lt;=256&apos; is always false" cwe="570" file0="/src/exploitable/signed_integer_overflow.c">
+            <location file="/src/exploitable/signed_integer_overflow.c" line="16" column="32" info="Condition &apos;(first_len+second_len)&lt;=256&apos; is always false"/>
+            <location file="/src/exploitable/signed_integer_overflow.c" line="10" column="19" info="Assignment &apos;first_len=2147483647&apos;, assigned value is 2147483647"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;first&apos; can be reduced." verbose="The scope of the variable &apos;first&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/src/exploitable/signed_integer_overflow.c">
+            <location file="/src/exploitable/signed_integer_overflow.c" line="14" column="8"/>
+            <symbol>first</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;second&apos; can be reduced." verbose="The scope of the variable &apos;second&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/src/exploitable/signed_integer_overflow.c">
+            <location file="/src/exploitable/signed_integer_overflow.c" line="14" column="26"/>
+            <symbol>second</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;buf&apos; can be reduced." verbose="The scope of the variable &apos;buf&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/src/exploitable/signed_integer_overflow.c">
+            <location file="/src/exploitable/signed_integer_overflow.c" line="14" column="46"/>
+            <symbol>buf</symbol>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &apos;first&apos; can be declared as const array" verbose="Variable &apos;first&apos; can be declared as const array" cwe="398" file0="/src/exploitable/signed_integer_overflow.c">
+            <location file="/src/exploitable/signed_integer_overflow.c" line="14" column="8" info="Variable &apos;first&apos; can be declared as const array"/>
+            <symbol>first</symbol>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &apos;second&apos; can be declared as const array" verbose="Variable &apos;second&apos; can be declared as const array" cwe="398" file0="/src/exploitable/signed_integer_overflow.c">
+            <location file="/src/exploitable/signed_integer_overflow.c" line="14" column="26" info="Variable &apos;second&apos; can be declared as const array"/>
+            <symbol>second</symbol>
+        </error>
+        <error id="integerOverflow" severity="error" msg="Signed integer overflow for expression &apos;first_len+second_len&apos;." verbose="Signed integer overflow for expression &apos;first_len+second_len&apos;." cwe="190" file0="/src/exploitable/signed_integer_overflow.c">
+            <location file="/src/exploitable/signed_integer_overflow.c" line="16" column="18" info="Integer overflow"/>
+            <location file="/src/exploitable/signed_integer_overflow.c" line="10" column="19" info="Assignment &apos;first_len=2147483647&apos;, assigned value is 2147483647"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;limits.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;limits.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/signed_integer_overflow_ubsan.c" line="6" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/signed_integer_overflow_ubsan.c" line="7" column="0"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;len_sum&lt;=buf_len&apos; is always true" verbose="Condition &apos;len_sum&lt;=buf_len&apos; is always true" cwe="571" file0="/src/exploitable/signed_integer_overflow_ubsan.c">
+            <location file="/src/exploitable/signed_integer_overflow_ubsan.c" line="15" column="15" info="Condition &apos;len_sum&lt;=buf_len&apos; is always true"/>
+            <location file="/src/exploitable/signed_integer_overflow_ubsan.c" line="14" column="27" info="Assignment &apos;len_sum=first_len+second_len&apos;, assigned value is -2147483393"/>
+            <location file="/src/exploitable/signed_integer_overflow_ubsan.c" line="10" column="19" info="Assignment &apos;first_len=2147483647&apos;, assigned value is 2147483647"/>
+        </error>
+        <error id="integerOverflow" severity="error" msg="Signed integer overflow for expression &apos;first_len+second_len&apos;." verbose="Signed integer overflow for expression &apos;first_len+second_len&apos;." cwe="190" file0="/src/exploitable/signed_integer_overflow_ubsan.c">
+            <location file="/src/exploitable/signed_integer_overflow_ubsan.c" line="14" column="27" info="Integer overflow"/>
+            <location file="/src/exploitable/signed_integer_overflow_ubsan.c" line="10" column="19" info="Assignment &apos;first_len=2147483647&apos;, assigned value is 2147483647"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;assert.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;assert.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/signed_integer_overflow_unsafe.c" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;limits.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;limits.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/signed_integer_overflow_unsafe.c" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/signed_integer_overflow_unsafe.c" line="3" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/stack_buffer_overflow.c" line="9" column="0"/>
+        </error>
+        <error id="getsCalled" severity="warning" msg="Obsolete function &apos;gets&apos; called. It is recommended to use &apos;fgets&apos; or &apos;gets_s&apos; instead." verbose="The obsolete function &apos;gets&apos; is called. With &apos;gets&apos; you&apos;ll get a buffer overrun if the input data exceeds the size of the buffer. It is recommended to use the functions &apos;fgets&apos; or &apos;gets_s&apos; instead." cwe="477" file0="/src/exploitable/stack_buffer_overflow.c">
+            <location file="/src/exploitable/stack_buffer_overflow.c" line="13" column="16"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;ret&apos; can be declared as pointer to const" verbose="Variable &apos;ret&apos; can be declared as pointer to const" cwe="398" file0="/src/exploitable/stack_buffer_overflow.c">
+            <location file="/src/exploitable/stack_buffer_overflow.c" line="13" column="10" info="Variable &apos;ret&apos; can be declared as pointer to const"/>
+            <symbol>ret</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;ret&apos; is assigned a value that is never used." verbose="Variable &apos;ret&apos; is assigned a value that is never used." cwe="563" file0="/src/exploitable/stack_buffer_overflow.c">
+            <location file="/src/exploitable/stack_buffer_overflow.c" line="13" column="14"/>
+            <symbol>ret</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/stack_buffer_overflow_cwe.c" line="6" column="0"/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;argv&apos; can be declared as const array" verbose="Parameter &apos;argv&apos; can be declared as const array" cwe="398" file0="/src/exploitable/stack_buffer_overflow_cwe.c">
+            <location file="/src/exploitable/stack_buffer_overflow_cwe.c" line="9" column="26" info="Parameter &apos;argv&apos; can be declared as const array"/>
+            <symbol>argv</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/temporary_capture.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/temporary_capture.cpp" line="2" column="0"/>
+        </error>
+        <error id="returnDanglingLifetime" severity="error" msg="Returning lambda that captures local variable &apos;suffix&apos; that will be invalid when returning." verbose="Returning lambda that captures local variable &apos;suffix&apos; that will be invalid when returning." cwe="562" file0="/src/exploitable/temporary_capture.cpp">
+            <location file="/src/exploitable/temporary_capture.cpp" line="9" column="10"/>
+            <location file="/src/exploitable/temporary_capture.cpp" line="8" column="15" info="Variable created here."/>
+            <location file="/src/exploitable/temporary_capture.cpp" line="10" column="35" info="Lambda captures variable by reference here."/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/uncontrolled_format_string.c" line="8" column="0"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;format&apos; can be declared as pointer to const" verbose="Variable &apos;format&apos; can be declared as pointer to const" cwe="398" file0="/src/exploitable/uncontrolled_format_string.c">
+            <location file="/src/exploitable/uncontrolled_format_string.c" line="11" column="10" info="Variable &apos;format&apos; can be declared as pointer to const"/>
+            <symbol>format</symbol>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;str&apos; can be declared as pointer to const" verbose="Variable &apos;str&apos; can be declared as pointer to const" cwe="398" file0="/src/exploitable/uncontrolled_format_string.c">
+            <location file="/src/exploitable/uncontrolled_format_string.c" line="12" column="10" info="Variable &apos;str&apos; can be declared as pointer to const"/>
+            <symbol>str</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;climits&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;climits&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/undefined_behavior.cpp" line="6" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/undefined_behavior.cpp" line="7" column="0"/>
+        </error>
+        <error id="invalidTestForOverflow" severity="warning" msg="Invalid test for overflow &apos;(x+1)&gt;x&apos;; signed integer overflow is undefined behavior. Some mainstream compilers remove such overflow tests when optimising the code and assume it&apos;s always true." verbose="Invalid test for overflow &apos;(x+1)&gt;x&apos;; signed integer overflow is undefined behavior. Some mainstream compilers remove such overflow tests when optimising the code and assume it&apos;s always true." cwe="391" file0="/src/exploitable/undefined_behavior.cpp">
+            <location file="/src/exploitable/undefined_behavior.cpp" line="11" column="18"/>
+        </error>
+        <error id="integerOverflow" severity="error" msg="Signed integer overflow for expression &apos;2147483647+1&apos;." verbose="Signed integer overflow for expression &apos;2147483647+1&apos;." cwe="190" file0="/src/exploitable/undefined_behavior.cpp">
+            <location file="/src/exploitable/undefined_behavior.cpp" line="15" column="21" info="Integer overflow"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;mutex&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;mutex&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/unnamed_lock_guard.cpp" line="5" column="0"/>
+        </error>
+        <error id="unusedScopedObject" severity="style" msg="Instance of &apos;std::lock_guard&apos; object is destroyed immediately." verbose="Instance of &apos;std::lock_guard&apos; object is destroyed immediately." cwe="563" file0="/src/exploitable/unnamed_lock_guard.cpp">
+            <location file="/src/exploitable/unnamed_lock_guard.cpp" line="11" column="8"/>
+            <symbol>std::lock_guard</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;limits.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;limits.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/unsigned_integer_wraparound.c" line="6" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/unsigned_integer_wraparound.c" line="7" column="0"/>
+        </error>
+        <error id="pointerOutOfBounds" severity="portability" msg="Undefined behaviour, pointer arithmetic &apos;buf+first_len&apos; is out of bounds." verbose="Undefined behaviour, pointer arithmetic &apos;buf+first_len&apos; is out of bounds." cwe="758" file0="/src/exploitable/unsigned_integer_wraparound.c">
+            <location file="/src/exploitable/unsigned_integer_wraparound.c" line="18" column="16" info="Pointer arithmetic overflow"/>
+            <location file="/src/exploitable/unsigned_integer_wraparound.c" line="10" column="28" info="Assignment &apos;first_len=4294967295&apos;, assigned value is 4294967295"/>
+        </error>
+        <error id="bufferAccessOutOfBounds" severity="error" msg="Buffer is accessed out of bounds: buf" verbose="Buffer is accessed out of bounds: buf" cwe="788" file0="/src/exploitable/unsigned_integer_wraparound.c">
+            <location file="/src/exploitable/unsigned_integer_wraparound.c" line="17" column="12" info="Buffer overrun"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;(first_len+second_len)&lt;=256&apos; is always true" verbose="Condition &apos;(first_len+second_len)&lt;=256&apos; is always true" cwe="571" file0="/src/exploitable/unsigned_integer_wraparound.c">
+            <location file="/src/exploitable/unsigned_integer_wraparound.c" line="16" column="32" info="Condition &apos;(first_len+second_len)&lt;=256&apos; is always true"/>
+            <location file="/src/exploitable/unsigned_integer_wraparound.c" line="10" column="28" info="Assignment &apos;first_len=4294967295&apos;, assigned value is 4294967295"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;first&apos; can be reduced." verbose="The scope of the variable &apos;first&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/src/exploitable/unsigned_integer_wraparound.c">
+            <location file="/src/exploitable/unsigned_integer_wraparound.c" line="14" column="8"/>
+            <symbol>first</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;second&apos; can be reduced." verbose="The scope of the variable &apos;second&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/src/exploitable/unsigned_integer_wraparound.c">
+            <location file="/src/exploitable/unsigned_integer_wraparound.c" line="14" column="26"/>
+            <symbol>second</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;buf&apos; can be reduced." verbose="The scope of the variable &apos;buf&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/src/exploitable/unsigned_integer_wraparound.c">
+            <location file="/src/exploitable/unsigned_integer_wraparound.c" line="14" column="46"/>
+            <symbol>buf</symbol>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &apos;first&apos; can be declared as const array" verbose="Variable &apos;first&apos; can be declared as const array" cwe="398" file0="/src/exploitable/unsigned_integer_wraparound.c">
+            <location file="/src/exploitable/unsigned_integer_wraparound.c" line="14" column="8" info="Variable &apos;first&apos; can be declared as const array"/>
+            <symbol>first</symbol>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &apos;second&apos; can be declared as const array" verbose="Variable &apos;second&apos; can be declared as const array" cwe="398" file0="/src/exploitable/unsigned_integer_wraparound.c">
+            <location file="/src/exploitable/unsigned_integer_wraparound.c" line="14" column="26" info="Variable &apos;second&apos; can be declared as const array"/>
+            <symbol>second</symbol>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: first" verbose="Uninitialized variable: first" cwe="457" file0="/src/exploitable/unsigned_integer_wraparound.c">
+            <location file="/src/exploitable/unsigned_integer_wraparound.c" line="17" column="17"/>
+            <symbol>first</symbol>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: second" verbose="Uninitialized variable: second" cwe="457" file0="/src/exploitable/unsigned_integer_wraparound.c">
+            <location file="/src/exploitable/unsigned_integer_wraparound.c" line="18" column="29"/>
+            <symbol>second</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;limits.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;limits.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/unsigned_integer_wraparound_ubsan.c" line="6" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/unsigned_integer_wraparound_ubsan.c" line="7" column="0"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;len_sum&lt;=buf_len&apos; is always true" verbose="Condition &apos;len_sum&lt;=buf_len&apos; is always true" cwe="571" file0="/src/exploitable/unsigned_integer_wraparound_ubsan.c">
+            <location file="/src/exploitable/unsigned_integer_wraparound_ubsan.c" line="15" column="15" info="Condition &apos;len_sum&lt;=buf_len&apos; is always true"/>
+            <location file="/src/exploitable/unsigned_integer_wraparound_ubsan.c" line="14" column="36" info="Assignment &apos;len_sum=first_len+second_len&apos;, assigned value is 255"/>
+            <location file="/src/exploitable/unsigned_integer_wraparound_ubsan.c" line="10" column="28" info="Assignment &apos;first_len=4294967295&apos;, assigned value is 4294967295"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686" file0="/src/exploitable/unsigned_integer_wraparound_ubsan.c">
+            <location file="/src/exploitable/unsigned_integer_wraparound_ubsan.c" line="16" column="5"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;assert.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;assert.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/unsigned_integer_wraparound_unsafe.c" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;limits.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;limits.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/unsigned_integer_wraparound_unsafe.c" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/unsigned_integer_wraparound_unsafe.c" line="3" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/use_after_free.c" line="6" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/use_after_free.c" line="7" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/use_after_free.c" line="8" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/exploitable/use_after_free.c" line="9" column="0"/>
+        </error>
+        <error id="duplicateCondition" severity="style" msg="The if condition is the same as the previous if condition" verbose="The if condition is the same as the previous if condition" cwe="398" file0="/src/exploitable/use_after_free.c">
+            <location file="/src/exploitable/use_after_free.c" line="17" column="7" info="Second condition"/>
+            <location file="/src/exploitable/use_after_free.c" line="14" column="7" info="First condition"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="portability" msg="%lu in format string (no. 1) requires &apos;unsigned long&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." verbose="%lu in format string (no. 1) requires &apos;unsigned long&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." cwe="686" file0="/src/exploitable/use_after_free.c">
+            <location file="/src/exploitable/use_after_free.c" line="19" column="5"/>
+        </error>
+        <error id="deallocuse" severity="error" msg="Dereferencing &apos;buffer&apos; after it is deallocated / released" verbose="Dereferencing &apos;buffer&apos; after it is deallocated / released" cwe="416" file0="/src/exploitable/use_after_free.c">
+            <location file="/src/exploitable/use_after_free.c" line="19" column="28"/>
+            <symbol>buffer</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/commandline.cpp" line="1" column="0"/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;argv&apos; can be declared as const array" verbose="Parameter &apos;argv&apos; can be declared as const array" cwe="398" file0="/src/practice/commandline.cpp">
+            <location file="/src/practice/commandline.cpp" line="3" column="27" info="Parameter &apos;argv&apos; can be declared as const array"/>
+            <symbol>argv</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/concat_strings.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/decay.cpp" line="1" column="0"/>
+        </error>
+        <error id="memleak" severity="error" msg="Memory leak: peter" verbose="Memory leak: peter" cwe="401" file0="/src/practice/downcasting.cpp">
+            <location file="/src/practice/downcasting.cpp" line="9" column="1"/>
+            <symbol>peter</symbol>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;peter&apos; can be declared as pointer to const" verbose="Variable &apos;peter&apos; can be declared as pointer to const" cwe="398" file0="/src/practice/downcasting.cpp">
+            <location file="/src/practice/downcasting.cpp" line="5" column="15" info="Variable &apos;peter&apos; can be declared as pointer to const"/>
+            <symbol>peter</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;peter&apos; is assigned a value that is never used." verbose="Variable &apos;peter&apos; is assigned a value that is never used." cwe="563" file0="/src/practice/downcasting.cpp">
+            <location file="/src/practice/downcasting.cpp" line="5" column="21"/>
+            <symbol>peter</symbol>
+        </error>
+        <error id="unusedAllocatedMemory" severity="style" msg="Variable &apos;peter&apos; is allocated memory that is never used." verbose="Variable &apos;peter&apos; is allocated memory that is never used." cwe="563" file0="/src/practice/downcasting.cpp">
+            <location file="/src/practice/downcasting.cpp" line="5" column="15"/>
+            <symbol>peter</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/enum_class.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;ostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;ostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/enum_class.cpp" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;type_traits&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;type_traits&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/enum_class.cpp" line="3" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;filesystem&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;filesystem&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/filesystem.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/filesystem.cpp" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/filesystem.cpp" line="3" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;algorithm&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;algorithm&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/CPL/prefer_cpp.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/CPL/prefer_cpp.cpp" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;vector&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;vector&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/CPL/prefer_cpp.cpp" line="3" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/classes/use_override.cpp" line="1" column="0"/>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function point.is_valid() is not used." verbose="Return value of function point.is_valid() is not used." cwe="252" file0="/src/practice/guidelines/constants_and_immutability/prefer_const.cpp">
+            <location file="/src/practice/guidelines/constants_and_immutability/prefer_const.cpp" line="19" column="9"/>
+            <symbol>point.is_valid</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/enumerations/prefer_class_enums.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;ostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;ostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/enumerations/prefer_class_enums.cpp" line="2" column="0"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;point&apos; is assigned a value that is never used." verbose="Variable &apos;point&apos; is assigned a value that is never used." cwe="563" file0="/src/practice/guidelines/expressions_and_statements/always_initialize.cpp">
+            <location file="/src/practice/guidelines/expressions_and_statements/always_initialize.cpp" line="20" column="14"/>
+            <symbol>point</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/expressions_and_statements/avoid_casts.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;variant&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;variant&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/expressions_and_statements/avoid_casts.cpp" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/expressions_and_statements/cautious_pointer_use.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;span&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;span&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/expressions_and_statements/cautious_pointer_use.cpp" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/expressions_and_statements/cautious_pointer_use_decay.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iterator&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iterator&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/expressions_and_statements/cautious_pointer_use_decay.cpp" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;cassert&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;cassert&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/expressions_and_statements/dont_overflow.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;climits&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;climits&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/expressions_and_statements/dont_overflow.cpp" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;cassert&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;cassert&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/expressions_and_statements/dont_underflow.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;climits&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;climits&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/expressions_and_statements/dont_underflow.cpp" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/expressions_and_statements/dont_underflow_c.c" line="1" column="0"/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;argv&apos; can be declared as const array" verbose="Parameter &apos;argv&apos; can be declared as const array" cwe="398" file0="/src/practice/guidelines/expressions_and_statements/dont_underflow_c.c">
+            <location file="/src/practice/guidelines/expressions_and_statements/dont_underflow_c.c" line="3" column="27" info="Parameter &apos;argv&apos; can be declared as const array"/>
+            <symbol>argv</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/expressions_and_statements/dont_underflow_cpp.cpp" line="1" column="0"/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;argv&apos; can be declared as const array" verbose="Parameter &apos;argv&apos; can be declared as const array" cwe="398" file0="/src/practice/guidelines/expressions_and_statements/dont_underflow_cpp.cpp">
+            <location file="/src/practice/guidelines/expressions_and_statements/dont_underflow_cpp.cpp" line="3" column="27" info="Parameter &apos;argv&apos; can be declared as const array"/>
+            <symbol>argv</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;algorithm&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;algorithm&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/expressions_and_statements/prefer_the_standard_library.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/expressions_and_statements/prefer_the_standard_library.cpp" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iterator&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iterator&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/expressions_and_statements/prefer_the_standard_library.cpp" line="3" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;climits&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;climits&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/expressions_and_statements/use_braced_init.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;cstdint&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;cstdint&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/expressions_and_statements/use_braced_init.cpp" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;limits&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;limits&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/expressions_and_statements/use_braced_init.cpp" line="3" column="0"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;some_int64&apos; is assigned a value that is never used." verbose="Variable &apos;some_int64&apos; is assigned a value that is never used." cwe="563" file0="/src/practice/guidelines/expressions_and_statements/use_braced_init.cpp">
+            <location file="/src/practice/guidelines/expressions_and_statements/use_braced_init.cpp" line="11" column="22"/>
+            <symbol>some_int64</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;some_double&apos; is assigned a value that is never used." verbose="Variable &apos;some_double&apos; is assigned a value that is never used." cwe="563" file0="/src/practice/guidelines/expressions_and_statements/use_braced_init.cpp">
+            <location file="/src/practice/guidelines/expressions_and_statements/use_braced_init.cpp" line="13" column="22"/>
+            <symbol>some_double</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;i64&apos; is assigned a value that is never used." verbose="Variable &apos;i64&apos; is assigned a value that is never used." cwe="563" file0="/src/practice/guidelines/expressions_and_statements/use_braced_init.cpp">
+            <location file="/src/practice/guidelines/expressions_and_statements/use_braced_init.cpp" line="16" column="14"/>
+            <symbol>i64</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;d&apos; is assigned a value that is never used." verbose="Variable &apos;d&apos; is assigned a value that is never used." cwe="563" file0="/src/practice/guidelines/expressions_and_statements/use_braced_init.cpp">
+            <location file="/src/practice/guidelines/expressions_and_statements/use_braced_init.cpp" line="18" column="11"/>
+            <symbol>d</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="/src/practice/guidelines/expressions_and_statements/use_named_cast.cpp">
+            <location file="/src/practice/guidelines/expressions_and_statements/use_named_cast.cpp" line="13" column="21"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;tony1&apos; can be declared as pointer to const" verbose="Variable &apos;tony1&apos; can be declared as pointer to const" cwe="398" file0="/src/practice/guidelines/expressions_and_statements/use_named_cast.cpp">
+            <location file="/src/practice/guidelines/expressions_and_statements/use_named_cast.cpp" line="13" column="13" info="Variable &apos;tony1&apos; can be declared as pointer to const"/>
+            <symbol>tony1</symbol>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;tony3&apos; can be declared as pointer to const" verbose="Variable &apos;tony3&apos; can be declared as pointer to const" cwe="398" file0="/src/practice/guidelines/expressions_and_statements/use_named_cast.cpp">
+            <location file="/src/practice/guidelines/expressions_and_statements/use_named_cast.cpp" line="16" column="13" info="Variable &apos;tony3&apos; can be declared as pointer to const"/>
+            <symbol>tony3</symbol>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;tony4&apos; can be declared as pointer to const" verbose="Variable &apos;tony4&apos; can be declared as pointer to const" cwe="398" file0="/src/practice/guidelines/expressions_and_statements/use_named_cast.cpp">
+            <location file="/src/practice/guidelines/expressions_and_statements/use_named_cast.cpp" line="18" column="13" info="Variable &apos;tony4&apos; can be declared as pointer to const"/>
+            <symbol>tony4</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;tony1&apos; is assigned a value that is never used." verbose="Variable &apos;tony1&apos; is assigned a value that is never used." cwe="563" file0="/src/practice/guidelines/expressions_and_statements/use_named_cast.cpp">
+            <location file="/src/practice/guidelines/expressions_and_statements/use_named_cast.cpp" line="13" column="19"/>
+            <symbol>tony1</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;tony3&apos; is assigned a value that is never used." verbose="Variable &apos;tony3&apos; is assigned a value that is never used." cwe="563" file0="/src/practice/guidelines/expressions_and_statements/use_named_cast.cpp">
+            <location file="/src/practice/guidelines/expressions_and_statements/use_named_cast.cpp" line="16" column="19"/>
+            <symbol>tony3</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;tony4&apos; is assigned a value that is never used." verbose="Variable &apos;tony4&apos; is assigned a value that is never used." cwe="563" file0="/src/practice/guidelines/expressions_and_statements/use_named_cast.cpp">
+            <location file="/src/practice/guidelines/expressions_and_statements/use_named_cast.cpp" line="18" column="19"/>
+            <symbol>tony4</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;algorithm&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;algorithm&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/expressions_and_statements/use_std_array.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;array&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;array&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/expressions_and_statements/use_std_array.cpp" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/expressions_and_statements/use_std_array.cpp" line="3" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/expressions_and_statements/use_std_array.cpp" line="4" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;cassert&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;cassert&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/functions/cautious_reference_capture.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;cassert&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;cassert&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/functions/cautious_this_capture.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/functions/cautious_this_capture_cpp17.cpp" line="1" column="0"/>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;suffix&apos; should be passed by const reference." verbose="Parameter &apos;suffix&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="/src/practice/guidelines/functions/cautious_this_capture_cpp17.cpp">
+            <location file="/src/practice/guidelines/functions/cautious_this_capture_cpp17.cpp" line="10" column="32" info="Function parameter &apos;suffix&apos; should be passed by const reference."/>
+            <symbol>suffix</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/functions/cautious_this_capture_cpp_pre17.cpp" line="1" column="0"/>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;suffix&apos; should be passed by const reference." verbose="Parameter &apos;suffix&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="/src/practice/guidelines/functions/cautious_this_capture_cpp_pre17.cpp">
+            <location file="/src/practice/guidelines/functions/cautious_this_capture_cpp_pre17.cpp" line="10" column="48" info="Function parameter &apos;suffix&apos; should be passed by const reference."/>
+            <symbol>suffix</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;cstring&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;cstring&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/interfaces/state_postconditions.cpp" line="1" column="0"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;percent&apos; is assigned a value that is never used." verbose="Variable &apos;percent&apos; is assigned a value that is never used." cwe="563" file0="/src/practice/guidelines/naming_and_layout/prefer_typesafe_literals.cpp">
+            <location file="/src/practice/guidelines/naming_and_layout/prefer_typesafe_literals.cpp" line="30" column="16"/>
+            <symbol>percent</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;pixels&apos; is assigned a value that is never used." verbose="Variable &apos;pixels&apos; is assigned a value that is never used." cwe="563" file0="/src/practice/guidelines/naming_and_layout/prefer_typesafe_literals.cpp">
+            <location file="/src/practice/guidelines/naming_and_layout/prefer_typesafe_literals.cpp" line="31" column="15"/>
+            <symbol>pixels</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;memory&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;memory&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/resource_management/avoid_calling_new_and_delete.cpp" line="1" column="0"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;Hero::p&apos; is never used." verbose="class member &apos;Hero::p&apos; is never used." cwe="563" file0="/src/practice/guidelines/resource_management/avoid_calling_new_and_delete.cpp">
+            <location file="/src/practice/guidelines/resource_management/avoid_calling_new_and_delete.cpp" line="10" column="10"/>
+            <symbol>Hero::p</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;myHero&apos; is assigned a value that is never used." verbose="Variable &apos;myHero&apos; is assigned a value that is never used." cwe="563" file0="/src/practice/guidelines/resource_management/avoid_calling_new_and_delete.cpp">
+            <location file="/src/practice/guidelines/resource_management/avoid_calling_new_and_delete.cpp" line="16" column="15"/>
+            <symbol>myHero</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;ourHero&apos; is assigned a value that is never used." verbose="Variable &apos;ourHero&apos; is assigned a value that is never used." cwe="563" file0="/src/practice/guidelines/resource_management/avoid_calling_new_and_delete.cpp">
+            <location file="/src/practice/guidelines/resource_management/avoid_calling_new_and_delete.cpp" line="18" column="16"/>
+            <symbol>ourHero</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: stackHero" verbose="Unused variable: stackHero" cwe="563" file0="/src/practice/guidelines/resource_management/avoid_calling_new_and_delete.cpp">
+            <location file="/src/practice/guidelines/resource_management/avoid_calling_new_and_delete.cpp" line="14" column="8"/>
+            <symbol>stackHero</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;mutex&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;mutex&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/resource_management/use_raii.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/resource_management/use_raii_c.c" line="1" column="0"/>
+        </error>
+        <error id="memleak" severity="error" msg="Memory leak: buffer" verbose="Memory leak: buffer" cwe="401" file0="/src/practice/guidelines/resource_management/use_raii_c.c">
+            <location file="/src/practice/guidelines/resource_management/use_raii_c.c" line="9" column="1"/>
+            <symbol>buffer</symbol>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;buffer&apos; can be declared as pointer to const" verbose="Variable &apos;buffer&apos; can be declared as pointer to const" cwe="398" file0="/src/practice/guidelines/resource_management/use_raii_c.c">
+            <location file="/src/practice/guidelines/resource_management/use_raii_c.c" line="8" column="28" info="Variable &apos;buffer&apos; can be declared as pointer to const"/>
+            <symbol>buffer</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;buffer&apos; is assigned a value that is never used." verbose="Variable &apos;buffer&apos; is assigned a value that is never used." cwe="563" file0="/src/practice/guidelines/resource_management/use_raii_c.c">
+            <location file="/src/practice/guidelines/resource_management/use_raii_c.c" line="8" column="35"/>
+            <symbol>buffer</symbol>
+        </error>
+        <error id="unusedAllocatedMemory" severity="style" msg="Variable &apos;buffer&apos; is allocated memory that is never used." verbose="Variable &apos;buffer&apos; is allocated memory that is never used." cwe="563" file0="/src/practice/guidelines/resource_management/use_raii_c.c">
+            <location file="/src/practice/guidelines/resource_management/use_raii_c.c" line="8" column="37"/>
+            <symbol>buffer</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/resource_management/use_raii_cpp.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;algorithm&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;algorithm&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/standard_library/avoid_bounds_errors.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;array&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;array&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/standard_library/avoid_bounds_errors.cpp" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/standard_library/avoid_bounds_errors.cpp" line="3" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/standard_library/prefer_iostreams.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/standard_library/prefer_iostreams.cpp" line="2" column="0"/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;argv&apos; can be declared as const array" verbose="Parameter &apos;argv&apos; can be declared as const array" cwe="398" file0="/src/practice/guidelines/standard_library/prefer_iostreams.cpp">
+            <location file="/src/practice/guidelines/standard_library/prefer_iostreams.cpp" line="8" column="27" info="Parameter &apos;argv&apos; can be declared as const array"/>
+            <symbol>argv</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;array&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;array&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/standard_library/use_byte_for_non_strings.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;cstddef&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;cstddef&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/standard_library/use_byte_for_non_strings.cpp" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/standard_library/use_byte_for_non_strings.cpp" line="3" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/standard_library/use_string_for_strings.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/guidelines/standard_library/use_string_for_strings.cpp" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;cstring&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;cstring&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/if_constexpr.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;limits&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;limits&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/if_constexpr.cpp" line="2" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;first&apos; can be reduced." verbose="The scope of the variable &apos;first&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/src/practice/if_constexpr.cpp">
+            <location file="/src/practice/if_constexpr.cpp" line="11" column="8"/>
+            <symbol>first</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;second&apos; can be reduced." verbose="The scope of the variable &apos;second&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/src/practice/if_constexpr.cpp">
+            <location file="/src/practice/if_constexpr.cpp" line="11" column="26"/>
+            <symbol>second</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;buf&apos; can be reduced." verbose="The scope of the variable &apos;buf&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/src/practice/if_constexpr.cpp">
+            <location file="/src/practice/if_constexpr.cpp" line="11" column="46"/>
+            <symbol>buf</symbol>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &apos;first&apos; can be declared as const array" verbose="Variable &apos;first&apos; can be declared as const array" cwe="398" file0="/src/practice/if_constexpr.cpp">
+            <location file="/src/practice/if_constexpr.cpp" line="11" column="8" info="Variable &apos;first&apos; can be declared as const array"/>
+            <symbol>first</symbol>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &apos;second&apos; can be declared as const array" verbose="Variable &apos;second&apos; can be declared as const array" cwe="398" file0="/src/practice/if_constexpr.cpp">
+            <location file="/src/practice/if_constexpr.cpp" line="11" column="26" info="Variable &apos;second&apos; can be declared as const array"/>
+            <symbol>second</symbol>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: first" verbose="Uninitialized variable: first" cwe="457" file0="/src/practice/if_constexpr.cpp">
+            <location file="/src/practice/if_constexpr.cpp" line="15" column="17"/>
+            <symbol>first</symbol>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: second" verbose="Uninitialized variable: second" cwe="457" file0="/src/practice/if_constexpr.cpp">
+            <location file="/src/practice/if_constexpr.cpp" line="16" column="29"/>
+            <symbol>second</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;cstdint&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;cstdint&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/midpoint_library.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/midpoint_library.cpp" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;limits&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;limits&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/midpoint_library.cpp" line="3" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;numeric&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;numeric&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/midpoint_library.cpp" line="4" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;assert.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;assert.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/numeric_truncation_safe.c" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;limits.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;limits.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/numeric_truncation_safe.c" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/numeric_truncation_safe.c" line="3" column="0"/>
+        </error>
+        <error id="assertWithSideEffect" severity="warning" msg="Assert statement calls a function which may have desired side effects: &apos;isSafe&apos;." verbose="Non-pure function: &apos;isSafe&apos; is called inside assert statement. Assert statements are removed from release builds so the code inside assert statement is not executed. If the code is needed also in release builds, this is a bug." cwe="398" file0="/src/practice/numeric_truncation_safe.c">
+            <location file="/src/practice/numeric_truncation_safe.c" line="19" column="11"/>
+            <symbol>isSafe</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;utility&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;utility&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/safe_integer_comparisons.cpp" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;assert.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;assert.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/signed_integer_overflow_safe.c" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;limits.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;limits.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/signed_integer_overflow_safe.c" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/signed_integer_overflow_safe.c" line="3" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/string_literals.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/string_literals.cpp" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;algorithm&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;algorithm&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/strip_after_colon.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/strip_after_colon.cpp" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iterator&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iterator&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/strip_after_colon.cpp" line="3" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;assert.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;assert.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/unsigned_integer_wraparound_safe.c" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;limits.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;limits.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/unsigned_integer_wraparound_safe.c" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/practice/unsigned_integer_wraparound_safe.c" line="3" column="0"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;pixels&apos; is assigned a value that is never used." verbose="Variable &apos;pixels&apos; is assigned a value that is never used." cwe="563" file0="/src/practice/user_defined_literals.cpp">
+            <location file="/src/practice/user_defined_literals.cpp" line="18" column="15"/>
+            <symbol>pixels</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;percent&apos; is assigned a value that is never used." verbose="Variable &apos;percent&apos; is assigned a value that is never used." cwe="563" file0="/src/practice/user_defined_literals.cpp">
+            <location file="/src/practice/user_defined_literals.cpp" line="19" column="16"/>
+            <symbol>percent</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/vulnerability/heartbleed.c" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/vulnerability/heartbleed.c" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/vulnerability/heartbleed.c" line="3" column="0"/>
+        </error>
+        <error id="normalCheckLevelMaxBranches" severity="information" msg="Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches." verbose="Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches." file0="/src/vulnerability/heartbleed.c">
+            <location file="/src/vulnerability/heartbleed.c" line="0" column="0"/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found an exit path from function with non-void return type that has missing return statement" verbose="Found an exit path from function with non-void return type that has missing return statement" cwe="758" file0="/src/vulnerability/heartbleed.c">
+            <location file="/src/vulnerability/heartbleed.c" line="60" column="53"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;r&gt;=0&apos; is always true" verbose="Condition &apos;r&gt;=0&apos; is always true" cwe="571" file0="/src/vulnerability/heartbleed.c">
+            <location file="/src/vulnerability/heartbleed.c" line="115" column="11" info="Condition &apos;r&gt;=0&apos; is always true"/>
+            <location file="/src/vulnerability/heartbleed.c" line="113" column="26" info="Assignment &apos;r=dtls1_write_bytes(s,24,buffer,3+payload+padding)&apos;, assigned value is 0"/>
+            <location file="/src/vulnerability/heartbleed.c" line="113" column="26" info="Calling function &apos;dtls1_write_bytes&apos; returns 0"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;r&gt;=0&apos; is always true" verbose="Condition &apos;r&gt;=0&apos; is always true" cwe="571" file0="/src/vulnerability/heartbleed.c">
+            <location file="/src/vulnerability/heartbleed.c" line="190" column="11" info="Condition &apos;r&gt;=0&apos; is always true"/>
+            <location file="/src/vulnerability/heartbleed.c" line="188" column="26" info="Assignment &apos;r=dtls1_write_bytes(s,24,buffer,write_length)&apos;, assigned value is 0"/>
+            <location file="/src/vulnerability/heartbleed.c" line="188" column="26" info="Calling function &apos;dtls1_write_bytes&apos; returns 0"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686" file0="/src/vulnerability/heartbleed.c">
+            <location file="/src/vulnerability/heartbleed.c" line="52" column="3"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;padding&apos; can be reduced." verbose="The scope of the variable &apos;padding&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/src/vulnerability/heartbleed.c">
+            <location file="/src/vulnerability/heartbleed.c" line="82" column="16"/>
+            <symbol>padding</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;padding&apos; can be reduced." verbose="The scope of the variable &apos;padding&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/src/vulnerability/heartbleed.c">
+            <location file="/src/vulnerability/heartbleed.c" line="147" column="16"/>
+            <symbol>padding</symbol>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;buf&apos; can be declared as pointer to const" verbose="Parameter &apos;buf&apos; can be declared as pointer to const" cwe="398" file0="/src/vulnerability/heartbleed.c">
+            <location file="/src/vulnerability/heartbleed.c" line="60" column="38" info="Parameter &apos;buf&apos; can be declared as pointer to const"/>
+            <symbol>buf</symbol>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;buf&apos; can be declared as pointer to const" verbose="Parameter &apos;buf&apos; can be declared as pointer to const" cwe="398" file0="/src/vulnerability/heartbleed.c">
+            <location file="/src/vulnerability/heartbleed.c" line="69" column="56" info="Parameter &apos;buf&apos; can be declared as pointer to const"/>
+            <symbol>buf</symbol>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;pSsl&apos; can be declared as pointer to const" verbose="Parameter &apos;pSsl&apos; can be declared as pointer to const" cwe="398" file0="/src/vulnerability/heartbleed.c">
+            <location file="/src/vulnerability/heartbleed.c" line="75" column="28" info="Parameter &apos;pSsl&apos; can be declared as pointer to const"/>
+            <symbol>pSsl</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/vulnerable.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;cstring&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;cstring&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/vulnerable.cpp" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;cstdlib&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;cstdlib&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="/src/vulnerable.cpp" line="3" column="0"/>
+        </error>
+        <error id="bufferAccessOutOfBounds" severity="error" msg="Buffer is accessed out of bounds: buffer" verbose="Buffer is accessed out of bounds: buffer" cwe="788" file0="/src/vulnerable.cpp">
+            <location file="/src/vulnerable.cpp" line="8" column="12" info="Buffer overrun"/>
+        </error>
+        <error id="memleak" severity="error" msg="Memory leak: ptr" verbose="Memory leak: ptr" cwe="401" file0="/src/vulnerable.cpp">
+            <location file="/src/vulnerable.cpp" line="24" column="1"/>
+            <symbol>ptr</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="/src/vulnerable.cpp">
+            <location file="/src/vulnerable.cpp" line="21" column="16"/>
+        </error>
+        <error id="zerodiv" severity="error" msg="Division by zero." verbose="Division by zero." cwe="369" file0="/src/vulnerable.cpp">
+            <location file="/src/vulnerable.cpp" line="37" column="20" info="Division by zero"/>
+            <location file="/src/vulnerable.cpp" line="36" column="13" info="Assignment &apos;b=0&apos;, assigned value is 0"/>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &apos;src&apos; can be declared as const array" verbose="Variable &apos;src&apos; can be declared as const array" cwe="398" file0="/src/vulnerable.cpp">
+            <location file="/src/vulnerable.cpp" line="14" column="10" info="Variable &apos;src&apos; can be declared as const array"/>
+            <symbol>src</symbol>
+        </error>
+        <error id="integerOverflow" severity="error" msg="Signed integer overflow for expression &apos;max_int+1&apos;." verbose="Signed integer overflow for expression &apos;max_int+1&apos;." cwe="190" file0="/src/vulnerable.cpp">
+            <location file="/src/vulnerable.cpp" line="29" column="26" info="Integer overflow"/>
+            <location file="/src/vulnerable.cpp" line="28" column="19" info="Assignment &apos;max_int=2147483647&apos;, assigned value is 2147483647"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;result&apos; is assigned a value that is never used." verbose="Variable &apos;result&apos; is assigned a value that is never used." cwe="563" file0="/src/vulnerable.cpp">
+            <location file="/src/vulnerable.cpp" line="37" column="16"/>
+            <symbol>result</symbol>
+        </error>
+        <error id="ctuOneDefinitionRuleViolation" severity="error" msg="The one definition rule is violated, different classes/structs have the same name &apos;Point&apos;" verbose="The one definition rule is violated, different classes/structs have the same name &apos;Point&apos;" cwe="758">
+            <location file="/src/practice/guidelines/constants_and_immutability/prefer_const.cpp" line="5" column="1"/>
+            <location file="/src/practice/guidelines/expressions_and_statements/always_initialize.cpp" line="5" column="1"/>
+            <symbol>Point</symbol>
+        </error>
+        <error id="ctuOneDefinitionRuleViolation" severity="error" msg="The one definition rule is violated, different classes/structs have the same name &apos;Point&apos;" verbose="The one definition rule is violated, different classes/structs have the same name &apos;Point&apos;" cwe="758">
+            <location file="/src/practice/guidelines/constants_and_immutability/prefer_const.cpp" line="5" column="1"/>
+            <location file="/src/practice/guidelines/expressions_and_statements/avoid_casts.cpp" line="8" column="1"/>
+            <symbol>Point</symbol>
+        </error>
+        <error id="ctuOneDefinitionRuleViolation" severity="error" msg="The one definition rule is violated, different classes/structs have the same name &apos;Spiderman&apos;" verbose="The one definition rule is violated, different classes/structs have the same name &apos;Spiderman&apos;" cwe="758">
+            <location file="/src/practice/downcasting.cpp" line="1" column="1"/>
+            <location file="/src/practice/guidelines/expressions_and_statements/use_named_cast.cpp" line="8" column="1"/>
+            <symbol>Spiderman</symbol>
+        </error>
+        <error id="ctuOneDefinitionRuleViolation" severity="error" msg="The one definition rule is violated, different classes/structs have the same name &apos;Prefixer&apos;" verbose="The one definition rule is violated, different classes/structs have the same name &apos;Prefixer&apos;" cwe="758">
+            <location file="/src/practice/guidelines/functions/cautious_this_capture_cpp17.cpp" line="7" column="1"/>
+            <location file="/src/practice/guidelines/functions/cautious_this_capture_cpp_pre17.cpp" line="7" column="1"/>
+            <symbol>Prefixer</symbol>
+        </error>
+        <error id="ctuOneDefinitionRuleViolation" severity="error" msg="The one definition rule is violated, different classes/structs have the same name &apos;Pixels&apos;" verbose="The one definition rule is violated, different classes/structs have the same name &apos;Pixels&apos;" cwe="758">
+            <location file="/src/practice/guidelines/naming_and_layout/prefer_typesafe_literals.cpp" line="5" column="1"/>
+            <location file="/src/practice/user_defined_literals.cpp" line="1" column="1"/>
+            <symbol>Pixels</symbol>
+        </error>
+        <error id="ctuOneDefinitionRuleViolation" severity="error" msg="The one definition rule is violated, different classes/structs have the same name &apos;Percent&apos;" verbose="The one definition rule is violated, different classes/structs have the same name &apos;Percent&apos;" cwe="758">
+            <location file="/src/practice/guidelines/naming_and_layout/prefer_typesafe_literals.cpp" line="13" column="1"/>
+            <location file="/src/practice/user_defined_literals.cpp" line="5" column="1"/>
+            <symbol>Percent</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;exploited&apos; is never used." verbose="The function &apos;exploited&apos; is never used." cwe="561">
+            <location file="/src/exploit/format/exploitable.c" line="50" column="0"/>
+            <symbol>exploited</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;x&apos; is never used." verbose="The function &apos;x&apos; is never used." cwe="561">
+            <location file="/src/practice/guidelines/constants_and_immutability/prefer_const.cpp" line="10" column="0"/>
+            <symbol>x</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;y&apos; is never used." verbose="The function &apos;y&apos; is never used." cwe="561">
+            <location file="/src/practice/guidelines/constants_and_immutability/prefer_const.cpp" line="11" column="0"/>
+            <symbol>y</symbol>
+        </error>
+        <error id="checkersReport" severity="information" msg="Active checkers: 167/836 (use --checkers-report=&lt;filename&gt; to see details)" verbose="Active checkers: 167/836 (use --checkers-report=&lt;filename&gt; to see details)"/>
+    </errors>
+</results>

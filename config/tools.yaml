@@ -1,0 +1,72 @@
+tools:
+  semgrep:
+    type: "docker"
+    image: "returntocorp/semgrep"
+    version: "latest"
+    command: "semgrep scan --config auto"
+    args:
+      - "--sarif"
+      - "-o"
+      - "{output_file}"
+      - "{project_path}"
+    mount_point: "/src"
+    env_vars: { }
+
+  sonarqube:
+    type: "docker"
+    image: "sonarsource/sonar-scanner-cli"
+    version: "latest"
+    command: "sonar-scanner"
+    args:
+      - "-Dsonar.projectKey=test"
+      - "-Dsonar.sources=/src"
+      - "-Dsonar.host.url=http://sonarqube:9000"
+      - "-Dsonar.login=admin"
+      - "-Dsonar.password=admin"
+      - "-Dsonar.scm.disabled=true"
+    mount_point: "/usr/src"
+    env_vars:
+      SONAR_SCANNER_OPTS: "-Xmx1024m"
+
+  cppcheck:
+    type: "docker"
+    image: "ghcr.io/facthunder/cppcheck"
+    version: "latest"
+    command: "cppcheck"
+    args:
+      - "--enable=all"
+      - "--xml"
+      - "--xml-version=2"
+      - "--output-file={output_file}"
+      - "{project_path}"
+    mount_point: "/src"
+    env_vars: {}
+
+  shellcheck:
+    type: "docker"
+    image: "koalaman/shellcheck-alpine"
+    version: "stable"
+    command: "shellcheck"
+    args:
+      - "--format=json1"
+      - "--check-sourced"
+      - "-x"
+      - "{project_path}/**/*.sh"
+    mount_point: "/src"
+    env_vars: {}
+
+  pvs-studio:
+    type: "docker"
+    image: "viva64/pvs-studio"
+    version: "latest"
+    command: "pvs-studio-analyzer"
+    args:
+      - "analyze"
+      - "-l"
+      - "/etc/pvs-studio/PVS-Studio.lic"
+      - "-o"
+      - "{output_file}"
+      - "-j"
+      - "8"
+    mount_point: "/src"
+    env_vars: {}

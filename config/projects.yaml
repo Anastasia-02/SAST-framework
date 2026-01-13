@@ -1,0 +1,32 @@
+projects:
+  # Простой тестовый проект
+  - name: "simple-test"
+    path: "./projects/simple-test"
+    language: "python"
+    analyzers: ["semgrep"]
+  
+  # Эталонные проекты из спецификации
+  - name: "insecure-cpp"
+    path: "./projects/insecure-cpp"
+    language: "cpp"
+    analyzers: ["cppcheck"]
+    
+  - name: "dvpa-python"
+    path: "./projects/dvpa-python"
+    language: "python"
+    analyzers: ["semgrep"]
+    
+  - name: "insecure-go"
+    path: "./projects/insecure-go"
+    language: "go"
+    analyzers: ["semgrep"]
+    
+  - name: "bash-examples"
+    path: "./projects/bash-examples"
+    language: "bash"
+    analyzers: ["shellcheck"]
+    
+  - name: "insecure-ruby"
+    path: "./projects/insecure-ruby"
+    language: "ruby"
+    analyzers: ["semgrep"]

@@ -1,0 +1,99 @@
+{
+  "tool": "semgrep",
+  "project": "simple-test",
+  "timestamp": "2026-01-13T18:24:57.302700",
+  "duration_seconds": 21.046072721481323,
+  "issues": [
+    {
+      "id": "bec37f30-2e89-4bb3-ad76-f692ae2165ba",
+      "tool": "Semgrep OSS",
+      "rule_id": "python.sqlalchemy.security.sqlalchemy-execute-raw-query.sqlalchemy-execute-raw-query",
+      "rule_name": "python.sqlalchemy.security.sqlalchemy-execute-raw-query.sqlalchemy-execute-raw-query",
+      "file_path": "test.py",
+      "line_number": 13,
+      "column_number": 5,
+      "end_line": 13,
+      "end_column": 26,
+      "severity": "warning",
+      "message": "Avoiding SQL string concatenation: untrusted input concatenated with raw SQL query can result in SQL Injection. In order to execute raw query safely, prepared statement should be used. SQLAlchemy provides TextualSQL to easily used prepared statement with named parameters. For complex SQL composition, use SQL Expression Language or Schema Definition Language. In most cases, SQLAlchemy ORM will be a better option.",
+      "snippet": "    cursor.execute(query)",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/test.py",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 26,
+                "endLine": 13,
+                "snippet": {
+                  "text": "    cursor.execute(query)"
+                },
+                "startColumn": 5,
+                "startLine": 13
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Avoiding SQL string concatenation: untrusted input concatenated with raw SQL query can result in SQL Injection. In order to execute raw query safely, prepared statement should be used. SQLAlchemy provides TextualSQL to easily used prepared statement with named parameters. For complex SQL composition, use SQL Expression Language or Schema Definition Language. In most cases, SQLAlchemy ORM will be a better option."
+        },
+        "properties": {},
+        "ruleId": "python.sqlalchemy.security.sqlalchemy-execute-raw-query.sqlalchemy-execute-raw-query"
+      }
+    },
+    {
+      "id": "91c88462-74f6-4c7f-bcfc-763a615a5034",
+      "tool": "Semgrep OSS",
+      "rule_id": "python.lang.security.audit.md5-used-as-password.md5-used-as-password",
+      "rule_name": "python.lang.security.audit.md5-used-as-password.md5-used-as-password",
+      "file_path": "test.py",
+      "line_number": 24,
+      "column_number": 12,
+      "end_line": 24,
+      "end_column": 54,
+      "severity": "warning",
+      "message": "It looks like MD5 is used as a password hash. MD5 is not considered a secure password hash because it can be cracked by an attacker in a short amount of time. Use a suitable password hashing function such as scrypt. You can use `hashlib.scrypt`.",
+      "snippet": "    return hashlib.md5(password.encode()).hexdigest()  # Weak MD5",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/test.py",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 54,
+                "endLine": 24,
+                "snippet": {
+                  "text": "    return hashlib.md5(password.encode()).hexdigest()  # Weak MD5"
+                },
+                "startColumn": 12,
+                "startLine": 24
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "It looks like MD5 is used as a password hash. MD5 is not considered a secure password hash because it can be cracked by an attacker in a short amount of time. Use a suitable password hashing function such as scrypt. You can use `hashlib.scrypt`."
+        },
+        "properties": {},
+        "ruleId": "python.lang.security.audit.md5-used-as-password.md5-used-as-password"
+      }
+    }
+  ],
+  "issue_count": 2,
+  "issues_by_severity": {
+    "warning": 2
+  },
+  "metadata": {}
+}

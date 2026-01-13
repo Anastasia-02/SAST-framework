@@ -1,0 +1,118 @@
+{
+  "generated_at": "2026-01-13T18:13:17.201600",
+  "baseline_summary": {
+    "generated_at": "2026-01-13T18:09:56.126112",
+    "projects": {
+      "dvpa-python": {
+        "tools": {
+          "semgrep": {
+            "by_severity": {
+              "warning": 10
+            },
+            "issue_count": 10,
+            "timestamp": "2026-01-13T18:09:27.183108"
+          }
+        },
+        "total_issues": 10
+      },
+      "insecure-go": {
+        "tools": {
+          "semgrep": {
+            "by_severity": {
+              "warning": 3
+            },
+            "issue_count": 3,
+            "timestamp": "2026-01-13T18:09:44.237935"
+          }
+        },
+        "total_issues": 3
+      },
+      "insecure-ruby": {
+        "tools": {
+          "semgrep": {
+            "by_severity": {
+              "warning": 44
+            },
+            "issue_count": 44,
+            "timestamp": "2026-01-13T18:09:56.115488"
+          }
+        },
+        "total_issues": 44
+      },
+      "simple-test": {
+        "tools": {
+          "semgrep": {
+            "by_severity": {
+              "warning": 2
+            },
+            "issue_count": 2,
+            "timestamp": "2026-01-13T18:08:55.837689"
+          }
+        },
+        "total_issues": 2
+      }
+    }
+  },
+  "projects": [
+    {
+      "name": "insecure-go",
+      "tools": [
+        {
+          "name": "semgrep",
+          "issues": 3,
+          "severities": {
+            "warning": 3
+          },
+          "timestamp": "2026-01-13T18:09:44.237935",
+          "file": "semgrep_baseline.json"
+        }
+      ],
+      "total_issues": 3
+    },
+    {
+      "name": "dvpa-python",
+      "tools": [
+        {
+          "name": "semgrep",
+          "issues": 10,
+          "severities": {
+            "warning": 10
+          },
+          "timestamp": "2026-01-13T18:09:27.183108",
+          "file": "semgrep_baseline.json"
+        }
+      ],
+      "total_issues": 10
+    },
+    {
+      "name": "simple-test",
+      "tools": [
+        {
+          "name": "semgrep",
+          "issues": 2,
+          "severities": {
+            "warning": 2
+          },
+          "timestamp": "2026-01-13T18:08:55.837689",
+          "file": "semgrep_baseline.json"
+        }
+      ],
+      "total_issues": 2
+    },
+    {
+      "name": "insecure-ruby",
+      "tools": [
+        {
+          "name": "semgrep",
+          "issues": 44,
+          "severities": {
+            "warning": 44
+          },
+          "timestamp": "2026-01-13T18:09:56.115488",
+          "file": "semgrep_baseline.json"
+        }
+      ],
+      "total_issues": 44
+    }
+  ]
+}

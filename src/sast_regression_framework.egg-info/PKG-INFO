@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: sast-regression-framework
+Version: 0.1.0
+Summary: Automated regression testing framework for SAST tools in CI/CD
+Author-email: SAST Framework Team <team@sast-framework.example.com>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: PyYAML>=6.0
+Requires-Dist: pydantic>=2.0
+Requires-Dist: docker>=6.0
+Requires-Dist: jsonschema>=4.0
+Requires-Dist: python-dateutil>=2.8
+Requires-Dist: colorlog>=6.0
+Requires-Dist: typer>=0.9
+Requires-Dist: rich>=13.0
+Dynamic: requires-python
+
+# SAST Regression Testing Framework
+
+Automated regression testing framework for SAST tools in CI/CD pipelines.
+
+## Features
+
+- **Multi-tool Support**: Works with Semgrep, SonarQube, Cppcheck, PVS-Studio, Shellcheck, and more
+- **Docker-based Execution**: Runs tools in isolated Docker containers
+- **Normalized Output**: Converts all tool outputs to a unified format
+- **Baseline Management**: Creates and compares against reference results
+- **Extensible Architecture**: Easy to add new tools and parsers
+
+## Installation
+
+```bash
+# Clone the repository
+git clone <repository-url>
+cd sast-regression-framework
+
+# Install dependencies
+pip install -e .
+
+# Or using pip directly
+pip install -r requirements.txt

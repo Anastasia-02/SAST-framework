@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/projects/dvpa-python" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/projects/insecure-coding-examples" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/projects/insecure-cpp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/projects/insecure-ruby" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/projects/railsgoat" vcs="Git" />
+  </component>
+</project>

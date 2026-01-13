@@ -1,11 +1,11 @@
 {
   "tool": "semgrep",
   "project": "dvpa-python",
-  "timestamp": "2026-01-13T18:25:30.711168",
-  "duration_seconds": 31.300918102264404,
+  "timestamp": "2026-01-13T20:01:47.295831",
+  "duration_seconds": 29.003665924072266,
   "issues": [
     {
-      "id": "3aeccd8d-0c7d-4cb1-b87b-4fa599375ec8",
+      "id": "214e8af0-dc71-4e59-9e72-b252b5114f36",
       "tool": "Semgrep OSS",
       "rule_id": "yaml.docker-compose.security.no-new-privileges.no-new-privileges",
       "rule_name": "yaml.docker-compose.security.no-new-privileges.no-new-privileges",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "e981c5af-9c93-49b6-8c4d-eb4f25a9e509",
+      "id": "c6bb8e77-2b73-40f3-8b39-fe947759c290",
       "tool": "Semgrep OSS",
       "rule_id": "yaml.docker-compose.security.writable-filesystem-service.writable-filesystem-service",
       "rule_name": "yaml.docker-compose.security.writable-filesystem-service.writable-filesystem-service",
@@ -91,7 +91,7 @@
       }
     },
     {
-      "id": "cc3030ed-f98b-415d-807f-5999e1900dde",
+      "id": "883991d0-2418-4233-9bcf-da5f7fad5549",
       "tool": "Semgrep OSS",
       "rule_id": "python.lang.security.audit.formatted-sql-query.formatted-sql-query",
       "rule_name": "python.lang.security.audit.formatted-sql-query.formatted-sql-query",
@@ -134,7 +134,7 @@
       }
     },
     {
-      "id": "3995de30-bed3-4f51-b286-b4df977f33db",
+      "id": "26990c45-2464-4109-bb8b-3e7f5bae851b",
       "tool": "Semgrep OSS",
       "rule_id": "python.sqlalchemy.security.sqlalchemy-execute-raw-query.sqlalchemy-execute-raw-query",
       "rule_name": "python.sqlalchemy.security.sqlalchemy-execute-raw-query.sqlalchemy-execute-raw-query",
@@ -177,7 +177,7 @@
       }
     },
     {
-      "id": "afc87746-6146-4d23-a90a-756a983cb3b4",
+      "id": "328c9c5d-ae46-4043-8d9a-898804009627",
       "tool": "Semgrep OSS",
       "rule_id": "python.lang.security.audit.md5-used-as-password.md5-used-as-password",
       "rule_name": "python.lang.security.audit.md5-used-as-password.md5-used-as-password",
@@ -220,7 +220,7 @@
       }
     },
     {
-      "id": "f0700249-c024-409d-aae8-6b9ee7031e7c",
+      "id": "b55f6892-cfe8-48bc-899b-ec8baa82857f",
       "tool": "Semgrep OSS",
       "rule_id": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
       "rule_name": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
@@ -263,7 +263,7 @@
       }
     },
     {
-      "id": "33af86d1-2f55-4555-ac39-a6bd6d7cd07b",
+      "id": "aa0828d6-e5fe-4036-a495-582153c58121",
       "tool": "Semgrep OSS",
       "rule_id": "javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring",
       "rule_name": "javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring",
@@ -306,7 +306,7 @@
       }
     },
     {
-      "id": "ea252936-9ac0-4b45-95c6-9913e0b095ed",
+      "id": "6bc877e4-76d5-40dc-ba21-64bad473b998",
       "tool": "Semgrep OSS",
       "rule_id": "javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring",
       "rule_name": "javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring",
@@ -349,7 +349,7 @@
       }
     },
     {
-      "id": "6b2e10e3-7d3d-4bd2-bcd2-4dfc209c810e",
+      "id": "de5140ca-b9ac-4704-9724-437c33e2d427",
       "tool": "Semgrep OSS",
       "rule_id": "javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring",
       "rule_name": "javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring",
@@ -392,7 +392,7 @@
       }
     },
     {
-      "id": "cae8cd2c-7012-4894-8f82-9ab8c63b4ab0",
+      "id": "6e64ba19-e6c9-47e7-a054-6328588cb585",
       "tool": "Semgrep OSS",
       "rule_id": "javascript.browser.security.insecure-document-method.insecure-document-method",
       "rule_name": "javascript.browser.security.insecure-document-method.insecure-document-method",

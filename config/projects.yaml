@@ -9,7 +9,7 @@ projects:
   - name: "insecure-cpp"
     path: "./projects/insecure-cpp"
     language: "cpp"
-    analyzers: ["cppcheck"]
+    analyzers: ["semgrep"]
     
   - name: "dvpa-python"
     path: "./projects/dvpa-python"
@@ -24,7 +24,7 @@ projects:
   - name: "bash-examples"
     path: "./projects/bash-examples"
     language: "bash"
-    analyzers: ["shellcheck"]
+    analyzers: ["semgrep"]
     
   - name: "insecure-ruby"
     path: "./projects/insecure-ruby"

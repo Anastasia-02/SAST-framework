@@ -1,11 +1,11 @@
 {
   "tool": "semgrep",
   "project": "insecure-ruby",
-  "timestamp": "2026-01-13T18:25:58.501008",
-  "duration_seconds": 17.48022723197937,
+  "timestamp": "2026-01-13T20:02:14.956621",
+  "duration_seconds": 12.332681894302368,
   "issues": [
     {
-      "id": "6f197c21-4e77-4e90-98a7-9d2ca8d549ef",
+      "id": "23755c0a-f08a-43d1-9bcc-a8cabe1970dc",
       "tool": "Semgrep OSS",
       "rule_id": "javascript.browser.security.insecure-document-method.insecure-document-method",
       "rule_name": "javascript.browser.security.insecure-document-method.insecure-document-method",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "1aad8ca7-38e6-43fe-8d1a-e6508d73ccad",
+      "id": "be8cc5ae-12fb-48a9-be17-787c03d3edfc",
       "tool": "Semgrep OSS",
       "rule_id": "generic.secrets.security.detected-generic-api-key.detected-generic-api-key",
       "rule_name": "generic.secrets.security.detected-generic-api-key.detected-generic-api-key",
@@ -91,7 +91,7 @@
       }
     },
     {
-      "id": "5281f537-ac74-4c6c-a872-39fc458188df",
+      "id": "f88f2055-427c-4085-b58e-f2bc93e480aa",
       "tool": "Semgrep OSS",
       "rule_id": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
       "rule_name": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
@@ -134,7 +134,7 @@
       }
     },
     {
-      "id": "9278a98b-34cf-4387-8fef-8d6e2bd78a85",
+      "id": "1637d649-832b-4f07-909c-726b087ce4d9",
       "tool": "Semgrep OSS",
       "rule_id": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
       "rule_name": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
@@ -177,7 +177,7 @@
       }
     },
     {
-      "id": "f48fb133-39aa-4911-ab04-a8ad6f590274",
+      "id": "b1afe17d-03f7-4ddf-aece-85a6574bb308",
       "tool": "Semgrep OSS",
       "rule_id": "javascript.browser.security.raw-html-concat.raw-html-concat",
       "rule_name": "javascript.browser.security.raw-html-concat.raw-html-concat",
@@ -220,7 +220,7 @@
       }
     },
     {
-      "id": "96e69ffa-c8b5-4e94-9874-c7547b24f8b6",
+      "id": "6cf9240a-ef1f-4601-8c54-94faeae37ff2",
       "tool": "Semgrep OSS",
       "rule_id": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
       "rule_name": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
@@ -263,7 +263,7 @@
       }
     },
     {
-      "id": "9aa1432f-5fc0-4083-b853-02cde90196a5",
+      "id": "c894e303-23e7-4575-aa8f-8ac2548c2869",
       "tool": "Semgrep OSS",
       "rule_id": "javascript.browser.security.insecure-document-method.insecure-document-method",
       "rule_name": "javascript.browser.security.insecure-document-method.insecure-document-method",
@@ -306,7 +306,7 @@
       }
     },
     {
-      "id": "bba2b84a-7537-4d21-b35c-8fc77a29ba9f",
+      "id": "25892b9d-b9b7-4278-ab42-2be7e9f46cff",
       "tool": "Semgrep OSS",
       "rule_id": "javascript.browser.security.eval-detected.eval-detected",
       "rule_name": "javascript.browser.security.eval-detected.eval-detected",
@@ -349,7 +349,7 @@
       }
     },
     {
-      "id": "431182b2-6543-482d-8fe9-c661e575d29b",
+      "id": "41a5bca3-fcf4-4e61-958d-e0fe26740c9e",
       "tool": "Semgrep OSS",
       "rule_id": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
       "rule_name": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
@@ -392,7 +392,7 @@
       }
     },
     {
-      "id": "f6020558-be0e-4314-ad4e-d4ab0dedd0f5",
+      "id": "c350f343-5125-4bb3-97ce-f1dcddd37c22",
       "tool": "Semgrep OSS",
       "rule_id": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
       "rule_name": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
@@ -435,7 +435,7 @@
       }
     },
     {
-      "id": "be10ffac-2481-42ba-aedf-1223919e44ff",
+      "id": "081b411f-fc17-454b-9f51-d3f69434dc2e",
       "tool": "Semgrep OSS",
       "rule_id": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
       "rule_name": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
@@ -478,7 +478,7 @@
       }
     },
     {
-      "id": "6340c44a-a602-41d5-a9b4-a26e668608b3",
+      "id": "2ad8dee1-c364-471f-b1ee-21cbb98b6ded",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.rails.security.brakeman.check-unscoped-find.check-unscoped-find",
       "rule_name": "ruby.rails.security.brakeman.check-unscoped-find.check-unscoped-find",
@@ -521,7 +521,7 @@
       }
     },
     {
-      "id": "e9395f08-f4c4-4e2a-aeeb-56b1924cad00",
+      "id": "5a3cfbdc-9cb5-44fa-b1b5-7a39012c7db0",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.rails.security.brakeman.check-unscoped-find.check-unscoped-find",
       "rule_name": "ruby.rails.security.brakeman.check-unscoped-find.check-unscoped-find",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "f5c35478-71bd-40fe-98f2-d7942748a1ef",
+      "id": "09f04ff4-a61c-42b5-8394-15fa330b8a93",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.rails.security.brakeman.check-unsafe-reflection.check-unsafe-reflection",
       "rule_name": "ruby.rails.security.brakeman.check-unsafe-reflection.check-unsafe-reflection",
@@ -607,7 +607,7 @@
       }
     },
     {
-      "id": "1bff3c17-4119-4e63-8ddd-29d3aa720d9a",
+      "id": "b32ab5b3-d46c-4024-ad24-78c8607eb5ce",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.rails.security.brakeman.check-unsafe-reflection.check-unsafe-reflection",
       "rule_name": "ruby.rails.security.brakeman.check-unsafe-reflection.check-unsafe-reflection",
@@ -650,7 +650,7 @@
       }
     },
     {
-      "id": "b855a335-4981-4be9-920c-68020d7ce149",
+      "id": "572ce8d0-57ee-4a20-a397-ef0ca913c89b",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.lang.security.weak-hashes-sha1.weak-hashes-sha1",
       "rule_name": "ruby.lang.security.weak-hashes-sha1.weak-hashes-sha1",
@@ -693,7 +693,7 @@
       }
     },
     {
-      "id": "977058c5-6d0e-4489-a3e6-aff16309eb84",
+      "id": "85556589-dd3b-445b-80b5-d7b1a8904099",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.lang.security.missing-csrf-protection.missing-csrf-protection",
       "rule_name": "ruby.lang.security.missing-csrf-protection.missing-csrf-protection",
@@ -736,7 +736,7 @@
       }
     },
     {
-      "id": "7382474a-e58c-426b-af70-6e8fa8718b56",
+      "id": "2e0f7969-2fae-4419-bec3-815ded2d657a",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.rails.security.brakeman.check-unsafe-reflection.check-unsafe-reflection",
       "rule_name": "ruby.rails.security.brakeman.check-unsafe-reflection.check-unsafe-reflection",
@@ -779,7 +779,7 @@
       }
     },
     {
-      "id": "36e1d05b-0821-4de8-878a-7e54f9f280e1",
+      "id": "f242adee-d360-4840-b809-eb5a6dada825",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.rails.security.brakeman.check-send-file.check-send-file",
       "rule_name": "ruby.rails.security.brakeman.check-send-file.check-send-file",
@@ -822,7 +822,7 @@
       }
     },
     {
-      "id": "5610e6a8-2190-417f-a0b8-148d4034217a",
+      "id": "bd172db7-6df1-466d-b84a-c868417aa26f",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.lang.security.bad-deserialization.bad-deserialization",
       "rule_name": "ruby.lang.security.bad-deserialization.bad-deserialization",
@@ -865,7 +865,7 @@
       }
     },
     {
-      "id": "f5550a3e-62b4-4547-810b-25162961e28e",
+      "id": "b5dc448c-f4ce-44a1-bb05-d223602a880e",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.rails.security.audit.xss.avoid-html-safe.avoid-html-safe",
       "rule_name": "ruby.rails.security.audit.xss.avoid-html-safe.avoid-html-safe",
@@ -908,7 +908,7 @@
       }
     },
     {
-      "id": "0a68a927-161f-4e11-84f2-64695c5a490a",
+      "id": "d0406fb6-97d8-4047-8f6b-45b4ae9f9a64",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.lang.security.weak-hashes-md5.weak-hashes-md5",
       "rule_name": "ruby.lang.security.weak-hashes-md5.weak-hashes-md5",
@@ -951,7 +951,7 @@
       }
     },
     {
-      "id": "996074fc-fcc5-46bb-9a9b-74e82a4dac39",
+      "id": "17e1d816-88e4-44a0-88db-65335b5abf8e",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.lang.security.weak-hashes-md5.weak-hashes-md5",
       "rule_name": "ruby.lang.security.weak-hashes-md5.weak-hashes-md5",
@@ -994,7 +994,7 @@
       }
     },
     {
-      "id": "2e92736e-46fa-424c-be1a-c06fd2ad7944",
+      "id": "1664f715-1853-4f2c-8222-b50de2bd0cf1",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.rails.security.brakeman.check-unscoped-find.check-unscoped-find",
       "rule_name": "ruby.rails.security.brakeman.check-unscoped-find.check-unscoped-find",
@@ -1037,7 +1037,7 @@
       }
     },
     {
-      "id": "53c61165-ca41-4c5c-8953-5c8926e533f4",
+      "id": "36529224-97e7-403b-a23e-7f618e54fab7",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.rails.security.audit.xss.avoid-redirect.avoid-redirect",
       "rule_name": "ruby.rails.security.audit.xss.avoid-redirect.avoid-redirect",
@@ -1080,7 +1080,7 @@
       }
     },
     {
-      "id": "f0186433-a24d-4a65-8960-c65df0590669",
+      "id": "977e3c53-4c14-4fc4-8e91-a7f02970430c",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.rails.security.brakeman.check-redirect-to.check-redirect-to",
       "rule_name": "ruby.rails.security.brakeman.check-redirect-to.check-redirect-to",
@@ -1123,7 +1123,7 @@
       }
     },
     {
-      "id": "59945ecb-4403-4d37-a8d1-0a79184a3e05",
+      "id": "72cee530-96a2-4c53-a04a-8bd1bcfd526b",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.rails.security.injection.tainted-sql-string.tainted-sql-string",
       "rule_name": "ruby.rails.security.injection.tainted-sql-string.tainted-sql-string",
@@ -1166,7 +1166,7 @@
       }
     },
     {
-      "id": "924e9017-8f1c-42c1-8a03-14cfbfeb107d",
+      "id": "b8e996e8-4180-4281-bfea-be9ea3d803e3",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.lang.security.model-attr-accessible.model-attr-accessible",
       "rule_name": "ruby.lang.security.model-attr-accessible.model-attr-accessible",
@@ -1209,7 +1209,7 @@
       }
     },
     {
-      "id": "ea94c08a-c9db-4c44-b3b9-5da9eb2f81c1",
+      "id": "5a3485da-51d4-4fb5-b692-a380fb916215",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.lang.security.weak-hashes-md5.weak-hashes-md5",
       "rule_name": "ruby.lang.security.weak-hashes-md5.weak-hashes-md5",
@@ -1252,7 +1252,7 @@
       }
     },
     {
-      "id": "33a3f3f2-9e71-44a4-9898-a386ef3f945e",
+      "id": "33878ed5-76a8-4b94-b4ca-52ae7ed65f11",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.lang.security.weak-hashes-md5.weak-hashes-md5",
       "rule_name": "ruby.lang.security.weak-hashes-md5.weak-hashes-md5",
@@ -1295,7 +1295,7 @@
       }
     },
     {
-      "id": "2f6cb8a5-14f7-443b-a3bb-5236fedea2e5",
+      "id": "30a13c4a-d2c4-4298-aaef-7ee80f672f30",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.rails.security.audit.xss.templates.unquoted-attribute.unquoted-attribute",
       "rule_name": "ruby.rails.security.audit.xss.templates.unquoted-attribute.unquoted-attribute",
@@ -1338,7 +1338,7 @@
       }
     },
     {
-      "id": "4157f145-8f4c-4914-96eb-d94e60226eaf",
+      "id": "3526533b-f626-4844-9b91-ba1d59e1c4fb",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.rails.security.audit.xss.templates.avoid-raw.avoid-raw",
       "rule_name": "ruby.rails.security.audit.xss.templates.avoid-raw.avoid-raw",
@@ -1381,7 +1381,7 @@
       }
     },
     {
-      "id": "f11fbbfc-cb47-4889-a4f4-a5f32ece9008",
+      "id": "2be89008-d03c-433a-baf0-7d64a80b8dcb",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.rails.security.audit.xss.templates.var-in-href.var-in-href",
       "rule_name": "ruby.rails.security.audit.xss.templates.var-in-href.var-in-href",
@@ -1424,7 +1424,7 @@
       }
     },
     {
-      "id": "8e3fc0e3-a416-4c69-8697-00fad0013964",
+      "id": "667b2929-dec2-4dab-ac1e-45f081063200",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.rails.security.audit.xss.templates.avoid-html-safe.avoid-html-safe",
       "rule_name": "ruby.rails.security.audit.xss.templates.avoid-html-safe.avoid-html-safe",
@@ -1467,7 +1467,7 @@
       }
     },
     {
-      "id": "c3661f4b-ff3a-4a4d-ae54-a7c2d0b55c72",
+      "id": "5c584424-d230-4a86-b3be-e18074f614b7",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.rails.security.audit.xss.templates.var-in-href.var-in-href",
       "rule_name": "ruby.rails.security.audit.xss.templates.var-in-href.var-in-href",
@@ -1510,7 +1510,7 @@
       }
     },
     {
-      "id": "15f221c0-c2fd-452b-baea-02488002bac7",
+      "id": "8515b80f-580d-4f46-875a-8feff9085dea",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.rails.security.audit.xss.templates.avoid-html-safe.avoid-html-safe",
       "rule_name": "ruby.rails.security.audit.xss.templates.avoid-html-safe.avoid-html-safe",
@@ -1553,7 +1553,7 @@
       }
     },
     {
-      "id": "ecb3152b-99e2-4816-acd6-858b7a7cb0b9",
+      "id": "1f5dc141-6feb-49da-b6cc-e211df91d563",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.rails.security.audit.xss.templates.avoid-html-safe.avoid-html-safe",
       "rule_name": "ruby.rails.security.audit.xss.templates.avoid-html-safe.avoid-html-safe",
@@ -1596,7 +1596,7 @@
       }
     },
     {
-      "id": "4e4285f2-c183-454e-9ee7-c06abe870a9f",
+      "id": "8538cfed-c420-4c38-92c0-817bb691be48",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.rails.security.audit.xss.templates.avoid-html-safe.avoid-html-safe",
       "rule_name": "ruby.rails.security.audit.xss.templates.avoid-html-safe.avoid-html-safe",
@@ -1639,7 +1639,7 @@
       }
     },
     {
-      "id": "47a61bd3-73a1-4080-87f1-db8c49f8bc6b",
+      "id": "31fab994-6180-48eb-83a6-998ce5da3874",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.rails.security.audit.detailed-exceptions.detailed-exceptions",
       "rule_name": "ruby.rails.security.audit.detailed-exceptions.detailed-exceptions",
@@ -1682,7 +1682,7 @@
       }
     },
     {
-      "id": "456ddcfd-62a7-46b3-b3f6-8387dbc54394",
+      "id": "7b4ac750-958d-4089-a105-b22fc4b6978d",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.rails.security.audit.detailed-exceptions.detailed-exceptions",
       "rule_name": "ruby.rails.security.audit.detailed-exceptions.detailed-exceptions",
@@ -1725,7 +1725,7 @@
       }
     },
     {
-      "id": "551efbb5-5c88-4e88-900c-cfd9adb552d8",
+      "id": "fcfe9f01-9e7c-4c93-b0d3-8979190c1a95",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.rails.security.audit.detailed-exceptions.detailed-exceptions",
       "rule_name": "ruby.rails.security.audit.detailed-exceptions.detailed-exceptions",
@@ -1768,7 +1768,7 @@
       }
     },
     {
-      "id": "1fc0329c-3ca3-4e96-adbc-f105f92bf142",
+      "id": "e70f1d90-aa3f-427b-9c88-36c5c1f49080",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.rails.security.audit.detailed-exceptions.detailed-exceptions",
       "rule_name": "ruby.rails.security.audit.detailed-exceptions.detailed-exceptions",
@@ -1811,7 +1811,7 @@
       }
     },
     {
-      "id": "a604a279-c090-4f10-b523-3f1aff96c1c8",
+      "id": "651c6c7d-a9af-4a4d-a862-ef20a7abeaf2",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.lang.security.weak-hashes-md5.weak-hashes-md5",
       "rule_name": "ruby.lang.security.weak-hashes-md5.weak-hashes-md5",
@@ -1854,7 +1854,7 @@
       }
     },
     {
-      "id": "92c9db1c-5cb0-47f5-98d8-01bd7da36e17",
+      "id": "977fe137-da90-4864-845c-75f0db4fbfa5",
       "tool": "Semgrep OSS",
       "rule_id": "ruby.lang.security.dangerous-exec.dangerous-exec",
       "rule_name": "ruby.lang.security.dangerous-exec.dangerous-exec",

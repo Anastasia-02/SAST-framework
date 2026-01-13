@@ -1,0 +1,101 @@
+{
+  "tool": "semgrep",
+  "project": "insecure-cpp",
+  "timestamp": "2026-01-13T20:01:18.216336",
+  "duration_seconds": 8.436387062072754,
+  "issues": [
+    {
+      "id": "24c18502-9a01-4abb-96d8-cc4e4ac09e90",
+      "tool": "Semgrep OSS",
+      "rule_id": "c.lang.security.insecure-use-gets-fn.insecure-use-gets-fn",
+      "rule_name": "c.lang.security.insecure-use-gets-fn.insecure-use-gets-fn",
+      "file_path": "exploit/wargames/launch.c",
+      "line_number": 19,
+      "column_number": 3,
+      "end_line": 19,
+      "end_column": 17,
+      "severity": "warning",
+      "message": "Avoid 'gets()'. This function does not consider buffer boundaries and can lead to buffer overflows. Use 'fgets()' or 'gets_s()' instead.",
+      "snippet": "  gets(response);",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/exploit/wargames/launch.c",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 17,
+                "endLine": 19,
+                "snippet": {
+                  "text": "  gets(response);"
+                },
+                "startColumn": 3,
+                "startLine": 19
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Avoid 'gets()'. This function does not consider buffer boundaries and can lead to buffer overflows. Use 'fgets()' or 'gets_s()' instead."
+        },
+        "properties": {},
+        "ruleId": "c.lang.security.insecure-use-gets-fn.insecure-use-gets-fn"
+      }
+    },
+    {
+      "id": "cbc6a24a-59f6-4ff2-8e6c-0d17756ab7f5",
+      "tool": "Semgrep OSS",
+      "rule_id": "c.lang.security.insecure-use-gets-fn.insecure-use-gets-fn",
+      "rule_name": "c.lang.security.insecure-use-gets-fn.insecure-use-gets-fn",
+      "file_path": "exploitable/stack_buffer_overflow.c",
+      "line_number": 13,
+      "column_number": 16,
+      "end_line": 13,
+      "end_column": 28,
+      "severity": "warning",
+      "message": "Avoid 'gets()'. This function does not consider buffer boundaries and can lead to buffer overflows. Use 'fgets()' or 'gets_s()' instead.",
+      "snippet": "  char * ret = gets(buffer); // <- Write outside",
+      "raw_data": {
+        "fingerprints": {
+          "matchBasedId/v1": "requires login"
+        },
+        "locations": [
+          {
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "/src/exploitable/stack_buffer_overflow.c",
+                "uriBaseId": "%SRCROOT%"
+              },
+              "region": {
+                "endColumn": 28,
+                "endLine": 13,
+                "snippet": {
+                  "text": "  char * ret = gets(buffer); // <- Write outside"
+                },
+                "startColumn": 16,
+                "startLine": 13
+              }
+            }
+          }
+        ],
+        "message": {
+          "text": "Avoid 'gets()'. This function does not consider buffer boundaries and can lead to buffer overflows. Use 'fgets()' or 'gets_s()' instead."
+        },
+        "properties": {},
+        "ruleId": "c.lang.security.insecure-use-gets-fn.insecure-use-gets-fn"
+      }
+    }
+  ],
+  "issue_count": 2,
+  "issues_by_severity": {
+    "warning": 2
+  },
+  "metadata": {},
+  "created_at": "2026-01-13T20:01:18.219630",
+  "is_baseline": true
+}

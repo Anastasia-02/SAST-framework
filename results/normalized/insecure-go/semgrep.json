@@ -1,11 +1,11 @@
 {
   "tool": "semgrep",
   "project": "insecure-go",
-  "timestamp": "2026-01-13T18:25:40.643139",
-  "duration_seconds": 9.876481056213379,
+  "timestamp": "2026-01-13T20:01:55.156414",
+  "duration_seconds": 7.798492908477783,
   "issues": [
     {
-      "id": "b2dc3489-5bff-4fbc-96e2-207df590d1cd",
+      "id": "b081a69c-9a47-4932-b522-1ee5fd5689ac",
       "tool": "Semgrep OSS",
       "rule_id": "go.lang.security.audit.database.string-formatted-query.string-formatted-query",
       "rule_name": "go.lang.security.audit.database.string-formatted-query.string-formatted-query",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "3136ee9c-2f21-45bb-aca0-71e07d7aa05f",
+      "id": "0f2a1da0-07b0-46c3-9db5-2d91ad3d5ad0",
       "tool": "Semgrep OSS",
       "rule_id": "go.lang.security.audit.sqli.gosql-sqli.gosql-sqli",
       "rule_name": "go.lang.security.audit.sqli.gosql-sqli.gosql-sqli",
@@ -91,7 +91,7 @@
       }
     },
     {
-      "id": "112c6e82-26c8-44e2-aeb6-9b0092c2430c",
+      "id": "e97eb7d7-e534-4630-a2bb-6aef54b286d3",
       "tool": "Semgrep OSS",
       "rule_id": "go.lang.security.audit.dangerous-exec-command.dangerous-exec-command",
       "rule_name": "go.lang.security.audit.dangerous-exec-command.dangerous-exec-command",

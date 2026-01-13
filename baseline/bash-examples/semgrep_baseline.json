@@ -1,0 +1,12 @@
+{
+  "tool": "semgrep",
+  "project": "bash-examples",
+  "timestamp": "2026-01-13T20:02:02.566435",
+  "duration_seconds": 7.360256910324097,
+  "issues": [],
+  "issue_count": 0,
+  "issues_by_severity": {},
+  "metadata": {},
+  "created_at": "2026-01-13T20:02:02.569302",
+  "is_baseline": true
+}

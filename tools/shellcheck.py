@@ -7,7 +7,7 @@ import json
 import subprocess
 from pathlib import Path
 from typing import Dict, List
-from .base_tool import BaseTool
+from tools.base_tool import BaseTool
 
 
 class ShellcheckTool(BaseTool):

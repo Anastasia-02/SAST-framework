@@ -4,9 +4,9 @@ Registry для управления инструментами SAST
 
 import logging
 from typing import Dict, Optional
-from .tools.semgrep import SemgrepTool
-from .tools.cppcheck import CppcheckTool
-from .tools.shellcheck import ShellcheckTool
+from tools.semgrep import SemgrepTool
+from tools.cppcheck import CppcheckTool
+from tools.shellcheck import ShellcheckTool
 
 logger = logging.getLogger(__name__)
 

@@ -44,9 +44,9 @@ def main():
 
     # 3. Импортируем модули после настройки логирования
     try:
-        from sast_framework.test_runner import TestRunner
-        from sast_framework.comparer import Comparer
-        from sast_framework.performance_metrics import PerformanceCollector
+        from test_runner import TestRunner
+        from comparer import Comparer
+        from performance_metrics import PerformanceCollector
         import yaml
 
     except ImportError as e:

@@ -8,7 +8,7 @@ import subprocess
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import Dict
-from .base_tool import BaseTool
+from tools.base_tool import BaseTool
 
 
 class CppcheckTool(BaseTool):

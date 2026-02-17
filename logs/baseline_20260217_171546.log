@@ -1,0 +1,10 @@
+2026-02-17 17:15:47,142 - test_runner - INFO - Configuration loaded from config/projects_config.yaml
+2026-02-17 17:15:47,143 - tools_registry - INFO - Registered tool: semgrep
+2026-02-17 17:15:47,143 - tools_registry - INFO - Registered tool: semgrep
+2026-02-17 17:15:47,143 - tools_registry - INFO - Registered tool: cppcheck
+2026-02-17 17:15:47,143 - tools_registry - INFO - Registered tool: cppcheck
+2026-02-17 17:15:47,143 - tools_registry - INFO - Registered tool: shellcheck
+2026-02-17 17:15:47,143 - tools_registry - INFO - Registered tool: shellcheck
+2026-02-17 17:15:47,146 - __main__ - INFO - Baseline уже существует: baseline/insecure-cpp/cppcheck_baseline.json (пропускаем)
+2026-02-17 17:15:47,146 - __main__ - INFO - Baseline уже существует: baseline/dvpa-python/semgrep_baseline.json (пропускаем)
+2026-02-17 17:15:47,146 - __main__ - INFO - Baseline уже существует: baseline/bash-examples/shellcheck_baseline.json (пропускаем)

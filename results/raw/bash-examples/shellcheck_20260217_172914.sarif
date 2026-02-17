@@ -1,0 +1,192 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "shellcheck",
+          "version": "unknown",
+          "informationUri": "https://www.shellcheck.net"
+        }
+      },
+      "results": [
+        {
+          "ruleId": "SC2162",
+          "level": "note",
+          "message": {
+            "text": "read without -r will mangle backslashes."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "test1.bash"
+                },
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 1,
+                  "endLine": 4,
+                  "endColumn": 5
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "SC2162:test1.bash:4"
+          }
+        },
+        {
+          "ruleId": "SC2086",
+          "level": "note",
+          "message": {
+            "text": "Double quote to prevent globbing and word splitting."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "test1.bash"
+                },
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 5,
+                  "endLine": 5,
+                  "endColumn": 14
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "SC2086:test1.bash:5"
+          }
+        },
+        {
+          "ruleId": "SC2162",
+          "level": "note",
+          "message": {
+            "text": "read without -r will mangle backslashes."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "test1.bash"
+                },
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 1,
+                  "endLine": 8,
+                  "endColumn": 5
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "SC2162:test1.bash:8"
+          }
+        },
+        {
+          "ruleId": "SC2086",
+          "level": "note",
+          "message": {
+            "text": "Double quote to prevent globbing and word splitting."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "test1.bash"
+                },
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 6,
+                  "endLine": 9,
+                  "endColumn": 10
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "SC2086:test1.bash:9"
+          }
+        },
+        {
+          "ruleId": "SC2162",
+          "level": "note",
+          "message": {
+            "text": "read without -r will mangle backslashes."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "vulnerable.sh"
+                },
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 1,
+                  "endLine": 4,
+                  "endColumn": 5
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "SC2162:vulnerable.sh:4"
+          }
+        },
+        {
+          "ruleId": "SC2086",
+          "level": "note",
+          "message": {
+            "text": "Double quote to prevent globbing and word splitting."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "vulnerable.sh"
+                },
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 5,
+                  "endLine": 5,
+                  "endColumn": 14
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "SC2086:vulnerable.sh:5"
+          }
+        },
+        {
+          "ruleId": "SC2162",
+          "level": "note",
+          "message": {
+            "text": "read without -r will mangle backslashes."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "vulnerable.sh"
+                },
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 1,
+                  "endLine": 8,
+                  "endColumn": 5
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "SC2162:vulnerable.sh:8"
+          }
+        }
+      ]
+    }
+  ]
+}

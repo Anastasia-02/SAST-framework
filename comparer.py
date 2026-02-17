@@ -32,6 +32,21 @@ class ComparisonResult:
 class Comparer:
     """Класс для сравнения результатов SAST-тестирования с эталоном"""
 
+    def load_baseline(self, project: str, tool: str) -> Optional[Dict]:
+        baseline_file = self.baseline_dir / project / f"{tool}_baseline.json"
+        if not baseline_file.exists():
+            logger.warning(f"Baseline file not found: {baseline_file}")
+            return None
+        logger.info(f"Loading baseline from {baseline_file}")
+        # ... остальной код ...
+
+    def load_current_results(self, project: str, tool: str) -> Optional[List[Dict]]:
+        result_file = self.results_dir / project / f"{tool}_normalized.json"
+        if not result_file.exists():
+            logger.warning(f"Current results file not found: {result_file}")
+            return None
+        logger.info(f"Loading current results from {result_file}")
+
     def __init__(self, baseline_dir: str = "baseline", results_dir: str = "results/normalized"):
         self.baseline_dir = Path(baseline_dir)
         self.results_dir = Path(results_dir)

@@ -1,0 +1,12 @@
+{
+  "tool": "cppcheck",
+  "project": "insecure-cpp",
+  "timestamp": "2026-02-17T17:14:24.048850",
+  "execution_time": 2.4730541706085205,
+  "memory_usage": null,
+  "cpu_usage": null,
+  "issues_per_second": 140.7166911812413,
+  "files_scanned": 100,
+  "lines_scanned": 0,
+  "issues_found": 348
+}

@@ -1,47 +1,47 @@
 {
-  "timestamp": "2026-02-17T14:34:07.477476",
+  "timestamp": "2026-02-17T17:46:54.506659",
   "tools_performance": {
     "semgrep": {
-      "total_runs": 2,
-      "avg_execution_time": 29.791022062301636,
-      "avg_issues_found": 10.0,
+      "total_runs": 25,
+      "avg_execution_time": 29.132848596572877,
+      "avg_issues_found": 9.6,
       "best_run": {
         "tool": "semgrep",
-        "project": "dvpa-python",
-        "timestamp": "2026-02-17T14:32:31.708499",
-        "execution_time": 28.83101224899292,
+        "project": "bash-examples",
+        "timestamp": "2026-02-17T15:06:02.979654",
+        "execution_time": 8.661265850067139,
         "memory_usage": null,
         "cpu_usage": null,
-        "issues_per_second": 0.3468487305834815,
-        "files_scanned": 26,
+        "issues_per_second": 0.0,
+        "files_scanned": 0,
         "lines_scanned": 0,
-        "issues_found": 10
+        "issues_found": 0
       },
       "worst_run": {
         "tool": "semgrep",
         "project": "dvpa-python",
-        "timestamp": "2026-02-17T14:33:36.170014",
-        "execution_time": 30.75103187561035,
+        "timestamp": "2026-02-17T16:52:38.037182",
+        "execution_time": 55.911548137664795,
         "memory_usage": null,
         "cpu_usage": null,
-        "issues_per_second": 0.32519233957580873,
+        "issues_per_second": 0.17885392791088722,
         "files_scanned": 26,
         "lines_scanned": 0,
         "issues_found": 10
       }
     },
     "cppcheck": {
-      "total_runs": 2,
-      "avg_execution_time": 3.662103533744812,
+      "total_runs": 24,
+      "avg_execution_time": 2.6655049125353494,
       "avg_issues_found": 348.0,
       "best_run": {
         "tool": "cppcheck",
         "project": "insecure-cpp",
-        "timestamp": "2026-02-17T14:33:33.455982",
-        "execution_time": 2.7015058994293213,
+        "timestamp": "2026-02-17T17:31:30.443123",
+        "execution_time": 2.327681064605713,
         "memory_usage": null,
         "cpu_usage": null,
-        "issues_per_second": 128.81704240346585,
+        "issues_per_second": 149.50501823107277,
         "files_scanned": 100,
         "lines_scanned": 0,
         "issues_found": 348
@@ -58,20 +58,55 @@
         "lines_scanned": 0,
         "issues_found": 348
       }
+    },
+    "shellcheck": {
+      "total_runs": 10,
+      "avg_execution_time": 0.45946488380432127,
+      "avg_issues_found": 7.0,
+      "best_run": {
+        "tool": "shellcheck",
+        "project": "bash-examples",
+        "timestamp": "2026-02-17T17:45:16.110676",
+        "execution_time": 0.43999505043029785,
+        "memory_usage": null,
+        "cpu_usage": null,
+        "issues_per_second": 15.909269872818513,
+        "files_scanned": 2,
+        "lines_scanned": 0,
+        "issues_found": 7
+      },
+      "worst_run": {
+        "tool": "shellcheck",
+        "project": "bash-examples",
+        "timestamp": "2026-02-17T17:16:33.471917",
+        "execution_time": 0.5316548347473145,
+        "memory_usage": null,
+        "cpu_usage": null,
+        "issues_per_second": 13.166437211705162,
+        "files_scanned": 2,
+        "lines_scanned": 0,
+        "issues_found": 7
+      }
     }
   },
   "projects_performance": {
-    "insecure-cpp": {
-      "total_runs": 2,
-      "total_execution_time": 7.324207067489624,
-      "avg_execution_time": 3.662103533744812,
-      "total_issues_found": 696
-    },
     "dvpa-python": {
-      "total_runs": 2,
-      "total_execution_time": 59.58204412460327,
-      "avg_execution_time": 29.791022062301636,
-      "total_issues_found": 20
+      "total_runs": 24,
+      "total_execution_time": 719.6599490642548,
+      "avg_execution_time": 29.985831211010616,
+      "total_issues_found": 240
+    },
+    "bash-examples": {
+      "total_runs": 11,
+      "total_execution_time": 13.255914688110352,
+      "avg_execution_time": 1.2050831534645774,
+      "total_issues_found": 70
+    },
+    "insecure-cpp": {
+      "total_runs": 24,
+      "total_execution_time": 63.97211790084839,
+      "avg_execution_time": 2.6655049125353494,
+      "total_issues_found": 8352
     }
   },
   "recommendations": []

@@ -1,46 +1,147 @@
 {
-  "timestamp": "2026-02-17T14:34:07.478720",
+  "timestamp": "2026-02-17T17:46:54.507446",
   "test_results_summary": {
     "insecure-cpp": {
       "cppcheck": {
         "success": true,
         "issues_count": 348,
-        "has_error": false,
-        "error_message": null
+        "execution_time": 2.4921629428863525
       }
     },
     "dvpa-python": {
       "semgrep": {
         "success": true,
         "issues_count": 10,
-        "has_error": false,
-        "error_message": null
+        "execution_time": 26.91604208946228
       }
     },
     "bash-examples": {
       "shellcheck": {
-        "success": false,
-        "issues_count": 0,
-        "has_error": true,
-        "error_message": "Tool execution failed"
+        "success": true,
+        "issues_count": 7,
+        "execution_time": 0.4486091136932373
       }
     }
   },
-  "comparison_summary": {},
-  "performance_summary": {
-    "semgrep": {
-      "avg_execution_time": 29.791022062301636,
-      "avg_issues_found": 10.0,
-      "total_runs": 2
+  "comparison_summary": {
+    "insecure-cpp": {
+      "cppcheck": {
+        "recall_percentage": 99.71264367816092,
+        "fp_delta": 0,
+        "matched": 347,
+        "new": 0,
+        "missing": 0,
+        "f1_score": 0.9971264367816092
+      }
     },
-    "cppcheck": {
-      "avg_execution_time": 3.662103533744812,
-      "avg_issues_found": 348.0,
-      "total_runs": 2
+    "dvpa-python": {
+      "semgrep": {
+        "recall_percentage": 100.0,
+        "fp_delta": 0,
+        "matched": 10,
+        "new": 0,
+        "missing": 0,
+        "f1_score": 1.0
+      }
+    },
+    "bash-examples": {
+      "shellcheck": {
+        "recall_percentage": 100.0,
+        "fp_delta": 0,
+        "matched": 7,
+        "new": 0,
+        "missing": 0,
+        "f1_score": 1.0
+      }
     }
   },
-  "metadata": {
-    "framework_version": "1.0.0",
-    "execution_time": "2026-02-17 14:34:07"
+  "performance_summary": {
+    "semgrep": {
+      "total_runs": 25,
+      "avg_execution_time": 29.132848596572877,
+      "avg_issues_found": 9.6,
+      "best_run": {
+        "tool": "semgrep",
+        "project": "bash-examples",
+        "timestamp": "2026-02-17T15:06:02.979654",
+        "execution_time": 8.661265850067139,
+        "memory_usage": null,
+        "cpu_usage": null,
+        "issues_per_second": 0.0,
+        "files_scanned": 0,
+        "lines_scanned": 0,
+        "issues_found": 0
+      },
+      "worst_run": {
+        "tool": "semgrep",
+        "project": "dvpa-python",
+        "timestamp": "2026-02-17T16:52:38.037182",
+        "execution_time": 55.911548137664795,
+        "memory_usage": null,
+        "cpu_usage": null,
+        "issues_per_second": 0.17885392791088722,
+        "files_scanned": 26,
+        "lines_scanned": 0,
+        "issues_found": 10
+      }
+    },
+    "cppcheck": {
+      "total_runs": 24,
+      "avg_execution_time": 2.6655049125353494,
+      "avg_issues_found": 348.0,
+      "best_run": {
+        "tool": "cppcheck",
+        "project": "insecure-cpp",
+        "timestamp": "2026-02-17T17:31:30.443123",
+        "execution_time": 2.327681064605713,
+        "memory_usage": null,
+        "cpu_usage": null,
+        "issues_per_second": 149.50501823107277,
+        "files_scanned": 100,
+        "lines_scanned": 0,
+        "issues_found": 348
+      },
+      "worst_run": {
+        "tool": "cppcheck",
+        "project": "insecure-cpp",
+        "timestamp": "2026-02-17T14:32:27.072182",
+        "execution_time": 4.622701168060303,
+        "memory_usage": null,
+        "cpu_usage": null,
+        "issues_per_second": 75.28066110014672,
+        "files_scanned": 100,
+        "lines_scanned": 0,
+        "issues_found": 348
+      }
+    },
+    "shellcheck": {
+      "total_runs": 10,
+      "avg_execution_time": 0.45946488380432127,
+      "avg_issues_found": 7.0,
+      "best_run": {
+        "tool": "shellcheck",
+        "project": "bash-examples",
+        "timestamp": "2026-02-17T17:45:16.110676",
+        "execution_time": 0.43999505043029785,
+        "memory_usage": null,
+        "cpu_usage": null,
+        "issues_per_second": 15.909269872818513,
+        "files_scanned": 2,
+        "lines_scanned": 0,
+        "issues_found": 7
+      },
+      "worst_run": {
+        "tool": "shellcheck",
+        "project": "bash-examples",
+        "timestamp": "2026-02-17T17:16:33.471917",
+        "execution_time": 0.5316548347473145,
+        "memory_usage": null,
+        "cpu_usage": null,
+        "issues_per_second": 13.166437211705162,
+        "files_scanned": 2,
+        "lines_scanned": 0,
+        "issues_found": 7
+      }
+    }
   }
 }

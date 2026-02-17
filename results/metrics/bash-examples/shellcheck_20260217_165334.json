@@ -1,0 +1,12 @@
+{
+  "tool": "shellcheck",
+  "project": "bash-examples",
+  "timestamp": "2026-02-17T16:53:33.959919",
+  "execution_time": 0.472383975982666,
+  "memory_usage": null,
+  "cpu_usage": null,
+  "issues_per_second": 14.81845353758753,
+  "files_scanned": 2,
+  "lines_scanned": 0,
+  "issues_found": 7
+}

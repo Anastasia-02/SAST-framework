@@ -87,6 +87,9 @@ class TestRunner:
                         raw_result = tool.load_results()
                         normalized = self.normalizer.normalize(raw_result)
 
+                        # Сохраняем нормализованные результаты на диск
+                        self.normalizer.save_normalized(normalized, project_name, tool_name)
+
                         # Останавливаем таймер и получаем метрики
                         timer_data = self.timers.pop((project_name, tool_name), None)
                         if timer_data:

@@ -1,0 +1,61 @@
+2026-02-17 17:44:46,514 - test_runner - INFO - Configuration loaded from config/projects_config.yaml
+2026-02-17 17:44:46,514 - tools_registry - INFO - Registered tool: semgrep
+2026-02-17 17:44:46,514 - tools_registry - INFO - Registered tool: semgrep
+2026-02-17 17:44:46,514 - tools_registry - INFO - Registered tool: cppcheck
+2026-02-17 17:44:46,514 - tools_registry - INFO - Registered tool: cppcheck
+2026-02-17 17:44:46,514 - tools_registry - INFO - Registered tool: shellcheck
+2026-02-17 17:44:46,514 - tools_registry - INFO - Registered tool: shellcheck
+2026-02-17 17:44:46,514 - test_runner - INFO - Found 3 projects in config
+2026-02-17 17:44:46,514 - test_runner - INFO - Running tests for project: insecure-cpp
+2026-02-17 17:44:46,514 - test_runner - INFO - Starting testing for project: insecure-cpp
+2026-02-17 17:44:46,588 - environment - INFO - Docker client initialized
+2026-02-17 17:44:46,588 - environment - INFO - Environment setup completed
+2026-02-17 17:44:46,589 - test_runner - INFO -   Running cppcheck...
+2026-02-17 17:44:46,637 - sast_framework.tools.cppcheck - INFO - Running cppcheck on ./projects/insecure-cpp
+2026-02-17 17:44:46,660 - sast_framework.tools.cppcheck - INFO - Running container: ghcr.io/facthunder/cppcheck:latest
+2026-02-17 17:44:46,660 - sast_framework.tools.cppcheck - INFO - Command: cppcheck --enable=all --xml --xml-version=2 --output-file=/results/cppcheck_results.xml /src
+2026-02-17 17:44:49,006 - sast_framework.tools.cppcheck - INFO - Results saved to results/raw/insecure-cpp/cppcheck_20260217_174446.sarif
+2026-02-17 17:44:49,008 - normalizer - INFO - Normalized 348 issues
+2026-02-17 17:44:49,014 - normalizer - INFO - Normalized results saved to results/normalized/insecure-cpp/cppcheck_normalized.json
+2026-02-17 17:44:49,018 - performance_metrics - INFO - Performance metrics saved: results/metrics/insecure-cpp/cppcheck_20260217_174449.json
+2026-02-17 17:44:49,018 - test_runner - INFO -     Found 348 issues
+2026-02-17 17:44:49,018 - environment - INFO - Environment cleanup completed
+2026-02-17 17:44:49,018 - test_runner - INFO - Running tests for project: dvpa-python
+2026-02-17 17:44:49,018 - test_runner - INFO - Starting testing for project: dvpa-python
+2026-02-17 17:44:49,028 - environment - INFO - Docker client initialized
+2026-02-17 17:44:49,028 - environment - INFO - Environment setup completed
+2026-02-17 17:44:49,029 - test_runner - INFO -   Running semgrep...
+2026-02-17 17:44:49,071 - sast_framework.tools.semgrep - INFO - Running semgrep on ./projects/dvpa-python
+2026-02-17 17:44:49,082 - sast_framework.tools.semgrep - INFO - Running container: returntocorp/semgrep:latest
+2026-02-17 17:44:49,082 - sast_framework.tools.semgrep - INFO - Command: semgrep scan --config=auto --json --output=/results/semgrep_results.json /src
+2026-02-17 17:45:16,096 - sast_framework.tools.semgrep - INFO - Results saved to results/raw/dvpa-python/semgrep_20260217_174449.sarif
+2026-02-17 17:45:16,096 - normalizer - INFO - Normalized 10 issues
+2026-02-17 17:45:16,098 - normalizer - INFO - Normalized results saved to results/normalized/dvpa-python/semgrep_normalized.json
+2026-02-17 17:45:16,101 - performance_metrics - INFO - Performance metrics saved: results/metrics/dvpa-python/semgrep_20260217_174516.json
+2026-02-17 17:45:16,101 - test_runner - INFO -     Found 10 issues
+2026-02-17 17:45:16,101 - environment - INFO - Environment cleanup completed
+2026-02-17 17:45:16,101 - test_runner - INFO - Running tests for project: bash-examples
+2026-02-17 17:45:16,101 - test_runner - INFO - Starting testing for project: bash-examples
+2026-02-17 17:45:16,110 - environment - INFO - Docker client initialized
+2026-02-17 17:45:16,110 - environment - INFO - Environment setup completed
+2026-02-17 17:45:16,110 - test_runner - INFO -   Running shellcheck...
+2026-02-17 17:45:16,162 - sast_framework.tools.shellcheck - INFO - Running shellcheck on ./projects/bash-examples
+2026-02-17 17:45:16,163 - sast_framework.tools.shellcheck - INFO - Running command in container: shellcheck -f json /src/vulnerable.sh /src/test1.bash > /results/shellcheck_results.json
+2026-02-17 17:45:16,175 - sast_framework.tools.shellcheck - INFO - Running container: koalaman/shellcheck-alpine:stable
+2026-02-17 17:45:16,175 - sast_framework.tools.shellcheck - INFO - Command: sh -c shellcheck -f json /src/vulnerable.sh /src/test1.bash > /results/shellcheck_results.json
+2026-02-17 17:45:16,541 - sast_framework.tools.shellcheck - WARNING - Container exited with code 1
+2026-02-17 17:45:16,549 - sast_framework.tools.shellcheck - INFO - Results saved to results/raw/bash-examples/shellcheck_20260217_174516.sarif
+2026-02-17 17:45:16,549 - normalizer - INFO - Normalized 7 issues
+2026-02-17 17:45:16,550 - normalizer - INFO - Normalized results saved to results/normalized/bash-examples/shellcheck_normalized.json
+2026-02-17 17:45:16,552 - performance_metrics - INFO - Performance metrics saved: results/metrics/bash-examples/shellcheck_20260217_174516.json
+2026-02-17 17:45:16,552 - test_runner - INFO -     Found 7 issues
+2026-02-17 17:45:16,552 - environment - INFO - Environment cleanup completed
+2026-02-17 17:45:16,555 - comparer - INFO - Comparing insecure-cpp/cppcheck
+2026-02-17 17:45:16,557 - comparer - INFO - Loaded baseline for insecure-cpp/cppcheck: 348 issues
+2026-02-17 17:45:16,562 - comparer - INFO - Comparing dvpa-python/semgrep
+2026-02-17 17:45:16,562 - comparer - INFO - Loaded baseline for dvpa-python/semgrep: 10 issues
+2026-02-17 17:45:16,562 - comparer - INFO - Comparing bash-examples/shellcheck
+2026-02-17 17:45:16,563 - comparer - INFO - Loaded baseline for bash-examples/shellcheck: 7 issues
+2026-02-17 17:45:16,563 - comparer - INFO - Summary report saved to results/comparison/summary.json
+2026-02-17 17:45:16,565 - comparer - INFO - Detailed reports saved to results/comparison/detailed
+2026-02-17 17:45:16,567 - performance_metrics - INFO - Performance report saved to results/performance_report.json

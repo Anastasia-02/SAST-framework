@@ -1,11 +1,11 @@
 {
   "tool": "semgrep",
   "project": "insecure-cpp",
-  "timestamp": "2026-01-13T20:01:18.216336",
-  "duration_seconds": 8.436387062072754,
+  "timestamp": "2026-01-29T12:25:31.543466",
+  "duration_seconds": 7.516325235366821,
   "issues": [
     {
-      "id": "24c18502-9a01-4abb-96d8-cc4e4ac09e90",
+      "id": "566ba2ca-6f60-4fcd-8ff6-3d20141d2e2b",
       "tool": "Semgrep OSS",
       "rule_id": "c.lang.security.insecure-use-gets-fn.insecure-use-gets-fn",
       "rule_name": "c.lang.security.insecure-use-gets-fn.insecure-use-gets-fn",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "cbc6a24a-59f6-4ff2-8e6c-0d17756ab7f5",
+      "id": "b188ae16-20ce-4c48-a85c-833dc5318495",
       "tool": "Semgrep OSS",
       "rule_id": "c.lang.security.insecure-use-gets-fn.insecure-use-gets-fn",
       "rule_name": "c.lang.security.insecure-use-gets-fn.insecure-use-gets-fn",
@@ -96,6 +96,6 @@
     "warning": 2
   },
   "metadata": {},
-  "created_at": "2026-01-13T20:01:18.219630",
+  "created_at": "2026-01-29T12:25:31.546519",
   "is_baseline": true
 }

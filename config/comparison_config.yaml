@@ -1,0 +1,41 @@
+# Конфигурация модуля сравнения
+comparison:
+  # Пороговые значения для оценки качества
+  thresholds:
+    recall_good: 90.0      # Полнота выше 90% - хорошо
+    recall_warning: 70.0   # Полнота ниже 70% - предупреждение
+    fp_delta_warning: 5    # Дельта FP больше 5 - предупреждение
+
+  # Поля для сравнения
+  fields_to_compare:
+    - rule_id
+    - file_path
+    - line_number
+    - message
+    - severity
+
+  # Настройки генерации отчетов
+  reports:
+    generate_summary: true
+    generate_detailed: true
+    include_matched_issues: true
+    include_new_issues: true
+    include_missing_issues: true
+    max_issues_per_category: 10
+
+  # Настройки метрик производительности
+  performance:
+    track_execution_time: true
+    track_memory_usage: false
+    track_cpu_usage: false
+    generate_trends: true
+
+  # Автоматические действия при определенных условиях
+  auto_actions:
+    on_low_recall:
+      generate_alert: true
+      regenerate_baseline: false
+      notify: false
+    on_high_fp_delta:
+      investigate_new_issues: true
+      exclude_false_positives: false

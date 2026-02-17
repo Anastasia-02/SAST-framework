@@ -1,0 +1,28 @@
+projects:
+  insecure-cpp:
+    path: "./projects/insecure-cpp"
+    language: "cpp"
+    tools: ["cppcheck"]
+
+  dvpa-python:
+    path: "./projects/dvpa-python"
+    language: "python"
+    tools: ["semgrep"]
+
+  bash-examples:
+    path: "./projects/bash-examples"
+    language: "bash"
+    tools: ["shellcheck"]
+
+tools_config:
+  cppcheck:
+    docker_image: "ghcr.io/facthunder/cppcheck:latest"
+    timeout: 300
+
+  semgrep:
+    docker_image: "returntocorp/semgrep:latest"
+    timeout: 300
+
+  shellcheck:
+    docker_image: "koalaman/shellcheck-alpine:stable"
+    timeout: 120

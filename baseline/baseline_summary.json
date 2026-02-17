@@ -1,0 +1,75 @@
+{
+  "generated_at": "2026-01-29T12:26:27.243942",
+  "projects": {
+    "insecure-cpp": {
+      "tools": {
+        "semgrep": {
+          "issue_count": 2,
+          "by_severity": {
+            "warning": 2
+          },
+          "timestamp": "2026-01-29T12:25:31.543466"
+        }
+      },
+      "total_issues": 2
+    },
+    "insecure-go": {
+      "tools": {
+        "semgrep": {
+          "issue_count": 3,
+          "by_severity": {
+            "warning": 3
+          },
+          "timestamp": "2026-01-29T12:26:08.713345"
+        }
+      },
+      "total_issues": 3
+    },
+    "dvpa-python": {
+      "tools": {
+        "semgrep": {
+          "issue_count": 10,
+          "by_severity": {
+            "warning": 10
+          },
+          "timestamp": "2026-01-29T12:25:58.454352"
+        }
+      },
+      "total_issues": 10
+    },
+    "simple-test": {
+      "tools": {
+        "semgrep": {
+          "issue_count": 2,
+          "by_severity": {
+            "warning": 2
+          },
+          "timestamp": "2026-01-29T12:25:23.987777"
+        }
+      },
+      "total_issues": 2
+    },
+    "bash-examples": {
+      "tools": {
+        "semgrep": {
+          "issue_count": 0,
+          "by_severity": {},
+          "timestamp": "2026-01-29T12:26:15.975652"
+        }
+      },
+      "total_issues": 0
+    },
+    "insecure-ruby": {
+      "tools": {
+        "semgrep": {
+          "issue_count": 44,
+          "by_severity": {
+            "warning": 44
+          },
+          "timestamp": "2026-01-29T12:26:27.227106"
+        }
+      },
+      "total_issues": 44
+    }
+  }
+}

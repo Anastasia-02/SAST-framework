@@ -1,11 +1,11 @@
 {
   "tool": "semgrep",
   "project": "dvpa-python",
-  "timestamp": "2026-01-13T20:01:47.295831",
-  "duration_seconds": 29.003665924072266,
+  "timestamp": "2026-01-29T12:25:58.454352",
+  "duration_seconds": 26.874531984329224,
   "issues": [
     {
-      "id": "214e8af0-dc71-4e59-9e72-b252b5114f36",
+      "id": "5642b1d1-669d-43d0-853e-867bdad83133",
       "tool": "Semgrep OSS",
       "rule_id": "yaml.docker-compose.security.no-new-privileges.no-new-privileges",
       "rule_name": "yaml.docker-compose.security.no-new-privileges.no-new-privileges",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "c6bb8e77-2b73-40f3-8b39-fe947759c290",
+      "id": "f9935842-f837-4df9-b01b-76f5337f50b8",
       "tool": "Semgrep OSS",
       "rule_id": "yaml.docker-compose.security.writable-filesystem-service.writable-filesystem-service",
       "rule_name": "yaml.docker-compose.security.writable-filesystem-service.writable-filesystem-service",
@@ -91,7 +91,7 @@
       }
     },
     {
-      "id": "883991d0-2418-4233-9bcf-da5f7fad5549",
+      "id": "40a2862c-8598-468c-ac1c-6cbc2f13e9d3",
       "tool": "Semgrep OSS",
       "rule_id": "python.lang.security.audit.formatted-sql-query.formatted-sql-query",
       "rule_name": "python.lang.security.audit.formatted-sql-query.formatted-sql-query",
@@ -134,7 +134,7 @@
       }
     },
     {
-      "id": "26990c45-2464-4109-bb8b-3e7f5bae851b",
+      "id": "e3a25a3d-67b5-456b-8a39-5e151dc52fd8",
       "tool": "Semgrep OSS",
       "rule_id": "python.sqlalchemy.security.sqlalchemy-execute-raw-query.sqlalchemy-execute-raw-query",
       "rule_name": "python.sqlalchemy.security.sqlalchemy-execute-raw-query.sqlalchemy-execute-raw-query",
@@ -177,7 +177,7 @@
       }
     },
     {
-      "id": "328c9c5d-ae46-4043-8d9a-898804009627",
+      "id": "a70c3ce5-a95e-4035-976b-b63c44a87671",
       "tool": "Semgrep OSS",
       "rule_id": "python.lang.security.audit.md5-used-as-password.md5-used-as-password",
       "rule_name": "python.lang.security.audit.md5-used-as-password.md5-used-as-password",
@@ -220,7 +220,7 @@
       }
     },
     {
-      "id": "b55f6892-cfe8-48bc-899b-ec8baa82857f",
+      "id": "541c3c04-1339-40b2-ad22-311f26aa1eb2",
       "tool": "Semgrep OSS",
       "rule_id": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
       "rule_name": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
@@ -263,7 +263,7 @@
       }
     },
     {
-      "id": "aa0828d6-e5fe-4036-a495-582153c58121",
+      "id": "73a9b161-fd25-4a3d-a37d-0bdfc249e02c",
       "tool": "Semgrep OSS",
       "rule_id": "javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring",
       "rule_name": "javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring",
@@ -306,7 +306,7 @@
       }
     },
     {
-      "id": "6bc877e4-76d5-40dc-ba21-64bad473b998",
+      "id": "6b673f91-fc96-4e5b-b25f-ab3e9b1fb819",
       "tool": "Semgrep OSS",
       "rule_id": "javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring",
       "rule_name": "javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring",
@@ -349,7 +349,7 @@
       }
     },
     {
-      "id": "de5140ca-b9ac-4704-9724-437c33e2d427",
+      "id": "bf1029aa-38c1-45bf-ab8c-919b94322ffc",
       "tool": "Semgrep OSS",
       "rule_id": "javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring",
       "rule_name": "javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring",
@@ -392,7 +392,7 @@
       }
     },
     {
-      "id": "6e64ba19-e6c9-47e7-a054-6328588cb585",
+      "id": "528d3648-1509-46d7-b7c1-d5b896bd7cac",
       "tool": "Semgrep OSS",
       "rule_id": "javascript.browser.security.insecure-document-method.insecure-document-method",
       "rule_name": "javascript.browser.security.insecure-document-method.insecure-document-method",
@@ -440,6 +440,6 @@
     "warning": 10
   },
   "metadata": {},
-  "created_at": "2026-01-13T20:01:47.300794",
+  "created_at": "2026-01-29T12:25:58.458679",
   "is_baseline": true
 }

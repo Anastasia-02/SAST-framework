@@ -13,7 +13,7 @@ sys.path.insert(0, str(Path(__file__).parent / "src"))
 # Проверяем наличие необходимых директорий
 config_dir = Path("./config")
 if not config_dir.exists():
-    print("Creating config directory...")
+    print("Создание каталога конфигурации...")
     config_dir.mkdir(parents=True)
 
     # Создаем минимальную конфигурацию

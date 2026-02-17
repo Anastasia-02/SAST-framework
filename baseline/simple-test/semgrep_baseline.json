@@ -1,11 +1,11 @@
 {
   "tool": "semgrep",
   "project": "simple-test",
-  "timestamp": "2026-01-13T20:01:09.694055",
-  "duration_seconds": 9.05150318145752,
+  "timestamp": "2026-01-29T12:25:23.987777",
+  "duration_seconds": 8.31818413734436,
   "issues": [
     {
-      "id": "50a34fcc-ff0d-4e1d-a814-0c16d129f174",
+      "id": "c4fcec3d-7fca-40fc-9685-52e154a3ea58",
       "tool": "Semgrep OSS",
       "rule_id": "python.sqlalchemy.security.sqlalchemy-execute-raw-query.sqlalchemy-execute-raw-query",
       "rule_name": "python.sqlalchemy.security.sqlalchemy-execute-raw-query.sqlalchemy-execute-raw-query",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "c6e95beb-ba96-43cd-81fd-852de257225c",
+      "id": "debf3f59-b235-498b-9264-c042c1c2e749",
       "tool": "Semgrep OSS",
       "rule_id": "python.lang.security.audit.md5-used-as-password.md5-used-as-password",
       "rule_name": "python.lang.security.audit.md5-used-as-password.md5-used-as-password",
@@ -96,6 +96,6 @@
     "warning": 2
   },
   "metadata": {},
-  "created_at": "2026-01-13T20:01:09.699453",
+  "created_at": "2026-01-29T12:25:23.992366",
   "is_baseline": true
 }

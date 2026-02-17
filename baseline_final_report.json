@@ -1,59 +1,22 @@
 {
-  "generated_at": "2026-01-13T18:13:17.201600",
-  "baseline_summary": {
-    "generated_at": "2026-01-13T18:09:56.126112",
-    "projects": {
-      "dvpa-python": {
-        "tools": {
-          "semgrep": {
-            "by_severity": {
-              "warning": 10
-            },
-            "issue_count": 10,
-            "timestamp": "2026-01-13T18:09:27.183108"
-          }
-        },
-        "total_issues": 10
-      },
-      "insecure-go": {
-        "tools": {
-          "semgrep": {
-            "by_severity": {
-              "warning": 3
-            },
-            "issue_count": 3,
-            "timestamp": "2026-01-13T18:09:44.237935"
-          }
-        },
-        "total_issues": 3
-      },
-      "insecure-ruby": {
-        "tools": {
-          "semgrep": {
-            "by_severity": {
-              "warning": 44
-            },
-            "issue_count": 44,
-            "timestamp": "2026-01-13T18:09:56.115488"
-          }
-        },
-        "total_issues": 44
-      },
-      "simple-test": {
-        "tools": {
-          "semgrep": {
-            "by_severity": {
-              "warning": 2
-            },
-            "issue_count": 2,
-            "timestamp": "2026-01-13T18:08:55.837689"
-          }
-        },
-        "total_issues": 2
-      }
-    }
-  },
+  "generated_at": "2026-01-29T12:23:54.971647",
+  "baseline_summary": {},
   "projects": [
+    {
+      "name": "insecure-cpp",
+      "tools": [
+        {
+          "name": "semgrep",
+          "issues": 2,
+          "severities": {
+            "warning": 2
+          },
+          "timestamp": "2026-01-29T12:09:23.350451",
+          "file": "semgrep_baseline.json"
+        }
+      ],
+      "total_issues": 2
+    },
     {
       "name": "insecure-go",
       "tools": [
@@ -63,7 +26,7 @@
           "severities": {
             "warning": 3
           },
-          "timestamp": "2026-01-13T18:09:44.237935",
+          "timestamp": "2026-01-29T12:10:02.420143",
           "file": "semgrep_baseline.json"
         }
       ],
@@ -78,7 +41,7 @@
           "severities": {
             "warning": 10
           },
-          "timestamp": "2026-01-13T18:09:27.183108",
+          "timestamp": "2026-01-29T12:09:53.549393",
           "file": "semgrep_baseline.json"
         }
       ],
@@ -93,11 +56,24 @@
           "severities": {
             "warning": 2
           },
-          "timestamp": "2026-01-13T18:08:55.837689",
+          "timestamp": "2026-01-29T12:09:15.294582",
           "file": "semgrep_baseline.json"
         }
       ],
       "total_issues": 2
+    },
+    {
+      "name": "bash-examples",
+      "tools": [
+        {
+          "name": "semgrep",
+          "issues": 0,
+          "severities": {},
+          "timestamp": "2026-01-29T12:10:09.483690",
+          "file": "semgrep_baseline.json"
+        }
+      ],
+      "total_issues": 0
     },
     {
       "name": "insecure-ruby",
@@ -108,7 +84,7 @@
           "severities": {
             "warning": 44
           },
-          "timestamp": "2026-01-13T18:09:56.115488",
+          "timestamp": "2026-01-29T12:10:23.473467",
           "file": "semgrep_baseline.json"
         }
       ],

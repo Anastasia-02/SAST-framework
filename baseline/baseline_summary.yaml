@@ -1,0 +1,49 @@
+generated_at: '2026-01-29T12:26:27.243942'
+projects:
+  bash-examples:
+    tools:
+      semgrep:
+        by_severity: {}
+        issue_count: 0
+        timestamp: '2026-01-29T12:26:15.975652'
+    total_issues: 0
+  dvpa-python:
+    tools:
+      semgrep:
+        by_severity:
+          warning: 10
+        issue_count: 10
+        timestamp: '2026-01-29T12:25:58.454352'
+    total_issues: 10
+  insecure-cpp:
+    tools:
+      semgrep:
+        by_severity:
+          warning: 2
+        issue_count: 2
+        timestamp: '2026-01-29T12:25:31.543466'
+    total_issues: 2
+  insecure-go:
+    tools:
+      semgrep:
+        by_severity:
+          warning: 3
+        issue_count: 3
+        timestamp: '2026-01-29T12:26:08.713345'
+    total_issues: 3
+  insecure-ruby:
+    tools:
+      semgrep:
+        by_severity:
+          warning: 44
+        issue_count: 44
+        timestamp: '2026-01-29T12:26:27.227106'
+    total_issues: 44
+  simple-test:
+    tools:
+      semgrep:
+        by_severity:
+          warning: 2
+        issue_count: 2
+        timestamp: '2026-01-29T12:25:23.987777'
+    total_issues: 2

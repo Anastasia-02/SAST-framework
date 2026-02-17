@@ -52,28 +52,18 @@ class BaseTool(ABC):
     def run_in_container(self, command: List[str], project_path: str,
                          mount_readonly: bool = True) -> subprocess.CompletedProcess:
         """
-        Запускает команду в Docker-контейнере
-
-        Args:
-            command: Команда для выполнения
-            project_path: Путь к проекту для монтирования
-            mount_readonly: Монтировать ли проект только для чтения
-
-        Returns:
-            subprocess.CompletedProcess: Результат выполнения
+        Запускает команду в Docker-контейнере и возвращает результат.
+        Не выбрасывает исключение при ненулевом коде возврата, а возвращает объект с этим кодом.
         """
         try:
             client = docker.from_env()
 
-            # Создаем директорию для результатов
             output_dir = Path("results/raw")
             output_dir.mkdir(parents=True, exist_ok=True)
 
-            # Подготавливаем пути
             abs_project_path = Path(project_path).absolute()
             abs_output_dir = output_dir.absolute()
 
-            # Создаем volumes для монтирования
             volumes = {
                 str(abs_project_path): {
                     'bind': '/src',
@@ -87,10 +77,7 @@ class BaseTool(ABC):
 
             self.logger.info(f"Running container: {self.image}")
             self.logger.info(f"Command: {' '.join(command)}")
-            self.logger.info(f"Mounting project: {abs_project_path} -> /src")
-            self.logger.info(f"Mounting results: {abs_output_dir} -> /results")
 
-            # Запускаем контейнер
             container = client.containers.run(
                 image=self.image,
                 command=command,
@@ -102,20 +89,25 @@ class BaseTool(ABC):
                 stderr=True
             )
 
-            # Логируем вывод
-            if container:
-                output = container.decode('utf-8') if isinstance(container, bytes) else str(container)
-                if output.strip():
-                    self.logger.debug(f"Container output: {output[:500]}...")
-
+            stdout = container.decode('utf-8') if isinstance(container, bytes) else str(container)
             return subprocess.CompletedProcess(
                 args=command,
                 returncode=0,
-                stdout=output if 'output' in locals() else '',
+                stdout=stdout,
                 stderr=''
             )
 
-        except docker.errors.ImageNotFound:
+        except docker.errors.ContainerError as e:
+            self.logger.warning(f"Container exited with code {e.exit_status}")
+            stdout = e.stdout if hasattr(e, 'stdout') else ''
+            stderr = e.stderr if hasattr(e, 'stderr') else ''
+            return subprocess.CompletedProcess(
+                args=command,
+                returncode=e.exit_status,
+                stdout=stdout,
+                stderr=stderr
+            )
+        except docker.errors.ImageNotFound as e:
             self.logger.error(f"Docker image not found: {self.image}")
             raise
         except docker.errors.APIError as e:

@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # Shell injection vulnerability
 read -p "Enter filename: " filename
 cat $filename

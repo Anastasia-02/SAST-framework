@@ -1,0 +1,69 @@
+2026-02-17 15:24:19,521 - test_runner - INFO - Configuration loaded from config/projects_config.yaml
+2026-02-17 15:24:19,521 - tools_registry - INFO - Registered tool: semgrep
+2026-02-17 15:24:19,521 - tools_registry - INFO - Registered tool: semgrep
+2026-02-17 15:24:19,522 - tools_registry - INFO - Registered tool: cppcheck
+2026-02-17 15:24:19,522 - tools_registry - INFO - Registered tool: cppcheck
+2026-02-17 15:24:19,522 - tools_registry - INFO - Registered tool: shellcheck
+2026-02-17 15:24:19,522 - tools_registry - INFO - Registered tool: shellcheck
+2026-02-17 15:24:19,524 - __main__ - INFO - Baseline будет перезаписан: baseline/insecure-cpp/cppcheck_baseline.json
+2026-02-17 15:24:19,524 - __main__ - INFO - Baseline будет перезаписан: baseline/dvpa-python/semgrep_baseline.json
+2026-02-17 15:24:19,524 - __main__ - INFO - Будет создан baseline для bash-examples/shellcheck
+2026-02-17 15:24:19,524 - test_runner - INFO - Found 3 projects in config
+2026-02-17 15:24:19,524 - test_runner - INFO - Running tests for project: insecure-cpp
+2026-02-17 15:24:19,524 - test_runner - INFO - Starting testing for project: insecure-cpp
+2026-02-17 15:24:19,604 - environment - INFO - Docker client initialized
+2026-02-17 15:24:19,604 - environment - INFO - Environment setup completed
+2026-02-17 15:24:19,604 - test_runner - INFO -   Running cppcheck...
+2026-02-17 15:24:19,658 - sast_framework.tools.cppcheck - INFO - Running cppcheck on ./projects/insecure-cpp
+2026-02-17 15:24:19,681 - sast_framework.tools.cppcheck - INFO - Running container: ghcr.io/facthunder/cppcheck:latest
+2026-02-17 15:24:19,681 - sast_framework.tools.cppcheck - INFO - Command: cppcheck --enable=all --xml --xml-version=2 --output-file=/results/cppcheck_results.xml /src
+2026-02-17 15:24:19,681 - sast_framework.tools.cppcheck - INFO - Mounting project: /Users/anastasiakamalova/PycharmProjects/SAST-Framework/projects/insecure-cpp -> /src
+2026-02-17 15:24:19,682 - sast_framework.tools.cppcheck - INFO - Mounting results: /Users/anastasiakamalova/PycharmProjects/SAST-Framework/results/raw -> /results
+2026-02-17 15:24:21,943 - sast_framework.tools.cppcheck - INFO - Results saved to results/raw/insecure-cpp/cppcheck_20260217_152419.sarif
+2026-02-17 15:24:21,945 - normalizer - INFO - Normalized 348 issues
+2026-02-17 15:24:21,949 - performance_metrics - INFO - Performance metrics saved: results/metrics/insecure-cpp/cppcheck_20260217_152421.json
+2026-02-17 15:24:21,949 - test_runner - INFO -     Found 348 issues
+2026-02-17 15:24:21,949 - environment - INFO - Environment cleanup completed
+2026-02-17 15:24:21,949 - test_runner - INFO - Running tests for project: dvpa-python
+2026-02-17 15:24:21,949 - test_runner - INFO - Starting testing for project: dvpa-python
+2026-02-17 15:24:21,960 - environment - INFO - Docker client initialized
+2026-02-17 15:24:21,960 - environment - INFO - Environment setup completed
+2026-02-17 15:24:21,960 - test_runner - INFO -   Running semgrep...
+2026-02-17 15:24:22,010 - sast_framework.tools.semgrep - INFO - Running semgrep on ./projects/dvpa-python
+2026-02-17 15:24:22,022 - sast_framework.tools.semgrep - INFO - Running container: returntocorp/semgrep:latest
+2026-02-17 15:24:22,022 - sast_framework.tools.semgrep - INFO - Command: semgrep scan --config=auto --json --output=/results/semgrep_results.json /src
+2026-02-17 15:24:22,022 - sast_framework.tools.semgrep - INFO - Mounting project: /Users/anastasiakamalova/PycharmProjects/SAST-Framework/projects/dvpa-python -> /src
+2026-02-17 15:24:22,022 - sast_framework.tools.semgrep - INFO - Mounting results: /Users/anastasiakamalova/PycharmProjects/SAST-Framework/results/raw -> /results
+2026-02-17 15:24:48,663 - sast_framework.tools.semgrep - INFO - Results saved to results/raw/dvpa-python/semgrep_20260217_152422.sarif
+2026-02-17 15:24:48,663 - normalizer - INFO - Normalized 10 issues
+2026-02-17 15:24:48,667 - performance_metrics - INFO - Performance metrics saved: results/metrics/dvpa-python/semgrep_20260217_152448.json
+2026-02-17 15:24:48,667 - test_runner - INFO -     Found 10 issues
+2026-02-17 15:24:48,667 - environment - INFO - Environment cleanup completed
+2026-02-17 15:24:48,667 - test_runner - INFO - Running tests for project: bash-examples
+2026-02-17 15:24:48,667 - test_runner - INFO - Starting testing for project: bash-examples
+2026-02-17 15:24:48,676 - environment - INFO - Docker client initialized
+2026-02-17 15:24:48,676 - environment - INFO - Environment setup completed
+2026-02-17 15:24:48,676 - test_runner - INFO -   Running shellcheck...
+2026-02-17 15:24:48,724 - sast_framework.tools.shellcheck - INFO - Running shellcheck on ./projects/bash-examples
+2026-02-17 15:24:48,725 - sast_framework.tools.shellcheck - INFO - Running command in container: shellcheck --version
+2026-02-17 15:24:48,737 - sast_framework.tools.shellcheck - INFO - Running container: koalaman/shellcheck-alpine:stable
+2026-02-17 15:24:48,737 - sast_framework.tools.shellcheck - INFO - Command: sh -c shellcheck --version
+2026-02-17 15:24:48,737 - sast_framework.tools.shellcheck - INFO - Mounting project: /Users/anastasiakamalova/PycharmProjects/SAST-Framework/projects/bash-examples -> /src
+2026-02-17 15:24:48,737 - sast_framework.tools.shellcheck - INFO - Mounting results: /Users/anastasiakamalova/PycharmProjects/SAST-Framework/results/raw -> /results
+2026-02-17 15:24:49,042 - sast_framework.tools.shellcheck - ERROR - Error running shellcheck: Expecting value: line 2 column 1 (char 1)
+Traceback (most recent call last):
+  File "/Users/anastasiakamalova/PycharmProjects/SAST-Framework/tools/shellcheck.py", line 66, in run
+    shellcheck_results = json.load(f)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
+2026-02-17 15:24:49,048 - test_runner - ERROR -     Tool shellcheck failed
+2026-02-17 15:24:49,048 - environment - INFO - Environment cleanup completed
+2026-02-17 15:24:49,051 - normalizer - INFO - Normalized 348 issues
+2026-02-17 15:24:49,058 - normalizer - INFO - Normalized 10 issues

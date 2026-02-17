@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-02-17T14:34:07.478720",
+  "test_results_summary": {
+    "insecure-cpp": {
+      "cppcheck": {
+        "success": true,
+        "issues_count": 348,
+        "has_error": false,
+        "error_message": null
+      }
+    },
+    "dvpa-python": {
+      "semgrep": {
+        "success": true,
+        "issues_count": 10,
+        "has_error": false,
+        "error_message": null
+      }
+    },
+    "bash-examples": {
+      "shellcheck": {
+        "success": false,
+        "issues_count": 0,
+        "has_error": true,
+        "error_message": "Tool execution failed"
+      }
+    }
+  },
+  "comparison_summary": {},
+  "performance_summary": {
+    "semgrep": {
+      "avg_execution_time": 29.791022062301636,
+      "avg_issues_found": 10.0,
+      "total_runs": 2
+    },
+    "cppcheck": {
+      "avg_execution_time": 3.662103533744812,
+      "avg_issues_found": 348.0,
+      "total_runs": 2
+    }
+  },
+  "metadata": {
+    "framework_version": "1.0.0",
+    "execution_time": "2026-02-17 14:34:07"
+  }
+}

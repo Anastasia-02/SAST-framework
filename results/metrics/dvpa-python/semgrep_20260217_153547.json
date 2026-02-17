@@ -1,0 +1,12 @@
+{
+  "tool": "semgrep",
+  "project": "dvpa-python",
+  "timestamp": "2026-02-17T15:35:14.475878",
+  "execution_time": 32.58884572982788,
+  "memory_usage": null,
+  "cpu_usage": null,
+  "issues_per_second": 0.30685345786417995,
+  "files_scanned": 26,
+  "lines_scanned": 0,
+  "issues_found": 10
+}

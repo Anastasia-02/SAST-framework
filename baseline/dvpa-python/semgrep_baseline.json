@@ -1,445 +1,192 @@
 {
-  "tool": "semgrep",
   "project": "dvpa-python",
-  "timestamp": "2026-01-29T12:25:58.454352",
-  "duration_seconds": 26.874531984329224,
+  "tool": "semgrep",
+  "timestamp": "2026-02-17T15:35:47.539956",
+  "issues_count": 10,
   "issues": [
     {
-      "id": "5642b1d1-669d-43d0-853e-867bdad83133",
-      "tool": "Semgrep OSS",
       "rule_id": "yaml.docker-compose.security.no-new-privileges.no-new-privileges",
-      "rule_name": "yaml.docker-compose.security.no-new-privileges.no-new-privileges",
-      "file_path": "docker-compose.yml",
-      "line_number": 11,
-      "column_number": 3,
-      "end_line": 11,
-      "end_column": 8,
-      "severity": "warning",
       "message": "Service 'redis' allows for privilege escalation via setuid or setgid binaries. Add 'no-new-privileges:true' in 'security_opt' to prevent this.",
-      "snippet": "  redis:",
-      "raw_data": {
-        "fingerprints": {
-          "matchBasedId/v1": "requires login"
-        },
-        "locations": [
-          {
-            "physicalLocation": {
-              "artifactLocation": {
-                "uri": "/src/docker-compose.yml",
-                "uriBaseId": "%SRCROOT%"
-              },
-              "region": {
-                "endColumn": 8,
-                "endLine": 11,
-                "snippet": {
-                  "text": "  redis:"
-                },
-                "startColumn": 3,
-                "startLine": 11
-              }
-            }
-          }
-        ],
-        "message": {
-          "text": "Service 'redis' allows for privilege escalation via setuid or setgid binaries. Add 'no-new-privileges:true' in 'security_opt' to prevent this."
-        },
-        "properties": {},
-        "ruleId": "yaml.docker-compose.security.no-new-privileges.no-new-privileges"
-      }
-    },
-    {
-      "id": "f9935842-f837-4df9-b01b-76f5337f50b8",
-      "tool": "Semgrep OSS",
-      "rule_id": "yaml.docker-compose.security.writable-filesystem-service.writable-filesystem-service",
-      "rule_name": "yaml.docker-compose.security.writable-filesystem-service.writable-filesystem-service",
+      "severity": "warning",
       "file_path": "docker-compose.yml",
       "line_number": 11,
-      "column_number": 3,
+      "start_column": 3,
       "end_line": 11,
       "end_column": 8,
-      "severity": "warning",
+      "partialFingerprints": {
+        "primaryLocationLineHash": "yaml.docker-compose.security.no-new-privileges.no-new-privileges:/src/docker-compose.yml:11"
+      },
+      "metadata": {
+        "tool": "semgrep",
+        "tool_version": "latest",
+        "normalization_timestamp": "2026-02-17T15:35:47.539773"
+      }
+    },
+    {
+      "rule_id": "yaml.docker-compose.security.writable-filesystem-service.writable-filesystem-service",
       "message": "Service 'redis' is running with a writable root filesystem. This may allow malicious applications to download and run additional payloads, or modify container files. If an application inside a container has to save something temporarily consider using a tmpfs. Add 'read_only: true' to this service to prevent this.",
-      "snippet": "  redis:",
-      "raw_data": {
-        "fingerprints": {
-          "matchBasedId/v1": "requires login"
-        },
-        "locations": [
-          {
-            "physicalLocation": {
-              "artifactLocation": {
-                "uri": "/src/docker-compose.yml",
-                "uriBaseId": "%SRCROOT%"
-              },
-              "region": {
-                "endColumn": 8,
-                "endLine": 11,
-                "snippet": {
-                  "text": "  redis:"
-                },
-                "startColumn": 3,
-                "startLine": 11
-              }
-            }
-          }
-        ],
-        "message": {
-          "text": "Service 'redis' is running with a writable root filesystem. This may allow malicious applications to download and run additional payloads, or modify container files. If an application inside a container has to save something temporarily consider using a tmpfs. Add 'read_only: true' to this service to prevent this."
-        },
-        "properties": {},
-        "ruleId": "yaml.docker-compose.security.writable-filesystem-service.writable-filesystem-service"
+      "severity": "warning",
+      "file_path": "docker-compose.yml",
+      "line_number": 11,
+      "start_column": 3,
+      "end_line": 11,
+      "end_column": 8,
+      "partialFingerprints": {
+        "primaryLocationLineHash": "yaml.docker-compose.security.writable-filesystem-service.writable-filesystem-service:/src/docker-compose.yml:11"
+      },
+      "metadata": {
+        "tool": "semgrep",
+        "tool_version": "latest",
+        "normalization_timestamp": "2026-02-17T15:35:47.539790"
       }
     },
     {
-      "id": "40a2862c-8598-468c-ac1c-6cbc2f13e9d3",
-      "tool": "Semgrep OSS",
       "rule_id": "python.lang.security.audit.formatted-sql-query.formatted-sql-query",
-      "rule_name": "python.lang.security.audit.formatted-sql-query.formatted-sql-query",
-      "file_path": "sqli/dao/student.py",
-      "line_number": 45,
-      "column_number": 19,
-      "end_line": 45,
-      "end_column": 33,
-      "severity": "warning",
       "message": "Detected possible formatted SQL query. Use parameterized queries instead.",
-      "snippet": "            await cur.execute(q)",
-      "raw_data": {
-        "fingerprints": {
-          "matchBasedId/v1": "requires login"
-        },
-        "locations": [
-          {
-            "physicalLocation": {
-              "artifactLocation": {
-                "uri": "/src/sqli/dao/student.py",
-                "uriBaseId": "%SRCROOT%"
-              },
-              "region": {
-                "endColumn": 33,
-                "endLine": 45,
-                "snippet": {
-                  "text": "            await cur.execute(q)"
-                },
-                "startColumn": 19,
-                "startLine": 45
-              }
-            }
-          }
-        ],
-        "message": {
-          "text": "Detected possible formatted SQL query. Use parameterized queries instead."
-        },
-        "properties": {},
-        "ruleId": "python.lang.security.audit.formatted-sql-query.formatted-sql-query"
-      }
-    },
-    {
-      "id": "e3a25a3d-67b5-456b-8a39-5e151dc52fd8",
-      "tool": "Semgrep OSS",
-      "rule_id": "python.sqlalchemy.security.sqlalchemy-execute-raw-query.sqlalchemy-execute-raw-query",
-      "rule_name": "python.sqlalchemy.security.sqlalchemy-execute-raw-query.sqlalchemy-execute-raw-query",
+      "severity": "warning",
       "file_path": "sqli/dao/student.py",
       "line_number": 45,
-      "column_number": 19,
+      "start_column": 19,
       "end_line": 45,
       "end_column": 33,
-      "severity": "warning",
-      "message": "Avoiding SQL string concatenation: untrusted input concatenated with raw SQL query can result in SQL Injection. In order to execute raw query safely, prepared statement should be used. SQLAlchemy provides TextualSQL to easily used prepared statement with named parameters. For complex SQL composition, use SQL Expression Language or Schema Definition Language. In most cases, SQLAlchemy ORM will be a better option.",
-      "snippet": "            await cur.execute(q)",
-      "raw_data": {
-        "fingerprints": {
-          "matchBasedId/v1": "requires login"
-        },
-        "locations": [
-          {
-            "physicalLocation": {
-              "artifactLocation": {
-                "uri": "/src/sqli/dao/student.py",
-                "uriBaseId": "%SRCROOT%"
-              },
-              "region": {
-                "endColumn": 33,
-                "endLine": 45,
-                "snippet": {
-                  "text": "            await cur.execute(q)"
-                },
-                "startColumn": 19,
-                "startLine": 45
-              }
-            }
-          }
-        ],
-        "message": {
-          "text": "Avoiding SQL string concatenation: untrusted input concatenated with raw SQL query can result in SQL Injection. In order to execute raw query safely, prepared statement should be used. SQLAlchemy provides TextualSQL to easily used prepared statement with named parameters. For complex SQL composition, use SQL Expression Language or Schema Definition Language. In most cases, SQLAlchemy ORM will be a better option."
-        },
-        "properties": {},
-        "ruleId": "python.sqlalchemy.security.sqlalchemy-execute-raw-query.sqlalchemy-execute-raw-query"
+      "partialFingerprints": {
+        "primaryLocationLineHash": "python.lang.security.audit.formatted-sql-query.formatted-sql-query:/src/sqli/dao/student.py:45"
+      },
+      "metadata": {
+        "tool": "semgrep",
+        "tool_version": "latest",
+        "normalization_timestamp": "2026-02-17T15:35:47.539795"
       }
     },
     {
-      "id": "a70c3ce5-a95e-4035-976b-b63c44a87671",
-      "tool": "Semgrep OSS",
+      "rule_id": "python.sqlalchemy.security.sqlalchemy-execute-raw-query.sqlalchemy-execute-raw-query",
+      "message": "Avoiding SQL string concatenation: untrusted input concatenated with raw SQL query can result in SQL Injection. In order to execute raw query safely, prepared statement should be used. SQLAlchemy provides TextualSQL to easily used prepared statement with named parameters. For complex SQL composition, use SQL Expression Language or Schema Definition Language. In most cases, SQLAlchemy ORM will be a better option.",
+      "severity": "error",
+      "file_path": "sqli/dao/student.py",
+      "line_number": 45,
+      "start_column": 19,
+      "end_line": 45,
+      "end_column": 33,
+      "partialFingerprints": {
+        "primaryLocationLineHash": "python.sqlalchemy.security.sqlalchemy-execute-raw-query.sqlalchemy-execute-raw-query:/src/sqli/dao/student.py:45"
+      },
+      "metadata": {
+        "tool": "semgrep",
+        "tool_version": "latest",
+        "normalization_timestamp": "2026-02-17T15:35:47.539799"
+      }
+    },
+    {
       "rule_id": "python.lang.security.audit.md5-used-as-password.md5-used-as-password",
-      "rule_name": "python.lang.security.audit.md5-used-as-password.md5-used-as-password",
+      "message": "It looks like MD5 is used as a password hash. MD5 is not considered a secure password hash because it can be cracked by an attacker in a short amount of time. Use a suitable password hashing function such as scrypt. You can use `hashlib.scrypt`.",
+      "severity": "warning",
       "file_path": "sqli/dao/user.py",
       "line_number": 41,
-      "column_number": 33,
+      "start_column": 33,
       "end_line": 41,
       "end_column": 74,
-      "severity": "warning",
-      "message": "It looks like MD5 is used as a password hash. MD5 is not considered a secure password hash because it can be cracked by an attacker in a short amount of time. Use a suitable password hashing function such as scrypt. You can use `hashlib.scrypt`.",
-      "snippet": "        return self.pwd_hash == md5(password.encode('utf-8')).hexdigest()",
-      "raw_data": {
-        "fingerprints": {
-          "matchBasedId/v1": "requires login"
-        },
-        "locations": [
-          {
-            "physicalLocation": {
-              "artifactLocation": {
-                "uri": "/src/sqli/dao/user.py",
-                "uriBaseId": "%SRCROOT%"
-              },
-              "region": {
-                "endColumn": 74,
-                "endLine": 41,
-                "snippet": {
-                  "text": "        return self.pwd_hash == md5(password.encode('utf-8')).hexdigest()"
-                },
-                "startColumn": 33,
-                "startLine": 41
-              }
-            }
-          }
-        ],
-        "message": {
-          "text": "It looks like MD5 is used as a password hash. MD5 is not considered a secure password hash because it can be cracked by an attacker in a short amount of time. Use a suitable password hashing function such as scrypt. You can use `hashlib.scrypt`."
-        },
-        "properties": {},
-        "ruleId": "python.lang.security.audit.md5-used-as-password.md5-used-as-password"
+      "partialFingerprints": {
+        "primaryLocationLineHash": "python.lang.security.audit.md5-used-as-password.md5-used-as-password:/src/sqli/dao/user.py:41"
+      },
+      "metadata": {
+        "tool": "semgrep",
+        "tool_version": "latest",
+        "normalization_timestamp": "2026-02-17T15:35:47.539804"
       }
     },
     {
-      "id": "541c3c04-1339-40b2-ad22-311f26aa1eb2",
-      "tool": "Semgrep OSS",
       "rule_id": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
-      "rule_name": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
+      "message": "RegExp() called with a `t` function argument, this might allow an attacker to cause a Regular Expression Denial-of-Service (ReDoS) within your application as RegExP blocks the main thread. For this reason, it is recommended to use hardcoded regexes instead. If your regex is run on user-controlled input, consider performing input validation or use a regex checking/sanitization library such as https://www.npmjs.com/package/recheck to verify that the regex does not appear vulnerable to ReDoS.",
+      "severity": "warning",
       "file_path": "sqli/static/js/materialize.js",
       "line_number": 565,
-      "column_number": 94,
+      "start_column": 94,
       "end_line": 565,
       "end_column": 158,
-      "severity": "warning",
-      "message": "RegExp() called with a `t` function argument, this might allow an attacker to cause a Regular Expression Denial-of-Service (ReDoS) within your application as RegExP blocks the main thread. For this reason, it is recommended to use hardcoded regexes instead. If your regex is run on user-controlled input, consider performing input validation or use a regex checking/sanitization library such as https://www.npmjs.com/package/recheck to verify that the regex does not appear vulnerable to ReDoS.",
-      "snippet": "          e.classList ? e.classList.remove(t) : e.className = e.className.toString().replace(new RegExp(\"(^|\\\\s)\" + t.split(\" \").join(\"|\") + \"(\\\\s|$)\", \"gi\"), \" \");",
-      "raw_data": {
-        "fingerprints": {
-          "matchBasedId/v1": "requires login"
-        },
-        "locations": [
-          {
-            "physicalLocation": {
-              "artifactLocation": {
-                "uri": "/src/sqli/static/js/materialize.js",
-                "uriBaseId": "%SRCROOT%"
-              },
-              "region": {
-                "endColumn": 158,
-                "endLine": 565,
-                "snippet": {
-                  "text": "          e.classList ? e.classList.remove(t) : e.className = e.className.toString().replace(new RegExp(\"(^|\\\\s)\" + t.split(\" \").join(\"|\") + \"(\\\\s|$)\", \"gi\"), \" \");"
-                },
-                "startColumn": 94,
-                "startLine": 565
-              }
-            }
-          }
-        ],
-        "message": {
-          "text": "RegExp() called with a `t` function argument, this might allow an attacker to cause a Regular Expression Denial-of-Service (ReDoS) within your application as RegExP blocks the main thread. For this reason, it is recommended to use hardcoded regexes instead. If your regex is run on user-controlled input, consider performing input validation or use a regex checking/sanitization library such as https://www.npmjs.com/package/recheck to verify that the regex does not appear vulnerable to ReDoS."
-        },
-        "properties": {},
-        "ruleId": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp"
+      "partialFingerprints": {
+        "primaryLocationLineHash": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp:/src/sqli/static/js/materialize.js:565"
+      },
+      "metadata": {
+        "tool": "semgrep",
+        "tool_version": "latest",
+        "normalization_timestamp": "2026-02-17T15:35:47.539811"
       }
     },
     {
-      "id": "73a9b161-fd25-4a3d-a37d-0bdfc249e02c",
-      "tool": "Semgrep OSS",
       "rule_id": "javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring",
-      "rule_name": "javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring",
+      "message": "Detected string concatenation with a non-literal variable in a util.format / console.log function. If an attacker injects a format specifier in the string, it will forge the log message. Try to use constant values for the format string.",
+      "severity": "note",
       "file_path": "sqli/static/js/materialize.js",
       "line_number": 645,
-      "column_number": 318,
+      "start_column": 318,
       "end_line": 645,
       "end_column": 353,
-      "severity": "warning",
-      "message": "Detected string concatenation with a non-literal variable in a util.format / console.log function. If an attacker injects a format specifier in the string, it will forge the log message. Try to use constant values for the format string.",
-      "snippet": "            }return null === L.remToPx && (L.remToPx = parseFloat(S.getPropertyValue(r.body, \"fontSize\")) || 16), null === L.vwToPx && (L.vwToPx = parseFloat(t.innerWidth) / 100, L.vhToPx = parseFloat(t.innerHeight) / 100), l.remToPx = L.remToPx, l.vwToPx = L.vwToPx, l.vhToPx = L.vhToPx, b.debug >= 1 && console.log(\"Unit ratios: \" + JSON.stringify(l), o), l;",
-      "raw_data": {
-        "fingerprints": {
-          "matchBasedId/v1": "requires login"
-        },
-        "locations": [
-          {
-            "physicalLocation": {
-              "artifactLocation": {
-                "uri": "/src/sqli/static/js/materialize.js",
-                "uriBaseId": "%SRCROOT%"
-              },
-              "region": {
-                "endColumn": 353,
-                "endLine": 645,
-                "snippet": {
-                  "text": "            }return null === L.remToPx && (L.remToPx = parseFloat(S.getPropertyValue(r.body, \"fontSize\")) || 16), null === L.vwToPx && (L.vwToPx = parseFloat(t.innerWidth) / 100, L.vhToPx = parseFloat(t.innerHeight) / 100), l.remToPx = L.remToPx, l.vwToPx = L.vwToPx, l.vhToPx = L.vhToPx, b.debug >= 1 && console.log(\"Unit ratios: \" + JSON.stringify(l), o), l;"
-                },
-                "startColumn": 318,
-                "startLine": 645
-              }
-            }
-          }
-        ],
-        "message": {
-          "text": "Detected string concatenation with a non-literal variable in a util.format / console.log function. If an attacker injects a format specifier in the string, it will forge the log message. Try to use constant values for the format string."
-        },
-        "properties": {},
-        "ruleId": "javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring"
+      "partialFingerprints": {
+        "primaryLocationLineHash": "javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring:/src/sqli/static/js/materialize.js:645"
+      },
+      "metadata": {
+        "tool": "semgrep",
+        "tool_version": "latest",
+        "normalization_timestamp": "2026-02-17T15:35:47.539817"
       }
     },
     {
-      "id": "6b673f91-fc96-4e5b-b25f-ab3e9b1fb819",
-      "tool": "Semgrep OSS",
       "rule_id": "javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring",
-      "rule_name": "javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring",
+      "message": "Detected string concatenation with a non-literal variable in a util.format / console.log function. If an attacker injects a format specifier in the string, it will forge the log message. Try to use constant values for the format string.",
+      "severity": "note",
       "file_path": "sqli/static/js/materialize.js",
       "line_number": 661,
-      "column_number": 184,
+      "start_column": 184,
       "end_line": 661,
       "end_column": 246,
-      "severity": "warning",
-      "message": "Detected string concatenation with a non-literal variable in a util.format / console.log function. If an attacker injects a format specifier in the string, it will forge the log message. Try to use constant values for the format string.",
-      "snippet": "                var N = E[H].startValue;E[H].startValue = E[H].currentValue = E[H].endValue, E[H].endValue = N, m.isEmptyObject(v) || (E[H].easing = s.easing), b.debug && console.log(\"reverse tweensContainer (\" + H + \"): \" + JSON.stringify(E[H]), o);",
-      "raw_data": {
-        "fingerprints": {
-          "matchBasedId/v1": "requires login"
-        },
-        "locations": [
-          {
-            "physicalLocation": {
-              "artifactLocation": {
-                "uri": "/src/sqli/static/js/materialize.js",
-                "uriBaseId": "%SRCROOT%"
-              },
-              "region": {
-                "endColumn": 246,
-                "endLine": 661,
-                "snippet": {
-                  "text": "                var N = E[H].startValue;E[H].startValue = E[H].currentValue = E[H].endValue, E[H].endValue = N, m.isEmptyObject(v) || (E[H].easing = s.easing), b.debug && console.log(\"reverse tweensContainer (\" + H + \"): \" + JSON.stringify(E[H]), o);"
-                },
-                "startColumn": 184,
-                "startLine": 661
-              }
-            }
-          }
-        ],
-        "message": {
-          "text": "Detected string concatenation with a non-literal variable in a util.format / console.log function. If an attacker injects a format specifier in the string, it will forge the log message. Try to use constant values for the format string."
-        },
-        "properties": {},
-        "ruleId": "javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring"
+      "partialFingerprints": {
+        "primaryLocationLineHash": "javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring:/src/sqli/static/js/materialize.js:661"
+      },
+      "metadata": {
+        "tool": "semgrep",
+        "tool_version": "latest",
+        "normalization_timestamp": "2026-02-17T15:35:47.539821"
       }
     },
     {
-      "id": "bf1029aa-38c1-45bf-ab8c-919b94322ffc",
-      "tool": "Semgrep OSS",
       "rule_id": "javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring",
-      "rule_name": "javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring",
+      "message": "Detected string concatenation with a non-literal variable in a util.format / console.log function. If an attacker injects a format specifier in the string, it will forge the log message. Try to use constant values for the format string.",
+      "severity": "note",
       "file_path": "sqli/static/js/materialize.js",
       "line_number": 699,
-      "column_number": 157,
+      "start_column": 157,
       "end_line": 699,
       "end_column": 211,
-      "severity": "warning",
-      "message": "Detected string concatenation with a non-literal variable in a util.format / console.log function. If an attacker injects a format specifier in the string, it will forge the log message. Try to use constant values for the format string.",
-      "snippet": "                    q = M / q;}l[z] = { rootPropertyValue: B, startValue: M, currentValue: M, endValue: q, unitType: G, easing: $ }, b.debug && console.log(\"tweensContainer (\" + z + \"): \" + JSON.stringify(l[z]), o);",
-      "raw_data": {
-        "fingerprints": {
-          "matchBasedId/v1": "requires login"
-        },
-        "locations": [
-          {
-            "physicalLocation": {
-              "artifactLocation": {
-                "uri": "/src/sqli/static/js/materialize.js",
-                "uriBaseId": "%SRCROOT%"
-              },
-              "region": {
-                "endColumn": 211,
-                "endLine": 699,
-                "snippet": {
-                  "text": "                    q = M / q;}l[z] = { rootPropertyValue: B, startValue: M, currentValue: M, endValue: q, unitType: G, easing: $ }, b.debug && console.log(\"tweensContainer (\" + z + \"): \" + JSON.stringify(l[z]), o);"
-                },
-                "startColumn": 157,
-                "startLine": 699
-              }
-            }
-          }
-        ],
-        "message": {
-          "text": "Detected string concatenation with a non-literal variable in a util.format / console.log function. If an attacker injects a format specifier in the string, it will forge the log message. Try to use constant values for the format string."
-        },
-        "properties": {},
-        "ruleId": "javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring"
+      "partialFingerprints": {
+        "primaryLocationLineHash": "javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring:/src/sqli/static/js/materialize.js:699"
+      },
+      "metadata": {
+        "tool": "semgrep",
+        "tool_version": "latest",
+        "normalization_timestamp": "2026-02-17T15:35:47.539827"
       }
     },
     {
-      "id": "528d3648-1509-46d7-b7c1-d5b896bd7cac",
-      "tool": "Semgrep OSS",
       "rule_id": "javascript.browser.security.insecure-document-method.insecure-document-method",
-      "rule_name": "javascript.browser.security.insecure-document-method.insecure-document-method",
+      "message": "User controlled data in methods like `innerHTML`, `outerHTML` or `document.write` is an anti-pattern that can lead to XSS vulnerabilities",
+      "severity": "error",
       "file_path": "sqli/static/js/materialize.js",
       "line_number": 3444,
-      "column_number": 11,
+      "start_column": 11,
       "end_line": 3444,
       "end_column": 42,
-      "severity": "warning",
-      "message": "User controlled data in methods like `innerHTML`, `outerHTML` or `document.write` is an anti-pattern that can lead to XSS vulnerabilities",
-      "snippet": "          toast.innerHTML = this.message;",
-      "raw_data": {
-        "fingerprints": {
-          "matchBasedId/v1": "requires login"
-        },
-        "locations": [
-          {
-            "physicalLocation": {
-              "artifactLocation": {
-                "uri": "/src/sqli/static/js/materialize.js",
-                "uriBaseId": "%SRCROOT%"
-              },
-              "region": {
-                "endColumn": 42,
-                "endLine": 3444,
-                "snippet": {
-                  "text": "          toast.innerHTML = this.message;"
-                },
-                "startColumn": 11,
-                "startLine": 3444
-              }
-            }
-          }
-        ],
-        "message": {
-          "text": "User controlled data in methods like `innerHTML`, `outerHTML` or `document.write` is an anti-pattern that can lead to XSS vulnerabilities"
-        },
-        "properties": {},
-        "ruleId": "javascript.browser.security.insecure-document-method.insecure-document-method"
+      "partialFingerprints": {
+        "primaryLocationLineHash": "javascript.browser.security.insecure-document-method.insecure-document-method:/src/sqli/static/js/materialize.js:3444"
+      },
+      "metadata": {
+        "tool": "semgrep",
+        "tool_version": "latest",
+        "normalization_timestamp": "2026-02-17T15:35:47.539831"
       }
     }
   ],
-  "issue_count": 10,
-  "issues_by_severity": {
-    "warning": 10
-  },
-  "metadata": {},
-  "created_at": "2026-01-29T12:25:58.458679",
-  "is_baseline": true
+  "metadata": {
+    "framework_version": "1.0.0",
+    "created_with": "create_baseline.py"
+  }
 }

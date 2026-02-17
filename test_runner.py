@@ -1,18 +1,16 @@
 import time
 import logging
 import os
+import yaml
 from typing import Dict, List, Optional, Any
 from pathlib import Path
 
-# Используем абсолютные импорты внутри пакета (рекомендуется)
 from environment import Environment
 from normalizer import Normalizer
 from tools_registry import ToolsRegistry
 from performance_metrics import PerformanceCollector
 
-# Настройка логгера для текущего модуля
 logger = logging.getLogger(__name__)
-
 
 class TestRunner:
     def __init__(self, config_path: str):
@@ -23,36 +21,42 @@ class TestRunner:
             config_path: Путь к файлу конфигурации проектов (YAML).
         """
         self.config_path = config_path
-        self.config = self._load_config()                # загружаем конфигурацию
-        self.environment = Environment()                  # для управления Docker и временными файлами
-        self.normalizer = Normalizer()                    # для нормализации результатов
-        self.tools_registry = ToolsRegistry()             # реестр доступных инструментов
+        self.config = self._load_config()
+        self.environment = Environment()
+        self.normalizer = Normalizer()
+        self.tools_registry = ToolsRegistry()
         self.performance_collector = PerformanceCollector()
-        self.timers = {}                                   # для замера времени выполнения
+        self.timers = {}
 
     def _load_config(self) -> Dict:
         """Загружает конфигурацию из YAML-файла."""
-        import yaml
         with open(self.config_path, 'r', encoding='utf-8') as f:
             config = yaml.safe_load(f)
         logger.info(f"Configuration loaded from {self.config_path}")
         return config
 
-    def run_test(self, project_name: str, project_info: Dict) -> Dict:
+    def run_all_tests(self) -> Dict:
         """
-        Запускает тестирование одного проекта.
-
-        Args:
-            project_name: Имя проекта.
-            project_info: Словарь с информацией о проекте (путь, язык, инструменты).
+        Запускает тестирование для всех проектов из конфигурации.
 
         Returns:
-            Dict: Результаты для каждого инструмента.
+            Dict: Словарь с результатами для каждого проекта.
         """
+        results = {}
+        projects = self.config.get('projects', {})
+        logger.info(f"Found {len(projects)} projects in config")
+        for project_name, project_info in projects.items():
+            logger.info(f"Running tests for project: {project_name}")
+            project_results = self.run_test(project_name, project_info)
+            results[project_name] = project_results
+        return results
+
+    def run_test(self, project_name: str, project_info: Dict) -> Dict:
+        """Запускает тестирование для одного проекта с метриками производительности"""
         try:
             logger.info(f"Starting testing for project: {project_name}")
 
-            # Подготовка окружения (создание папок, проверка Docker)
+            # Подготовка окружения
             self.environment.setup()
 
             results = {}
@@ -63,13 +67,13 @@ class TestRunner:
                 logger.info(f"  Running {tool_name}...")
 
                 try:
-                    # Запускаем таймер для метрик производительности
+                    # Запускаем таймер
                     self.timers[(project_name, tool_name)] = (
                         self.performance_collector.start_timer(tool_name, project_name)
                     )
 
-                    # Получаем экземпляр инструмента из реестра
-                    tool = self.tools_registry.get_tool(tool_name)  # было self.tools.get — исправлено
+                    # Получаем инструмент
+                    tool = self.tools_registry.get_tool(tool_name)
                     if not tool:
                         logger.error(f"Tool {tool_name} not found")
                         results[tool_name] = {'success': False, 'error': f'Tool {tool_name} not found'}
@@ -117,21 +121,11 @@ class TestRunner:
             logger.error(f"Error testing project {project_name}: {e}")
             return {}
         finally:
-            # Очистка окружения в любом случае
+            # Очистка окружения
             self.environment.cleanup()
 
     def _count_files_in_project(self, project_path: str, tool_name: str) -> int:
-        """
-        Подсчитывает количество файлов, подходящих для сканирования указанным инструментом.
-
-        Args:
-            project_path: Путь к проекту.
-            tool_name: Имя инструмента.
-
-        Returns:
-            int: Количество подходящих файлов.
-        """
-        # Расширения файлов для разных инструментов
+        """Подсчитывает количество файлов, которые будет сканировать инструмент"""
         file_patterns = {
             'semgrep': ['.py', '.js', '.ts', '.java', '.go', '.rb'],
             'cppcheck': ['.c', '.cpp', '.cc', '.cxx', '.h', '.hpp'],
@@ -151,7 +145,6 @@ class TestRunner:
                 count += len(files)
             return count
 
-        # Считаем только файлы с нужными расширениями
         count = 0
         for root, dirs, files in os.walk(project_path):
             for file in files:

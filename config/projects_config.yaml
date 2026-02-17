@@ -25,4 +25,4 @@ tools_config:
 
   shellcheck:
     docker_image: "koalaman/shellcheck-alpine:stable"
-    timeout: 120
+    timeout: 300

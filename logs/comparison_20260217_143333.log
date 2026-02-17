@@ -1,0 +1,66 @@
+2026-02-17 14:33:33,354 - test_runner - INFO - Configuration loaded from config/projects_config.yaml
+2026-02-17 14:33:33,355 - tools_registry - INFO - Registered tool: semgrep
+2026-02-17 14:33:33,355 - tools_registry - INFO - Registered tool: semgrep
+2026-02-17 14:33:33,355 - tools_registry - INFO - Registered tool: cppcheck
+2026-02-17 14:33:33,355 - tools_registry - INFO - Registered tool: cppcheck
+2026-02-17 14:33:33,355 - tools_registry - INFO - Registered tool: shellcheck
+2026-02-17 14:33:33,355 - tools_registry - INFO - Registered tool: shellcheck
+2026-02-17 14:33:33,355 - test_runner - INFO - Found 3 projects in config
+2026-02-17 14:33:33,355 - test_runner - INFO - Running tests for project: insecure-cpp
+2026-02-17 14:33:33,355 - test_runner - INFO - Starting testing for project: insecure-cpp
+2026-02-17 14:33:33,455 - environment - INFO - Docker client initialized
+2026-02-17 14:33:33,455 - environment - INFO - Environment setup completed
+2026-02-17 14:33:33,455 - test_runner - INFO -   Running cppcheck...
+2026-02-17 14:33:33,508 - sast_framework.tools.cppcheck - INFO - Running cppcheck on ./projects/insecure-cpp
+2026-02-17 14:33:33,522 - sast_framework.tools.cppcheck - INFO - Running container: ghcr.io/facthunder/cppcheck:latest
+2026-02-17 14:33:33,522 - sast_framework.tools.cppcheck - INFO - Command: cppcheck --enable=all --xml --xml-version=2 --output-file=/results/cppcheck_results.xml /src
+2026-02-17 14:33:33,522 - sast_framework.tools.cppcheck - INFO - Mounting project: /Users/anastasiakamalova/PycharmProjects/SAST-Framework/projects/insecure-cpp -> /src
+2026-02-17 14:33:33,522 - sast_framework.tools.cppcheck - INFO - Mounting results: /Users/anastasiakamalova/PycharmProjects/SAST-Framework/results/raw -> /results
+2026-02-17 14:33:36,153 - sast_framework.tools.cppcheck - INFO - Results saved to results/raw/insecure-cpp/cppcheck_20260217_143333.sarif
+2026-02-17 14:33:36,155 - normalizer - INFO - Normalized 348 issues
+2026-02-17 14:33:36,158 - performance_metrics - INFO - Performance metrics saved: results/metrics/insecure-cpp/cppcheck_20260217_143336.json
+2026-02-17 14:33:36,159 - test_runner - INFO -     Found 348 issues
+2026-02-17 14:33:36,159 - environment - INFO - Environment cleanup completed
+2026-02-17 14:33:36,159 - test_runner - INFO - Running tests for project: dvpa-python
+2026-02-17 14:33:36,159 - test_runner - INFO - Starting testing for project: dvpa-python
+2026-02-17 14:33:36,169 - environment - INFO - Docker client initialized
+2026-02-17 14:33:36,169 - environment - INFO - Environment setup completed
+2026-02-17 14:33:36,169 - test_runner - INFO -   Running semgrep...
+2026-02-17 14:33:36,214 - sast_framework.tools.semgrep - INFO - Running semgrep on ./projects/dvpa-python
+2026-02-17 14:33:36,225 - sast_framework.tools.semgrep - INFO - Running container: returntocorp/semgrep:latest
+2026-02-17 14:33:36,225 - sast_framework.tools.semgrep - INFO - Command: semgrep scan --config=auto --json --output=/results/semgrep_results.json /src
+2026-02-17 14:33:36,225 - sast_framework.tools.semgrep - INFO - Mounting project: /Users/anastasiakamalova/PycharmProjects/SAST-Framework/projects/dvpa-python -> /src
+2026-02-17 14:33:36,226 - sast_framework.tools.semgrep - INFO - Mounting results: /Users/anastasiakamalova/PycharmProjects/SAST-Framework/results/raw -> /results
+2026-02-17 14:34:06,914 - sast_framework.tools.semgrep - INFO - Results saved to results/raw/dvpa-python/semgrep_20260217_143336.sarif
+2026-02-17 14:34:06,916 - normalizer - INFO - Normalized 10 issues
+2026-02-17 14:34:06,924 - performance_metrics - INFO - Performance metrics saved: results/metrics/dvpa-python/semgrep_20260217_143406.json
+2026-02-17 14:34:06,924 - test_runner - INFO -     Found 10 issues
+2026-02-17 14:34:06,925 - environment - INFO - Environment cleanup completed
+2026-02-17 14:34:06,925 - test_runner - INFO - Running tests for project: bash-examples
+2026-02-17 14:34:06,925 - test_runner - INFO - Starting testing for project: bash-examples
+2026-02-17 14:34:06,937 - environment - INFO - Docker client initialized
+2026-02-17 14:34:06,938 - environment - INFO - Environment setup completed
+2026-02-17 14:34:06,938 - test_runner - INFO -   Running shellcheck...
+2026-02-17 14:34:06,995 - sast_framework.tools.shellcheck - INFO - Running shellcheck on ./projects/bash-examples
+2026-02-17 14:34:07,008 - sast_framework.tools.shellcheck - INFO - Running container: koalaman/shellcheck-alpine:stable
+2026-02-17 14:34:07,008 - sast_framework.tools.shellcheck - INFO - Command: sh -c find /src -type f \( -name '*.sh' -o -name '*.bash' -o -name '*.zsh' -o -name '*.ksh' \) | xargs -I {} shellcheck -f json {} > /results/shellcheck_results.json
+2026-02-17 14:34:07,008 - sast_framework.tools.shellcheck - INFO - Mounting project: /Users/anastasiakamalova/PycharmProjects/SAST-Framework/projects/bash-examples -> /src
+2026-02-17 14:34:07,008 - sast_framework.tools.shellcheck - INFO - Mounting results: /Users/anastasiakamalova/PycharmProjects/SAST-Framework/results/raw -> /results
+2026-02-17 14:34:07,469 - sast_framework.tools.shellcheck - ERROR - Error running container: Command '['sh', '-c', "find /src -type f \\( -name '*.sh' -o -name '*.bash' -o -name '*.zsh' -o -name '*.ksh' \\) | xargs -I {} shellcheck -f json {} > /results/shellcheck_results.json"]' in image 'koalaman/shellcheck-alpine:stable' returned non-zero exit status 123: b''
+2026-02-17 14:34:07,469 - sast_framework.tools.shellcheck - ERROR - Error running shellcheck: Command '['sh', '-c', "find /src -type f \\( -name '*.sh' -o -name '*.bash' -o -name '*.zsh' -o -name '*.ksh' \\) | xargs -I {} shellcheck -f json {} > /results/shellcheck_results.json"]' in image 'koalaman/shellcheck-alpine:stable' returned non-zero exit status 123: b''
+2026-02-17 14:34:07,469 - test_runner - ERROR -     Tool shellcheck failed
+2026-02-17 14:34:07,469 - environment - INFO - Environment cleanup completed
+2026-02-17 14:34:07,469 - __main__ - INFO - Тестирование завершено. Проектов: 3
+2026-02-17 14:34:07,474 - comparer - INFO - Comparing insecure-cpp/cppcheck
+2026-02-17 14:34:07,476 - comparer - INFO - Loaded baseline for insecure-cpp/cppcheck: 348 issues
+2026-02-17 14:34:07,476 - comparer - WARNING - Current results not found: results/normalized/insecure-cpp/cppcheck_normalized.json
+2026-02-17 14:34:07,476 - comparer - WARNING - No current results for insecure-cpp/cppcheck
+2026-02-17 14:34:07,476 - comparer - INFO - Comparing dvpa-python/semgrep
+2026-02-17 14:34:07,476 - comparer - INFO - Loaded baseline for dvpa-python/semgrep: 10 issues
+2026-02-17 14:34:07,476 - comparer - WARNING - Current results not found: results/normalized/dvpa-python/semgrep_normalized.json
+2026-02-17 14:34:07,477 - comparer - WARNING - No current results for dvpa-python/semgrep
+2026-02-17 14:34:07,477 - comparer - INFO - Comparing bash-examples/shellcheck
+2026-02-17 14:34:07,477 - comparer - WARNING - Baseline not found: baseline/bash-examples/shellcheck_baseline.json
+2026-02-17 14:34:07,477 - comparer - WARNING - No baseline for bash-examples/shellcheck
+2026-02-17 14:34:07,477 - __main__ - WARNING - Нет результатов для сравнения
+2026-02-17 14:34:07,477 - performance_metrics - INFO - Performance report saved to results/performance_report.json

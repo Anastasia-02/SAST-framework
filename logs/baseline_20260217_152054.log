@@ -1,0 +1,66 @@
+2026-02-17 15:20:54,182 - test_runner - INFO - Configuration loaded from config/projects_config.yaml
+2026-02-17 15:20:54,182 - tools_registry - INFO - Registered tool: semgrep
+2026-02-17 15:20:54,182 - tools_registry - INFO - Registered tool: semgrep
+2026-02-17 15:20:54,183 - tools_registry - INFO - Registered tool: cppcheck
+2026-02-17 15:20:54,183 - tools_registry - INFO - Registered tool: cppcheck
+2026-02-17 15:20:54,183 - tools_registry - INFO - Registered tool: shellcheck
+2026-02-17 15:20:54,183 - tools_registry - INFO - Registered tool: shellcheck
+2026-02-17 15:20:54,185 - __main__ - INFO - Baseline будет перезаписан: baseline/insecure-cpp/cppcheck_baseline.json
+2026-02-17 15:20:54,185 - __main__ - INFO - Baseline будет перезаписан: baseline/dvpa-python/semgrep_baseline.json
+2026-02-17 15:20:54,185 - __main__ - INFO - Будет создан baseline для bash-examples/shellcheck
+2026-02-17 15:20:54,185 - test_runner - INFO - Found 3 projects in config
+2026-02-17 15:20:54,185 - test_runner - INFO - Running tests for project: insecure-cpp
+2026-02-17 15:20:54,185 - test_runner - INFO - Starting testing for project: insecure-cpp
+2026-02-17 15:20:54,282 - environment - INFO - Docker client initialized
+2026-02-17 15:20:54,282 - environment - INFO - Environment setup completed
+2026-02-17 15:20:54,282 - test_runner - INFO -   Running cppcheck...
+2026-02-17 15:20:54,337 - sast_framework.tools.cppcheck - INFO - Running cppcheck on ./projects/insecure-cpp
+2026-02-17 15:20:54,371 - sast_framework.tools.cppcheck - INFO - Running container: ghcr.io/facthunder/cppcheck:latest
+2026-02-17 15:20:54,371 - sast_framework.tools.cppcheck - INFO - Command: cppcheck --enable=all --xml --xml-version=2 --output-file=/results/cppcheck_results.xml /src
+2026-02-17 15:20:54,371 - sast_framework.tools.cppcheck - INFO - Mounting project: /Users/anastasiakamalova/PycharmProjects/SAST-Framework/projects/insecure-cpp -> /src
+2026-02-17 15:20:54,372 - sast_framework.tools.cppcheck - INFO - Mounting results: /Users/anastasiakamalova/PycharmProjects/SAST-Framework/results/raw -> /results
+2026-02-17 15:20:56,674 - sast_framework.tools.cppcheck - INFO - Results saved to results/raw/insecure-cpp/cppcheck_20260217_152054.sarif
+2026-02-17 15:20:56,676 - normalizer - INFO - Normalized 348 issues
+2026-02-17 15:20:56,679 - performance_metrics - INFO - Performance metrics saved: results/metrics/insecure-cpp/cppcheck_20260217_152056.json
+2026-02-17 15:20:56,680 - test_runner - INFO -     Found 348 issues
+2026-02-17 15:20:56,680 - environment - INFO - Environment cleanup completed
+2026-02-17 15:20:56,680 - test_runner - INFO - Running tests for project: dvpa-python
+2026-02-17 15:20:56,680 - test_runner - INFO - Starting testing for project: dvpa-python
+2026-02-17 15:20:56,690 - environment - INFO - Docker client initialized
+2026-02-17 15:20:56,691 - environment - INFO - Environment setup completed
+2026-02-17 15:20:56,691 - test_runner - INFO -   Running semgrep...
+2026-02-17 15:20:56,738 - sast_framework.tools.semgrep - INFO - Running semgrep on ./projects/dvpa-python
+2026-02-17 15:20:56,749 - sast_framework.tools.semgrep - INFO - Running container: returntocorp/semgrep:latest
+2026-02-17 15:20:56,750 - sast_framework.tools.semgrep - INFO - Command: semgrep scan --config=auto --json --output=/results/semgrep_results.json /src
+2026-02-17 15:20:56,750 - sast_framework.tools.semgrep - INFO - Mounting project: /Users/anastasiakamalova/PycharmProjects/SAST-Framework/projects/dvpa-python -> /src
+2026-02-17 15:20:56,750 - sast_framework.tools.semgrep - INFO - Mounting results: /Users/anastasiakamalova/PycharmProjects/SAST-Framework/results/raw -> /results
+2026-02-17 15:21:23,317 - sast_framework.tools.semgrep - INFO - Results saved to results/raw/dvpa-python/semgrep_20260217_152056.sarif
+2026-02-17 15:21:23,318 - normalizer - INFO - Normalized 10 issues
+2026-02-17 15:21:23,321 - performance_metrics - INFO - Performance metrics saved: results/metrics/dvpa-python/semgrep_20260217_152123.json
+2026-02-17 15:21:23,321 - test_runner - INFO -     Found 10 issues
+2026-02-17 15:21:23,321 - environment - INFO - Environment cleanup completed
+2026-02-17 15:21:23,321 - test_runner - INFO - Running tests for project: bash-examples
+2026-02-17 15:21:23,321 - test_runner - INFO - Starting testing for project: bash-examples
+2026-02-17 15:21:23,333 - environment - INFO - Docker client initialized
+2026-02-17 15:21:23,334 - environment - INFO - Environment setup completed
+2026-02-17 15:21:23,334 - test_runner - INFO -   Running shellcheck...
+2026-02-17 15:21:23,384 - sast_framework.tools.shellcheck - INFO - Running shellcheck on ./projects/bash-examples
+2026-02-17 15:21:23,385 - sast_framework.tools.shellcheck - INFO - Running command in container: shellcheck /src/vulnerable.sh /src/test1.bash > /results/shellcheck_results.json
+2026-02-17 15:21:23,396 - sast_framework.tools.shellcheck - INFO - Running container: koalaman/shellcheck-alpine:stable
+2026-02-17 15:21:23,396 - sast_framework.tools.shellcheck - INFO - Command: sh -c shellcheck /src/vulnerable.sh /src/test1.bash > /results/shellcheck_results.json
+2026-02-17 15:21:23,396 - sast_framework.tools.shellcheck - INFO - Mounting project: /Users/anastasiakamalova/PycharmProjects/SAST-Framework/projects/bash-examples -> /src
+2026-02-17 15:21:23,396 - sast_framework.tools.shellcheck - INFO - Mounting results: /Users/anastasiakamalova/PycharmProjects/SAST-Framework/results/raw -> /results
+2026-02-17 15:21:23,758 - sast_framework.tools.shellcheck - ERROR - Error running container: Command '['sh', '-c', 'shellcheck /src/vulnerable.sh /src/test1.bash > /results/shellcheck_results.json']' in image 'koalaman/shellcheck-alpine:stable' returned non-zero exit status 1: b''
+2026-02-17 15:21:23,758 - sast_framework.tools.shellcheck - ERROR - Error running shellcheck: Command '['sh', '-c', 'shellcheck /src/vulnerable.sh /src/test1.bash > /results/shellcheck_results.json']' in image 'koalaman/shellcheck-alpine:stable' returned non-zero exit status 1: b''
+Traceback (most recent call last):
+  File "/Users/anastasiakamalova/PycharmProjects/SAST-Framework/tools/shellcheck.py", line 52, in run
+    result = self.run_in_container(["sh", "-c", cmd], project_path)
+  File "/Users/anastasiakamalova/PycharmProjects/SAST-Framework/tools/base_tool.py", line 94, in run_in_container
+    container = client.containers.run(
+  File "/Users/anastasiakamalova/SAST-Framework/lib/python3.9/site-packages/docker/models/containers.py", line 905, in run
+    raise ContainerError(
+docker.errors.ContainerError: Command '['sh', '-c', 'shellcheck /src/vulnerable.sh /src/test1.bash > /results/shellcheck_results.json']' in image 'koalaman/shellcheck-alpine:stable' returned non-zero exit status 1: b''
+2026-02-17 15:21:23,763 - test_runner - ERROR -     Tool shellcheck failed
+2026-02-17 15:21:23,763 - environment - INFO - Environment cleanup completed
+2026-02-17 15:21:23,769 - normalizer - INFO - Normalized 348 issues
+2026-02-17 15:21:23,777 - normalizer - INFO - Normalized 10 issues

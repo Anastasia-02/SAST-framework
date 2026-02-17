@@ -1,0 +1,85 @@
+2026-02-17 15:29:47,765 - test_runner - INFO - Configuration loaded from config/projects_config.yaml
+2026-02-17 15:29:47,765 - tools_registry - INFO - Registered tool: semgrep
+2026-02-17 15:29:47,765 - tools_registry - INFO - Registered tool: semgrep
+2026-02-17 15:29:47,765 - tools_registry - INFO - Registered tool: cppcheck
+2026-02-17 15:29:47,765 - tools_registry - INFO - Registered tool: cppcheck
+2026-02-17 15:29:47,765 - tools_registry - INFO - Registered tool: shellcheck
+2026-02-17 15:29:47,765 - tools_registry - INFO - Registered tool: shellcheck
+2026-02-17 15:29:47,768 - __main__ - INFO - Baseline будет перезаписан: baseline/insecure-cpp/cppcheck_baseline.json
+2026-02-17 15:29:47,768 - __main__ - INFO - Baseline будет перезаписан: baseline/dvpa-python/semgrep_baseline.json
+2026-02-17 15:29:47,768 - __main__ - INFO - Будет создан baseline для bash-examples/shellcheck
+2026-02-17 15:29:47,768 - test_runner - INFO - Found 3 projects in config
+2026-02-17 15:29:47,768 - test_runner - INFO - Running tests for project: insecure-cpp
+2026-02-17 15:29:47,768 - test_runner - INFO - Starting testing for project: insecure-cpp
+2026-02-17 15:29:47,840 - environment - INFO - Docker client initialized
+2026-02-17 15:29:47,841 - environment - INFO - Environment setup completed
+2026-02-17 15:29:47,841 - test_runner - INFO -   Running cppcheck...
+2026-02-17 15:29:47,888 - sast_framework.tools.cppcheck - INFO - Running cppcheck on ./projects/insecure-cpp
+2026-02-17 15:29:47,921 - sast_framework.tools.cppcheck - INFO - Running container: ghcr.io/facthunder/cppcheck:latest
+2026-02-17 15:29:47,922 - sast_framework.tools.cppcheck - INFO - Command: cppcheck --enable=all --xml --xml-version=2 --output-file=/results/cppcheck_results.xml /src
+2026-02-17 15:29:47,922 - sast_framework.tools.cppcheck - INFO - Mounting project: /Users/anastasiakamalova/PycharmProjects/SAST-Framework/projects/insecure-cpp -> /src
+2026-02-17 15:29:47,922 - sast_framework.tools.cppcheck - INFO - Mounting results: /Users/anastasiakamalova/PycharmProjects/SAST-Framework/results/raw -> /results
+2026-02-17 15:29:51,256 - sast_framework.tools.cppcheck - INFO - Results saved to results/raw/insecure-cpp/cppcheck_20260217_152947.sarif
+2026-02-17 15:29:51,258 - normalizer - INFO - Normalized 348 issues
+2026-02-17 15:29:51,262 - performance_metrics - INFO - Performance metrics saved: results/metrics/insecure-cpp/cppcheck_20260217_152951.json
+2026-02-17 15:29:51,262 - test_runner - INFO -     Found 348 issues
+2026-02-17 15:29:51,262 - environment - INFO - Environment cleanup completed
+2026-02-17 15:29:51,262 - test_runner - INFO - Running tests for project: dvpa-python
+2026-02-17 15:29:51,262 - test_runner - INFO - Starting testing for project: dvpa-python
+2026-02-17 15:29:51,278 - environment - INFO - Docker client initialized
+2026-02-17 15:29:51,278 - environment - INFO - Environment setup completed
+2026-02-17 15:29:51,278 - test_runner - INFO -   Running semgrep...
+2026-02-17 15:29:51,320 - sast_framework.tools.semgrep - INFO - Running semgrep on ./projects/dvpa-python
+2026-02-17 15:29:51,332 - sast_framework.tools.semgrep - INFO - Running container: returntocorp/semgrep:latest
+2026-02-17 15:29:51,333 - sast_framework.tools.semgrep - INFO - Command: semgrep scan --config=auto --json --output=/results/semgrep_results.json /src
+2026-02-17 15:29:51,333 - sast_framework.tools.semgrep - INFO - Mounting project: /Users/anastasiakamalova/PycharmProjects/SAST-Framework/projects/dvpa-python -> /src
+2026-02-17 15:29:51,333 - sast_framework.tools.semgrep - INFO - Mounting results: /Users/anastasiakamalova/PycharmProjects/SAST-Framework/results/raw -> /results
+2026-02-17 15:30:21,358 - sast_framework.tools.semgrep - INFO - Results saved to results/raw/dvpa-python/semgrep_20260217_152951.sarif
+2026-02-17 15:30:21,359 - normalizer - INFO - Normalized 10 issues
+2026-02-17 15:30:21,362 - performance_metrics - INFO - Performance metrics saved: results/metrics/dvpa-python/semgrep_20260217_153021.json
+2026-02-17 15:30:21,362 - test_runner - INFO -     Found 10 issues
+2026-02-17 15:30:21,362 - environment - INFO - Environment cleanup completed
+2026-02-17 15:30:21,362 - test_runner - INFO - Running tests for project: bash-examples
+2026-02-17 15:30:21,362 - test_runner - INFO - Starting testing for project: bash-examples
+2026-02-17 15:30:21,376 - environment - INFO - Docker client initialized
+2026-02-17 15:30:21,377 - environment - INFO - Environment setup completed
+2026-02-17 15:30:21,377 - test_runner - INFO -   Running shellcheck...
+2026-02-17 15:30:21,429 - sast_framework.tools.shellcheck - INFO - Running shellcheck on ./projects/bash-examples
+2026-02-17 15:30:21,430 - sast_framework.tools.shellcheck - INFO - Running command in container: shellcheck /src/vulnerable.sh /src/test1.bash > /results/shellcheck_results.json
+2026-02-17 15:30:21,442 - sast_framework.tools.shellcheck - INFO - Running container: koalaman/shellcheck-alpine:stable
+2026-02-17 15:30:21,442 - sast_framework.tools.shellcheck - INFO - Command: shellcheck /src/vulnerable.sh /src/test1.bash > /results/shellcheck_results.json
+2026-02-17 15:30:21,442 - sast_framework.tools.shellcheck - INFO - Mounting project: /Users/anastasiakamalova/PycharmProjects/SAST-Framework/projects/bash-examples -> /src
+2026-02-17 15:30:21,442 - sast_framework.tools.shellcheck - INFO - Mounting results: /Users/anastasiakamalova/PycharmProjects/SAST-Framework/results/raw -> /results
+2026-02-17 15:30:21,729 - sast_framework.tools.shellcheck - ERROR - Docker API error: 400 Client Error for http+docker://localhost/v1.41/containers/9583d9dd739e4bd2734b872a15c24d60cae17c940638c33226c16fb15d26f3e7/start: Bad Request ("failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "shellcheck /src/vulnerable.sh /src/test1.bash > /results/shellcheck_results.json": stat shellcheck /src/vulnerable.sh /src/test1.bash > /results/shellcheck_results.json: no such file or directory: unknown")
+2026-02-17 15:30:21,729 - sast_framework.tools.shellcheck - ERROR - Error running shellcheck: 400 Client Error for http+docker://localhost/v1.41/containers/9583d9dd739e4bd2734b872a15c24d60cae17c940638c33226c16fb15d26f3e7/start: Bad Request ("failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "shellcheck /src/vulnerable.sh /src/test1.bash > /results/shellcheck_results.json": stat shellcheck /src/vulnerable.sh /src/test1.bash > /results/shellcheck_results.json: no such file or directory: unknown")
+Traceback (most recent call last):
+  File "/Users/anastasiakamalova/SAST-Framework/lib/python3.9/site-packages/docker/api/client.py", line 275, in _raise_for_status
+    response.raise_for_status()
+  File "/Users/anastasiakamalova/SAST-Framework/lib/python3.9/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http+docker://localhost/v1.41/containers/9583d9dd739e4bd2734b872a15c24d60cae17c940638c33226c16fb15d26f3e7/start
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/anastasiakamalova/PycharmProjects/SAST-Framework/tools/shellcheck.py", line 54, in run
+    result = self.run_in_container([cmd], project_path)
+  File "/Users/anastasiakamalova/PycharmProjects/SAST-Framework/tools/base_tool.py", line 94, in run_in_container
+    container = client.containers.run(
+  File "/Users/anastasiakamalova/SAST-Framework/lib/python3.9/site-packages/docker/models/containers.py", line 883, in run
+    container.start()
+  File "/Users/anastasiakamalova/SAST-Framework/lib/python3.9/site-packages/docker/models/containers.py", line 420, in start
+    return self.client.api.start(self.id, **kwargs)
+  File "/Users/anastasiakamalova/SAST-Framework/lib/python3.9/site-packages/docker/utils/decorators.py", line 19, in wrapped
+    return f(self, resource_id, *args, **kwargs)
+  File "/Users/anastasiakamalova/SAST-Framework/lib/python3.9/site-packages/docker/api/container.py", line 1136, in start
+    self._raise_for_status(res)
+  File "/Users/anastasiakamalova/SAST-Framework/lib/python3.9/site-packages/docker/api/client.py", line 277, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+  File "/Users/anastasiakamalova/SAST-Framework/lib/python3.9/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.APIError: 400 Client Error for http+docker://localhost/v1.41/containers/9583d9dd739e4bd2734b872a15c24d60cae17c940638c33226c16fb15d26f3e7/start: Bad Request ("failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "shellcheck /src/vulnerable.sh /src/test1.bash > /results/shellcheck_results.json": stat shellcheck /src/vulnerable.sh /src/test1.bash > /results/shellcheck_results.json: no such file or directory: unknown")
+2026-02-17 15:30:21,754 - test_runner - ERROR -     Tool shellcheck failed
+2026-02-17 15:30:21,754 - environment - INFO - Environment cleanup completed
+2026-02-17 15:30:21,757 - normalizer - INFO - Normalized 348 issues
+2026-02-17 15:30:21,765 - normalizer - INFO - Normalized 10 issues

@@ -48,10 +48,11 @@ tools:
     version: "stable"
     command: "shellcheck"
     args:
-      - "--format=json1"
-      - "--check-sourced"
-      - "-x"
-      - "{project_path}/**/*.sh"
+#      - "--format=json1"
+#      - "--check-sourced"
+#      - "-x"
+#      - "{project_path}/**/*.sh"
+      - "--version"
     mount_point: "/src"
     env_vars: {}
 

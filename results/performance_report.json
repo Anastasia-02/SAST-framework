@@ -1,0 +1,78 @@
+{
+  "timestamp": "2026-02-17T14:34:07.477476",
+  "tools_performance": {
+    "semgrep": {
+      "total_runs": 2,
+      "avg_execution_time": 29.791022062301636,
+      "avg_issues_found": 10.0,
+      "best_run": {
+        "tool": "semgrep",
+        "project": "dvpa-python",
+        "timestamp": "2026-02-17T14:32:31.708499",
+        "execution_time": 28.83101224899292,
+        "memory_usage": null,
+        "cpu_usage": null,
+        "issues_per_second": 0.3468487305834815,
+        "files_scanned": 26,
+        "lines_scanned": 0,
+        "issues_found": 10
+      },
+      "worst_run": {
+        "tool": "semgrep",
+        "project": "dvpa-python",
+        "timestamp": "2026-02-17T14:33:36.170014",
+        "execution_time": 30.75103187561035,
+        "memory_usage": null,
+        "cpu_usage": null,
+        "issues_per_second": 0.32519233957580873,
+        "files_scanned": 26,
+        "lines_scanned": 0,
+        "issues_found": 10
+      }
+    },
+    "cppcheck": {
+      "total_runs": 2,
+      "avg_execution_time": 3.662103533744812,
+      "avg_issues_found": 348.0,
+      "best_run": {
+        "tool": "cppcheck",
+        "project": "insecure-cpp",
+        "timestamp": "2026-02-17T14:33:33.455982",
+        "execution_time": 2.7015058994293213,
+        "memory_usage": null,
+        "cpu_usage": null,
+        "issues_per_second": 128.81704240346585,
+        "files_scanned": 100,
+        "lines_scanned": 0,
+        "issues_found": 348
+      },
+      "worst_run": {
+        "tool": "cppcheck",
+        "project": "insecure-cpp",
+        "timestamp": "2026-02-17T14:32:27.072182",
+        "execution_time": 4.622701168060303,
+        "memory_usage": null,
+        "cpu_usage": null,
+        "issues_per_second": 75.28066110014672,
+        "files_scanned": 100,
+        "lines_scanned": 0,
+        "issues_found": 348
+      }
+    }
+  },
+  "projects_performance": {
+    "insecure-cpp": {
+      "total_runs": 2,
+      "total_execution_time": 7.324207067489624,
+      "avg_execution_time": 3.662103533744812,
+      "total_issues_found": 696
+    },
+    "dvpa-python": {
+      "total_runs": 2,
+      "total_execution_time": 59.58204412460327,
+      "avg_execution_time": 29.791022062301636,
+      "total_issues_found": 20
+    }
+  },
+  "recommendations": []
+}

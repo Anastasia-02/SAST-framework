@@ -15,12 +15,14 @@ class ToolsRegistry:
     """Registry для управления и доступа к инструментам SAST"""
 
     def __init__(self):
-        self.tools: Dict[str, any] = {}
+        self.tools = {}
         self._register_default_tools()
 
     def _register_default_tools(self):
         """Регистрирует инструменты по умолчанию"""
         # Регистрируем доступные инструменты
+        if self.tools:
+            return
         default_tools = [
             SemgrepTool(),
             CppcheckTool(),
